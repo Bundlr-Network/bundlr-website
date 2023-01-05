@@ -1,1 +1,11 @@
 export {}
+export { default as NavbarDesktop } from './NavbarDesktop'
+export { default as Button } from './Button'
+export { default as Footer } from './Footer'
+export { default as FooterDesktop } from './FooterDesktop'
+export { default as FooterMobile } from './FooterMobile'
+export { default as HomeHeader } from './HomeHeader'
+export { default as SectionTitle } from './SectionTitle'
+export { default as HomeStats } from './HomeStats'
+export { default as HomeWhyUseBundlr } from './HomeWhyUseBundlr'
+export { default as HomeTrustedBy } from './HomeTrustedBy'

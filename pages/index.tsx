@@ -1,11 +1,5 @@
 import { GetServerSideProps } from 'next'
-
-const HomeWrapper = (props: any) => {
-  return <>
-    <h1 className="text-3xl">Ola mundo</h1>
-  </>
-}
-
+import { Home } from '@/templates'
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
@@ -14,4 +8,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 
-export default HomeWrapper
+export default Home

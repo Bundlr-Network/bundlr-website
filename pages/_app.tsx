@@ -1,6 +1,9 @@
+import "@fontsource/roboto-mono"
+import "@fontsource/roboto-mono/600.css"
+import '@/styles/globals.css'
+
 import type { AppProps } from 'next/app'
 import NextNProgress from 'nextjs-progressbar'
-import '@/styles/globals.css'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

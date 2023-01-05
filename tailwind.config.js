@@ -5,7 +5,16 @@ module.exports = {
     './src/templates/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        timberwolf: '#D8CFCA',
+        seashell: '#FEF4EE',
+        ghostWhite: '#EEF0F6'
+      },
+      fontFamily: {
+        robotoMono: ['Roboto Mono', 'monospace']
+      }
+    }
   },
   plugins: []
 }
