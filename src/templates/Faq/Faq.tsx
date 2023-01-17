@@ -172,12 +172,15 @@ const Faq: NextPage = () => {
             return (
               <li
                 key={key}
-                onClick={() =>
-                  setCurrentCategory(
-                    Object.keys(FaqCategory).find(
-                      (k) => FaqCategory[k as keyof typeof FaqCategory] === key
-                    )
-                  )
+                onClick={() => {
+                  if (key && Object.values(FaqCategory).includes(key)) {
+                    setCurrentCategory(
+                      Object.keys(FaqCategory).find(
+                        (k) => FaqCategory[k as keyof typeof FaqCategory] === key
+                      ) as FaqCategory
+                    );
+                  }
+                }
                 }
                 className={`
                 ${currentCategory ===
@@ -198,8 +201,9 @@ const Faq: NextPage = () => {
         </ul>
         <ul className="pt-12">
           {FAQ_CONTENT.filter((faq) =>
-            currentCategory === 'All'
+            currentCategory as string === 'All'
               ? true
+              // @ts-ignore
               : FaqCategory[faq.category] === currentCategory
           )
             .filter(

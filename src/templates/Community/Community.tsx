@@ -17,6 +17,7 @@ import { useEffect, useState } from 'react'
 
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 
 const useCommunity = () => {
   const PAGE_SEO = {
@@ -197,7 +198,7 @@ const Community: NextPage = () => {
       <div className="bg-black">
         <NextSeo {...PAGE_SEO} />
         <div className="text-white">
-          <NavbarDesktop scheme="onyx" />
+          <NavbarDesktop scheme={SchemeColor.onyx} />
         </div>
         <header
           className="px-[109px] border-b border-timberwolf bg-black pt-[183px]"

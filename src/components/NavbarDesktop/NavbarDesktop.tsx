@@ -47,18 +47,18 @@ const useNavbarDesktop = () => {
   return { MENU_OPTIONS }
 }
 
-enum SchemeColor {
+export enum SchemeColor {
   'transparent' = 'transparent',
   'onyx' = 'onyx'
 }
 
-const NavbarDesktop = ({ scheme }: { scheme: SchemeColor }) => {
+const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
   const { MENU_OPTIONS } = useNavbarDesktop()
 
   return (
     <>
       <nav
-        className={`flex items-center h-[90px] antialiased border-b font-robotoMono ${{
+        className={`flex items-center h-[90px] antialiased border-b font-robotoMono ${scheme && {
           timberwolf: 'border-timberwolf',
           transparent: 'border-transparent',
           onyx: 'border-onyx'
@@ -69,7 +69,7 @@ const NavbarDesktop = ({ scheme }: { scheme: SchemeColor }) => {
           <BundlrIcon />
         </div>
         <div
-          className={`h-full w-[1px] bg-timberwolf ${{
+          className={`h-full w-[1px] bg-timberwolf ${scheme && {
             transparent: 'bg-transparent',
             onyx: 'bg-onyx'
           }[scheme]
@@ -89,7 +89,7 @@ const NavbarDesktop = ({ scheme }: { scheme: SchemeColor }) => {
         </ul>
 
         <div
-          className={`h-full w-[1px] bg-timberwolf ml-auto hidden lg:block ${{
+          className={`h-full w-[1px] bg-timberwolf ml-auto hidden lg:block ${scheme && {
             transparent: 'bg-transparent',
             onyx: 'bg-onyx'
           }[scheme]
@@ -99,7 +99,7 @@ const NavbarDesktop = ({ scheme }: { scheme: SchemeColor }) => {
           EN
         </div>
         <div
-          className={`h-full w-[1px] bg-timberwolf hidden lg:block ${{
+          className={`h-full w-[1px] bg-timberwolf hidden lg:block ${scheme && {
             transparent: 'bg-transparent',
             onyx: 'bg-onyx'
           }[scheme]
@@ -126,7 +126,7 @@ const NavDropdown = ({
     name: string
     href: string
   }[]
-  scheme: SchemeColor
+  scheme?: SchemeColor
 }) => {
   const [isHovered, setIsHovered] = useState(false)
 
@@ -151,7 +151,7 @@ const NavDropdown = ({
                 Learn: 'w-[138px]'
               }[title]
               }
-              ${{
+              ${scheme && {
                 transparent: 'bg-transparent',
                 onyx: '!bg-black border-onyx text-white'
               }[scheme]
