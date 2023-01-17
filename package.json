@@ -12,8 +12,7 @@
     "start": "next start",
     "lint": "next lint",
     "generate": "yarn plop --plopfile generators/plopfile.js",
-    "deploy": "next build && next start",
-    "prepare": "husky install && chmod +x .husky/pre-commit"
+    "deploy": "next build && next start"
   },
   "husky": {
     "hooks": {
