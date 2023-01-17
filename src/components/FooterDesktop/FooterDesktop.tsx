@@ -149,7 +149,7 @@ const FooterDesktop = () => {
       <footer className="hidden lg:flex items-center bg-seashell antialiased border-t border-timberwolf font-robotoMono px-[50px] pb-[25px]">
         <section className="flex flex-col max-w-[513px] leading-none pt-[73px] w-auto">
           <FooterLogo />
-          <p className="mt-[230px] text-[62px] tracking-tighter whitespace-normal">
+          <p className="mt-[230px] lg:text-[31px] text-[62px] tracking-tighter whitespace-normal">
             THE FUTURE OF DATA STORAGE
           </p>
           <p className="mt-[47px]">2022 Bundlr. All rights reserved.</p>

@@ -9,10 +9,14 @@ module.exports = {
       colors: {
         timberwolf: '#D8CFCA',
         seashell: '#FEF4EE',
-        ghostWhite: '#EEF0F6'
+        ghostWhite: '#EEF0F6',
+        onyx: '#403F3E',
+        smoky: '#0F0F0F'
       },
       fontFamily: {
-        robotoMono: ['Roboto Mono', 'monospace']
+        robotoMono: ['Roboto Mono', 'monospace'],
+        fkDisplay: ['FK Display', 'sans-serif'],
+        spaceGrotesk: ['Space Grotesk', 'sans-serif']
       }
     }
   },

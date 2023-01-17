@@ -47,29 +47,64 @@ const useNavbarDesktop = () => {
   return { MENU_OPTIONS }
 }
 
-const NavbarDesktop = () => {
+enum SchemeColor {
+  'transparent' = 'transparent',
+  'onyx' = 'onyx'
+}
+
+const NavbarDesktop = ({ scheme }: { scheme: SchemeColor }) => {
   const { MENU_OPTIONS } = useNavbarDesktop()
 
   return (
     <>
-      <nav className="flex items-center h-[90px] bg-seashell antialiased border-b border-timberwolf font-robotoMono">
+      <nav
+        className={`flex items-center h-[90px] antialiased border-b font-robotoMono ${{
+          timberwolf: 'border-timberwolf',
+          transparent: 'border-transparent',
+          onyx: 'border-onyx'
+        }[scheme]
+          }`}
+      >
         <div className="w-[120px] flex items-center justify-center">
           <BundlrIcon />
         </div>
-        <div className="h-full w-[1px] bg-timberwolf" />
+        <div
+          className={`h-full w-[1px] bg-timberwolf ${{
+            transparent: 'bg-transparent',
+            onyx: 'bg-onyx'
+          }[scheme]
+            }`}
+        />
         <ul className="items-center ml-[40px] gap-[30px] text-sm hidden lg:flex">
           {Object.keys(MENU_OPTIONS).map((key) => {
             return (
-              <NavDropdown key={key} title={key} options={MENU_OPTIONS[key]} />
+              <NavDropdown
+                key={key}
+                title={key}
+                options={MENU_OPTIONS[key]}
+                scheme={scheme}
+              />
             )
           })}
         </ul>
 
-        <div className="h-full w-[1px] bg-timberwolf ml-auto hidden lg:block" />
+        <div
+          className={`h-full w-[1px] bg-timberwolf ml-auto hidden lg:block ${{
+            transparent: 'bg-transparent',
+            onyx: 'bg-onyx'
+          }[scheme]
+            }`}
+        />
         <div className="w-[83px] items-center justify-center font-bold text-sm hidden lg:flex">
           EN
         </div>
-        <div className="h-full w-[1px] bg-timberwolf hidden lg:block" />
+        <div
+          className={`h-full w-[1px] bg-timberwolf hidden lg:block ${{
+            transparent: 'bg-transparent',
+            onyx: 'bg-onyx'
+          }[scheme]
+            }`}
+        />
         <div className="lg:w-[269px] flex items-center justify-center ml-auto lg:ml-0">
           <Button />
         </div>
@@ -83,13 +118,15 @@ const NavbarDesktop = () => {
 
 const NavDropdown = ({
   title,
-  options
+  options,
+  scheme
 }: {
   title: string
   options: {
     name: string
     href: string
   }[]
+  scheme: SchemeColor
 }) => {
   const [isHovered, setIsHovered] = useState(false)
 
@@ -113,7 +150,13 @@ const NavDropdown = ({
                 Solutions: 'w-[220px]',
                 Learn: 'w-[138px]'
               }[title]
-              }`}
+              }
+              ${{
+                transparent: 'bg-transparent',
+                onyx: '!bg-black border-onyx text-white'
+              }[scheme]
+              }
+              `}
           >
             <ul className="h-full w-full flex flex-col justify-start items-start pl-5 pt-4 pb-5">
               {options.map((option) => {
