@@ -14,7 +14,7 @@ const useNavbarDesktop = () => {
     Solutions: [
       {
         name: 'Permanent Storage',
-        href: '/solutions/permanent-storage'
+        href: '/permanentstorage'
       },
       {
         name: 'FIAT On-Ramp',

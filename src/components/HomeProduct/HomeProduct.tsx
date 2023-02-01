@@ -14,6 +14,7 @@ const HomeProduct = ({
   title: string
   children?: React.ReactNode
 }) => {
+
   return (
     <>
       <section className="bg-black px-[109px] pb-[120px]">
