@@ -22,7 +22,7 @@ export function useHorizontalScroll() {
         if (e.deltaY == 0) return
         e.preventDefault()
         el.scrollTo({
-          left: el.scrollLeft + e.deltaY,
+          left: el.scrollLeft + e.deltaY
           // behavior: 'smooth'
         })
       }
@@ -42,14 +42,12 @@ const Roadmap: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
       <div className="h-[1232px] w-full bg-red-500"></div>
-      <div
-        // @ts-ignore
-        ref={scrollRef}
-        className="h-96 w-[4000px] bg-neutral-100 border-red-100 text-[120px]"
-      >
-        Text should scroll Text should scroll Text should scroll Text should
-        scroll Text should scroll Text should scroll Text should scroll Text
-        should scroll
+      <div ref={scrollRef as any} className="w-full overflow-x-hidden">
+        <div className="h-96 w-[4000px] bg-neutral-100 border-red-100 text-[120px]">
+          Text should scroll Text should scroll Text should scroll Text should
+          scroll Text should scroll Text should scroll Text should scroll Text
+          should scroll
+        </div>
       </div>
       WIP.
       <Footer />
