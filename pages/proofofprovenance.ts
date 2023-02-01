@@ -1,4 +1,4 @@
-import { {{pascalCase name}} } from '@/templates'
+import { ProofOfProvenance } from '@/templates'
 import { GetServerSideProps } from 'next'
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -9,4 +9,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 
-export default {{pascalCase name}}
+export default ProofOfProvenance

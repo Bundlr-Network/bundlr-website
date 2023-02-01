@@ -18,6 +18,7 @@ import { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
+import { Socials } from '@/components/JoinTheCommunity/JoinTheCommunity'
 
 const useCommunity = () => {
   const PAGE_SEO = {
@@ -40,36 +41,6 @@ const useCommunity = () => {
     }
   ]
 
-  return { PAGE_SEO, COMMUNITY_VALUES }
-}
-
-const CTA: React.FC = () => {
-  return (
-    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 rounded-lg flex flex-col items-center justify-center">
-      <h2 className="text-black font-light mb-2 text-[76px] max-w-[399px] text-center leading-none mb-11">
-        Join the community
-      </h2>
-      <Button />
-
-      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image1"
-        />
-      </div>
-      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image2"
-        />
-      </div>
-    </div>
-  )
-}
-
-const Socials: React.FC = () => {
   const SOCIAL_LINKS = [
     {
       name: 'Discord',
@@ -103,26 +74,32 @@ const Socials: React.FC = () => {
     }
   ]
 
+  return { PAGE_SEO, COMMUNITY_VALUES, SOCIAL_LINKS }
+}
+
+const CTA: React.FC = () => {
   return (
-    // grid 3 columns
-    <ul className="grid grid-cols-3 gap-11">
-      {SOCIAL_LINKS.map((link, index) => {
-        const Icon = link.icon
-        return (
-          <a href={link.href} target="_blank" rel="noreferrer" key={index}>
-            <li
-              className="text-white font-light flex items-center justify-center gap-4 bg-smoky rounded-3xl py-11 text-4xl"
-              style={{
-                boxShadow: '1px 1px 0px rgba(255, 255, 255, .5)'
-              }}
-            >
-              <Icon />
-              {link.name}
-            </li>
-          </a>
-        )
-      })}
-    </ul>
+    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 overflow-hidden flex flex-col items-center justify-center">
+      <h2 className="text-black font-light mb-2 text-[76px] max-w-[399px] text-center leading-none mb-11">
+        Join the community
+      </h2>
+      <Button />
+
+      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
+        <img
+          src="/assets/community/cta-blocks-2.png"
+          className="w-full h-full rounded-lg"
+          alt="image1"
+        />
+      </div>
+      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
+        <img
+          src="/assets/community/cta-blocks-2.png"
+          className="w-full h-full rounded-lg"
+          alt="image2"
+        />
+      </div>
+    </div>
   )
 }
 
@@ -191,7 +168,7 @@ const NewsSection: React.FC = () => {
 }
 
 const Community: NextPage = () => {
-  const { PAGE_SEO, COMMUNITY_VALUES } = useCommunity()
+  const { PAGE_SEO, COMMUNITY_VALUES, SOCIAL_LINKS } = useCommunity()
 
   return (
     <>
@@ -214,7 +191,7 @@ const Community: NextPage = () => {
             <h1 className="max-w-[464px] font-light text-[76px] text-white">
               Join the #bundloooor community
             </h1>
-            <Socials />
+            <Socials links={SOCIAL_LINKS} />
           </div>
         </header>
 

@@ -49,7 +49,8 @@ const useNavbarDesktop = () => {
 
 export enum SchemeColor {
   'transparent' = 'transparent',
-  'onyx' = 'onyx'
+  'onyx' = 'onyx',
+  'black' = 'black'
 }
 
 const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
@@ -61,7 +62,8 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
         className={`flex items-center h-[90px] antialiased border-b font-robotoMono ${scheme && {
           timberwolf: 'border-timberwolf',
           transparent: 'border-transparent',
-          onyx: 'border-onyx'
+          onyx: 'border-onyx',
+          black: 'border-ghostWhite'
         }[scheme]
           }`}
       >
@@ -71,7 +73,8 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
         <div
           className={`h-full w-[1px] bg-timberwolf ${scheme && {
             transparent: 'bg-transparent',
-            onyx: 'bg-onyx'
+            onyx: 'bg-onyx',
+            black: 'bg-ghostWhite'
           }[scheme]
             }`}
         />
@@ -91,7 +94,8 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
         <div
           className={`h-full w-[1px] bg-timberwolf ml-auto hidden lg:block ${scheme && {
             transparent: 'bg-transparent',
-            onyx: 'bg-onyx'
+            onyx: 'bg-onyx',
+            black: 'bg-ghostWhite'
           }[scheme]
             }`}
         />
@@ -101,7 +105,8 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
         <div
           className={`h-full w-[1px] bg-timberwolf hidden lg:block ${scheme && {
             transparent: 'bg-transparent',
-            onyx: 'bg-onyx'
+            onyx: 'bg-onyx',
+            black: 'bg-ghostWhite'
           }[scheme]
             }`}
         />
@@ -153,7 +158,8 @@ const NavDropdown = ({
               }
               ${scheme && {
                 transparent: 'bg-transparent',
-                onyx: '!bg-black border-onyx text-white'
+                onyx: '!bg-black border-onyx text-white',
+                black: '!bg-onyx border-ghostWhite text-white'
               }[scheme]
               }
               `}

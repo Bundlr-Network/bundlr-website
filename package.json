@@ -29,6 +29,7 @@
     "@fontsource/space-grotesk": "^4.5.12",
     "@stitches/react": "^1.2.8",
     "critters": "^0.0.16",
+    "framer-motion": "^8.5.5",
     "next": "12.2.4",
     "next-plugin-preact": "^3.0.7",
     "next-seo": "^5.5.0",

@@ -1,5 +1,14 @@
-export {}
+export { }
 export { default as Home } from './Home'
 export { default as Community } from './Community'
 export { default as Faq } from './Faq'
 export { default as Solutions } from './Solutions'
+export { default as PartnerProgram } from './PartnerProgram'
+export { default as Developers } from './Developers'
+export { default as DescentralizedStorage } from './DescentralizedStorage'
+export { default as About } from './About'
+export { default as MediaKit } from './MediaKit'
+export { default as ProofOfProvenance } from './ProofOfProvenance'
+export { default as DataAvailability } from './DataAvailability'
+export { default as Roadmap } from './Roadmap'
+export { default as Blog } from './Blog'

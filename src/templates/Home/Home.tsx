@@ -5,6 +5,7 @@ import {
   HomeCloudImage,
   HomeHeader,
   HomeProduct,
+  HomeStats,
   HomeTrustedBy,
   HomeWhyUseBundlr,
   NavbarDesktop,
@@ -69,20 +70,43 @@ const useHome = () => {
     }
   ]
 
-  return { PAGE_SEO, WHY_USE_BUNDLR }
+  const PRODUCT_CONTENT = [
+    {
+      title: "Permanent Storage",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
+    },
+    {
+      title: "Fiat <br/>On-Ramp",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
+    },
+    {
+      title: "Preweave <br/><br/>",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
+    },
+    {
+      title: "Mutability Layer",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non."
+    }
+  ]
+
+  return { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT }
 }
 
 const Home: NextPage = () => {
-  const { PAGE_SEO, WHY_USE_BUNDLR } = useHome()
+  const { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT } = useHome()
 
   return (
     <>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
       <HomeHeader />
-      {/* <HomeStats /> */}
+      <HomeStats />
 
-      <HomeProduct />
+      <HomeProduct content={PRODUCT_CONTENT} title={"The Product"}>
+        <div className="h-[271px] text-white border border-white mt-[192px]">
+          Supported currencies
+        </div>
+      </HomeProduct>
 
       <section className='bg-ghostWhite pb-[144px]'>
         <HomeWhyUseBundlr content={WHY_USE_BUNDLR}>
