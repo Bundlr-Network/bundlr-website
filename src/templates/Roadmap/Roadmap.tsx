@@ -25,7 +25,7 @@ const Roadmap: NextPage = () => {
         <h2>The Roadmap</h2>
         <p></p>
       </div> */}
-      WIP
+      WIP.
       <Footer />
     </>
   )
