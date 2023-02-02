@@ -29,7 +29,10 @@ const CTA: React.FC = () => {
       <h2 className="text-black font-light mb-2 text-[76px] max-w-[668px] text-center leading-none mb-11">
         Ready to Become a <br /> BUNDLOOOOR?
       </h2>
-      <Button />
+      <Button>
+        START BUILDING
+        <DevIcon />
+      </Button>
 
       <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
         <img

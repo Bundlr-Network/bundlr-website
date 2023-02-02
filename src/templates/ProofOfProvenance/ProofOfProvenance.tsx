@@ -2,6 +2,7 @@ import { Button, Footer, HomeProduct, NavbarDesktop } from '@/components'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
+import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 
@@ -18,11 +19,13 @@ const useProofOfProvenance = () => {
     {
       title: 'Decentralized Storage',
       description:
-        'Performant, scalable, and seamless data, stored permanently on Arweave '
+        'Performant, scalable, and seamless data, stored permanently on Arweave ',
+      href: '/solutions/decentralized-storage'
     },
     {
       title: 'Optimistic Data Availability',
-      description: 'Pay for consensus only when you need it'
+      description: 'Pay for consensus only when you need it',
+      href: '/solutions/data-availability'
     }
   ]
 
@@ -35,7 +38,10 @@ const CTA: React.FC = () => {
       <h2 className="text-black font-light mb-2 text-[76px] max-w-[668px] text-center leading-none mb-11">
         Ready to Become a <br /> BUNDLOOOOR?
       </h2>
-      <Button />
+      <Button>
+        START BUILDING
+        <DevIcon />
+      </Button>
 
       <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
         <img

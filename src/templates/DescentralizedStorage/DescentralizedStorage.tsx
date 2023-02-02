@@ -2,6 +2,7 @@ import { Button, Footer, HomeProduct, NavbarDesktop } from '@/components'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
+import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 
@@ -19,12 +20,14 @@ const useDescentralizedStorage = () => {
   const PRODUCT_CONTENT = [
     {
       title: 'Optimistic Data Availability',
-      description: 'Pay for consensus only when you need it'
+      description: 'Pay for consensus only when you need it',
+      href: '/solutions/data-availability'
     },
     {
       title: 'Proof of Provenance',
       description:
-        'Identify original information by accurately attributing origin'
+        'Identify original information by accurately attributing origin',
+      href: '/solutions/proof-of-provenance'
     }
   ]
 
@@ -37,7 +40,10 @@ const CTA: React.FC = () => {
       <h2 className="text-black font-light mb-2 text-[76px] max-w-[668px] text-center leading-none mb-11">
         Ready to Become a <br /> BUNDLOOOOR?
       </h2>
-      <Button />
+      <Button>
+        START BUILDING
+        <DevIcon />
+      </Button>
 
       <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
         <img
