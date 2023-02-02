@@ -10,6 +10,7 @@ const HomeProduct = ({
   content: {
     title: string
     description: string
+    href: string
   }[]
   title: string
   children?: React.ReactNode
@@ -21,26 +22,28 @@ const HomeProduct = ({
           <SectionTitle title={title} />
         </div>
         {/* 4 column grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${content.length} gap-4 mt-[182px]`}>
+        <div className={`grid gap-4 mt-[182px]`} style={{
+          gridTemplateColumns: `repeat(${content.length}, 1fr)`
+        }}>
           {/* 1st column title, text, and find out more button */}
-          {content.map((content, index) => {
+          {content.map((info, index) => {
             return (
               <div
-                key={`content-${index}`}
+                key={`info-${index}`}
                 className="flex flex-col gap-4 text-white items-start max-w-[275px]"
               >
                 <h3
-                  className="text-[46px] leading-none"
+                  className="text-[46px] leading-none font-fkDisplay"
                   dangerouslySetInnerHTML={{
-                    __html: content.title
+                    __html: info.title
                   }}
                 ></h3>
                 <p className="text-lg mt-auto font-robotoMono font-normal">
-                  {content.description}
+                  {info.description}
                 </p>
-                <button className="text-white font-robotoMono text-base mt-auto">
+                <a href={info.href} className="text-white font-robotoMono text-base mt-auto hover:font-bold">
                   [ Find out more ]
-                </button>
+                </a>
               </div>
             )
           })}

@@ -1,13 +1,19 @@
 import { useEffect, useState } from 'react'
 
 import Button from '../Button'
+import { DevIcon } from '@/svg'
 
 const useHomeHeader = () => {
-  return {}
+
+  const TITLE = "THE WORLD’S NEXT DATA LAYER"
+
+  const SUBTITLE = "Store your data on the trustless source of truth"
+
+  return { TITLE, SUBTITLE }
 }
 
 const HomeHeader = () => {
-  const { } = useHomeHeader()
+  const { TITLE, SUBTITLE } = useHomeHeader()
 
   return (
     <>
@@ -22,15 +28,18 @@ const HomeHeader = () => {
         }}
       >
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px]">
-          <h1 className="text-[76px]">
-            Creating the trustless source of truth
+          <h1 className="text-[76px] font-fkDisplay">
+            {TITLE}
           </h1>
           <h2 className='font-robotoMono max-w-[327px] leading-6 font-normal'>
-            Your infinitely scalable, reliable and composable data network
+            {SUBTITLE}
           </h2>
         </div>
         <div className="flex gap-[21px] mt-[450px] items-center font-robotoMono">
-          <Button />
+          <Button>
+            START BUILDING
+            <DevIcon />
+          </Button>
           Permanent on Arweave
         </div>
       </header>

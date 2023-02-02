@@ -1,8 +1,8 @@
-import { BracesIcon, BundlrIcon, BurgerMenuIcon, ParenthesisIcon } from '@/svg'
-import { useEffect, useState } from 'react'
+import { BracesIcon, BundlrIcon, DevIcon, ParenthesisIcon } from '@/svg'
 
 import Button from '../Button'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const useNavbarDesktop = () => {
   const MENU_OPTIONS: {
@@ -13,23 +13,28 @@ const useNavbarDesktop = () => {
   } = {
     Solutions: [
       {
-        name: 'Permanent Storage',
-        href: '/solutions/permanent-storage'
+        name: 'Data Availability',
+        href: '/solutions/data-availability'
       },
       {
-        name: 'FIAT On-Ramp',
-        href: '/solutions/fiat-on-ramp'
+        name: 'Descentralized Storage',
+        href: '/solutions/descentralized-storage'
       },
       {
-        name: 'PreWeave',
-        href: '/solutions/preweave'
-      },
-      {
-        name: 'Mutability Layer',
-        href: '/solutions/mutability-layer'
+        name: 'Proof of Provenance',
+        href: '/solutions/proof-of-provenance'
       }
     ],
-    Developers: [],
+    'Use Cases': [
+      {
+        name: 'Use Cases',
+        href: '/use-cases'
+      }
+    ],
+    Developers: [{
+      name: 'Developers',
+      href: '/developers'
+    }],
     Learn: [
       {
         name: 'About',
@@ -40,8 +45,10 @@ const useNavbarDesktop = () => {
         href: '/learn/blog'
       }
     ],
-    Community: [],
-    Network: []
+    Community: [{
+      name: 'Community',
+      href: '/community'
+    }],
   }
 
   return { MENU_OPTIONS }
@@ -59,59 +66,81 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
   return (
     <>
       <nav
-        className={`flex items-center h-[90px] antialiased border-b font-robotoMono ${scheme && {
-          timberwolf: 'border-timberwolf',
-          transparent: 'border-transparent',
-          onyx: 'border-onyx',
-          black: 'border-ghostWhite'
-        }[scheme]
+        className={`flex items-center h-[90px] antialiased border-b font-robotoMono ${scheme &&
+          {
+            timberwolf: 'border-timberwolf',
+            transparent: 'border-transparent',
+            onyx: 'border-onyx',
+            black: 'border-ghostWhite'
+          }[scheme]
           }`}
       >
-        <div className="w-[120px] flex items-center justify-center">
-          <BundlrIcon />
-        </div>
+        <Link href="/">
+          <div className="w-[120px] flex items-center justify-center cursor-pointer">
+            <BundlrIcon />
+          </div>
+        </Link>
         <div
-          className={`h-full w-[1px] bg-timberwolf ${scheme && {
-            transparent: 'bg-transparent',
-            onyx: 'bg-onyx',
-            black: 'bg-ghostWhite'
-          }[scheme]
+          className={`h-full w-[1px] bg-timberwolf ${scheme &&
+            {
+              transparent: 'bg-transparent',
+              onyx: 'bg-onyx',
+              black: 'bg-ghostWhite'
+            }[scheme]
             }`}
         />
         <ul className="items-center ml-[40px] gap-[30px] text-sm hidden lg:flex">
-          {Object.keys(MENU_OPTIONS).map((key) => {
-            return (
-              <NavDropdown
-                key={key}
-                title={key}
-                options={MENU_OPTIONS[key]}
-                scheme={scheme}
-              />
-            )
+          {Object.keys(MENU_OPTIONS).map((key, index) => {
+            if (MENU_OPTIONS[key].length === 1) {
+              return (
+                <Link
+                  href={MENU_OPTIONS[key][0].href}
+                  key={`menu-option-${index}`}
+                >
+                  <div className="cursor-pointer  px-4 uppercase font-bold">
+                    {MENU_OPTIONS[key][0].name}
+                  </div>
+                </Link>
+              )
+            } else {
+              return (
+                <NavDropdown
+                  key={key}
+                  title={key}
+                  options={MENU_OPTIONS[key]}
+                  scheme={scheme}
+                />
+              )
+            }
           })}
         </ul>
 
         <div
-          className={`h-full w-[1px] bg-timberwolf ml-auto hidden lg:block ${scheme && {
-            transparent: 'bg-transparent',
-            onyx: 'bg-onyx',
-            black: 'bg-ghostWhite'
-          }[scheme]
+          className={`h-full w-[1px] bg-timberwolf ml-auto hidden lg:block ${scheme &&
+            {
+              transparent: 'bg-transparent',
+              onyx: 'bg-onyx',
+              black: 'bg-ghostWhite'
+            }[scheme]
             }`}
         />
         <div className="w-[83px] items-center justify-center font-bold text-sm hidden lg:flex">
           EN
         </div>
         <div
-          className={`h-full w-[1px] bg-timberwolf hidden lg:block ${scheme && {
-            transparent: 'bg-transparent',
-            onyx: 'bg-onyx',
-            black: 'bg-ghostWhite'
-          }[scheme]
+          className={`h-full w-[1px] bg-timberwolf hidden lg:block ${scheme &&
+            {
+              transparent: 'bg-transparent',
+              onyx: 'bg-onyx',
+              black: 'bg-ghostWhite'
+            }[scheme]
             }`}
         />
         <div className="lg:w-[269px] flex items-center justify-center ml-auto lg:ml-0">
-          <Button />
+          <Button>
+            START BUILDING
+            <DevIcon />
+          </Button>
         </div>
         <div className="flex lg:hidden ml-[10px] mr-[10px]">
           <MenuMobile />
@@ -142,21 +171,21 @@ const NavDropdown = ({
         onMouseLeave={() => setIsHovered(false)}
         className="relative h-[89px] flex items-center justify-center"
       >
-        <a
-          href={`/${title.toLowerCase()}`}
+        <div
           className=" px-4 uppercase font-bold "
         >
           {title}
-        </a>
+        </div>
         {options.length > 0 && (
           <div
             className={`absolute top-[89px] left-0 bg-seashell ${isHovered ? 'block' : 'hidden'
               } rounded-b-[6px] border border-timberwolf ${{
-                Solutions: 'w-[220px]',
+                Solutions: 'w-[260px]',
                 Learn: 'w-[138px]'
               }[title]
               }
-              ${scheme && {
+              ${scheme &&
+              {
                 transparent: 'bg-transparent',
                 onyx: '!bg-black border-onyx text-white',
                 black: '!bg-onyx border-ghostWhite text-white'

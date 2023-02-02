@@ -1,11 +1,129 @@
+import { DiscordIcon, GitIcon, MediumIcon, MirrorIcon, TelegramIcon, TwitterIcon } from "@/svg"
+
 import FooterDesktop from "../FooterDesktop"
 import FooterMobile from "../FooterMobile"
 
 const Footer = () => {
+
+  const DEFINITIONS = [
+    {
+      title: 'BUNDLR',
+      options: [
+        {
+          name: 'About',
+          href: '/learn/about'
+        },
+        {
+          name: 'Join our team',
+          href: '#',
+          label: 'Hiring'
+        },
+        {
+          name: 'FAQs',
+          href: '/faq'
+        },
+        {
+          name: 'Media Kit',
+          href: '/media-kit'
+        },
+        {
+          name: 'Roadmap',
+          href: '/roadmap'
+        }
+      ]
+    },
+    {
+      title: 'DEVELOPERS',
+      options: [
+        {
+          name: 'Get Started',
+          href: 'https://docs.bundlr.network/sdk/basic-features/'
+        },
+        {
+          name: 'Docs',
+          href: 'https://docs.bundlr.network/'
+        },
+        {
+          name: 'Tutorials',
+          href: '#waiting-luke-to-create'
+        },
+        {
+          name: 'JS SDK',
+          href: 'https://docs.bundlr.network/sdk/basic-features/installing-the-sdks'
+        }
+      ]
+    },
+    {
+      title: 'PARTICIPATE',
+      options: [
+        {
+          name: 'Community',
+          href: '/community'
+        },
+        {
+          name: 'Partner Program',
+          href: '/partner-program'
+        }
+      ],
+      footer: (
+        <div className="flex items-center gap-[21px] mt-auto pb-[10px]">
+          <a
+            href="https://medium.com/bundlr-network"
+            target={'_blank'}
+            rel="nofollow noreferrer"
+            className="hover:rotate-6 hover:scale-105 transition-all"
+          >
+            <MediumIcon />
+          </a>
+          <a
+            href="https://mirror.xyz/0x9AbB09BF9F58E72A532E859d798eB4E8e10A35e1"
+            target={'_blank'}
+            rel="nofollow noreferrer"
+            className="hover:rotate-6 hover:scale-105 transition-all"
+          >
+            <MirrorIcon className="w-6 h-6 text-black" />
+          </a>
+          <a
+            href="https://twitter.com/BundlrNetwork"
+            target={'_blank'}
+            rel="nofollow noreferrer"
+            className="hover:rotate-6 hover:scale-105 transition-all"
+          >
+            <TwitterIcon />
+          </a>
+          <a
+            href="https://discord.gg/bundlr"
+            target={'_blank'}
+            rel="nofollow noreferrer"
+            className="hover:rotate-6 hover:scale-105 transition-all"
+          >
+            <DiscordIcon />
+          </a>
+          <a
+            href="https://github.com/Bundlr-Network"
+            target={'_blank'}
+            rel="nofollow noreferrer"
+            className="hover:rotate-6 hover:scale-105 transition-all"
+          >
+            <GitIcon />
+          </a>
+          <a
+            href="https://t.me/bundlr"
+            target={'_blank'}
+            rel="nofollow noreferrer"
+            className="hover:rotate-6 hover:scale-105 transition-all"
+          >
+            <TelegramIcon />
+          </a>
+        </div>
+      )
+    }
+  ]
+
   return (
     <>
-      <FooterMobile />
-      <FooterDesktop />
+      <FooterMobile data={DEFINITIONS} />
+      <FooterDesktop data={DEFINITIONS} />
     </>
   )
 }

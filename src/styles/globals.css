@@ -36,7 +36,7 @@ details[open] summary ~ * {
 
 @font-face {
   font-family: 'FKDisplay';
-  src: url('../asset/FKDisplay-RegularAlt.ttf');
+  src: url('/assets/fonts/fkd.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }

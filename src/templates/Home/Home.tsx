@@ -13,10 +13,12 @@ import {
   Testimonial
 } from '@/components'
 
+import { ButtonScheme } from '@/components/Button/Button'
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { url } from 'inspector'
+import useHorizontalScroll from '@/hooks/useHorizontalScroll'
 
 const useHome = () => {
   const PAGE_SEO = {
@@ -26,66 +28,64 @@ const useHome = () => {
 
   const WHY_USE_BUNDLR = [
     {
-      title: 'Multichain Compatible',
-      description: 'Upload your data from any major blockchain'
-    },
-
-    {
-      title: 'Pay With Any Token',
-      description: 'Pay in any major token including ETH, SOL, MATIC, and more'
-    },
-
-    {
-      title: 'Pay Once. Stored Forever.',
+      title: 'Performant',
       description:
-        'Pay just once when you have your data stored forever on Arweave'
+        'Instant uploads and retrievability. Finalized in under 8 milliseconds'
     },
 
     {
-      title: 'Own Your Data',
+      title: 'Scalable',
       description:
-        'With no singular entity holding your data, you’re always in control'
+        'Scales to millions of transactions per second with horizontal scaling'
     },
 
     {
-      title: 'Unlimited Storage',
+      title: 'Seamless',
       description:
-        'Thanks to Arweave, you’ll never be restricted by data limits ever again'
+        'Integrate with 3-4 lines of code. Sign and pay in 14 major tokens'
     },
 
     {
-      title: 'Guaranteed Seeding',
-      description: 'Your data is guaranteed to be uploaded to Arweave'
+      title: 'Enduring',
+      description: 'Affordable, long-term data solutions'
     },
 
     {
-      title: 'Instant Data',
+      title: 'Verifiable',
       description:
-        'From the moment you upload, your data is instantly accessible'
+        'Quick and easy to verify the provenance of data and transactions'
     },
 
     {
-      title: 'Free Transactions',
-      description: 'Free for data uploads under 100kb'
+      title: 'Customizable',
+      description: 'Customize data with metadata tags for easy querying'
     }
   ]
 
   const PRODUCT_CONTENT = [
     {
-      title: "Permanent Storage",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
+      title: 'Permanent Storage',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+      href: '#'
     },
     {
-      title: "Fiat <br/>On-Ramp",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
+      title: 'Fiat <br/>On-Ramp',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+      href: '#'
     },
     {
-      title: "Preweave <br/><br/>",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
+      title: 'Preweave <br/><br/>',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+      href: '#'
     },
     {
-      title: "Mutability Layer",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non."
+      title: 'Mutability Layer',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+      href: '#'
     }
   ]
 
@@ -94,6 +94,7 @@ const useHome = () => {
 
 const Home: NextPage = () => {
   const { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT } = useHome()
+  const scrollRef = useHorizontalScroll()
 
   return (
     <>
@@ -102,37 +103,127 @@ const Home: NextPage = () => {
       <HomeHeader />
       <HomeStats />
 
-      <HomeProduct content={PRODUCT_CONTENT} title={"The Product"}>
-        <div className="h-[271px] text-white border border-white mt-[192px]">
+      <HomeProduct content={PRODUCT_CONTENT} title={'The Product'}>
+        {/* <div className="h-[271px] text-white border border-white mt-[192px]">
           Supported currencies
-        </div>
+        </div> */}
       </HomeProduct>
 
-      <section className='bg-ghostWhite pb-[144px]'>
+      <section className="bg-ghostWhite pb-[144px]">
         <HomeWhyUseBundlr content={WHY_USE_BUNDLR}>
           <div className="mx-44 rounded-[20px] overflow-hidden">
             <HomeTrustedBy />
           </div>
         </HomeWhyUseBundlr>
       </section>
-      <HomeCloudImage />
 
-      <section className='px-[109px] mt-[122px]'>
-        <SectionTitle title='Testimonials' />
+      <div
+        ref={scrollRef as any}
+        className="w-screen overflow-x-hidden flex h-screen"
+      >
+        <div className="h-full w-screen shrink-0 font-fkDisplay text-7xl flex items-center justify-center">
+          Data is Evolving
+        </div>
+        <div className="relative h-full w-screen shrink-0 flex items-center justify-between flex-col pt-24">
+          <h2 className="text-7xl font-fkDispla z-10">On-Premise Servers</h2>
+          <p className="font-robotoMono text-base max-w-md text-center z-10 mb-32">
+            In the internet’s early days, online data was stored in local
+            servers. This was inconvenient and expensive for most people.
+          </p>
+          <div />
+          {/* centered absolute image  */}
+          <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-[90%]">
+            <img src="/assets/home/particles.png" alt="On-Premise Servers" />
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-[90%]">
+            <img src="/assets/home/servers.png" alt="On-Premise Servers" />
+          </div>
+        </div>
+        <div className="relative h-full w-screen	shrink-0 px-[109px] pt-[120px]">
+          <div className="w-2/5 ml-auto">
+            <h2 className="text-7xl font-fkDispla z-10">The Cloud</h2>
+            <div className="flex flex-col gap-6 mt-12 ml-16">
+              <p className="font-robotoMono text-base max-w-md z-10">
+                With the advent of the cloud, data storage became more
+                affordable, convenient, and performant.
+              </p>
+              <p className="font-robotoMono text-base max-w-md z-10">
+                But, data centralized in the cloud.
+              </p>
+            </div>
+          </div>
+          {/* center of screen absolute image */}
+          <img
+            src="/assets/home/cloud.png"
+            alt="cloud"
+            className="absolute bottom-0 -left-32 right-0 mx-auto max-w-[80%]"
+          />
+        </div>
+        <div className="relative h-full w-screen flex flex-col items-center justify-start	shrink-0 px-[109px] pt-[120px]">
+          <div>
+            <div className="flex flex-col gap-6 mt-4">
+              <p className="font-robotoMono text-base max-w-md z-10 text-center">
+                Bundlr is the successor to on-premise servers and the cloud.
+              </p>
+              <p className="font-robotoMono text-base max-w-md z-10 text-center">
+                Through cryptographic guarantees and trustless provenance, you
+                can now secure your data, make it censorship resistant and
+                available forever – all while retaining the performance and
+                convenience that you expect
+              </p>
+            </div>
+          </div>
+          {/* center of screen absolute image */}
+          <img
+            src="/assets/home/dataverse.png"
+            alt="dataverse"
+            className="absolute bottom-0 left-0 right-0 mx-auto"
+          />
+        </div>
+        <div className="relative h-full w-screen flex flex-col items-center justify-start	shrink-0 px-[109px] pt-[120px]">
+          <div>
+            <div className="flex flex-col gap-6 mt-4">
+              <p className="text-center text-7xl font-fkDispla z-10">
+                Bundlr is the <br /> trustless source of truth
+              </p>
+              <div className="self-center">
+                <Button>
+                  LEARN MORE
+                  <DevIcon />
+                </Button>
+              </div>
+            </div>
+          </div>
+          {/* center of screen absolute image */}
+          <img
+            src="/assets/home/dataverse.png"
+            alt="dataverse"
+            className="absolute bottom-0 left-0 right-0 mx-auto"
+          />
+        </div>
+      </div>
+
+      <section className="px-[109px] mt-[122px]">
+        <SectionTitle title="Testimonials" />
         <div className="flex mt-[89px] justify-center relative">
-          <h2 className='text-[76px] font-light max-w-[407px] leading-none'>Endorsed by the best</h2>
-          <p className='absolute bottom-0 right-0 font-robotoMono w-[321px]'>Our clients love us, but don’t just take our word for it. </p>
+          <h2 className="text-[76px] font-light leading-none font-fkDisplay">
+            What Users Say About Us
+          </h2>
         </div>
         <Testimonial />
       </section>
+
       <CtaSection>
         <p className="text-[62px] font-light leading-none">
-          We’re here to revolutionize data storage. Try us.
+          Ready to Become a BUNDLOOOOR?
         </p>
-        <button className='mt-[52px] font-robotoMono text-sm bg-white text-black flex items-center gap-2 px-4 py-3 rounded-full hover:font-bold'>
-          START BUILDING
-          <DevIcon color='black' />
-        </button>
+
+        <div className="mt-10">
+          <Button scheme={ButtonScheme.white}>
+            START BUILDING
+            <DevIcon color="black" />
+          </Button>
+        </div>
       </CtaSection>
       <Footer />
     </>

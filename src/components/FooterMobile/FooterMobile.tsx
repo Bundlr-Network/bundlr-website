@@ -11,78 +11,16 @@ import {
 } from '@/svg'
 import { useEffect, useState } from 'react'
 
-const useFooterMobile = () => {
-  const DEFINITIONS = [
-    {
-      title: 'BUNDLR',
-      options: [
-        {
-          name: 'About',
-          href: '/learn/about'
-        },
-        {
-          name: 'Join our team',
-          href: '/learn/join-our-team',
-          label: 'Hiring'
-        },
-        {
-          name: 'FAQs',
-          href: '/learn/faqs'
-        },
-        {
-          name: 'Media Kit',
-          href: '/media-kit'
-        },
-        {
-          name: 'Roadmap',
-          href: '/roadmap'
-        }
-      ]
-    },
-    {
-      title: 'DEVELOPERS',
-      options: [
-        {
-          name: 'Get Started',
-          href: '/learn/get-started'
-        },
-        {
-          name: 'Docs',
-          href: '/learn/docs'
-        },
-        {
-          name: 'Resources',
-          href: '/learn/resources'
-        },
-        {
-          name: 'Tutorials',
-          href: '/learn/tutorials'
-        },
-        {
-          name: 'JS Client',
-          href: '/learn/js-client'
-        }
-      ]
-    },
-    {
-      title: 'PARTICIPATE',
-      options: [
-        {
-          name: 'Testnet Faucet',
-          href: '/testnet-faucet'
-        },
-        {
-          name: 'Run a Validator',
-          href: '/learn/run-a-validator'
-        }
-      ]
-    }
-  ]
-  return { DEFINITIONS }
-}
-
-const FooterMobile = () => {
-  const { DEFINITIONS } = useFooterMobile()
+const FooterMobile = ({ data }: {
+  data: {
+    title: string
+    options: {
+      name: string
+      href: string
+      label?: string
+    }[]
+  }[]
+}) => {
 
   return (
     <>
@@ -92,7 +30,7 @@ const FooterMobile = () => {
           THE FUTURE OF <br />
           DATA STORAGE
         </p>
-        {DEFINITIONS.map((definition) => (
+        {data.map((definition) => (
           <ExpandableSection
             title={definition.title}
             options={definition.options}
