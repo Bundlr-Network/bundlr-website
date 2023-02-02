@@ -32,7 +32,7 @@ const MediaKit: NextPage = () => {
       <section className="px-[109px] mt-28">
         <h2 className='text-5xl mb-16'>Brand Guidelines</h2>
         <div className="">
-          <h3 className="text-3xl font-spaceGrotesk font-light">Logo</h3>
+          <h3 className="text-3xl font-fkDisplay font-light">Logo</h3>
           <div className="py-28 flex items-center justify-center w-[726px] bg-white rounded-3xl mt-5">
             <MediaKitBundlrLogoIcon />
           </div>
@@ -47,7 +47,7 @@ const MediaKit: NextPage = () => {
           </div>
         </div>
         <div className="mt-28">
-          <h3 className="text-3xl font-spaceGrotesk font-light">
+          <h3 className="text-3xl font-fkDisplay font-light">
             Color Variations
           </h3>
           <div className="grid grid-cols-2 w-[726px] grid-row gap-y-4 mt-5">
@@ -66,7 +66,7 @@ const MediaKit: NextPage = () => {
           </div>
         </div>
         <div className="mt-28">
-          <h3 className="text-3xl font-spaceGrotesk font-light">Common Errors</h3>
+          <h3 className="text-3xl font-fkDisplay font-light">Common Errors</h3>
           <div className="grid grid-cols-2 grid-row gap-y-6 mt-5  w-[726px] ">
             <div className="max-w-[348px] flex flex-col gap-4">
               <div className="border-2 border-white flex flex-col items-center justify-center  h-[157px] rounded-3xl bg-white">
@@ -104,7 +104,7 @@ const MediaKit: NextPage = () => {
           </div>
         </div>
         <div className="mt-28 mb-28">
-          <h3 className="text-3xl font-spaceGrotesk font-light">
+          <h3 className="text-3xl font-fkDisplay font-light">
             Primary colors
           </h3>
           <div className="grid grid-cols-2 w-[726px] grid-row gap-y-4 mt-5">

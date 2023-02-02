@@ -92,7 +92,7 @@ const ProofOfProvenance: NextPage = () => {
         {/* 2 columns grid */}
         <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[109px] leading-none pt-[83px]">
           <div className="max-w-[501px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Trustless Truth
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -101,7 +101,7 @@ const ProofOfProvenance: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[441px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Searchability
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -109,7 +109,7 @@ const ProofOfProvenance: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Seamless Integration
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -117,7 +117,7 @@ const ProofOfProvenance: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Instant
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -130,7 +130,7 @@ const ProofOfProvenance: NextPage = () => {
       <section className="px-[109px] flex py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
-            <h2 className="text-4xl font-spaceGrotesk">Proof of Time</h2>
+            <h2 className="text-4xl font-fkDisplay">Proof of Time</h2>
             <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">
               Receive signed receipts timestamps down to the millisecond that
               serve as a verifiable ‘proof of time’ for when information was
@@ -138,7 +138,7 @@ const ProofOfProvenance: NextPage = () => {
             </p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-spaceGrotesk">
+            <h2 className="text-4xl font-fkDisplay">
               Custom Metadata Tagging
             </h2>
             <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">

@@ -81,7 +81,7 @@ const Solutions: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
       {/* <section className='flex flex-col items-center justify-center gap-8 pt-28'>
-        <h1 className='text-7xl font-spaceGrotesk font-light'>Technology</h1>
+        <h1 className='text-7xl font-fkDisplay font-light'>Technology</h1>
         <p className='font-robotoMono max-w-[830px] text-center'>Bundlr is the world’s next data layer. It provides true provenance with data availability guarantees backed by permanent, decentralized storage.</p>
         <Button />
       </section> */}

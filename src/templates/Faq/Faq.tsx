@@ -18,7 +18,7 @@ enum FaqCategory {
 const CTA: React.FC = () => {
   return (
     <div className="h-[616px] relative bg-black text-white py-4 px-6 flex flex-col items-center justify-center overflow-hidden">
-      <h2 className="text-white font-light font-spaceGrotesk text-6xl max-w-[670px] text-center leading-none mb-11">
+      <h2 className="text-white font-light font-fkDisplay text-6xl max-w-[670px] text-center leading-none mb-11">
         Can&apos;t Find What You&apos;re Looking For?
       </h2>
       <button className='font-robotoMono uppercase text-sm bg-white text-black flex items-center gap-3 px-4 py-3 rounded-full hover:font-bold'>
@@ -127,7 +127,7 @@ const ExpandableSection = ({
 }) => {
   return (
     <details className="last:border-b-0 border-b-[2.5px] border-dotted pt-4 pb-8 border-gray-400 border-spacing-4">
-      <summary className="text-2xl font-light mt-[26px] flex justify-between items-center cursor-pointer font-spaceGrotesk">
+      <summary className="text-2xl font-light mt-[26px] flex justify-between items-center cursor-pointer font-fkDisplay">
         {title}
         <PlusFooterDetailIcon />
         <MinusFooterDetailIcon />
@@ -154,7 +154,7 @@ const Faq: NextPage = () => {
       {/* Categories filter  */}
       <section className="max-w-[976px] ml-auto mr-auto">
         <div className="flex justify-between items-center pb-9 pt-32">
-          <h1 className="font-spaceGrotesk text-5xl font-light">FAQs</h1>
+          <h1 className="font-fkDisplay text-5xl font-light">FAQs</h1>
           {/* search box with icon on left of the input area */}
           <div className="flex items-center border border-gray-400 rounded-full py-2 px-4 text-lg font-robotoMono gap-3 ">
             <SearchIcon className="ml-2 text-gray-600" />

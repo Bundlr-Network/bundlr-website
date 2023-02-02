@@ -85,7 +85,7 @@ const DataAvailability: NextPage = () => {
       <section className='px-[109px] flex py-56 relative  bg-ghostWhite'>
         <div className="flex flex-col gap-36 w-1/2 ml-auto">
           <div className="">
-            <h2 className='text-4xl font-spaceGrotesk'>What is Optimistic Data Availability?</h2>
+            <h2 className='text-4xl font-fkDisplay'>What is Optimistic Data Availability?</h2>
             <p className='font-robotoMono max-w-[770px] pl-28 pt-16 text-lg'>Bundlr is the trust assumption, but it always gets settled on L1, Arweave.</p>
           </div>
         </div>
@@ -101,7 +101,7 @@ const DataAvailability: NextPage = () => {
         {/* 2 columns grid */}
         <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[109px] leading-none pt-[83px]">
           <div className="max-w-[501px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Scales to Millions of TPS
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -109,7 +109,7 @@ const DataAvailability: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[441px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Optimize Costs
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -117,7 +117,7 @@ const DataAvailability: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Seamless Integration
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -125,7 +125,7 @@ const DataAvailability: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Instant Finality
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -138,14 +138,14 @@ const DataAvailability: NextPage = () => {
       <section className="px-[109px] flex py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
-            <h2 className="text-4xl font-spaceGrotesk">Opt-in to Consensus</h2>
+            <h2 className="text-4xl font-fkDisplay">Opt-in to Consensus</h2>
             <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">
               People pay for consensus to update the state of a blockchain in every transaction. For non-financial transactions, this is wasteful and unnecessarily increases blockchain fees.
             </p>
             <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">For such use cases, you can have stateless transactions, which don’t require consensus. This allows incredibly low latency transactions at industrial scales for an affordable price.</p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-spaceGrotesk">
+            <h2 className="text-4xl font-fkDisplay">
               “And What If I Need My Data On-chain?”
             </h2>
             <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">

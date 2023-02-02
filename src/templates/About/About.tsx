@@ -103,7 +103,7 @@ const About: NextPage = () => {
       </div>
 
       <section className='flex pl-[109px]'>
-        <p className='text-5xl font-spaceGrotesk'>Our Team</p>
+        <p className='text-5xl font-fkDisplay'>Our Team</p>
         <ul className="flex gap-7 flex-wrap ml-10">
           {NEWS_ITEMS.map((item, index) => {
             return (

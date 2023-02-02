@@ -93,7 +93,7 @@ const DescentralizedStorage: NextPage = () => {
         {/* 2 columns grid */}
         <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[109px] leading-none pt-[83px]">
           <div className="max-w-[501px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Scales to Millions of TPS
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -102,7 +102,7 @@ const DescentralizedStorage: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[441px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Instant Uploads
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -110,7 +110,7 @@ const DescentralizedStorage: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Seamless Integration
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -118,7 +118,7 @@ const DescentralizedStorage: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Multichain
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -128,7 +128,7 @@ const DescentralizedStorage: NextPage = () => {
         </div>
       </section>
       <section className="relative h-[911px] px-[109px]">
-        <h2 className="text-5xl font-spaceGrotesk py-48 w-[440px]">
+        <h2 className="text-5xl font-fkDisplay py-48 w-[440px]">
           Data Stored for as Long as You Need
         </h2>
         <img
@@ -143,7 +143,7 @@ const DescentralizedStorage: NextPage = () => {
             <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11">
               {/* make image as background of rectangle box */}
               <div className="flex flex-col gap-4 px-5 pb-10">
-                <h3 className="text-black font-light text-5xl font-spaceGrotesk">
+                <h3 className="text-black font-light text-5xl font-fkDisplay">
                   Arweave
                 </h3>
                 <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
@@ -167,7 +167,7 @@ const DescentralizedStorage: NextPage = () => {
             <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11 h-full">
               {/* make image as background of rectangle box */}
               <div className="flex flex-col gap-4 px-5 pb-10">
-                <h3 className="text-black font-light text-5xl font-spaceGrotesk">
+                <h3 className="text-black font-light text-5xl font-fkDisplay">
                   Preweave
                 </h3>
                 <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
@@ -194,11 +194,11 @@ const DescentralizedStorage: NextPage = () => {
         </div>
         <div className="flex flex-col gap-36 w-1/2 ml-auto">
           <div className="">
-            <h2 className='text-4xl font-spaceGrotesk'>Lightning Fast Uploads, at Industrial Scale</h2>
+            <h2 className='text-4xl font-fkDisplay'>Lightning Fast Uploads, at Industrial Scale</h2>
             <p className='font-robotoMono max-w-[770px] pl-28 pt-16 text-lg'>With uploads time under 8 milliseconds and the <u>ability to  scale to millions of transactions per seconds</u>, Bundlr’s performance is on par with traditional providers. Bundlr is ready to store the world’s data.</p>
           </div>
           <div className="">
-            <h2 className='text-4xl font-spaceGrotesk'>Seamless for Developers</h2>
+            <h2 className='text-4xl font-fkDisplay'>Seamless for Developers</h2>
             <p className='font-robotoMono max-w-[770px] pl-28 pt-16 text-lg'>Our intuitive docs and SDK help you integrate Bundlr with just 3-4 lines of code. Further, you can sign and pay for storage in of our 14 supported tokens, including ETH, SOL, and MATIC. <a href="#"><u>Find out</u></a> how simple working with Bundlr is.</p>
           </div>
         </div>

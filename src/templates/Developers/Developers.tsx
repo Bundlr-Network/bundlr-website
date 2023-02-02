@@ -85,7 +85,7 @@ const Developers: NextPage = () => {
         {/* 2 columns grid */}
         <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[109px] leading-none pt-[83px]">
           <div className="max-w-[501px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Unlimited Scalability
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -94,7 +94,7 @@ const Developers: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[441px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Instant Uploads
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -102,7 +102,7 @@ const Developers: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Seamless Integration
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
@@ -110,7 +110,7 @@ const Developers: NextPage = () => {
             </h2>
           </div>
           <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
+            <small className="font-fkDisplay font-light text-5xl leading-none">
               Multichain
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">

@@ -20,7 +20,7 @@ const Blog: NextPage = () => {
     <>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
-      <h1 className='text-7xl font-spaceGrotesk text-center pt-24 pb-14 font-light'>Bundlr Blog</h1>
+      <h1 className='text-7xl font-fkDisplay text-center pt-24 pb-14 font-light'>Bundlr Blog</h1>
       <section className='px-4 md:px-[109px] flex gap-10 justify-center flex-col md:flex-row'>
         <div className="md:sticky top-10 left-0 self-start">
           <div className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full md:w-[726px] ">
