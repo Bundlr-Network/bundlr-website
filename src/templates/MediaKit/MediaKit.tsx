@@ -1,4 +1,9 @@
-import { DevIcon, DownloadIcon, MediaKitBundlrLogoIcon, MediaKitBundlrSymbolIcon } from '@/svg'
+import {
+  DevIcon,
+  DownloadIcon,
+  MediaKitBundlrLogoIcon,
+  MediaKitBundlrSymbolIcon
+} from '@/svg'
 import { Footer, NavbarDesktop } from '@/components'
 import { useEffect, useState } from 'react'
 
@@ -30,7 +35,7 @@ const MediaKit: NextPage = () => {
         </p>
       </header>
       <section className="px-5 lg:px-[109px] mt-28">
-        <h2 className='text-5xl mb-16'>Brand Guidelines</h2>
+        <h2 className="text-5xl mb-16">Brand Guidelines</h2>
         <div className="">
           <h3 className="text-3xl font-fkDisplay font-light">Logo</h3>
           <div className="py-28 flex items-center justify-center w-[726px] bg-white rounded-3xl mt-5">
@@ -81,7 +86,8 @@ const MediaKit: NextPage = () => {
                 <img src="/assets/mediakit/shadow.png" />
               </div>
               <p className="font-robotoMono text-sm">
-                Do not apply shadows or change the color to unauthorized pairings.
+                Do not apply shadows or change the color to unauthorized
+                pairings.
               </p>
             </div>
             <div className="max-w-[348px] flex flex-col gap-4">
@@ -104,9 +110,7 @@ const MediaKit: NextPage = () => {
           </div>
         </div>
         <div className="mt-28 mb-28">
-          <h3 className="text-3xl font-fkDisplay font-light">
-            Primary colors
-          </h3>
+          <h3 className="text-3xl font-fkDisplay font-light">Primary colors</h3>
           <div className="grid grid-cols-2 w-[726px] grid-row gap-y-4 mt-5">
             <div className="border-2 border-white max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-black text-white">
               Black #000000
@@ -123,10 +127,10 @@ const MediaKit: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className='px-5 lg:px-[109px]'>
+      <section className="px-5 lg:px-[109px]">
         <div className="flex justify-between items-center mb-16 max-w-[726px]">
-          <h2 className='text-5xl'>Asset Downloads</h2>
-          <button className='font-robotoMono text-sm bg-black text-white flex items-center gap-2 px-4 py-3 rounded-full hover:font-bold'>
+          <h2 className="text-5xl">Asset Downloads</h2>
+          <button className="font-robotoMono text-sm bg-black text-white flex items-center gap-2 px-4 py-3 rounded-full hover:font-bold">
             DOWNLOAD ALL
             <DownloadIcon />
           </button>
@@ -135,34 +139,59 @@ const MediaKit: NextPage = () => {
         <div className="flex flex-col gap-10">
           <div className="flex justify-between w-[726px] items-start">
             <div className="">
-              <p className='font-robotoMono uppercase text-xs pb-2'>Logo</p>
+              <p className="font-robotoMono uppercase text-xs pb-2">Logo</p>
               <div className="border-2 border-white w-[348px] flex items-center justify-center py-16 rounded-3xl bg-black text-white">
                 <MediaKitBundlrLogoIcon />
               </div>
             </div>
             <div className="flex flex-col gap-4 pt-4">
-              <a href="" className="border rounded-full font-robotoMono px-3 py-2 border-black">PNG</a>
-              <a href="" className="border rounded-full font-robotoMono px-3 py-2 border-black">SVG</a>
+              <a
+                href=""
+                className="border rounded-full font-robotoMono px-3 py-2 border-black"
+              >
+                PNG
+              </a>
+              <a
+                href=""
+                className="border rounded-full font-robotoMono px-3 py-2 border-black"
+              >
+                SVG
+              </a>
             </div>
           </div>
           <div className="flex justify-between w-[726px] items-start">
             <div className="">
-              <p className='font-robotoMono uppercase text-xs pb-2'>Logo</p>
+              <p className="font-robotoMono uppercase text-xs pb-2">Logo</p>
               <div className="border-2 border-white w-[348px] flex items-center justify-center py-16 rounded-3xl bg-black text-white">
                 <MediaKitBundlrSymbolIcon />
               </div>
             </div>
             <div className="flex flex-col gap-4 pt-4">
-              <a href="" className="border rounded-full font-robotoMono px-3 py-2 border-black">PNG</a>
-              <a href="" className="border rounded-full font-robotoMono px-3 py-2 border-black">SVG</a>
+              <a
+                href=""
+                className="border rounded-full font-robotoMono px-3 py-2 border-black"
+              >
+                PNG
+              </a>
+              <a
+                href=""
+                className="border rounded-full font-robotoMono px-3 py-2 border-black"
+              >
+                SVG
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section className='px-5 lg:px-[109px]'>
+      <section className="px-5 lg:px-[109px]">
         <div className="flex flex-col justify-between items-left gap-10 mb-28 max-w-[726px] mt-28">
-          <h2 className='text-5xl'>Press Inquiries</h2>
-          <p className='font-robotoMono text-sm'>Please direct all inquiries to hello@bundlr.network</p>
+          <h2 className="text-5xl">Press Inquiries</h2>
+          <p className="font-robotoMono text-sm">
+            Please direct all inquiries to{' '}
+            <a href="mailto:hello@bundlr.network">
+              <u>hello@bundlr.network</u>
+            </a>
+          </p>
         </div>
       </section>
       <Footer />

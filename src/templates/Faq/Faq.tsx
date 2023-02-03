@@ -113,7 +113,7 @@ const useFaq = () => {
     title: 'Can\'t Find What You\'re Looking For?',
     cta: 'ASK US ON DISCORD',
     ctaIcon: <DiscordIcon className='w-5' />,
-    href: 'https://docs.bundlr.network',
+    href: 'https://discord.gg/bundlr',
     newTab: true,
     scheme: CtaScheme.black
   }

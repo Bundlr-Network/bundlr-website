@@ -1,16 +1,15 @@
 import {
-  Button,
   CtaSection,
   Footer,
   HomeTrustedBy,
   NavbarDesktop,
   SectionTitle
 } from '@/components'
-import { useEffect, useState } from 'react'
 
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 
 const useSolutions = () => {
   const PAGE_SEO = {
@@ -20,6 +19,7 @@ const useSolutions = () => {
 
   const SECTION_DATA = [
     {
+      id: 'decentralized-social-media',
       title: 'Decentralized Social Media',
       description:
         'Prior to Bundlr, decentralized social media networks have  not had the infrastructure that allows the transactional throughout needed for mass adoption. With Bundlr’s Optimisitc Data Availability, social media dApps have access to performant and affordable infrastructure that delivers a seamless user experience, regardless of traffic volume.',
@@ -27,6 +27,7 @@ const useSolutions = () => {
       example: 'Lens Protocol'
     },
     {
+      id: 'audio',
       title: 'Audio',
       description:
         'With Bundlr, dApps can store audio permanently on Arweave while being to pay for storage in the token of their choice. With the ability to store metadata, dApps can incorporate algorithms to create personalized experiences for listeners. And even at peak listening times, Bundlr ensures a reliable streaming experience.',
@@ -34,6 +35,7 @@ const useSolutions = () => {
       example: 'Sound'
     },
     {
+      id: 'video',
       title: 'Video',
       description:
         'Through Bundlr, dApps can pay once and store their videos forever on Arweave. Once stored, videos do not require any ongoing maintenance. And of course, users can stream and upload seamlessly.',
@@ -41,6 +43,7 @@ const useSolutions = () => {
       example: 'Glass.xyz'
     },
     {
+      id: 'images',
       title: 'Images',
       description:
         'Bundlr makes it possible to instantly upload and retrieve large batches of images, creating a seamless user experience. It also makes it possible to store these images permanently on Arweave, preventing any risk of censorship.',
@@ -48,6 +51,7 @@ const useSolutions = () => {
       example: 'Metaplex'
     },
     {
+      id: 'content',
       title: 'Content',
       description:
         'Through Bundlr, writers can store content on Arweave forever, without any fear of censorship. Bundlr also provides high resolution timestamps for data provenance, which make it possible to verify and guarantee when content was created and by whom.',
@@ -55,6 +59,7 @@ const useSolutions = () => {
       example: 'Wordcel'
     },
     {
+      id: 'gaming',
       title: 'Gaming',
       description:
         'As online games are providing on-chain assets to users, they are being forced to sacrifice user-experience because of the time it takes for blockchains to execute transactions. With Bundlr, assets can be instantly uploaded and retrieved during gameplay. Further, Bundlr ensures the immutability of these assets and their metadata.',
@@ -62,6 +67,7 @@ const useSolutions = () => {
       example: 'Sandbox'
     },
     {
+      id: 'data-archiving',
       title: 'Data Archiving',
       description:
         'It is often said that “history is written by the victors.” This is no longer true. Bundlr enables permanent, censorship-resistant storage on Arweave. With dynamic customization with unlimited data-tagging, this information information becomes simple to find. Bundlr enables the preservation of history, forever.',
@@ -77,9 +83,9 @@ const Solutions: NextPage = () => {
   const { PAGE_SEO, SECTION_DATA } = useSolutions()
 
   return (
-    <div className='bg-ghostWhite'>
+    <div className="bg-ghostWhite">
       <NextSeo {...PAGE_SEO} />
-      <NavbarDesktop />
+      <NavbarDesktop scheme={SchemeColor.ghostWhite} />
       {/* <section className='flex flex-col items-center justify-center gap-8 pt-28'>
         <h1 className='text-7xl font-fkDisplay font-light'>Technology</h1>
         <p className='font-robotoMono max-w-[830px] text-center'>Bundlr is the world’s next data layer. It provides true provenance with data availability guarantees backed by permanent, decentralized storage.</p>
@@ -88,18 +94,19 @@ const Solutions: NextPage = () => {
 
       <header className="flex flex-col bg-ghostWhite px-5 lg:px-[109px] pb-24">
         <div className="flex">
-          <div className="max-w-[865px] container pt-[293px]">
-            <h1 className="text-7xl z-10">
-              Bundlr Is the Ideal Solution Across a Range of Use Cases
+          <div className="container pt-[203px]">
+            <h1 className="text-7xl z-50">
+              Solutions for every <br />
+              use case
             </h1>
             <p className="text-base font-robotoMono font-light mt-5">
-              Here are just a few examples
+              Check out our solutions below
             </p>
           </div>
           <img
             src="/assets/solutions/blocks.png"
             alt=""
-            className="absolute right-0"
+            className="absolute -right-32"
           />
         </div>
 
@@ -123,7 +130,10 @@ const Solutions: NextPage = () => {
 
         <section className="flex flex-col w-full">
           {SECTION_DATA.map((section, index) => (
-            <section key={`section-${index}`} className="w-full flex gap-20 justify-center items-center bg-ghostWhite odd:bg-seashell py-20">
+            <section
+              key={`section-${index}`}
+              className="w-full flex gap-20 justify-center items-center bg-ghostWhite odd:bg-seashell py-20"
+            >
               <div
                 key={index}
                 className="flex flex-col items-start justify-center gap-8 "
@@ -135,7 +145,7 @@ const Solutions: NextPage = () => {
               </div>
               <div className="flex flex-col items-center justify-center gap-10">
                 <img src={`/assets/solutions/logos/${section.image}`} alt="" />
-                <p className='font-robotoMono'>Example: {section.example}</p>
+                <p className="font-robotoMono">Example: {section.example}</p>
               </div>
             </section>
           ))}

@@ -2,6 +2,7 @@ import { BracesIcon, BundlrIcon, DevIcon, ParenthesisIcon } from '@/svg'
 
 import Button from '../Button'
 import Link from 'next/link'
+import { m } from 'framer-motion'
 import { useState } from 'react'
 
 const useNavbarDesktop = () => {
@@ -57,7 +58,8 @@ const useNavbarDesktop = () => {
 export enum SchemeColor {
   'transparent' = 'transparent',
   'onyx' = 'onyx',
-  'black' = 'black'
+  'black' = 'black',
+  'ghostWhite' = 'ghostWhite',
 }
 
 const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
@@ -71,7 +73,8 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
             timberwolf: 'border-timberwolf',
             transparent: 'border-transparent',
             onyx: 'border-onyx',
-            black: 'border-ghostWhite'
+            black: 'border-ghostWhite',
+            ghostWhite: 'border-timberwolf'
           }[scheme]
           }`}
       >
@@ -85,7 +88,8 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
             {
               transparent: 'bg-transparent',
               onyx: 'bg-onyx',
-              black: 'bg-ghostWhite'
+              black: 'bg-ghostWhite',
+              ghostWhite: 'bg-timberwolf'
             }[scheme]
             }`}
         />
@@ -120,7 +124,8 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
             {
               transparent: 'bg-transparent',
               onyx: 'bg-onyx',
-              black: 'bg-ghostWhite'
+              black: 'bg-ghostWhite',
+              ghostWhite: 'bg-timberwolf'
             }[scheme]
             }`}
         />
@@ -177,9 +182,10 @@ const NavDropdown = ({
               }
               ${scheme &&
               {
-                transparent: 'bg-transparent',
+                transparent: '!bg-transparent',
                 onyx: '!bg-black border-onyx text-white',
-                black: '!bg-onyx border-ghostWhite text-white'
+                black: '!bg-onyx border-ghostWhite text-white',
+                ghostWhite: '!bg-ghostWhite border-timberwolf text-onyx'
               }[scheme]
               }
               `}
