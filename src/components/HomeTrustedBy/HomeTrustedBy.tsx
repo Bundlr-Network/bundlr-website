@@ -40,12 +40,26 @@ const HomeTrustedBy = ({
           gradientColor={scheme === 'dark' ? [0, 0, 0] : [255, 255, 255]}
           speed={55}
         >
-          <div className="flex gap-20 items-center">
-            <div className="ml-20">
-              <AptosIcon />
-            </div>
+          <div className="flex items-center gap-20">
+            <AptosIcon className='ml-20' />
             <PolygonIcon />
-            <AvalancheIcon />
+            {/* <AvalancheIcon /> */}
+            <BobaIcon />
+            <KyveIcon />
+            {/* <MetaplexIcon /> */}
+            <MintbaseIcon />
+            <SolseaIcon />
+            <AptosIcon />
+            <PolygonIcon />
+            {/* <AvalancheIcon /> */}
+            <BobaIcon />
+            <KyveIcon />
+            {/* <MetaplexIcon /> */}
+            <MintbaseIcon />
+            <SolseaIcon />
+            <AptosIcon />
+            <PolygonIcon />
+            {/* <AvalancheIcon /> */}
             <BobaIcon />
             <KyveIcon />
             {/* <MetaplexIcon /> */}

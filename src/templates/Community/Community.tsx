@@ -1,5 +1,6 @@
 import {
   Button,
+  CtaCentralized,
   Footer,
   HomeHeader,
   HomeWhyUseBundlr,
@@ -14,12 +15,13 @@ import {
   TelegramIcon,
   TwitterIcon
 } from '@/svg'
+import { SOCIAL_LINKS, Socials } from '@/components/JoinTheCommunity/JoinTheCommunity'
 import { useEffect, useState } from 'react'
 
+import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
-import { Socials } from '@/components/JoinTheCommunity/JoinTheCommunity'
 
 const useCommunity = () => {
   const PAGE_SEO = {
@@ -75,36 +77,14 @@ const useCommunity = () => {
     }
   ]
 
-  return { PAGE_SEO, COMMUNITY_VALUES, SOCIAL_LINKS }
-}
+  const CTA_CONTENT: CtaCentralizedProps = {
+    title: 'Ready to Become <br /> a BUNDLOOOOR?',
+    cta: 'Start Building',
+    href: 'https://docs.bundlr.network',
+    newTab: true
+  }
 
-const CTA: React.FC = () => {
-  return (
-    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 overflow-hidden flex flex-col items-center justify-center">
-      <h2 className="text-black font-light mb-2 text-[76px] max-w-[399px] text-center leading-none mb-11">
-        Join the community
-      </h2>
-      <Button>
-        START BUILDING
-        <DevIcon />
-      </Button>
-
-      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image1"
-        />
-      </div>
-      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image2"
-        />
-      </div>
-    </div>
-  )
+  return { PAGE_SEO, COMMUNITY_VALUES, CTA_CONTENT }
 }
 
 const NewsSection: React.FC = () => {
@@ -172,7 +152,7 @@ const NewsSection: React.FC = () => {
 }
 
 const Community: NextPage = () => {
-  const { PAGE_SEO, COMMUNITY_VALUES, SOCIAL_LINKS } = useCommunity()
+  const { PAGE_SEO, COMMUNITY_VALUES, CTA_CONTENT } = useCommunity()
 
   return (
     <>
@@ -182,32 +162,31 @@ const Community: NextPage = () => {
           <NavbarDesktop scheme={SchemeColor.onyx} />
         </div>
         <header
-          className="px-[109px] border-b border-timberwolf bg-black pt-[183px]"
+          className="px-5 lg:px-[109px] border-b border-timberwolf bg-black pt-[113px] h-auto pb-40"
           style={{
-            backgroundImage: 'url(/assets/home/blocks.png)',
+            backgroundImage: 'url(/assets/home/header.png)',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: '50% 50%',
-            backgroundSize: '140%',
-            height: '1070px'
+            backgroundSize: '100%',
           }}
         >
           <div className="leading-none flex flex-col gap-[197px]">
-            <h1 className="max-w-[464px] font-light text-[76px] text-white">
-              Join the #bundloooor community
+            <h1 className="font-light text-6xl lg:text-7xl text-white">
+              Join the #bundloooor <br />community
             </h1>
             <Socials links={SOCIAL_LINKS} />
           </div>
         </header>
 
-        <section className="bg-seashell text-black">
+        {/* <section className="bg-seashell text-black">
           <HomeWhyUseBundlr content={COMMUNITY_VALUES} />
-        </section>
+        </section> */}
 
-        <section className='px-[109px] bg-seashell flex items-center justify-center'>
+        <section className='px-5 lg:px-[109px] bg-seashell flex items-center justify-center pt-20'>
           <NewsSection />
         </section>
 
-        <CTA />
+        <CtaCentralized {...CTA_CONTENT} />
         <Footer />
       </div>
     </>

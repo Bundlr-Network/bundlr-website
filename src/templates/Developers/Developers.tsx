@@ -1,14 +1,16 @@
+import Benefits, { BenefitsProps } from '@/components/Differentials/Differentials'
 import {
   Button,
+  CtaCentralized,
   Footer,
-  HomeStats,
   HomeTrustedBy,
   JoinTheCommunity,
   NavbarDesktop,
-  SectionTitle
-} from '@/components'
-import { useEffect, useState } from 'react'
+  SectionTitle,
+} from '@/components';
 
+import { ButtonScheme } from '@/components/Button/Button';
+import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -20,114 +22,76 @@ const useDevelopers = () => {
     description: 'Page Description'
   }
 
-  return { PAGE_SEO }
-}
+  const CTA_CONTENT: CtaCentralizedProps = {
+    title: 'Ready to Become <br /> a BUNDLOOOOR?',
+    cta: 'Start Building',
+    href: 'https://docs.bundlr.network',
+    newTab: true
+  }
 
-const CTA: React.FC = () => {
-  return (
-    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 flex flex-col items-center justify-center">
-      <h2 className="text-black font-light mb-2 text-[76px] max-w-[668px] text-center leading-none mb-11">
-        Ready to Become a <br /> BUNDLOOOOR?
-      </h2>
-      <Button>
-        START BUILDING
-        <DevIcon />
-      </Button>
+  const BENEFITS_CONTENT: BenefitsProps = {
+    title: 'What Bundlr Offers',
+    items: [
+      {
+        title: 'Scales to Millions of TPS',
+        description: 'Bundlr can scale horizontally to handle millions of transactions per second',
+      },
+      {
+        title: 'Instant Uploads',
+        description: 'You can upload data to Bundlr in under 8ms',
+      },
+      {
+        title: 'Seamless Integration',
+        description: 'It takes 3-4 lines of code to integrate Bundlr',
+      },
+      {
+        title: 'Pay in Any Token',
+        description: 'You can pay to use Bundlr in 14 supported tokens',
+      },
+    ]
+  }
 
-      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image1"
-        />
-      </div>
-      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image2"
-        />
-      </div>
-    </div>
-  )
+  return { PAGE_SEO, CTA_CONTENT, BENEFITS_CONTENT }
 }
 
 const Developers: NextPage = () => {
-  const { PAGE_SEO } = useDevelopers()
+  const { PAGE_SEO, CTA_CONTENT, BENEFITS_CONTENT } = useDevelopers()
 
   return (
     <div className="">
       <NextSeo {...PAGE_SEO} />
       <header className=" text-white bg-black">
         <NavbarDesktop scheme={SchemeColor.black} />
-        <div className="flex flex-col items-center gap-9">
-          <h1 className="text-7xl leading-none mt-16">
+        <div className="flex flex-col items-center gap-9 h-[calc(100vh-90px)] relative">
+          <h1 className="text-7xl leading-none mt-24  z-10">
             Performant, Scalable, Seamless
           </h1>
-          <p className="text-lg font-robotoMono font-light">
+          <p className="text-lg font-robotoMono font-light z-10">
             Just what you’d expect from the world’s next data layer
           </p>
-          <button className="font-robotoMono text-sm bg-white text-black flex items-center gap-2 px-4 py-3 rounded-full hover:font-bold">
-            START BUILDING
-            <DevIcon />
-          </button>
-          <img src="/assets/developers/header.png" alt="hero" className='bg-cover pt-1 w-full' />
+          <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer" className='z-10'>
+            <Button scheme={ButtonScheme.white}>
+              START BUILDING
+              <DevIcon />
+            </Button>
+          </a>
+
+          <img src="/assets/developers/header.png" alt="hero" className='absolute bg-cover bottom-0 w-full' />
 
         </div>
       </header>
-      <section className="h-[584px] flex justify-between text-white bg-black">
-        {/* Vertical text 'stats' aligned to left */}
-        <div>
-          <h3 className="inline-block transform -rotate-90 mt-[92px] text-[26px] uppercase">
-            WE ARE DIFFERENT
-          </h3>
-        </div>
-        {/* 2 columns grid */}
-        <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[109px] leading-none pt-[83px]">
-          <div className="max-w-[501px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Unlimited Scalability
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              There are no limits to the transactions per second that Bundlr can
-              handle
-            </h2>
-          </div>
-          <div className="max-w-[441px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Instant Uploads
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              You can upload data to Bundlr in under 8ms
-            </h2>
-          </div>
-          <div className="max-w-[332px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Seamless Integration
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              It takes 3-4 lines of code to integrate Bundlr
-            </h2>
-          </div>
-          <div className="max-w-[332px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Multichain
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              You can pay to use Bundlr in 14 supported tokens
-            </h2>
-          </div>
-        </div>
-      </section>
-      <section className="h-[489px] text-black px-[109px] bg-seashell pt-32" >
+
+      <Benefits {...BENEFITS_CONTENT} />
+
+      <section className="h-[489px] text-black px-5 lg:px-[109px] bg-seashell pt-32" >
         <div className="flex flex-col items-start">
-          <div className="text-9xl">90%</div>
+          <div className="text-9xl">&gt;90%</div>
           <p className="font-robotoMono text-lg">
             Bundlr processes over 90% of data uploaded to Arweave
           </p>
         </div>
         <div className="flex flex-col items-end">
-          <div className="text-9xl">3000%</div>
+          <div className="text-9xl">&lt;8ms</div>
           <p className="font-robotoMono text-lg">
             Data is uploaded to Bundlr in less than 8 milliseconds
           </p>
@@ -139,7 +103,7 @@ const Developers: NextPage = () => {
           <HomeTrustedBy scheme="dark" />
         </div>
       </section>
-      <section className="px-[109px] bg-seashell pt-16 flex justify-between">
+      <section className="px-5 lg:px-[109px] bg-seashell pt-16 flex justify-between">
         <div>
           <SectionTitle title="How Bundlr Works" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
@@ -160,7 +124,7 @@ const Developers: NextPage = () => {
           <img src="/assets/developers/cloud.png" alt="" />
         </div>
       </section>
-      <section className="px-[109px] bg-seashell pt-16 flex justify-between">
+      <section className="px-5 lg:px-[109px] bg-seashell pt-16 flex justify-between">
         <div>
           <SectionTitle title="Why on Arweave?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
@@ -181,7 +145,7 @@ const Developers: NextPage = () => {
       </section>
       <JoinTheCommunity />
 
-      <CTA />
+      <CtaCentralized {...CTA_CONTENT} />
 
       <Footer />
     </div >

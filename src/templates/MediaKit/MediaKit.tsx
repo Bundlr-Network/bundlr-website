@@ -21,7 +21,7 @@ const MediaKit: NextPage = () => {
     <>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
-      <header className="flex flex-col gap-9 px-[109px] pt-[193px] pb-14 border-b border-ghostWhite">
+      <header className="flex flex-col gap-9 px-5 lg:px-[109px] pt-[193px] pb-14 border-b border-ghostWhite">
         <h1 className="text-6xl">Media Kit</h1>
         <p className="font-robotoMono max-w-[654px]">
           Please follow these guidelines when promoting Bundlr in all marketing
@@ -29,7 +29,7 @@ const MediaKit: NextPage = () => {
           promotions.
         </p>
       </header>
-      <section className="px-[109px] mt-28">
+      <section className="px-5 lg:px-[109px] mt-28">
         <h2 className='text-5xl mb-16'>Brand Guidelines</h2>
         <div className="">
           <h3 className="text-3xl font-fkDisplay font-light">Logo</h3>
@@ -123,7 +123,7 @@ const MediaKit: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className='px-[109px]'>
+      <section className='px-5 lg:px-[109px]'>
         <div className="flex justify-between items-center mb-16 max-w-[726px]">
           <h2 className='text-5xl'>Asset Downloads</h2>
           <button className='font-robotoMono text-sm bg-black text-white flex items-center gap-2 px-4 py-3 rounded-full hover:font-bold'>
@@ -159,7 +159,7 @@ const MediaKit: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className='px-[109px]'>
+      <section className='px-5 lg:px-[109px]'>
         <div className="flex flex-col justify-between items-left gap-10 mb-28 max-w-[726px] mt-28">
           <h2 className='text-5xl'>Press Inquiries</h2>
           <p className='font-robotoMono text-sm'>Please direct all inquiries to hello@bundlr.network</p>

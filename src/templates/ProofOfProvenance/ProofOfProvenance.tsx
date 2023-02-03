@@ -1,7 +1,10 @@
-import { Button, Footer, HomeProduct, NavbarDesktop } from '@/components'
+import { Button, CtaCentralized, Footer, HomeProduct, NavbarDesktop } from '@/components'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
+import Benefits from '@/components/Differentials'
+import { BenefitsProps } from '@/components/Differentials/Differentials'
+import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -15,61 +18,70 @@ const useProofOfProvenance = () => {
     description: 'Page Description'
   }
 
-  const PRODUCT_CONTENT = [
-    {
-      title: 'Decentralized Storage',
-      description:
-        'Performant, scalable, and seamless data, stored permanently on Arweave ',
-      href: '/solutions/decentralized-storage'
-    },
-    {
-      title: 'Optimistic Data Availability',
-      description: 'Pay for consensus only when you need it',
-      href: '/solutions/data-availability'
-    }
-  ]
+  const PRODUCT_CONTENT: {
+    title: string
+    description: string
+    href: string
+  }[] = [
+      {
+        title: 'Decentralized Storage',
+        description:
+          'Performant, scalable, and seamless data, stored permanently on Arweave ',
+        href: '/solutions/decentralized-storage'
+      },
+      {
+        title: 'Optimistic Data Availability',
+        description: 'Pay for consensus only when you need it',
+        href: '/solutions/data-availability'
+      }
+    ]
 
-  return { PAGE_SEO, PRODUCT_CONTENT, x }
+  const CTA_CONTENT: CtaCentralizedProps = {
+    title: 'Ready to Become <br /> a BUNDLOOOOR?',
+    cta: 'Start Building',
+    href: 'https://docs.bundlr.network',
+    newTab: true
+  }
+
+  const BENEFITS_CONTENT: BenefitsProps = {
+    title: 'What Bundlr Offers',
+    items: [
+      {
+        title: 'Unlimited Scalability',
+        description:
+          'There are no limits to the transactions per second that Bundlr can handle'
+      },
+      {
+        title: 'Instant Uploads',
+        description:
+          'You can upload data to Bundlr in under 8ms'
+      },
+      {
+        title: 'Seamless Integration',
+        description:
+          'It takes 3-4 lines of code to integrate Bundlr'
+      },
+      {
+        title: 'Multichain',
+        description:
+          'Bundlr is a multichain, meaning that it can store data on multiple blockchains'
+      }
+    ]
+  }
+
+  return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT, x }
 }
 
-const CTA: React.FC = () => {
-  return (
-    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 flex flex-col items-center justify-center">
-      <h2 className="text-black font-light mb-2 text-[76px] max-w-[668px] text-center leading-none mb-11">
-        Ready to Become a <br /> BUNDLOOOOR?
-      </h2>
-      <Button>
-        START BUILDING
-        <DevIcon />
-      </Button>
-
-      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image1"
-        />
-      </div>
-      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image2"
-        />
-      </div>
-    </div>
-  )
-}
 
 const ProofOfProvenance: NextPage = () => {
-  const { PAGE_SEO, PRODUCT_CONTENT, x } = useProofOfProvenance()
+  const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT, x } = useProofOfProvenance()
 
   return (
     <>
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite">
         <NavbarDesktop />
-        <div className="h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-[109px] gap-5">
+        <div className="h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[109px] gap-5">
           <img
             src="/assets/proofofprovenance/data.png"
             className="absolute -top-30 right-0"
@@ -82,52 +94,10 @@ const ProofOfProvenance: NextPage = () => {
           </p>
         </div>
       </header>
-      <section className="h-[584px] flex justify-between text-white bg-black">
-        {/* Vertical text 'stats' aligned to left */}
-        <div>
-          <h3 className="inline-block transform -rotate-90 mt-[92px] ml-[108px] text-[26px] uppercase">
-            WHAT BUNDLR OFFERS
-          </h3>
-        </div>
-        {/* 2 columns grid */}
-        <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[109px] leading-none pt-[83px]">
-          <div className="max-w-[501px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Trustless Truth
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              Unfalsifiable guarantees around provenance through Bundlr’s Proof
-              of Time
-            </h2>
-          </div>
-          <div className="max-w-[441px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Searchability
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              Flexible data querying through custom metadata tagging
-            </h2>
-          </div>
-          <div className="max-w-[332px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Seamless Integration
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              It takes 3-4 lines of code to integrate Bundlr
-            </h2>
-          </div>
-          <div className="max-w-[332px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Instant
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              Instant access to information with detailed metadata attributes
-            </h2>
-          </div>
-        </div>
-      </section>
 
-      <section className="px-[109px] flex py-24 relative overflow-hidden">
+      <Benefits {...BENEFITS_CONTENT} />
+
+      <section className="px-5 lg:px-[109px] flex py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
             <h2 className="text-4xl font-fkDisplay">Proof of Time</h2>
@@ -166,7 +136,9 @@ const ProofOfProvenance: NextPage = () => {
         content={PRODUCT_CONTENT}
         title={'Learn More About'}
       ></HomeProduct>
-      <CTA />
+
+      <CtaCentralized {...CTA_CONTENT} />
+
       <Footer />
     </>
   )

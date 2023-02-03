@@ -1,6 +1,7 @@
-import { Button, Footer, NavbarDesktop } from '@/components'
+import { Button, CtaCentralized, Footer, NavbarDesktop } from '@/components'
+import { CtaCentralizedProps, CtaScheme } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon, DiscordIcon, MinusFooterDetailIcon, PlusFooterDetailIcon, SearchIcon } from '@/svg'
-import { useEffect, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -108,9 +109,19 @@ const useFaq = () => {
     }
   ]
 
+  const CTA_CONTENT: CtaCentralizedProps = {
+    title: 'Can\'t Find What You\'re Looking For?',
+    cta: 'ASK US ON DISCORD',
+    ctaIcon: <DiscordIcon className='w-5' />,
+    href: 'https://docs.bundlr.network',
+    newTab: true,
+    scheme: CtaScheme.black
+  }
+
   return {
     PAGE_SEO,
     FAQ_CONTENT,
+    CTA_CONTENT,
     currentCategory,
     setCurrentCategory,
     search,
@@ -141,6 +152,7 @@ const Faq: NextPage = () => {
   const {
     PAGE_SEO,
     FAQ_CONTENT,
+    CTA_CONTENT,
     currentCategory,
     setCurrentCategory,
     search,
@@ -220,7 +232,7 @@ const Faq: NextPage = () => {
       </section>
 
       <section className="mt-40">
-        <CTA />
+        <CtaCentralized {...CTA_CONTENT} />
       </section>
 
       <section>

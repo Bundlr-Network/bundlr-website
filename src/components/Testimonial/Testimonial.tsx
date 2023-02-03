@@ -14,7 +14,7 @@ const Testimonial = () => {
         <div className='bg-white text-black w-[388px] h-[377px] flex items-center justify-center'>
           <img src="/assets/home/metaplex.png" alt="Metaplex" />
         </div>
-        <div className=" h-[204px] w-[647px] mt-[27px]">
+        <div className="h-[204px] w-[647px] mt-[27px]">
           <p className='text-3xl leading-tight font-light'>“Bundlr has become a mainstay of Metaplex’s NFT toolkit and makes it much easier to store metadata on Arweave. The ability to pay for NFT storage in native SOL is a killer feature, as is the lightening fast upload capability.”</p>
           <div className="mt-[43px]">
             <p className='uppercase text-[13px] tracking-[2.72px] leading-[1.66]'>James Strawthorne</p>

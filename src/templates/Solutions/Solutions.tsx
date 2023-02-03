@@ -86,7 +86,7 @@ const Solutions: NextPage = () => {
         <Button />
       </section> */}
 
-      <header className="flex flex-col bg-ghostWhite px-[109px] pb-24">
+      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[109px] pb-24">
         <div className="flex">
           <div className="max-w-[865px] container pt-[293px]">
             <h1 className="text-7xl z-10">

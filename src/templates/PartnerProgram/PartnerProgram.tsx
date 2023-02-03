@@ -26,7 +26,7 @@ const PartnerProgram: NextPage = () => {
         </p>
         <p className="text-8xl">Let&apos;s talk</p>
       </header>
-      <section className="flex flex-col md:flex-row justify-between md:px-[109px] pb-[105px] px-5 gap-12 lg:gap-0">
+      <section className="flex flex-col md:flex-row justify-between md:px-5 lg:px-[109px] pb-[105px] px-5 gap-12 lg:gap-0">
         <div className="max-w-[564px] flex flex-col gap-9">
           <SectionTitle title="The Partner Program" />
           <p className="font-robotoMono">

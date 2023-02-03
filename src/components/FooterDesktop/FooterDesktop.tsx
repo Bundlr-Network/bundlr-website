@@ -22,7 +22,7 @@ const FooterDesktop = ({
           <p className="mt-[230px] lg:text-[31px] text-[62px] tracking-tighter whitespace-normal">
             THE FUTURE OF DATA STORAGE
           </p>
-          <p className="mt-[47px]">2022 Bundlr. All rights reserved.</p>
+          <p className="mt-[47px]">{new Date().getFullYear()} Bundlr. All rights reserved.</p>
         </section>
         <section className="flex gap-20 h-[568px] ml-auto min-w-[272px]">
           {data.map((definition) => {

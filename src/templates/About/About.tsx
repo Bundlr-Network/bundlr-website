@@ -63,7 +63,7 @@ const About: NextPage = () => {
       <NavbarDesktop />
 
       <header
-        className="px-[109px]"
+        className="px-5 lg:px-[109px]"
         style={{
           backgroundImage: 'url(/assets/about/header.png)',
           backgroundRepeat: 'no-repeat',
@@ -83,7 +83,7 @@ const About: NextPage = () => {
         </Button>
       </header>
 
-      <section className="px-[109px] relative bg-seashell pt-16 flex justify-between">
+      <section className="px-5 lg:px-[109px] relative bg-seashell pt-16 flex justify-between">
         <div>
           <SectionTitle title="What is Bundlr?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">

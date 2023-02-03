@@ -17,14 +17,18 @@ const HomeProduct = ({
 }) => {
   return (
     <>
-      <section className="bg-black px-[109px] pb-[120px]">
+      <section className="bg-black px-5 lg:px-[109px] pb-[120px]">
         <div className="text-white pt-[117px]">
           <SectionTitle title={title} />
         </div>
-        {/* 4 column grid */}
-        <div className={`grid gap-4 mt-[182px]`} style={{
-          gridTemplateColumns: `repeat(${content.length}, 1fr)`
-        }}>
+        <div style={{
+        }} className={`grid gap-20 lg:gap-4 mt-16 lg:mt-[182px] grid-cols-1 ${{
+          2: 'lg:grid-cols-2',
+          3: 'lg:grid-cols-3',
+          4: 'lg:grid-cols-4'
+        }[
+          content.length
+        ]}`} >
           {/* 1st column title, text, and find out more button */}
           {content.map((info, index) => {
             return (

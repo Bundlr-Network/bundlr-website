@@ -93,7 +93,7 @@ const FooterMobile = ({ data }: {
             <TelegramIcon />
           </a>
         </section>
-        <p className="mt-[17px] mb-[36px]">2022 Bundlr. All rights reserved.</p>
+        <p className="mt-[17px] mb-[36px]">{new Date().getFullYear()} Bundlr. All rights reserved.</p>
       </footer>
     </>
   )

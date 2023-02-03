@@ -1,7 +1,9 @@
-import { Button, Footer, HomeProduct, NavbarDesktop } from '@/components'
+import Benefits, { BenefitsProps } from '@/components/Differentials/Differentials'
+import { Button, CtaCentralized, Footer, HomeProduct, NavbarDesktop } from '@/components'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
+import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -16,61 +18,66 @@ const useDataAvailability = () => {
     description: 'Page Description'
   }
 
-  const PRODUCT_CONTENT = [
-    {
-      title: 'Decentralized Storage',
-      description:
-        'Performant, scalable, and seamless data, stored permanently on Arweave ',
-      href: '/solutions/decentralized-storage'
-    },
-    {
-      title: 'Proof of Provenance',
-      description: 'Identify original information by accurately attributing origin',
-      href: '/solutions/proof-of-provenance'
-    }
-  ]
+  const PRODUCT_CONTENT: {
+    title: string
+    description: string
+    href: string
+  }[] = [
+      {
+        title: 'Decentralized Storage',
+        description:
+          'Performant, scalable, and seamless data, stored permanently on Arweave ',
+        href: '/solutions/decentralized-storage'
+      },
+      {
+        title: 'Proof of Provenance',
+        description: 'Identify original information by accurately attributing origin',
+        href: '/solutions/proof-of-provenance'
+      }
+    ]
 
-  return { PAGE_SEO, PRODUCT_CONTENT, x }
-}
+  const CTA_CONTENT: CtaCentralizedProps = {
+    title: 'Ready to Become <br /> a BUNDLOOOOR?',
+    cta: 'Start Building',
+    href: 'https://docs.bundlr.network',
+    newTab: true
+  }
 
-const CTA: React.FC = () => {
-  return (
-    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 flex flex-col items-center justify-center">
-      <h2 className="text-black font-light mb-2 text-[76px] max-w-[668px] text-center leading-none mb-11">
-        Ready to Become a <br /> BUNDLOOOOR?
-      </h2>
-      <Button>
-        START BUILDING
-        <DevIcon />
-      </Button>
+  const BENEFITS_CONTENT: BenefitsProps = {
+    title: 'What Bundlr Offers',
+    items: [
+      {
+        title: ' Scales to Millions of TPS',
+        description:
+          'Bundlr can scale horizontally to handle millions of transactions per second',
+      },
+      {
+        title: 'Optimize Costs',
+        description:
+          'High throughput, low latency applications at a fraction of the cost',
+      },
+      {
+        title: 'Seamless Integration',
+        description: '<10 lines of code to integrate Bundlr'
+      }, {
+        title: 'Instant Finality',
+        description: 'Transaction ordering and finality in under 8 milliseconds'
+      }
+    ]
+  }
 
-      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image1"
-        />
-      </div>
-      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image2"
-        />
-      </div>
-    </div>
-  )
+  return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT, x }
 }
 
 const DataAvailability: NextPage = () => {
-  const { PAGE_SEO, PRODUCT_CONTENT, x } = useDataAvailability()
+  const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT, x } = useDataAvailability()
 
   return (
     <>
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite">
         <NavbarDesktop />
-        <div className="h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-[109px] gap-5">
+        <div className="h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[109px] gap-5">
           <img
             src="/assets/dataavailability/blocks.png"
             className="absolute -top-30 right-0"
@@ -82,7 +89,7 @@ const DataAvailability: NextPage = () => {
           </p>
         </div>
       </header>
-      <section className='px-[109px] flex py-56 relative  bg-ghostWhite'>
+      <section className='px-5 lg:px-[109px] flex py-56 relative  bg-ghostWhite'>
         <div className="flex flex-col gap-36 w-1/2 ml-auto">
           <div className="">
             <h2 className='text-4xl font-fkDisplay'>What is Optimistic Data Availability?</h2>
@@ -91,51 +98,10 @@ const DataAvailability: NextPage = () => {
         </div>
         <img src="/assets/dataavailability/cloud.png" alt="data-splash" className='absolute bottom-0 -left-32 w-[767px]' />
       </section>
-      <section className="h-[584px] flex justify-between text-white bg-black">
-        {/* Vertical text 'stats' aligned to left */}
-        <div>
-          <h3 className="inline-block transform -rotate-90 mt-[92px] ml-[108px] text-[26px] uppercase">
-            WHAT BUNDLR OFFERS
-          </h3>
-        </div>
-        {/* 2 columns grid */}
-        <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[109px] leading-none pt-[83px]">
-          <div className="max-w-[501px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Scales to Millions of TPS
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              Bundlr can scale horizontally to handle millions of transactions per second
-            </h2>
-          </div>
-          <div className="max-w-[441px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Optimize Costs
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              High throughput, low latency applications at a fraction of the cost
-            </h2>
-          </div>
-          <div className="max-w-[332px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Seamless Integration
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              {"<"}10 lines of code to integrate Bundlr
-            </h2>
-          </div>
-          <div className="max-w-[332px]">
-            <small className="font-fkDisplay font-light text-5xl leading-none">
-              Instant Finality
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              Transaction ordering and finality in under 8 milliseconds
-            </h2>
-          </div>
-        </div>
-      </section>
 
-      <section className="px-[109px] flex py-24 relative overflow-hidden">
+      <Benefits {...BENEFITS_CONTENT} />
+
+      <section className="px-5 lg:px-[109px] flex py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
             <h2 className="text-4xl font-fkDisplay">Opt-in to Consensus</h2>
@@ -171,7 +137,7 @@ const DataAvailability: NextPage = () => {
         content={PRODUCT_CONTENT}
         title={'Learn More About'}
       ></HomeProduct>
-      <CTA />
+      <CtaCentralized {...CTA_CONTENT} />
       <Footer />
     </>
   )

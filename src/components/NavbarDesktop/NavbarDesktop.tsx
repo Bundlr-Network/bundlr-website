@@ -13,16 +13,16 @@ const useNavbarDesktop = () => {
   } = {
     Solutions: [
       {
-        name: 'Data Availability',
-        href: '/solutions/data-availability'
-      },
-      {
-        name: 'Descentralized Storage',
+        name: 'Decentralized Storage',
         href: '/solutions/descentralized-storage'
       },
       {
         name: 'Proof of Provenance',
         href: '/solutions/proof-of-provenance'
+      },
+      {
+        name: 'Data Availability',
+        href: '/solutions/data-availability'
       }
     ],
     'Use Cases': [
@@ -124,18 +124,9 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
             }[scheme]
             }`}
         />
-        <div className="w-[83px] items-center justify-center font-bold text-sm hidden lg:flex">
+        {/* <div className="w-[83px] items-center justify-center font-bold text-sm hidden lg:flex">
           EN
-        </div>
-        <div
-          className={`h-full w-[1px] bg-timberwolf hidden lg:block ${scheme &&
-            {
-              transparent: 'bg-transparent',
-              onyx: 'bg-onyx',
-              black: 'bg-ghostWhite'
-            }[scheme]
-            }`}
-        />
+        </div> */}
         <div className="lg:w-[269px] flex items-center justify-center ml-auto lg:ml-0">
           <Button>
             START BUILDING

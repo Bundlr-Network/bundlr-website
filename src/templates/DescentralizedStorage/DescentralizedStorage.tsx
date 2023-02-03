@@ -1,7 +1,8 @@
-import { Button, Footer, HomeProduct, NavbarDesktop } from '@/components'
+import { Button, CtaCentralized, Footer, HomeProduct, NavbarDesktop } from '@/components'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
+import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -17,54 +18,36 @@ const useDescentralizedStorage = () => {
     description: 'Page Description'
   }
 
-  const PRODUCT_CONTENT = [
-    {
-      title: 'Optimistic Data Availability',
-      description: 'Pay for consensus only when you need it',
-      href: '/solutions/data-availability'
-    },
-    {
-      title: 'Proof of Provenance',
-      description:
-        'Identify original information by accurately attributing origin',
-      href: '/solutions/proof-of-provenance'
-    }
-  ]
+  const PRODUCT_CONTENT: {
+    title: string
+    description: string
+    href: string
+  }[] = [
+      {
+        title: 'Optimistic Data Availability',
+        description: 'Pay for consensus only when you need it',
+        href: '/solutions/data-availability'
+      },
+      {
+        title: 'Proof of Provenance',
+        description:
+          'Identify original information by accurately attributing origin',
+        href: '/solutions/proof-of-provenance'
+      }
+    ]
 
-  return { PAGE_SEO, PRODUCT_CONTENT, x }
-}
+  const CTA_CONTENT: CtaCentralizedProps = {
+    title: 'Ready to Become <br /> a BUNDLOOOOR?',
+    cta: 'Start Building',
+    href: 'https://docs.bundlr.network',
+    newTab: true
+  }
 
-const CTA: React.FC = () => {
-  return (
-    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 flex flex-col items-center justify-center">
-      <h2 className="text-black font-light mb-2 text-[76px] max-w-[668px] text-center leading-none mb-11">
-        Ready to Become a <br /> BUNDLOOOOR?
-      </h2>
-      <Button>
-        START BUILDING
-        <DevIcon />
-      </Button>
-
-      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image1"
-        />
-      </div>
-      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image2"
-        />
-      </div>
-    </div>
-  )
+  return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, x }
 }
 
 const DescentralizedStorage: NextPage = () => {
-  const { PAGE_SEO, PRODUCT_CONTENT, x } = useDescentralizedStorage()
+  const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, x } = useDescentralizedStorage()
 
   return (
     <>
@@ -127,7 +110,7 @@ const DescentralizedStorage: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="relative h-[911px] px-[109px]">
+      <section className="relative h-[911px] px-5 lg:px-[109px]">
         <h2 className="text-5xl font-fkDisplay py-48 w-[440px]">
           Data Stored for as Long as You Need
         </h2>
@@ -186,7 +169,7 @@ const DescentralizedStorage: NextPage = () => {
           </li>
         </ul>
       </section>
-      <section className='px-[109px] flex py-24 relative overflow-hidden'>
+      <section className='px-5 lg:px-[109px] flex py-24 relative overflow-hidden'>
         <div className="">
           <h3 className="inline-block transform -rotate-90 mt-24 text-[26px] uppercase -ml-[96px]">
             WE ARE DIFFERENT
@@ -216,7 +199,7 @@ const DescentralizedStorage: NextPage = () => {
         content={PRODUCT_CONTENT}
         title={'Learn More About'}
       ></HomeProduct>
-      <CTA />
+      <CtaCentralized {...CTA_CONTENT} />
       <Footer />
     </>
   )

@@ -44,12 +44,6 @@ const useHome = () => {
       description:
         'Integrate with 3-4 lines of code. Sign and pay in 14 major tokens'
     },
-
-    {
-      title: 'Enduring',
-      description: 'Affordable, long-term data solutions'
-    },
-
     {
       title: 'Verifiable',
       description:
@@ -59,35 +53,37 @@ const useHome = () => {
     {
       title: 'Customizable',
       description: 'Customize data with metadata tags for easy querying'
+    },
+    {
+      title: 'Enduring',
+      description: 'Affordable, long-term data solutions'
     }
   ]
 
-  const PRODUCT_CONTENT = [
-    {
-      title: 'Permanent Storage',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
-      href: '#'
-    },
-    {
-      title: 'Fiat <br/>On-Ramp',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
-      href: '#'
-    },
-    {
-      title: 'Preweave <br/><br/>',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
-      href: '#'
-    },
-    {
-      title: 'Mutability Layer',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
-      href: '#'
-    }
-  ]
+  const PRODUCT_CONTENT: {
+    title: string
+    description: string
+    href: string
+  }[] = [
+      {
+        title: 'Data Availability',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+        href: '#'
+      },
+      {
+        title: 'Decentralized Storage',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+        href: '#'
+      },
+      {
+        title: 'Proof of Provenance',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+        href: '#'
+      }
+    ]
 
   return { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT }
 }
@@ -103,7 +99,7 @@ const Home: NextPage = () => {
       <HomeHeader />
       <HomeStats />
 
-      <HomeProduct content={PRODUCT_CONTENT} title={'The Product'}>
+      <HomeProduct content={PRODUCT_CONTENT} title={'The Technology'}>
         {/* <div className="h-[271px] text-white border border-white mt-[192px]">
           Supported currencies
         </div> */}
@@ -139,7 +135,7 @@ const Home: NextPage = () => {
             <img src="/assets/home/servers.png" alt="On-Premise Servers" />
           </div>
         </div>
-        <div className="relative h-full w-screen	shrink-0 px-[109px] pt-[120px]">
+        <div className="relative h-full w-screen	shrink-0 px-5 lg:px-[109px] pt-[120px]">
           <div className="w-2/5 ml-auto">
             <h2 className="text-7xl font-fkDispla z-10">The Cloud</h2>
             <div className="flex flex-col gap-6 mt-12 ml-16">
@@ -159,7 +155,7 @@ const Home: NextPage = () => {
             className="absolute bottom-0 -left-32 right-0 mx-auto max-w-[80%]"
           />
         </div>
-        <div className="relative h-full w-screen flex flex-col items-center justify-start	shrink-0 px-[109px] pt-[120px]">
+        <div className="relative h-full w-screen flex flex-col items-center justify-start	shrink-0 px-5 lg:px-[109px] pt-[120px]">
           <div>
             <div className="flex flex-col gap-6 mt-4">
               <p className="font-robotoMono text-base max-w-md z-10 text-center">
@@ -180,7 +176,7 @@ const Home: NextPage = () => {
             className="absolute bottom-0 left-0 right-0 mx-auto"
           />
         </div>
-        <div className="relative h-full w-screen flex flex-col items-center justify-start	shrink-0 px-[109px] pt-[120px]">
+        <div className="relative h-full w-screen flex flex-col items-center justify-start	shrink-0 px-5 lg:px-[109px] pt-[120px]">
           <div>
             <div className="flex flex-col gap-6 mt-4">
               <p className="text-center text-7xl font-fkDispla z-10">
@@ -203,7 +199,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <section className="px-[109px] mt-[122px]">
+      <section className="px-5 lg:px-[109px] mt-[122px]">
         <SectionTitle title="Testimonials" />
         <div className="flex mt-[89px] justify-center relative">
           <h2 className="text-[76px] font-light leading-none font-fkDisplay">

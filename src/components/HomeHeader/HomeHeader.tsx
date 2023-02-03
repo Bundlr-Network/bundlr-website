@@ -18,12 +18,12 @@ const HomeHeader = () => {
   return (
     <>
       <header
-        className="px-[109px] border-b border-timberwolf"
+        className="px-5 lg:px-[109px] border-b border-timberwolf"
         style={{
-          backgroundImage: 'url(/assets/home/blocks.png)',
+          backgroundImage: 'url(/assets/home/header.png)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '50% 50%',
-          backgroundSize: '140%',
+          backgroundSize: '90%',
           height: '894px'
         }}
       >
@@ -31,7 +31,7 @@ const HomeHeader = () => {
           <h1 className="text-[76px] font-fkDisplay">
             {TITLE}
           </h1>
-          <h2 className='font-robotoMono max-w-[327px] leading-6 font-normal'>
+          <h2 className='font-robotoMono leading-6 font-normal'>
             {SUBTITLE}
           </h2>
         </div>

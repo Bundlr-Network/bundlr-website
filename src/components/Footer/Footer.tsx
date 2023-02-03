@@ -7,7 +7,7 @@ const Footer = () => {
 
   const DEFINITIONS = [
     {
-      title: 'BUNDLR',
+      title: 'LEARN',
       options: [
         {
           name: 'About',
@@ -45,11 +45,11 @@ const Footer = () => {
         },
         {
           name: 'Tutorials',
-          href: '#waiting-luke-to-create'
+          href: 'https://docs.bundlr.network/tutorials/bundlr-nodejs'
         },
         {
           name: 'JS SDK',
-          href: 'https://docs.bundlr.network/sdk/basic-features/installing-the-sdks'
+          href: 'https://docs.bundlr.network/category/basic-features'
         }
       ]
     },

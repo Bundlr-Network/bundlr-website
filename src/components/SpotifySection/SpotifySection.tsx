@@ -11,7 +11,7 @@ const SpotifySection = () => {
 
   return (
     <>
-      <section className='px-[109px]'>
+      <section className='px-5 lg:px-[109px]'>
         <div className="bg-black flex items-center flex-col gap-6 justify-center text-white w-full py-16 rounded-2xl">
           <SpotifyIcon />
           <a href="#">
