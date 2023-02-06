@@ -92,8 +92,8 @@ const Solutions: NextPage = () => {
         <Button />
       </section> */}
 
-      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[109px] pb-24">
-        <div className="flex">
+      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[109px] pb-2 lg:pb-24">
+        <div className="flex overflow-hidden">
           <div className="container pt-[203px]">
             <h1 className="text-7xl z-50">
               Solutions for every <br />
@@ -106,7 +106,7 @@ const Solutions: NextPage = () => {
           <img
             src="/assets/solutions/blocks.png"
             alt=""
-            className="absolute -right-32"
+            className="absolute lg:-right-32 -bottom-20 lg:bottom-0 right-0"
           />
         </div>
 
@@ -132,7 +132,7 @@ const Solutions: NextPage = () => {
           {SECTION_DATA.map((section, index) => (
             <section
               key={`section-${index}`}
-              className="w-full flex gap-20 justify-center items-center bg-ghostWhite odd:bg-seashell py-20"
+              className="w-full flex flex-col lg:flex-row gap-20 justify-center items-center bg-ghostWhite odd:bg-seashell py-20"
             >
               <div
                 key={index}

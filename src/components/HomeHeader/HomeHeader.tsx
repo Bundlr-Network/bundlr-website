@@ -35,7 +35,7 @@ const HomeHeader = () => {
             {SUBTITLE}
           </h2>
         </div>
-        <div className="flex gap-[21px] mt-[450px] items-center font-robotoMono">
+        <div className="flex gap-[21px] mt-56 lg:mt-[450px] items-center font-robotoMono">
           <Button>
             START BUILDING
             <DevIcon />

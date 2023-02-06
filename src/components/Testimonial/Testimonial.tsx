@@ -10,11 +10,11 @@ const Testimonial = () => {
 
   return (
     <>
-      <section className='flex relative order-solid border text-black bg-[rgba(251,242,237,1)] border-[rgba(216,_207,_202,_1.00)] overflow-clip rounded-[30px] py-[43px] px-[40px] gap-[147px] mt-[99px]'>
-        <div className='bg-white text-black w-[388px] h-[377px] flex items-center justify-center'>
+      <section className='flex flex-col lg:flex-row relative order-solid border text-black bg-[rgba(251,242,237,1)] border-[rgba(216,_207,_202,_1.00)] overflow-clip rounded-[30px] p-4 lg:py-[43px] lg:px-[40px] gap-10 lg:gap-[147px] mt-[99px]'>
+        <div className='bg-white text-black w-full h-auto lg:w-[388px] h-[377px] flex items-center justify-center'>
           <img src="/assets/home/metaplex.png" alt="Metaplex" />
         </div>
-        <div className="h-[204px] w-[647px] mt-[27px]">
+        <div className="h-auto lg:h-[204px] w-full lg:w-[647px] lg:mt-[27px]">
           <p className='text-3xl leading-tight font-light'>“Bundlr has become a mainstay of Metaplex’s NFT toolkit and makes it much easier to store metadata on Arweave. The ability to pay for NFT storage in native SOL is a killer feature, as is the lightening fast upload capability.”</p>
           <div className="mt-[43px]">
             <p className='uppercase text-[13px] tracking-[2.72px] leading-[1.66]'>James Strawthorne</p>

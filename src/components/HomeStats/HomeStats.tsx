@@ -3,21 +3,17 @@ import { useEffect, useState } from 'react'
 const useHomeStats = () => {
   const STATS = [
     {
+      title: 'Transactions in last 24h',
+      description: '402,907'
+    },
+    {
       title: 'Upload time',
-      description: '50ms'
+      description: '8ms'
     },
     {
       title: 'Total number of transactions',
       description: '302,355,014'
     },
-    {
-      title: 'Transactions in last 24h',
-      description: '402,907'
-    },
-    {
-      title: 'TPS',
-      description: 'infinity'
-    }
   ]
 
   return { STATS }
@@ -28,21 +24,21 @@ const HomeStats = () => {
 
   return (
     <>
-      <section className="h-[489px] flex justify-between">
+      <section className="h-auto px-4 py-20 lg:py-0 lg:h-[332px] flex items-center">
         {/* Vertical text 'stats' aligned to left */}
         <div>
-          <h3 className="inline-block transform -rotate-90 mt-[92px] ml-[108px] text-[26px] uppercase font-fkDisplay">
+          <h3 className="hidden lg:inline-block transform -rotate-90 ml-[108px] text-[26px] uppercase font-fkDisplay">
             STATS
           </h3>
         </div>
         {/* 2 columns grid */}
-        <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[108px] leading-none pt-[83px]">
+        <div className="flex lg:flex-row flex-col gap-10 leading-none lg:ml-auto lg:pr-[109px]">
           {STATS.map((stat, index) => (
             <div key={index}>
               <small className="uppercase text-[13px] font-robotoMono leading-none">
                 {stat.title}
               </small>
-              <h2 className="text-[84px] leading-none font-fkDisplay">
+              <h2 className="text-5xl lg:text-[74px] leading-none font-fkDisplay">
                 {stat.description}
               </h2>
             </div>

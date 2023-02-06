@@ -105,9 +105,9 @@ const Home: NextPage = () => {
         </div> */}
       </HomeProduct>
 
-      <section className="bg-ghostWhite pb-[144px]">
+      <section className="bg-ghostWhite pb-10 lg:pb-[144px]">
         <HomeWhyUseBundlr content={WHY_USE_BUNDLR}>
-          <div className="mx-44 rounded-[20px] overflow-hidden">
+          <div className="mx-4 lg:mx-44 rounded-[20px] overflow-hidden">
             <HomeTrustedBy />
           </div>
         </HomeWhyUseBundlr>
@@ -210,15 +210,16 @@ const Home: NextPage = () => {
       </section>
 
       <CtaSection>
-        <p className="text-[62px] font-light leading-none">
-          Ready to Become a BUNDLOOOOR?
-        </p>
-
-        <div className="mt-10">
-          <Button scheme={ButtonScheme.white}>
-            START BUILDING
-            <DevIcon color="black" />
-          </Button>
+        <div className="flex flex-col">
+          <p className="text-[62px] font-light leading-none">
+            Ready to Become a BUNDLOOOOR?
+          </p>
+          <div className="mt-10">
+            <Button scheme={ButtonScheme.white}>
+              START BUILDING
+              <DevIcon color="black" />
+            </Button>
+          </div>
         </div>
       </CtaSection>
       <Footer />

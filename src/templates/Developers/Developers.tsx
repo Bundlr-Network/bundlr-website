@@ -62,8 +62,8 @@ const Developers: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <header className=" text-white bg-black">
         <NavbarDesktop scheme={SchemeColor.black} />
-        <div className="flex flex-col items-center gap-9 h-[calc(100vh-90px)] relative">
-          <h1 className="text-7xl leading-none mt-24  z-10">
+        <div className="px-5 lg:px-0 flex flex-col items-center gap-9 h-[calc(100vh-90px)] relative">
+          <h1 className="text-6xl lg:text-7xl leading-none mt-24 z-10">
             Performant, Scalable, Seamless
           </h1>
           <p className="text-lg font-robotoMono font-light z-10">
@@ -83,7 +83,7 @@ const Developers: NextPage = () => {
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="h-[489px] text-black px-5 lg:px-[109px] bg-seashell pt-32" >
+      <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[109px] bg-seashell pt-32" >
         <div className="flex flex-col items-start">
           <div className="text-9xl">&gt;90%</div>
           <p className="font-robotoMono text-lg">
@@ -99,7 +99,7 @@ const Developers: NextPage = () => {
       </section >
 
       <section className='bg-seashell pt-44 pb-20'>
-        <div className="mx-44 rounded-[20px] overflow-hidden bg-black z-10">
+        <div className="mx-5 lg:mx-44 rounded-[20px] overflow-hidden bg-black z-10">
           <HomeTrustedBy scheme="dark" />
         </div>
       </section>
@@ -120,7 +120,7 @@ const Developers: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="">
+        <div className="hidden lg:block">
           <img src="/assets/developers/cloud.png" alt="" />
         </div>
       </section>
@@ -139,7 +139,7 @@ const Developers: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="">
+        <div className="hidden lg:block">
           <img src="/assets/developers/vortex.png" alt="" />
         </div>
       </section>
