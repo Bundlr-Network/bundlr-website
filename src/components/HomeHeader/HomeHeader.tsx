@@ -20,10 +20,10 @@ const HomeHeader = () => {
       <header
         className="px-5 lg:px-[109px] border-b border-timberwolf"
         style={{
-          backgroundImage: 'url(/assets/home/header.png)',
+          backgroundImage: 'url(/assets/home/home.png)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '50% 50%',
-          backgroundSize: '90%',
+          backgroundSize: '70%',
           height: '894px'
         }}
       >

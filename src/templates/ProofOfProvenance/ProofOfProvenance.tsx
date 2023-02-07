@@ -6,12 +6,11 @@ import Benefits from '@/components/Differentials'
 import { BenefitsProps } from '@/components/Differentials/Differentials'
 import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
+import Marquee from 'react-fast-marquee'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 
 const useProofOfProvenance = () => {
-  const { scrollYProgress } = useScroll()
-  const x = useTransform(scrollYProgress, [0, 1], [600, -1000])
 
   const PAGE_SEO = {
     title: 'Page Title',
@@ -69,12 +68,12 @@ const useProofOfProvenance = () => {
     ]
   }
 
-  return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT, x }
+  return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT }
 }
 
 
 const ProofOfProvenance: NextPage = () => {
-  const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT, x } = useProofOfProvenance()
+  const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT } = useProofOfProvenance()
 
   return (
     <>
@@ -126,10 +125,16 @@ const ProofOfProvenance: NextPage = () => {
       </section>
 
       <div className="overflow-hidden">
-        <motion.h2 className="text-8xl whitespace-nowrap py-32" style={{ x }}>
-          ONE STEP CLOSER TO OUR FULLY ONE STEP CLOSER TO OUR FULLY ONE STEP
-          CLOSER TO OUR FULLY
-        </motion.h2>
+        <Marquee
+          gradientColor={[254, 244, 238]}
+          speed={25}
+        >
+          <motion.h2 className="text-8xl whitespace-nowrap py-32 uppercase">
+            Identify original information with true provenance{' '}
+            Identify original information with true provenance{' '}
+            Identify original information with true provenance{' '}
+          </motion.h2>
+        </Marquee>
       </div>
 
       <HomeProduct

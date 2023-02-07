@@ -66,7 +66,7 @@ const Footer = () => {
         }
       ],
       footer: (
-        <div className="flex items-center gap-[21px] mt-auto pb-[10px]">
+        <div className="flex items-center gap-[21px] mt-auto pb-[40px]">
           <a
             href="https://medium.com/bundlr-network"
             target={'_blank'}

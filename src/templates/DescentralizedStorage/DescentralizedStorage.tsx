@@ -52,7 +52,7 @@ const DescentralizedStorage: NextPage = () => {
   return (
     <>
       <NextSeo {...PAGE_SEO} />
-      <header className="bg-ghostWhite">
+      <header className="bg-ghostWhite ">
         <NavbarDesktop />
         <div className="h-[700px] flex flex-col items-center justify-center relative overflow-hidden">
           <img
@@ -61,7 +61,7 @@ const DescentralizedStorage: NextPage = () => {
             alt="cloud"
           />
           <h1 className="text-7xl z-10">Decentralized Storage</h1>
-          <p className="font-robotoMono text-base">
+          <p className="font-robotoMono text-base z-10">
             Performant, scalable, and seamless – forever.{' '}
           </p>
         </div>
@@ -102,7 +102,7 @@ const DescentralizedStorage: NextPage = () => {
           </div>
           <div className="max-w-[332px]">
             <small className="font-fkDisplay font-light text-5xl leading-none">
-              Multichain
+              Pay in Any Token
             </small>
             <h2 className="text-lg font-robotoMono leading-none mt-4">
               You can pay to use Bundlr in 14 supported tokens
@@ -187,13 +187,6 @@ const DescentralizedStorage: NextPage = () => {
         </div>
         <img src="/assets/descentralizedStorage/data-splash.png" alt="data-splash" className='absolute -bottom-64 left-0' />
       </section>
-
-      <div className="overflow-hidden">
-        <motion.h2 className="text-8xl whitespace-nowrap py-32" style={{ x }}>
-          ONE STEP CLOSER TO OUR FULLY ONE STEP CLOSER TO OUR FULLY ONE STEP
-          CLOSER TO OUR FULLY
-        </motion.h2>
-      </div>
 
       <HomeProduct
         content={PRODUCT_CONTENT}

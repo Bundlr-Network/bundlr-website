@@ -165,7 +165,7 @@ const NavDropdown = ({
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative h-[89px] flex items-center justify-center"
+        className="relative h-[89px] flex items-center justify-center z-50"
       >
         <div
           className=" px-4 uppercase font-bold "
@@ -184,7 +184,7 @@ const NavDropdown = ({
               {
                 transparent: '!bg-transparent',
                 onyx: '!bg-black border-onyx text-white',
-                black: '!bg-onyx border-ghostWhite text-white',
+                black: '!bg-black border-ghostWhite text-white',
                 ghostWhite: '!bg-ghostWhite border-timberwolf text-onyx'
               }[scheme]
               }

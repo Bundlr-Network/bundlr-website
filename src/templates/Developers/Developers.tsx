@@ -1,15 +1,18 @@
-import Benefits, { BenefitsProps } from '@/components/Differentials/Differentials'
+import Benefits, {
+  BenefitsProps
+} from '@/components/Differentials/Differentials'
 import {
   Button,
   CtaCentralized,
+  ExpandableSection,
   Footer,
   HomeTrustedBy,
   JoinTheCommunity,
   NavbarDesktop,
-  SectionTitle,
-} from '@/components';
+  SectionTitle
+} from '@/components'
 
-import { ButtonScheme } from '@/components/Button/Button';
+import { ButtonScheme } from '@/components/Button/Button'
 import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
@@ -34,20 +37,21 @@ const useDevelopers = () => {
     items: [
       {
         title: 'Scales to Millions of TPS',
-        description: 'Bundlr can scale horizontally to handle millions of transactions per second',
+        description:
+          'Bundlr can scale horizontally to handle millions of transactions per second'
       },
       {
         title: 'Instant Uploads',
-        description: 'You can upload data to Bundlr in under 8ms',
+        description: 'You can upload data to Bundlr in under 8ms'
       },
       {
         title: 'Seamless Integration',
-        description: 'It takes 3-4 lines of code to integrate Bundlr',
+        description: 'It takes 3-4 lines of code to integrate Bundlr'
       },
       {
         title: 'Pay in Any Token',
-        description: 'You can pay to use Bundlr in 14 supported tokens',
-      },
+        description: 'You can pay to use Bundlr in 14 supported tokens'
+      }
     ]
   }
 
@@ -64,26 +68,37 @@ const Developers: NextPage = () => {
         <NavbarDesktop scheme={SchemeColor.black} />
         <div className="px-5 lg:px-0 flex flex-col items-center gap-9 h-[calc(100vh-90px)] relative">
           <h1 className="text-6xl lg:text-7xl leading-none mt-24 z-10">
-            Performant, Scalable, Seamless
+            Build with seamlessly Bundlr
           </h1>
-          <p className="text-lg font-robotoMono font-light z-10">
-            Just what you’d expect from the world’s next data layer
+          <p className="text-lg font-robotoMono font-light z-10 text-center max-w-5xl">
+            Bundlr is a decentralized data network to help developers solve
+            complex data integrity issues. Our performant, scalable, seamless
+            storage, proof of provenance, and data availability guarantees
+            allows you establish a trustless data foundation.
           </p>
-          <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer" className='z-10'>
+          <a
+            href="https://docs.bundlr.network/"
+            target={'_blank'}
+            rel="noreferrer"
+            className="z-10"
+          >
             <Button scheme={ButtonScheme.white}>
               START BUILDING
               <DevIcon />
             </Button>
           </a>
 
-          <img src="/assets/developers/header.png" alt="hero" className='absolute bg-cover bottom-0 w-full' />
-
+          <img
+            src="/assets/developers/header.png"
+            alt="hero"
+            className="absolute bg-cover bottom-0 w-full"
+          />
         </div>
       </header>
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[109px] bg-seashell pt-32" >
+      <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[109px] bg-seashell pt-32">
         <div className="flex flex-col items-start">
           <div className="text-9xl">&gt;90%</div>
           <p className="font-robotoMono text-lg">
@@ -96,14 +111,15 @@ const Developers: NextPage = () => {
             Data is uploaded to Bundlr in less than 8 milliseconds
           </p>
         </div>
-      </section >
+      </section>
 
-      <section className='bg-seashell pt-44 pb-20'>
+      <section className="bg-seashell pt-44 pb-20">
         <div className="mx-5 lg:mx-44 rounded-[20px] overflow-hidden bg-black z-10">
           <HomeTrustedBy scheme="dark" />
         </div>
       </section>
-      <section className="px-5 lg:px-[109px] bg-seashell pt-16 flex justify-between">
+
+      <section className="px-5 lg:px-[109px] bg-seashell py-16 flex justify-between">
         <div>
           <SectionTitle title="How Bundlr Works" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
@@ -121,7 +137,18 @@ const Developers: NextPage = () => {
           </div>
         </div>
         <div className="hidden lg:block">
-          <img src="/assets/developers/cloud.png" alt="" />
+          <img src="/assets/developers/cloud.png" alt="" width={'700px'} />
+        </div>
+      </section>
+      <section className='bg-black text-white flex gap-20 items-center relative h-auto flex-col-reverse lg:flex-row px-4 lg:px-[109px] py-20'>
+        <div className="hidden lg:inline-block absolute top-32 left-0">
+          <h2 className="transform -rotate-90 text-[26px] uppercase w-[300px]">
+            BUILD ON BUNDLR
+          </h2>
+        </div>
+        <img src="/assets/developers/data-donuts.png" alt="" />
+        <div className="ml-auto">
+          <ExpandableSection />
         </div>
       </section>
       <section className="px-5 lg:px-[109px] bg-seashell pt-16 flex justify-between">
@@ -129,9 +156,12 @@ const Developers: NextPage = () => {
           <SectionTitle title="Why on Arweave?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
             <p className="">
-              Arweave makes it possible to store data permanently for the first
-              time ever. This is fundamental to solving the data integrity
-              challenges we face today.{' '}
+              <a href="https://arweave.org" target={'_blank'} rel="noreferrer">
+                Arweave
+              </a>{' '}
+              makes it possible to store data permanently for the first time
+              ever. This is fundamental to solving the data integrity challenges
+              we face today.{' '}
             </p>
             <p className="">
               In the same way that the internet connected humans across
@@ -148,7 +178,7 @@ const Developers: NextPage = () => {
       <CtaCentralized {...CTA_CONTENT} />
 
       <Footer />
-    </div >
+    </div>
   )
 }
 

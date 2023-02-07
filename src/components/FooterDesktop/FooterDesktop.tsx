@@ -1,4 +1,5 @@
 import { FooterLogo } from '@/svg'
+import Link from 'next/link'
 import { ReactNode } from 'react'
 
 const FooterDesktop = ({
@@ -16,9 +17,11 @@ const FooterDesktop = ({
 }) => {
   return (
     <>
-      <footer className="hidden lg:flex items-center bg-seashell antialiased border-t border-timberwolf font-robotoMono px-[50px] pb-[25px]">
-        <section className="flex flex-col max-w-[513px] leading-none pt-[73px] w-auto">
-          <FooterLogo />
+      <footer className="hidden lg:flex items-start bg-seashell antialiased border-t border-timberwolf font-robotoMono px-[50px]">
+        <section className="flex flex-col max-w-[513px] leading-none w-auto pt-[36px]">
+          <Link href="/">
+            <FooterLogo className='cursor-pointer' />
+          </Link>
           <p className="mt-[230px] lg:text-[31px] text-[62px] tracking-tighter whitespace-normal">
             THE FUTURE OF DATA STORAGE
           </p>
@@ -29,9 +32,9 @@ const FooterDesktop = ({
             return (
               <div
                 key={definition.title}
-                className="flex flex-col mb-auto border-l border-timberwolf h-full pt-[76px] pl-[30px]"
+                className="flex flex-col mb-auto border-l border-timberwolf h-full pt-[36px] pl-[30px]"
               >
-                <p className="text-[13px] font-bold">{definition.title}</p>
+                <p className="text-[16px] font-bold">{definition.title}</p>
                 <ul className="mt-[50px] flex flex-col gap-[10px]">
                   {definition.options.map((option) => {
                     return (

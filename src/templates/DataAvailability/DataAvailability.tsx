@@ -5,13 +5,11 @@ import { useEffect, useState } from 'react'
 
 import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
+import Marquee from 'react-fast-marquee'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 
 const useDataAvailability = () => {
-
-  const { scrollYProgress } = useScroll()
-  const x = useTransform(scrollYProgress, [0, 1], [600, -1000])
 
   const PAGE_SEO = {
     title: 'Page Title',
@@ -47,7 +45,7 @@ const useDataAvailability = () => {
     title: 'What Bundlr Offers',
     items: [
       {
-        title: ' Scales to Millions of TPS',
+        title: 'Scales to Millions <br/>of TPS',
         description:
           'Bundlr can scale horizontally to handle millions of transactions per second',
       },
@@ -66,11 +64,11 @@ const useDataAvailability = () => {
     ]
   }
 
-  return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT, x }
+  return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT }
 }
 
 const DataAvailability: NextPage = () => {
-  const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT, x } = useDataAvailability()
+  const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT } = useDataAvailability()
 
   return (
     <>
@@ -127,10 +125,16 @@ const DataAvailability: NextPage = () => {
       </section>
 
       <div className="overflow-hidden">
-        <motion.h2 className="text-8xl whitespace-nowrap py-32" style={{ x }}>
-          ONE STEP CLOSER TO OUR FULLY ONE STEP CLOSER TO OUR FULLY ONE STEP
-          CLOSER TO OUR FULLY
-        </motion.h2>
+        <Marquee
+          gradientColor={[254, 244, 238]}
+          speed={55}
+        >
+          <motion.h2 className="text-8xl whitespace-nowrap py-32 uppercase">
+            OPTIMISM IS SENSIBLE {';)'}{' '}
+            OPTIMISM IS SENSIBLE {';)'}{' '}
+            OPTIMISM IS SENSIBLE {';)'}{' '}
+          </motion.h2>
+        </Marquee>
       </div>
 
       <HomeProduct

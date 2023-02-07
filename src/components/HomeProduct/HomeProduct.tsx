@@ -22,7 +22,7 @@ const HomeProduct = ({
           <SectionTitle title={title} />
         </div>
         <div style={{
-        }} className={`grid gap-20 lg:gap-4 mt-16 lg:mt-[182px] grid-cols-1 ${{
+        }} className={`grid gap-20 lg:gap-4 mt-16 lg:mt-[122px] grid-cols-1 ${{
           2: 'lg:grid-cols-2',
           3: 'lg:grid-cols-3',
           4: 'lg:grid-cols-4'

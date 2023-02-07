@@ -17,7 +17,7 @@ export const Socials = ({
     icon: React.FC
   }[]
 }) => (
-  <ul className="grid grid-cols-1 md:grid-cols-2 gap-11">
+  <ul className="grid grid-cols-1 md:grid-cols-4 gap-11">
     {links.map((link, index) => {
       const Icon = link.icon
       return (

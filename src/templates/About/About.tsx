@@ -12,7 +12,7 @@ const useAbout = () => {
     description: 'Page Description',
   }
 
-  const NEWS_ITEMS = [
+  const MEMBERS = [
     {
       name:
         'Josh Benaron',
@@ -51,11 +51,11 @@ const useAbout = () => {
     },
   ]
 
-  return { PAGE_SEO, NEWS_ITEMS }
+  return { PAGE_SEO, MEMBERS }
 }
 
 const About: NextPage = () => {
-  const { PAGE_SEO, NEWS_ITEMS } = useAbout()
+  const { PAGE_SEO, MEMBERS } = useAbout()
 
   return (
     <>
@@ -95,6 +95,7 @@ const About: NextPage = () => {
             </p>
             <p>Our vision is to be data’s trustless source of truth.</p>
           </div>
+
         </div>
       </section>
 
@@ -102,19 +103,20 @@ const About: NextPage = () => {
         <SpotifySection />
       </div>
 
-      <section className='flex pl-[109px]'>
-        <p className='text-5xl font-fkDisplay'>Our Team</p>
-        <ul className="flex gap-7 flex-wrap ml-10">
-          {NEWS_ITEMS.map((item, index) => {
+      <section className='flex flex-col lg:flex-row px-5 lg:px-[109px] justify-start gap-10 lg:gap-0'>
+        <p className='text-5xl font-fkDisplay text-center lg:text-left'>Our<br />Team</p>
+        {/* 3 column grid  */}
+        <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:ml-auto">
+          {MEMBERS.map((item, index) => {
             return (
 
               <li key={index} className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
                 {/* add gradient background that goes from gray to transparent */}
 
-                <div className="flex flex-col gap-8 w-[334px] bg-seashell rounded-lg overflow-hidden">
+                <div className="hover:shadow-md transition-all flex flex-col gap-8 w-full lg:w-[204px] xl:w-[334px] bg-seashell rounded-lg overflow-hidden">
                   {/* make image as background of rectangle box */}
                   <div
-                    className="w-full h-[348px] bg-cover bg-center"
+                    className="w-full h-[348px] bg-cover bg-center hover:bg-zoom  overflow-hidden"
                     style={{
                       backgroundImage: `url(${item.image})`
                     }}
