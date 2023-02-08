@@ -15,13 +15,17 @@ import {
   TelegramIcon,
   TwitterIcon
 } from '@/svg'
-import { SOCIAL_LINKS, Socials } from '@/components/JoinTheCommunity/JoinTheCommunity'
+import {
+  SOCIAL_LINKS,
+  Socials
+} from '@/components/JoinTheCommunity/JoinTheCommunity'
 import { useEffect, useState } from 'react'
 
 import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
+import { useLatestArticles } from '../Blog/Blog'
 
 const useCommunity = () => {
   const PAGE_SEO = {
@@ -115,35 +119,41 @@ const NewsSection: React.FC = () => {
     }
   ]
 
+  const { latestArticles } = useLatestArticles()
+
   return (
     <section>
-      <h2 className='text-7xl font-light pb-[60px]'>News</h2>
+      <h2 className="text-7xl font-light pb-[60px]">News</h2>
 
-      <ul className="flex gap-7">
-        {NEWS_ITEMS.map((item, index) => {
+      <ul className="grid grid-cols-4 gap-10">
+        {latestArticles.map((item, index) => {
           return (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg w-full"
+              key={`blog-post-${index}`}
+            >
+              <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
+                {/* add gradient background that goes from gray to transparent */}
 
-            <li key={index} className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
-              {/* add gradient background that goes from gray to transparent */}
-
-              <div className="flex flex-col items-center gap-11 max-w-[348px] bg-seashell rounded-lg overflow-hidden">
-                {/* make image as background of rectangle box */}
-                <div
-                  className="w-full h-[200px] bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${item.image})`
-                  }}
-                />
-                <div className="flex flex-col gap-4 px-5 pb-10">
-                  <h3 className="text-black font-light text-2xl ">
-                    {item.title}
-                  </h3>
-                  <p className="text-black font-light text-sm font-robotoMono">
-                    {item.description}
-                  </p>
+                <div className="flex flex-col items-center gap-11 max-w-[348px] bg-seashell rounded-lg overflow-hidden">
+                  {/* make image as background of rectangle box */}
+                  <div
+                    className="w-full h-[200px] bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url(${item.thumbnail})`
+                    }}
+                  />
+                  <div className="flex flex-col gap-4 px-5 pb-10">
+                    <h3 className="text-black font-light text-2xl line-clamp-2">
+                      {item.title}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </a>
           )
         })}
       </ul>
@@ -167,12 +177,13 @@ const Community: NextPage = () => {
             backgroundImage: 'url(/assets/home/header.png)',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: '50% 50%',
-            backgroundSize: '100%',
+            backgroundSize: '100%'
           }}
         >
           <div className="leading-none flex flex-col gap-[197px]">
             <h1 className="font-light text-6xl lg:text-7xl text-white">
-              Join the #bundloooor <br />community
+              Join the #bundloooor <br />
+              community
             </h1>
             <Socials links={SOCIAL_LINKS} />
           </div>
@@ -182,7 +193,7 @@ const Community: NextPage = () => {
           <HomeWhyUseBundlr content={COMMUNITY_VALUES} />
         </section> */}
 
-        <section className='px-5 lg:px-[109px] bg-seashell flex items-center justify-center pt-20'>
+        <section className="px-5 lg:px-[109px] bg-seashell flex items-center justify-center pt-20">
           <NewsSection />
         </section>
 

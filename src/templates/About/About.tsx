@@ -67,7 +67,7 @@ const About: NextPage = () => {
         style={{
           backgroundImage: 'url(/assets/about/header.png)',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: '50% 50%',
+          backgroundPosition: '50% 200%',
           backgroundSize: '100%',
           height: '894px'
         }}

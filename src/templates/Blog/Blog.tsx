@@ -41,7 +41,7 @@ export interface Item {
   categories: any[]
 }
 
-const useLatestArticles = () => {
+export const useLatestArticles = () => {
   const [latestArticles, setLatestArticles] = useState<
     ArticleResponseProps['items']
   >([])

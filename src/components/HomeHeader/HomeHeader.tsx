@@ -7,7 +7,7 @@ const useHomeHeader = () => {
 
   const TITLE = "THE WORLD’S NEXT DATA LAYER"
 
-  const SUBTITLE = "Store your data on the trustless source of truth"
+  const SUBTITLE = "Store your data on the<br/> trustless source of truth"
 
   return { TITLE, SUBTITLE }
 }
@@ -20,9 +20,9 @@ const HomeHeader = () => {
       <header
         className="px-5 lg:px-[109px] border-b border-timberwolf"
         style={{
-          backgroundImage: 'url(/assets/home/home.png)',
+          backgroundImage: 'url(/assets/home/header.png)',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: '50% 50%',
+          backgroundPosition: '20% -10%',
           backgroundSize: '120%',
           height: '894px'
         }}
@@ -31,9 +31,9 @@ const HomeHeader = () => {
           <h1 className="text-[76px] font-fkDisplay">
             {TITLE}
           </h1>
-          <h2 className='font-robotoMono leading-6 font-normal'>
-            {SUBTITLE}
-          </h2>
+          <h2 className='font-robotoMono leading-6 font-normal' dangerouslySetInnerHTML={{
+            __html: SUBTITLE
+          }} />
         </div>
         <div className="flex gap-[21px] mt-56 lg:mt-[450px] items-center font-robotoMono">
           <Button>

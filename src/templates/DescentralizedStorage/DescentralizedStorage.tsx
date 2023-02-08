@@ -6,6 +6,7 @@ import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 
 const useDescentralizedStorage = () => {
 
@@ -53,11 +54,12 @@ const DescentralizedStorage: NextPage = () => {
     <>
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite ">
-        <NavbarDesktop />
+        <NavbarDesktop scheme={SchemeColor.ghostWhite} />
         <div className="h-[700px] flex flex-col items-center justify-center relative overflow-hidden">
           <img
             src="/assets/descentralizedStorage/cloud.png"
             className="absolute -top-30 left-0"
+            width={'600px'}
             alt="cloud"
           />
           <h1 className="text-7xl z-10">Decentralized Storage</h1>

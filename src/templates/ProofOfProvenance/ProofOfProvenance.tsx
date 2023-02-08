@@ -9,6 +9,7 @@ import { DevIcon } from '@/svg'
 import Marquee from 'react-fast-marquee'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 
 const useProofOfProvenance = () => {
 
@@ -79,7 +80,7 @@ const ProofOfProvenance: NextPage = () => {
     <>
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite">
-        <NavbarDesktop />
+        <NavbarDesktop scheme={SchemeColor.ghostWhite} />
         <div className="h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[109px] gap-5">
           <img
             src="/assets/proofofprovenance/data.png"

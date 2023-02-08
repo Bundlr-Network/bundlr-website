@@ -91,7 +91,7 @@ const Developers: NextPage = () => {
           <img
             src="/assets/developers/header.png"
             alt="hero"
-            className="absolute bg-cover bottom-0 w-full h-80"
+            className="absolute bg-cover bottom-0 w-full h-64"
           />
         </div>
       </header>
