@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react'
 
 const useHomeStats = () => {
+
+  const [transactions, setTransactions] = useState<null | number>(null)
+  const [totalTransactions, setTotalTransactions] = useState<null | number>(null)
+
+
   const STATS = [
     {
       title: 'Transactions in last 24h',
-      description: '402,907'
+      description: transactions
+        ? transactions?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+        : 'Loading...',
     },
     {
       title: 'Upload time',
@@ -12,9 +19,32 @@ const useHomeStats = () => {
     },
     {
       title: 'Total number of transactions',
-      description: '302,355,014'
+      description: totalTransactions
+        ? totalTransactions?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+        : 'Loading...',
     },
   ]
+
+  useEffect(() => {
+    fetchTransactions()
+  }, [])
+
+  const fetchTransactions = async () => {
+    // get node1.bundlr.network/status
+    const node1 = await fetch('https://node1.bundlr.network/status')
+    const node1Json = await node1.json()
+
+    // get node2.bundlr.network/status
+    const node2 = await fetch('https://node2.bundlr.network/status')
+    const node2Json = await node2.json()
+
+    const last24Sum = node1Json.last24h + node2Json.last24h
+
+    const totalSum = node1Json.totalTransactions + node2Json.totalTransactions
+
+    setTransactions(last24Sum)
+    setTotalTransactions(totalSum)
+  }
 
   return { STATS }
 }

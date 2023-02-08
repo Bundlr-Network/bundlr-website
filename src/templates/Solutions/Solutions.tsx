@@ -92,10 +92,10 @@ const Solutions: NextPage = () => {
         <Button />
       </section> */}
 
-      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[109px] pb-2 lg:pb-24">
-        <div className="flex overflow-hidden">
-          <div className="container pt-[203px]">
-            <h1 className="text-7xl z-50">
+      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[109px] pb-2 lg:pb-24 relative overflow-hidden">
+        <div className="flex">
+          <div className="container pt-[203px] z-50">
+            <h1 className="text-7xl">
               Solutions for every <br />
               use case
             </h1>
@@ -110,7 +110,7 @@ const Solutions: NextPage = () => {
           />
         </div>
 
-        <div className="mx-44 rounded-[20px] overflow-hidden bg-black mt-40 z-10">
+        <div className="mx-4 lg:mx-44 rounded-[20px] overflow-hidden bg-black mt-40 z-10 mb-10 lg:mb-0">
           <HomeTrustedBy scheme="dark" />
         </div>
       </header>

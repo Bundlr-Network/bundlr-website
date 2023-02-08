@@ -12,6 +12,7 @@ import {
   SectionTitle,
   Testimonial
 } from '@/components'
+import { useEffect, useRef, useState } from 'react'
 
 import { ButtonScheme } from '@/components/Button/Button'
 import { DevIcon } from '@/svg'
@@ -85,12 +86,26 @@ const useHome = () => {
       }
     ]
 
+
+
   return { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT }
 }
 
 const Home: NextPage = () => {
   const { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT } = useHome()
-  const scrollRef = useHorizontalScroll()
+  // const scrollRef = useHorizontalScroll()
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  const onWheel = (e: UIEvent) => {
+    const elelemnt = ref.current;
+    if (elelemnt) {
+      if (e.deltaY == 0) return;
+      elelemnt.scrollTo({
+        left: elelemnt.scrollLeft + e.deltaY,
+      });
+    }
+  };
 
   return (
     <>
@@ -114,7 +129,8 @@ const Home: NextPage = () => {
       </section>
 
       <div
-        ref={scrollRef as any}
+        ref={ref as any}
+        onWheel={onWheel}
         className="w-screen overflow-x-hidden flex h-screen"
       >
         <div className="h-full w-screen shrink-0 font-fkDisplay text-7xl flex items-center justify-center">

@@ -77,10 +77,6 @@ const About: NextPage = () => {
             Meet the World&apos;s Next Data Layer
           </h1>
         </div>
-        <Button>
-          START BUILDING
-          <DevIcon />
-        </Button>
       </header>
 
       <section className="px-5 lg:px-[109px] relative bg-seashell pt-16 flex justify-between">

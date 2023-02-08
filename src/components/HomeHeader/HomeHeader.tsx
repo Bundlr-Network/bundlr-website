@@ -23,7 +23,7 @@ const HomeHeader = () => {
           backgroundImage: 'url(/assets/home/home.png)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '50% 50%',
-          backgroundSize: '70%',
+          backgroundSize: '120%',
           height: '894px'
         }}
       >
