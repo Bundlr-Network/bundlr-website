@@ -1,1 +1,1 @@
-import { default as useHorizontalScroll } from './useHorizontalScroll'
+import { default as useOnScreen } from './useOnScreen'
