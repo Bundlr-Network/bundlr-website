@@ -16,7 +16,8 @@ const Footer = () => {
         {
           name: 'Join our team',
           href: 'https://bundlrnetwork.notion.site/Bundlr-Careers-ee5a8841bc1e4728ba1dc66a9ee8ec2c',
-          label: 'Hiring'
+          label: 'Hiring',
+          newTab: true
         },
         {
           name: 'FAQs',

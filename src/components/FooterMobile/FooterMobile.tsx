@@ -11,6 +11,8 @@ import {
 } from '@/svg'
 import { useEffect, useState } from 'react'
 
+import Link from 'next/link'
+
 const FooterMobile = ({ data }: {
   data: {
     title: string
@@ -108,6 +110,7 @@ const ExpandableSection = ({
     name: string
     href: string
     label?: string
+    newTab?: boolean
   }[]
 }) => {
   return (
@@ -120,9 +123,9 @@ const ExpandableSection = ({
       <ul className="mt-[20px]">
         {options.map((option, index) => (
           <li className="mt-[20px]" key={`option-${option}-${index}`}>
-            <a href={option.href} className="text-[15px]">
+            <Link href={option.href} className="text-[15px]" target={option.newTab ? '_blank' : '_self'} rel="noreferrer">
               {option.name}
-            </a>
+            </Link>
             {option.label && (
               <span className="ml-[10px] text-xs font-bold bg-black rounded-full px-[10px] py-[5px] text-white">
                 {option.label}

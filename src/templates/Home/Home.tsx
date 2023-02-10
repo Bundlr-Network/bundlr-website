@@ -110,8 +110,8 @@ const Home: NextPage = () => {
           pin: true,
           scrub: 1,
           snap: 1 / (panels.length - 1),
-          end: () => '+=' + slider?.current?.offsetWidth,
-          markers: true
+          end: () => '+=' + slider?.current?.offsetWidth * 4,
+          // markers: true
         }
       })
     }, wrapper)
