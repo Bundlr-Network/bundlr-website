@@ -92,32 +92,6 @@ const useCommunity = () => {
 }
 
 const NewsSection: React.FC = () => {
-  const NEWS_ITEMS = [
-    {
-      title:
-        'Wordcel integrates with Bundlr to permanently store it’s users data',
-      description: 'Lorem ipsum dolor sit amet.',
-      image: 'https://picsum.photos/400'
-    },
-    {
-      title:
-        'Wordcel integrates with Bundlr to permanently store it’s users data',
-      description: 'Lorem ipsum dolor sit amet.',
-      image: 'https://picsum.photos/400'
-    },
-    {
-      title:
-        'Wordcel integrates with Bundlr to permanently store it’s users data',
-      description: 'Lorem ipsum dolor sit amet.',
-      image: 'https://picsum.photos/400'
-    },
-    {
-      title:
-        'Wordcel integrates with Bundlr to permanently store it’s users data',
-      description: 'Lorem ipsum dolor sit amet.',
-      image: 'https://picsum.photos/400'
-    }
-  ]
 
   const { latestArticles } = useLatestArticles()
 
@@ -125,7 +99,7 @@ const NewsSection: React.FC = () => {
     <section>
       <h2 className="text-7xl font-light pb-[60px]">News</h2>
 
-      <ul className="grid grid-cols-4 gap-10">
+      <ul className="grid grid-cols-1 lg:grid-cols-4 gap-10">
         {latestArticles.map((item, index) => {
           return (
             <a
@@ -181,7 +155,7 @@ const Community: NextPage = () => {
           }}
         >
           <div className="leading-none flex flex-col gap-[197px]">
-            <h1 className="font-light text-6xl lg:text-7xl text-white">
+            <h1 className="font-light text-5xl lg:text-7xl text-white">
               Join the #bundloooor <br />
               community
             </h1>

@@ -1,6 +1,7 @@
 import { Button, CtaSection, Footer, NavbarDesktop, SectionTitle, SpotifySection } from '@/components'
 import { useEffect, useState } from 'react'
 
+import { ButtonScheme } from '@/components/Button/Button'
 import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -79,7 +80,7 @@ const About: NextPage = () => {
         </div>
       </header>
 
-      <section className="px-5 lg:px-[109px] relative bg-seashell pt-16 flex justify-between">
+      <section className="px-5 lg:px-[109px] relative bg-seashell flex justify-between">
         <div>
           <SectionTitle title="What is Bundlr?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
@@ -135,13 +136,19 @@ const About: NextPage = () => {
 
 
       <CtaSection>
-        <p className="text-[62px] font-light leading-none">
-          Ready to Become a BUNDLOOOOR?
-        </p>
-        <button className='mt-[52px] font-robotoMono text-sm bg-white text-black flex items-center gap-2 px-4 py-3 rounded-full hover:font-bold'>
-          START BUILDING
-          <DevIcon color='black' />
-        </button>
+        <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+          <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
+            Ready to Become a BUNDLOOOOR?
+          </p>
+          <div className="mt-0 lg:mt-10">
+            <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer">
+              <Button scheme={ButtonScheme.white}>
+                START BUILDING
+                <DevIcon color="black" />
+              </Button>
+            </a>
+          </div>
+        </div>
       </CtaSection>
       <Footer />
     </>

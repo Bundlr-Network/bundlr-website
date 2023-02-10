@@ -11,12 +11,13 @@ import {
   HomeWhyUseBundlr,
   NavbarDesktop,
   SectionTitle,
+  SupportedCurrencies,
   Testimonial
 } from '@/components'
+import { ChevronRight, DevIcon } from '@/svg'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 import { ButtonScheme } from '@/components/Button/Button'
-import { DevIcon } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
@@ -73,19 +74,19 @@ const useHome = () => {
         title: 'Data Availability',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
-        href: '#'
+        href: '/solutions/data-availability'
       },
       {
         title: 'Decentralized Storage',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
-        href: '#'
+        href: '/solutions/decentralized-storage'
       },
       {
         title: 'Proof of Provenance',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
-        href: '#'
+        href: '/solution/proof-of-provenance'
       }
     ]
 
@@ -125,15 +126,15 @@ const Home: NextPage = () => {
       <HomeStats />
 
       <HomeProduct content={PRODUCT_CONTENT} title={'The Technology'}>
-        {/* <div className="h-[271px] text-white border border-white mt-[192px]">
-          Supported currencies
-        </div> */}
+        <div className="h-[271px] text-white mt-[122px]">
+          <HomeTrustedBy scheme={'dark'} />
+        </div>
       </HomeProduct>
 
-      <section className="bg-ghostWhite pb-10 lg:pb-[144px]">
+      <section className="bg-ghostWhite pb-10 lg:pb-[124px]">
         <HomeWhyUseBundlr content={WHY_USE_BUNDLR}>
-          <div className="mx-4 lg:mx-44 rounded-[20px] overflow-hidden">
-            <HomeTrustedBy />
+          <div className="mx-4 lg:mx-[109px] rounded-[20px] overflow-hidden mt-10">
+            <SupportedCurrencies />
           </div>
         </HomeWhyUseBundlr>
       </section>
@@ -226,6 +227,8 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+
+
       <section className="px-5 lg:px-[109px] mt-[122px]">
         <SectionTitle title="Testimonials" />
         <div className="flex mt-[89px] justify-center relative">
@@ -237,15 +240,17 @@ const Home: NextPage = () => {
       </section>
 
       <CtaSection>
-        <div className="flex flex-col">
-          <p className="text-[62px] font-light leading-none">
+        <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+          <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
             Ready to Become a BUNDLOOOOR?
           </p>
-          <div className="mt-10">
-            <Button scheme={ButtonScheme.white}>
-              START BUILDING
-              <DevIcon color="black" />
-            </Button>
+          <div className="mt-0 lg:mt-10">
+            <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer">
+              <Button scheme={ButtonScheme.white}>
+                START BUILDING
+                <DevIcon color="black" />
+              </Button>
+            </a>
           </div>
         </div>
       </CtaSection>

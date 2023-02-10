@@ -1,4 +1,8 @@
-import { DownloadIcon, MediaKitBundlrLogoIcon, MediaKitBundlrSymbolIcon } from '@/svg';
+import {
+  DownloadIcon,
+  MediaKitBundlrLogoIcon,
+  MediaKitBundlrSymbolIcon
+} from '@/svg'
 import { Footer, NavbarDesktop } from '@/components'
 import { useEffect, useRef, useState } from 'react'
 
@@ -56,6 +60,11 @@ const useMediaKit = () => {
     }
   ]
 
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    el?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return {
     PAGE_SEO,
     STICKY_MENU,
@@ -65,7 +74,8 @@ const useMediaKit = () => {
     assetOnScreen,
     pressRef,
     pressOnScreen,
-    latestCurrentlyOnScreen
+    latestCurrentlyOnScreen,
+    scrollToSection
   }
 }
 
@@ -76,7 +86,8 @@ const MediaKit: NextPage = () => {
     brandRef,
     assetRef,
     pressRef,
-    latestCurrentlyOnScreen
+    latestCurrentlyOnScreen,
+    scrollToSection
   } = useMediaKit()
 
   return (
@@ -92,7 +103,7 @@ const MediaKit: NextPage = () => {
         </p>
       </header>
       <div className="flex relative px-4 lg:px-[109px]">
-        <div className=''>
+        <div className="">
           <section className="mt-28">
             <h2 className="text-5xl mb-16" id="brand-guidelines" ref={brandRef}>
               Brand Guidelines
@@ -272,18 +283,18 @@ const MediaKit: NextPage = () => {
             </div>
           </section>
         </div>
-        <div className="sticky hidden lg:flex flex-col gap-3 top-10 ml-auto self-start mt-28 pr-5 lg:pr-[109px] uppercase">
+        <ul className="sticky hidden lg:flex cursor-pointer flex-col gap-3 top-10 ml-auto self-start mt-28 pr-5 lg:pr-[109px] uppercase">
           {STICKY_MENU.map((item, index) => (
-            <a
+            <li
               key={index}
-              href={`#${item.href}`}
+              onClick={() => scrollToSection(item.id)}
               className={`font-robotoMono text-sm mb-4 p-1 ${item.id === latestCurrentlyOnScreen && 'bg-black text-white'
                 }`}
             >
               {item.title}
-            </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
       <Footer />
     </>

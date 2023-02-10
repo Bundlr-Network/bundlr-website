@@ -29,7 +29,7 @@ const CtaCentralized = ({
   return (
     <>
       <div
-        className={`w-full h-[740px] overflow-hidden relative py-4 px-6 flex flex-col items-center justify-center ${{
+        className={`w-full h-auto py-56 lg:h-[740px] overflow-hidden relative py-4 px-6 flex flex-col items-center justify-center ${{
           [CtaScheme.seashell]: 'bg-seashell text-black',
           [CtaScheme.black]: 'text-white bg-black'
         }[scheme]

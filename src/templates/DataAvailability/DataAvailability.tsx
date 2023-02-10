@@ -79,23 +79,23 @@ const DataAvailability: NextPage = () => {
         <div className="h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[109px] gap-5">
           <img
             src="/assets/dataavailability/blocks.png"
-            className="absolute -top-30 right-0"
+            className="absolute -top-30 right-0 md:-right-64 -bottom-56 lg:bottom-auto"
             alt="cloud"
           />
-          <h1 className="text-7xl z-10">Optimistic <br />Data Availability</h1>
+          <h1 className="text-5xl lg:text-7xl z-10">Optimistic <br />Data Availability</h1>
           <p className="font-robotoMono text-base z-10">
             Improve performance, scalability, and costs by opting in to consensus
           </p>
         </div>
       </header>
       <section className='px-5 lg:px-[109px] flex py-56 relative  bg-ghostWhite'>
-        <div className="flex flex-col gap-36 w-1/2 ml-auto">
+        <div className="flex flex-col gap-36 w-2/3 lg:w-1/2 ml-auto z-10">
           <div className="">
             <h2 className='text-4xl font-fkDisplay'>What is Optimistic Data Availability?</h2>
             <p className='font-robotoMono max-w-[770px] pl-28 pt-16 text-lg'>Bundlr is the trust assumption, but it always gets settled on L1, Arweave.</p>
           </div>
         </div>
-        <img src="/assets/dataavailability/cloud.png" alt="data-splash" className='absolute bottom-0 -left-32 w-[767px]' />
+        <img src="/assets/dataavailability/cloud.png" alt="data-splash" className='absolute bottom-0 -left-40 md:-left-96 lg:-left-32 w-[767px]' />
       </section>
 
       <Benefits {...BENEFITS_CONTENT} />
@@ -104,21 +104,21 @@ const DataAvailability: NextPage = () => {
         <div className="flex flex-col gap-36 w-full">
           <div className="">
             <h2 className="text-4xl font-fkDisplay">Opt-in to Consensus</h2>
-            <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg">
               People pay for consensus to update the state of a blockchain in every transaction. For non-financial transactions, this is wasteful and unnecessarily increases blockchain fees.
             </p>
-            <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">For such use cases, you can have stateless transactions, which don’t require consensus. This allows incredibly low latency transactions at industrial scales for an affordable price.</p>
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg">For such use cases, you can have stateless transactions, which don’t require consensus. This allows incredibly low latency transactions at industrial scales for an affordable price.</p>
           </div>
           <div className="">
             <h2 className="text-4xl font-fkDisplay">
               “And What If I Need My Data On-chain?”
             </h2>
-            <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg">
               Easy,just connect to an oracle. Bundlr allows you to pay for state only when you need it.
             </p>
           </div>
         </div>
-        <div className="w-[310px]">
+        <div className="hidden lg:w-[310px]">
           <h3 className="inline-block transform -rotate-90 mt-24 text-[20px] uppercase ml-auto">
             PAY FOR WHAT YOU USE
           </h3>

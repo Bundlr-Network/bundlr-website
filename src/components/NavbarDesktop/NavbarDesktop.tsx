@@ -1,8 +1,17 @@
-import { BracesIcon, BundlrIcon, DevIcon, ParenthesisIcon } from '@/svg'
+import {
+  BracesIcon,
+  BundlrIcon,
+  ChevronRight,
+  CloseIcon,
+  DevIcon,
+  MenuIcon,
+  ParenthesisIcon
+} from '@/svg'
+import { m, motion } from 'framer-motion'
 
 import Button from '../Button'
+import { ButtonScheme } from '../Button/Button'
 import Link from 'next/link'
-import { m } from 'framer-motion'
 import { useState } from 'react'
 
 const useNavbarDesktop = () => {
@@ -32,10 +41,12 @@ const useNavbarDesktop = () => {
         href: '/use-cases'
       }
     ],
-    Developers: [{
-      name: 'Developers',
-      href: '/developers'
-    }],
+    Developers: [
+      {
+        name: 'Developers',
+        href: '/developers'
+      }
+    ],
     Learn: [
       {
         name: 'About',
@@ -46,10 +57,12 @@ const useNavbarDesktop = () => {
         href: '/learn/blog'
       }
     ],
-    Community: [{
-      name: 'Community',
-      href: '/community'
-    }],
+    Community: [
+      {
+        name: 'Community',
+        href: '/community'
+      }
+    ]
   }
 
   return { MENU_OPTIONS }
@@ -59,7 +72,7 @@ export enum SchemeColor {
   'transparent' = 'transparent',
   'onyx' = 'onyx',
   'black' = 'black',
-  'ghostWhite' = 'ghostWhite',
+  'ghostWhite' = 'ghostWhite'
 }
 
 const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
@@ -167,11 +180,7 @@ const NavDropdown = ({
         onMouseLeave={() => setIsHovered(false)}
         className="relative h-[89px] flex items-center justify-center z-50"
       >
-        <div
-          className=" px-4 uppercase font-bold "
-        >
-          {title}
-        </div>
+        <div className=" px-4 uppercase font-bold ">{title}</div>
         {options.length > 0 && (
           <div
             className={`absolute top-[89px] left-0 bg-seashell ${isHovered ? 'block' : 'hidden'
@@ -222,47 +231,202 @@ const NavDropdown = ({
 }
 
 const MenuMobile = () => {
+  const [currentSubmenu, setCurrentSubmenu] = useState(null)
+
   const [isPressed, setIsPressed] = useState(false)
+
+  const MENU_OPTIONS: {
+    [key: string]: {
+      name: string
+      href: string
+    }[]
+  } = {
+    Solutions: [
+      {
+        name: 'Decentralized Storage',
+        href: '/solutions/descentralized-storage'
+      },
+      {
+        name: 'Proof of Provenance',
+        href: '/solutions/proof-of-provenance'
+      },
+      {
+        name: 'Data Availability',
+        href: '/solutions/data-availability'
+      }
+    ],
+    'Use Cases': [
+      {
+        name: 'Use Cases',
+        href: '/use-cases'
+      }
+    ],
+    Developers: [
+      {
+        name: 'Developers',
+        href: '/developers'
+      }
+    ],
+    Learn: [
+      {
+        name: 'About',
+        href: '/learn/about'
+      },
+      {
+        name: 'Blog',
+        href: '/learn/blog'
+      }
+    ],
+    Community: [
+      {
+        name: 'Community',
+        href: '/community'
+      }
+    ]
+  }
 
   return (
     <>
       {/* overlay */}
-      <div
-        className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 ${isPressed ? 'block' : 'hidden'
+      <motion.div
+        className={`fixed top-0 left-0 w-full h-full text-white bg-black z-[9999] ${isPressed ? 'block' : 'hidden'
           }`}
       >
-        hello world
-      </div>
+        <div className="flex flex-col h-full justify-between">
+          {
+            {
+              Solutions: (
+                <img
+                  src="/assets/home/mobile-bg-2.png"
+                  className="absolute bottom-0 right-0"
+                />
+              ),
+              Learn: (
+                <img
+                  src="/assets/home/mobile-bg-3.png"
+                  className="absolute bottom-0 right-0 w-full"
+                />
+              ),
+              Default: (
+                <img
+                  src="/assets/home/mobile-bg-1.png"
+                  className="absolute top-0 left-0"
+                />
+              )
+            }[currentSubmenu || 'Default']
+          }
+          <div className="flex justify-between pt-5 px-3">
+            <div>
+              {currentSubmenu && (
+                <div className="bg-smoky border border-onyx rounded-md p-4 flex items-center justify-center">
+                  <ChevronRight
+                    className="rotate-180"
+                    onClick={() => setCurrentSubmenu(null)}
+                  />
+                </div>
+              )}
+            </div>
+
+            <div
+              className="bg-smoky border border-onyx rounded-md p-4 flex items-center justify-center self-start"
+              onClick={() => setIsPressed(false)}
+            >
+              <CloseIcon />
+            </div>
+          </div>
+
+          <div className="p-7">
+            {
+              {
+                Solutions: (
+                  <motion.div
+                    className="flex flex-col gap-8 -mt-32"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className='uppercase text-xs'>Solutions</p>
+                    {MENU_OPTIONS.Solutions.map((option) => {
+                      return (
+                        <Link href={option.href} key={option.name}>
+                          <p className="uppercase text-3xl">{option.name}</p>
+                        </Link>
+                      )
+                    })}
+                  </motion.div>
+                ),
+                Learn: (
+                  <motion.div
+                    className="flex flex-col gap-8 -mt-52"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className='uppercase text-xs'>Learn</p>
+                    {MENU_OPTIONS.Learn.map((option) => {
+                      return (
+                        <Link href={option.href} key={option.name}>
+                          <p className="uppercase text-3xl">{option.name}</p>
+                        </Link>
+                      )
+                    })}
+                  </motion.div>
+                ),
+                Default: (
+                  <div className="flex flex-col gap-8">
+                    {Object.keys(MENU_OPTIONS).map((key, index) => {
+                      if (MENU_OPTIONS[key].length === 1) {
+                        return (
+                          <Link
+                            href={MENU_OPTIONS[key][0].href}
+                            key={MENU_OPTIONS[key][0].name}
+                          >
+                            <div className="uppercase text-3xl">
+                              {MENU_OPTIONS[key][0].name}
+                            </div>
+                          </Link>
+                        )
+                      } else {
+                        return (
+                          <div
+                            className="uppercase text-3xl flex justify-between items-center"
+                            key={key}
+                            onClick={() => setCurrentSubmenu(key as any)}
+                          >
+                            {key}
+                            <ChevronRight />
+                          </div>
+                        )
+                      }
+                    })}
+                  </div>
+                )
+              }[currentSubmenu || 'Default']
+            }
+          </div>
+          {
+            {
+              Solutions: <div />,
+              Learn: <div />,
+              Default: (
+                <div className="w-full self-center p-7">
+                  <div className="font-robotoMono uppercase text-md flex items-center justify-center gap-2 px-4 py-3 lg:px-6 lg:py-5 rounded-full hover:font-bold bg-white text-black">
+                    START BUILDING
+                    <DevIcon />
+                  </div>
+                </div>
+              )
+            }[currentSubmenu || 'Default']
+          }
+        </div>
+      </motion.div>
 
       <button
         className="relative group z-50"
         onClick={() => setIsPressed((prev) => !prev)}
       >
         <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all duration-200">
-          <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-            <div
-              className={` ${isPressed ? 'bg-white translate-x-10' : 'bg-black'
-                } h-[2px] w-7 transform transition-all duration-300 origin-left mt-[2px]`}
-            ></div>
-            <div
-              className={` ${isPressed ? 'bg-white translate-x-10' : 'bg-black'
-                } h-[2px] w-7 transform transition-all duration-300 origin-left delay-150 mb-[2px]`}
-            ></div>
-
-            <div
-              className={`absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 flex w-0 ${isPressed ? 'translate-x-0 w-12' : ''
-                }`}
-            >
-              <div
-                className={`absolute ${isPressed ? 'bg-white rotate-45' : 'bg-black'
-                  } h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300`}
-              ></div>
-              <div
-                className={`absolute ${isPressed ? 'bg-white -rotate-45' : 'bg-black'
-                  }  h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300`}
-              ></div>
-            </div>
-          </div>
+          <MenuIcon />
         </div>
       </button>
     </>

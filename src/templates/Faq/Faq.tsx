@@ -1,6 +1,16 @@
 import { Button, CtaCentralized, Footer, NavbarDesktop } from '@/components'
-import { CtaCentralizedProps, CtaScheme } from '@/components/CtaCentralized/CtaCentralized'
-import { DevIcon, DiscordIcon, MinusFooterDetailIcon, PlusFooterDetailIcon, SearchIcon } from '@/svg'
+import {
+  ChevronDownIcon,
+  DevIcon,
+  DiscordIcon,
+  MinusFooterDetailIcon,
+  PlusFooterDetailIcon,
+  SearchIcon
+} from '@/svg'
+import {
+  CtaCentralizedProps,
+  CtaScheme
+} from '@/components/CtaCentralized/CtaCentralized'
 import { ReactNode, useEffect, useState } from 'react'
 
 import type { NextPage } from 'next'
@@ -22,9 +32,9 @@ const CTA: React.FC = () => {
       <h2 className="text-white font-light font-fkDisplay text-6xl max-w-[670px] text-center leading-none mb-11">
         Can&apos;t Find What You&apos;re Looking For?
       </h2>
-      <button className='font-robotoMono uppercase text-sm bg-white text-black flex items-center gap-3 px-4 py-3 rounded-full hover:font-bold'>
+      <button className="font-robotoMono uppercase text-sm bg-white text-black flex items-center gap-3 px-4 py-3 rounded-full hover:font-bold">
         Ask us on discord
-        <DiscordIcon className='w-5' />
+        <DiscordIcon className="w-5" />
       </button>
 
       <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
@@ -46,6 +56,7 @@ const CTA: React.FC = () => {
 }
 
 const useFaq = () => {
+
   const [currentCategory, setCurrentCategory] = useState(FaqCategory.General)
 
   const [search, setSearch] = useState('')
@@ -110,13 +121,15 @@ const useFaq = () => {
   ]
 
   const CTA_CONTENT: CtaCentralizedProps = {
-    title: 'Can\'t Find What You\'re Looking For?',
+    title: "Can't Find What You're Looking For?",
     cta: 'ASK US ON DISCORD',
-    ctaIcon: <DiscordIcon className='w-5' />,
+    ctaIcon: <DiscordIcon className="w-5" />,
     href: 'https://discord.gg/bundlr',
     newTab: true,
     scheme: CtaScheme.black
   }
+
+  const [mobileExpanded, setMobileExpanded] = useState(false)
 
   return {
     PAGE_SEO,
@@ -125,7 +138,9 @@ const useFaq = () => {
     currentCategory,
     setCurrentCategory,
     search,
-    setSearch
+    setSearch,
+    mobileExpanded,
+    setMobileExpanded
   }
 }
 
@@ -156,7 +171,9 @@ const Faq: NextPage = () => {
     currentCategory,
     setCurrentCategory,
     search,
-    setSearch
+    setSearch,
+    mobileExpanded,
+    setMobileExpanded
   } = useFaq()
 
   return (
@@ -165,10 +182,10 @@ const Faq: NextPage = () => {
       <NavbarDesktop />
       {/* Categories filter  */}
       <section className="max-w-[976px] ml-auto mr-auto">
-        <div className="flex justify-between items-center pb-9 pt-32">
+        <div className="flex justify-between items-start lg:items-center gap-4 lg:gap-0 pb-9 pt-32 flex-col lg:flex-row px-4">
           <h1 className="font-fkDisplay text-5xl font-light">FAQs</h1>
           {/* search box with icon on left of the input area */}
-          <div className="flex items-center border border-gray-400 rounded-full py-2 px-4 text-lg font-robotoMono gap-3 ">
+          <div className="flex items-center border border-gray-400 rounded-full py-2 px-4 text-lg font-robotoMono gap-3 w-full lg:w-auto">
             <SearchIcon className="ml-2 text-gray-600" />
             <input
               type="text"
@@ -179,7 +196,56 @@ const Faq: NextPage = () => {
           </div>
         </div>
         <hr />
-        <ul className="flex justify-between items-center pt-12">
+        <div
+          onClick={() => setMobileExpanded(!mobileExpanded)}
+          className={`mt-8 flex justify-between items-center mx-4 lg:hidden font-bold bg-black text-white cursor-pointer text-sm uppercase font-robotoMono p-[15px] lg:p-[5px]`}
+        >
+          {
+            Object.values(FaqCategory)[
+            Object.keys(FaqCategory).indexOf(currentCategory)
+            ]
+          } <ChevronDownIcon className={`w-5 transition-all ${mobileExpanded ? 'transform rotate-180' : ''
+            }`} />
+        </div>
+        {
+          mobileExpanded && (
+            <ul className="lg:hidden flex-col lg:flex-row justify-between items-center pt-2 px-4 lg:px-0">
+
+              {Object.values(FaqCategory).map((key) => {
+                return (
+                  <li
+                    key={key}
+                    onClick={() => {
+                      if (key && Object.values(FaqCategory).includes(key)) {
+                        setCurrentCategory(
+                          Object.keys(FaqCategory).find(
+                            (k) =>
+                              FaqCategory[k as keyof typeof FaqCategory] === key
+                          ) as FaqCategory
+                        )
+                      }
+                      setMobileExpanded(false)
+                    }}
+                    className={`
+                ${currentCategory ===
+                        Object.keys(FaqCategory).find(
+                          (k) => FaqCategory[k as keyof typeof FaqCategory] === key
+                        )
+                        ? 'font-bold cursor-default bg-black text-white'
+                        : ''
+                      } cursor-pointer text-sm uppercase font-robotoMono w-full lg:w-auto p-[15px] lg:p-[5px]
+
+              
+                `}
+                  >
+                    {key}
+                  </li>
+                )
+              })}
+            </ul>
+          )
+        }
+        <ul className="hidden lg:flex flex-col lg:flex-row justify-between items-center pt-12 px-4 lg:px-0">
           {Object.values(FaqCategory).map((key) => {
             return (
               <li
@@ -188,20 +254,20 @@ const Faq: NextPage = () => {
                   if (key && Object.values(FaqCategory).includes(key)) {
                     setCurrentCategory(
                       Object.keys(FaqCategory).find(
-                        (k) => FaqCategory[k as keyof typeof FaqCategory] === key
+                        (k) =>
+                          FaqCategory[k as keyof typeof FaqCategory] === key
                       ) as FaqCategory
-                    );
+                    )
                   }
-                }
-                }
+                }}
                 className={`
                 ${currentCategory ===
                     Object.keys(FaqCategory).find(
                       (k) => FaqCategory[k as keyof typeof FaqCategory] === key
                     )
-                    ? 'font-bold cursor-default bg-black p-[5px] text-white'
+                    ? 'font-bold cursor-default bg-black text-white'
                     : ''
-                  } cursor-pointer text-sm uppercase font-robotoMono
+                  } cursor-pointer text-sm uppercase font-robotoMono w-full lg:w-auto p-[15px] lg:p-[5px]
 
               
                 `}
@@ -211,12 +277,12 @@ const Faq: NextPage = () => {
             )
           })}
         </ul>
-        <ul className="pt-12">
+        <ul className="pt-4 lg:pt-12 px-4 lg:px-0">
           {FAQ_CONTENT.filter((faq) =>
-            currentCategory as string === 'All'
+            (currentCategory as string) === 'All'
               ? true
-              // @ts-ignore
-              : FaqCategory[faq.category] === currentCategory
+              : // @ts-ignore
+              FaqCategory[faq.category] === currentCategory
           )
             .filter(
               (faq) =>
@@ -231,7 +297,7 @@ const Faq: NextPage = () => {
         </ul>
       </section>
 
-      <section className="mt-40">
+      <section className="mt-10 lg:mt-40">
         <CtaCentralized {...CTA_CONTENT} />
       </section>
 

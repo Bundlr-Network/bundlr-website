@@ -67,7 +67,7 @@ const Developers: NextPage = () => {
       <header className=" text-white bg-black">
         <NavbarDesktop scheme={SchemeColor.black} />
         <div className="px-5 lg:px-0 flex flex-col items-center gap-9 h-[calc(100vh-90px)] relative">
-          <h1 className="text-6xl lg:text-7xl leading-none mt-24 z-10">
+          <h1 className="text-6xl lg:text-7xl leading-none mt-24 z-10 text-center">
             Build with seamlessly Bundlr
           </h1>
           <p className="text-lg font-robotoMono font-light z-10 text-center max-w-5xl">
@@ -119,7 +119,7 @@ const Developers: NextPage = () => {
         </div>
       </section>
 
-      <section className="px-5 lg:px-[109px] bg-seashell py-16 flex justify-between">
+      <section className="px-5 lg:px-[109px] bg-seashell pt-16 pb-36 flex justify-between items-center gap-24">
         <div>
           <SectionTitle title="How Bundlr Works" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
@@ -137,7 +137,7 @@ const Developers: NextPage = () => {
           </div>
         </div>
         <div className="hidden lg:block">
-          <img src="/assets/developers/cloud.png" alt="" width={'700px'} />
+          <img src="/assets/developers/cloud.png" alt="" width={689} />
         </div>
       </section>
       <section className='bg-black text-white flex gap-20 items-center relative h-auto flex-col-reverse lg:flex-row px-4 lg:px-[109px] py-20'>
@@ -151,7 +151,7 @@ const Developers: NextPage = () => {
           <ExpandableSection />
         </div>
       </section>
-      <section className="px-5 lg:px-[109px] bg-seashell pt-16 flex justify-between">
+      <section className="px-5 lg:px-[109px] bg-seashell pt-16 flex justify-between gap-24 items-center">
         <div>
           <SectionTitle title="Why on Arweave?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
@@ -170,7 +170,7 @@ const Developers: NextPage = () => {
           </div>
         </div>
         <div className="hidden lg:block">
-          <img src="/assets/developers/vortex.png" alt="" />
+          <img src="/assets/developers/vortex.png" alt="" width={689} />
         </div>
       </section>
       <JoinTheCommunity />

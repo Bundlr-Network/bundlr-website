@@ -87,7 +87,7 @@ const ProofOfProvenance: NextPage = () => {
             className="absolute -top-30 right-0"
             alt="cloud"
           />
-          <h1 className="text-7xl z-10">Proof of Provenance</h1>
+          <h1 className="text-5xl lg:text-7xl z-10">Proof of Provenance</h1>
           <p className="font-robotoMono text-base z-10">
             Trustlessly identify original information by accurately attributing
             characteristics of its origin.
@@ -101,7 +101,7 @@ const ProofOfProvenance: NextPage = () => {
         <div className="flex flex-col gap-36 w-full">
           <div className="">
             <h2 className="text-4xl font-fkDisplay">Proof of Time</h2>
-            <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg">
               Receive signed receipts timestamps down to the millisecond that
               serve as a verifiable ‘proof of time’ for when information was
               stored on Bundlr.
@@ -111,14 +111,14 @@ const ProofOfProvenance: NextPage = () => {
             <h2 className="text-4xl font-fkDisplay">
               Custom Metadata Tagging
             </h2>
-            <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg">
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg">
               You can add custom tags to the metadata of the content that you
               store on Bundlr. This makes it simple to index and query any data
               that you need to find on Bundlr.
             </p>
           </div>
         </div>
-        <div className="w-[310px]">
+        <div className="w-[310px] hidden lg:block">
           <h3 className="inline-block transform -rotate-90 mt-24 text-[20px] uppercase ml-auto">
             PROVE AND FIND TRUTH
           </h3>
