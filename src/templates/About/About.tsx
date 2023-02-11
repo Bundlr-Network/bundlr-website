@@ -18,37 +18,55 @@ const useAbout = () => {
       name:
         'Josh Benaron',
       role: 'FOUNDER & CEO',
-      image: '/assets/about/josh.png'
+      image: '/assets/about/heads/Josh.jpeg'
     },
     {
       name:
-        'Josh Benaron',
-      role: 'FOUNDER & CEO',
-      image: '/assets/about/josh.png'
+        'Amélia Guertin',
+      role: 'COO',
+      image: '/assets/about/heads/Amelia.jpeg'
     },
     {
       name:
-        'Josh Benaron',
-      role: 'FOUNDER & CEO',
-      image: '/assets/about/josh.png'
+        'Pranit Garg',
+      role: 'Head of Marketing',
+      image: '/assets/about/heads/Pranit.jpeg'
     },
     {
       name:
-        'Josh Benaron',
-      role: 'FOUNDER & CEO',
-      image: '/assets/about/josh.png'
+        'Jesse Wright',
+      role: 'Lead Engineer',
+      image: '/assets/about/heads/Jesse.jpg'
     },
     {
       name:
-        'Josh Benaron',
-      role: 'FOUNDER & CEO',
-      image: '/assets/about/josh.png'
+        'Miko Nieminen',
+      role: 'System Architect',
+      image: '/assets/about/heads/Miko.jpeg'
     },
     {
       name:
-        'Josh Benaron',
-      role: 'FOUNDER & CEO',
-      image: '/assets/about/josh.png'
+        'William G',
+      role: 'Lead Front-end Engineer',
+      image: '/assets/about/heads/Will.jpeg'
+    },
+    {
+      name:
+        'Rez',
+      role: 'Community Moderator',
+      image: '/assets/about/heads/Rez.jpeg'
+    },
+    {
+      name:
+        'Luke Cassady',
+      role: 'Dev Rel',
+      image: '/assets/about/heads/Luke.jpeg'
+    },
+    {
+      name:
+        'Kevin German',
+      role: 'Engineer',
+      image: '/assets/about/heads/Kevin.jpeg'
     },
   ]
 
@@ -64,12 +82,8 @@ const About: NextPage = () => {
       <NavbarDesktop />
 
       <header
-        className="px-5 lg:px-[109px]"
+        className="px-5 lg:px-[109px] relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/assets/about/header.png)',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: '50% 200%',
-          backgroundSize: '100%',
           height: '894px'
         }}
       >
@@ -78,6 +92,7 @@ const About: NextPage = () => {
             Meet the World&apos;s Next Data Layer
           </h1>
         </div>
+        <img src="/assets/about/header.png" alt="" className='absolute bottom-36 right-0' />
       </header>
 
       <section className="px-5 lg:px-[109px] relative bg-seashell flex justify-between">

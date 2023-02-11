@@ -17,30 +17,30 @@ const usePartnerProgram = () => {
 const PartnerProgram: NextPage = () => {
   const { PAGE_SEO } = usePartnerProgram()
 
-  const [captchaSettings, setCaptchaSettings] = useState<null | string>(null)
+  // const [captchaSettings, setCaptchaSettings] = useState<null | string>(null)
 
-  const captchaRef = useRef(null)
+  // const captchaRef = useRef(null)
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const response: any = document.getElementById('g-recaptcha-response')
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     const response: any = document.getElementById('g-recaptcha-response')
 
-      if (response == null || response.value.trim() === '') {
-        const currentCaptchaSettings = JSON.parse(
-          (captchaRef?.current as any)?.value
-        )
+  //     if (response == null || response.value.trim() === '') {
+  //       const currentCaptchaSettings = JSON.parse(
+  //         (captchaRef?.current as any)?.value
+  //       )
 
-        setCaptchaSettings(() =>
-          JSON.stringify({
-            ...currentCaptchaSettings,
-            ts: JSON.stringify(new Date().getTime())
-          })
-        )
-      }
-    }, 500)
+  //       setCaptchaSettings(() =>
+  //         JSON.stringify({
+  //           ...currentCaptchaSettings,
+  //           ts: JSON.stringify(new Date().getTime())
+  //         })
+  //       )
+  //     }
+  //   }, 500)
 
-    return () => clearInterval(intervalId)
-  }, [captchaSettings])
+  //   return () => clearInterval(intervalId)
+  // }, [captchaSettings])
 
   return (
     <div className="bg-ghostWhite">
@@ -65,14 +65,14 @@ const PartnerProgram: NextPage = () => {
         <div className="bg-black p-12 rounded-xl">
           <form
             className="flex flex-col gap-5"
-            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+            action="https://formsubmit.co/hello@bundlr.network"
             method="POST"
           >
             <p className="text-white font-robotoMono">
               Fill in this form and we’ll get back to you shortly.
             </p>
             {/* <input type="hidden" name="debug" value="1" /> */}
-            <input
+            {/* <input
               type="hidden"
               name="captcha_settings"
               ref={captchaRef}
@@ -86,48 +86,48 @@ const PartnerProgram: NextPage = () => {
               type="hidden"
               name="retURL"
               value="https://bundlr.network/partner-program?success"
-            />
+            /> */}
             <input
               className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
               type="text"
-              name="first_name"
+              name="Name"
               placeholder="Name"
             />
             <input
               className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
               type="text"
               placeholder="Organization"
-              name="organization"
+              name="Organization"
             />
             <input
               className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
               type="text"
               placeholder="Email"
-              name="email"
+              name="Email"
             />
             <input
               className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
               type="text"
               placeholder="Phone Number (Optional)"
-              name="phone"
+              name="Phone"
             />
             <input
               className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
               type="text"
               placeholder="Telegram Handle (Optional)"
-              name="telegram"
+              name="Telegram"
             />
             <textarea
-              name="description"
+              name="Description"
               id=""
               rows={4}
               placeholder="Anything you want us to know? (Optional)"
               className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
             ></textarea>
-            <div
+            {/* <div
               className="g-recaptcha"
               data-sitekey="6Lf5i2gkAAAAAD7B3wU-SK3lTeDReGIHxHhEutoc"
-            ></div>
+            ></div> */}
             <button
               type="submit"
               className="bg-white rounded-md text-black flex items-center justify-center uppercase text-base py-4"

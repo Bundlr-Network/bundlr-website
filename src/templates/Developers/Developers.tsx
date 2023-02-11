@@ -68,7 +68,7 @@ const Developers: NextPage = () => {
         <NavbarDesktop scheme={SchemeColor.black} />
         <div className="px-5 lg:px-0 flex flex-col items-center gap-9 h-[calc(100vh-90px)] relative">
           <h1 className="text-6xl lg:text-7xl leading-none mt-24 z-10 text-center">
-            Build with seamlessly Bundlr
+            Build Seamlessly with Bundlr
           </h1>
           <p className="text-lg font-robotoMono font-light z-10 text-center max-w-5xl">
             Bundlr is a decentralized data network to help developers solve
