@@ -38,63 +38,72 @@ const HomeTrustedBy = ({
     {
       title: 'Orb',
       icon: '/assets/home/users/orb.jpg',
-      invert: true
+      invert: false,
+      whiteinvert: true
     },
     {
       title: 'Sound XYZ',
       icon: '/assets/home/users/sound.svg',
-      invert: true
+      invert: false,
+      whiteinvert: true
     },
     {
       title: 'Metaplex',
       icon: '/assets/home/users/metaplex.svg',
-      invert: true
+      invert: false,
+      whiteinvert: true
     },
     {
       title: 'Glass XYZ',
-      icon: '/assets/home/users/glass.png'
+      icon: '/assets/home/users/glass.png',
     },
     {
       title: 'Backpack',
       icon: '/assets/home/users/backpack.svg',
-      invert: true
+      invert: false,
+      whiteinvert: true
     },
     {
       title: 'Exchange',
       icon: '/assets/home/users/exchange.svg',
-      invert: true
+      invert: false,
+      whiteinvert: true
     },
     {
       title: 'Beem XYZ',
       icon: '/assets/home/users/beem.svg',
-      invert: true
+      invert: false,
+      whiteinvert: true
     },
     {
       title: 'Orb',
       icon: '/assets/home/users/orb.jpg',
-      invert: true
+      invert: false,
+      whiteinvert: true
     },
     {
       title: 'Alex',
       icon: '/assets/home/users/alex.svg',
-      invert: true
-    },
-    {
-      title: 'Lens',
-      icon: '/assets/home/users/lens.png',
       invert: false,
       whiteinvert: true
     },
+    // {
+    //   title: 'Lens',
+    //   icon: '/assets/home/users/lens.png',
+    //   invert: false,
+    //   whiteinvert: true
+    // },
     {
       title: 'Wordcel',
       icon: '/assets/home/users/wordcel.svg',
-      invert: false,
-      whiteinvert: true
+      invert: true,
+      whiteinvert: false,
     },
     {
       title: 'CryptoUnicorns',
       icon: '/assets/home/users/unicorns.png',
-      invert: true
+      invert: false,
+      whiteinvert: true
     }
   ]
 
@@ -111,7 +120,7 @@ const HomeTrustedBy = ({
         {/* <Marquee gradientColor={[238, 240, 246]} speed={50}> */}
         <Marquee
           gradientColor={scheme === 'dark' ? [0, 0, 0] : [255, 255, 255]}
-          speed={10}
+          speed={50}
         >
           <div className="flex items-center gap-20">
             {[
@@ -126,14 +135,15 @@ const HomeTrustedBy = ({
               <div
                 key={index}
                 className={`flex flex-col items-center rounded-xl p-4 ${index === 0 && 'ml-[40px]'
-                  } ${scheme === 'dark' ? 'bg-white' : 'bg-black'}`}
+                  }`}
               >
                 <img
                   src={user.icon}
                   alt={user.title}
-                  width={103}
+                  // width={103}
                   // (scheme === 'light' && user.whiteinvert) ? 'whiteinvert' : '')
                   className={`
+                    h-12
                     ${(scheme === 'dark') && user.invert && 'invert'}
                     ${(!scheme || scheme === 'light') && user.whiteinvert && 'invert'}
                     `}

@@ -46,13 +46,13 @@ const PartnerProgram: NextPage = () => {
     <div className="bg-ghostWhite">
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-      <header className="flex flex-col justify-center items-center my-28">
+      <header className="flex flex-col justify-center items-center my-28 hidden">
         <p className="text-2xl font-robotoMono text-center">
           Interested in partnering with Bundlr?
         </p>
         <p className="text-8xl">Let&apos;s talk</p>
       </header>
-      <section className="flex flex-col md:flex-row justify-between md:px-5 lg:px-[109px] pb-[105px] px-5 gap-12 lg:gap-0">
+      <section className="mt-10 lg:mt-0 flex flex-col md:flex-row justify-between md:px-5 lg:px-[109px] pb-[105px] px-5 gap-12 lg:gap-0">
         <div className="max-w-[564px] flex flex-col gap-9">
           <SectionTitle title="The Partner Program" />
           <p className="font-robotoMono">
@@ -62,7 +62,7 @@ const PartnerProgram: NextPage = () => {
             continue the conversation.
           </p>
         </div>
-        <div className="bg-black p-12 rounded-xl">
+        <div className="bg-black p-6 lg:p-12 rounded-xl">
           <form
             className="flex flex-col gap-5"
             action="https://formsubmit.co/hello@bundlr.network"

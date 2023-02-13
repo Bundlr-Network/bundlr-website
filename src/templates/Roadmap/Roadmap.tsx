@@ -1,6 +1,7 @@
 import { Footer, NavbarDesktop } from '@/components'
 import { useLayoutEffect, useRef } from 'react'
 
+import { ChevronRight } from '@/svg'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
@@ -12,7 +13,8 @@ gsap.registerPlugin(ScrollTrigger)
 const useRoadmap = () => {
   const PAGE_SEO = {
     title: 'Bundlr | Roadmap',
-    description: 'Bear or bull, Bundlr will keep building. Check out what’s coming.'
+    description:
+      'Bear or bull, Bundlr will keep building. Check out what’s coming.'
   }
 
   return { PAGE_SEO }
@@ -35,8 +37,8 @@ const Roadmap: NextPage = () => {
           pin: true,
           scrub: 1,
           // snap: 1 / (panels.length - 1),
-          end: () => '+=' + slider?.current?.offsetWidth,
-          markers: true
+          end: () => '+=' + slider?.current?.offsetWidth * 3
+          // markers: true
         }
       })
     }, wrapper)
@@ -62,14 +64,23 @@ const Roadmap: NextPage = () => {
                 We’re building a seamless developer experience while
                 decentralizing our infrastructure.
               </p>
-              <p className="font-robotoMono z-10">Check out Bundlr’s plans ahead</p>
+              <p className="font-robotoMono z-10">
+                Check out Bundlr’s plans ahead
+              </p>
             </div>
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
-            <img src="/assets/roadmap/roadmap.png" alt="roadmap" className='absolute lg:-left-96 xl:-left-72 top-0' />
-
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div className="text-white mr-10">
+              <ChevronRight width={'40px'} height={'40px'} />
+            </div>
+            <img
+              src="/assets/roadmap/roadmap.png"
+              alt="roadmap"
+              className="absolute lg:-left-96 xl:-left-72 -top-96"
+            />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">Ongoing</p>
               <h2 className="text-7xl z-10">Chain Integrations </h2>
@@ -87,12 +98,25 @@ const Roadmap: NextPage = () => {
                 Partner Program.
               </p>
             </div>
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
-            <img src="/assets/roadmap/chain-1.png" alt="roadmap" className='absolute top-0 left-0' />
-            <img src="/assets/roadmap/chain-2.png" alt="roadmap" className='absolute bottom-0 right-0' />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" />\ */}
+            <div className="text-white mr-10">
+              <ChevronRight width={'40px'} height={'40px'} />
+            </div>
+
+            <img
+              src="/assets/roadmap/chain-1.png"
+              alt="roadmap"
+              className="absolute top-0 left-0"
+            />
+            <img
+              src="/assets/roadmap/chain-2.png"
+              alt="roadmap"
+              className="absolute bottom-0 right-0"
+            />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">Q1 2023</p>
               <h2 className="text-7xl z-10">Preweave</h2>
@@ -102,12 +126,24 @@ const Roadmap: NextPage = () => {
                 their data on Arweave, seamlessly.
               </p>
             </div>
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
-            <img src="/assets/roadmap/preweave-1.png" alt="preweave" className='absolute top-0 left-0' />
-            <img src="/assets/roadmap/preweave-2.png" alt="preweave" className='absolute bottom-0 right-0' />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div className="text-white mr-10">
+              <ChevronRight width={'40px'} height={'40px'} />
+            </div>
+            <img
+              src="/assets/roadmap/preweave-1.png"
+              alt="preweave"
+              className="absolute top-0 left-0"
+            />
+            <img
+              src="/assets/roadmap/preweave-2.png"
+              alt="preweave"
+              className="absolute bottom-0 right-0"
+            />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">Q2 2023</p>
               <h2 className="text-7xl z-10">Bundlr Studio</h2>
@@ -120,12 +156,24 @@ const Roadmap: NextPage = () => {
                 use Bundlr as a data layer.
               </p>
             </div>
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
-            <img src="/assets/roadmap/studio-1.png" alt="studio" className='absolute top-0 left-0' />
-            <img src="/assets/roadmap/studio-2.png" alt="studio" className='absolute bottom-0 right-0' />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div className="text-white mr-10">
+              <ChevronRight width={'40px'} height={'40px'} />
+            </div>
+            <img
+              src="/assets/roadmap/studio-1.png"
+              alt="studio"
+              className="absolute top-0 left-0"
+            />
+            <img
+              src="/assets/roadmap/studio-2.png"
+              alt="studio"
+              className="absolute bottom-0 right-0"
+            />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between">
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">Q4 2023</p>
               <h2 className="text-7xl z-10">Testnet </h2>
@@ -134,9 +182,17 @@ const Roadmap: NextPage = () => {
                 goes to Mainnet.
               </p>
             </div>
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
-            <img src="/assets/roadmap/testnet-1.png" alt="testnet" className='absolute top-0 left-0' />
-            <img src="/assets/roadmap/testnet-2.png" alt="testnet" className='absolute bottom-0 right-0' />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <img
+              src="/assets/roadmap/testnet-1.png"
+              alt="testnet"
+              className="absolute top-0 left-0"
+            />
+            <img
+              src="/assets/roadmap/testnet-2.png"
+              alt="testnet"
+              className="absolute bottom-0 right-0"
+            />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
             <div className="border-dashed border-t-2 w-24 h-2 border-white" />
@@ -149,8 +205,16 @@ const Roadmap: NextPage = () => {
               </p>
             </div>
             <div className="border-dashed border-t-2 w-24 h-2 border-white" />
-            <img src="/assets/roadmap/mainnet-1.png" alt="mainnet" className='absolute top-0 left-0' />
-            <img src="/assets/roadmap/mainnet-2.png" alt="mainnet" className='absolute bottom-0 right-0' />
+            <img
+              src="/assets/roadmap/mainnet-1.png"
+              alt="mainnet"
+              className="absolute top-0 left-0"
+            />
+            <img
+              src="/assets/roadmap/mainnet-2.png"
+              alt="mainnet"
+              className="absolute bottom-0 right-0"
+            />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
             <div className="border-dashed border-t-2 w-24 h-2 border-white" />
@@ -165,8 +229,16 @@ const Roadmap: NextPage = () => {
               </p>
             </div>
             <div />
-            <img src="/assets/roadmap/future-1.png" alt="future" className='absolute top-0 left-0' />
-            <img src="/assets/roadmap/future-2.png" alt="future" className='absolute bottom-0 right-0' />
+            <img
+              src="/assets/roadmap/future-1.png"
+              alt="future"
+              className="absolute top-0 left-0"
+            />
+            <img
+              src="/assets/roadmap/future-2.png"
+              alt="future"
+              className="absolute bottom-0 right-0"
+            />
           </div>
         </div>
       </div>
