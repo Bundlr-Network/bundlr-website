@@ -3,7 +3,7 @@ import { DevIcon } from '@/svg'
 const CtaSection = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <section className="mx-4 lg:mx-[109px] my-[88px] rounded-[30px] overflow-hidden h-[473px] relative bg-black text-white flex items-center">
+      <section className="mx-4 lg:mx-[109px] rounded-[30px] overflow-hidden h-[473px] relative bg-black text-white flex items-center">
         {/* <div
             className="absolute left-0 bottom-0 bg-no-repeat"
             style={{ backgroundImage: "url(')", backgroundSize: '100% 100%' }}

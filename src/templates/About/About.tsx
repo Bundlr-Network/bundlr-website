@@ -115,7 +115,7 @@ const About: NextPage = () => {
           </div>
 
         </div>
-        <img src="/assets/about/section.png" alt="" className='absolute right-0 hidden lg:block' />
+        <img src="/assets/about/section.png" alt="" className='absolute right-0 hidden lg:block -mb-4' />
       </section>
 
       <div className="py-28">

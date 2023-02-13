@@ -1,4 +1,4 @@
-export {}
+export { }
 export { default as NavbarDesktop } from './NavbarDesktop'
 export { default as Button } from './Button'
 export { default as Footer } from './Footer'
@@ -20,3 +20,4 @@ export { default as Differentials } from './Differentials'
 export { default as ExpandableSection } from './ExpandableSection'
 export { default as HomeHorizontalSection } from './HomeHorizontalSection'
 export { default as SupportedCurrencies } from './SupportedCurrencies'
+export { default as HomeHorizontalScroll } from './HomeHorizontalScroll'
