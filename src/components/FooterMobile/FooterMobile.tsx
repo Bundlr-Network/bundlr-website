@@ -13,7 +13,9 @@ import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
 
-const FooterMobile = ({ data }: {
+const FooterMobile = ({
+  data
+}: {
   data: {
     title: string
     options: {
@@ -23,14 +25,13 @@ const FooterMobile = ({ data }: {
     }[]
   }[]
 }) => {
-
   return (
     <>
       <footer className="border-t border-timberwolf pt-[56px] px-[20px] font-robotoMono lg:hidden">
         <FooterLogo />
         <p className="mt-[60px] text-[40px] tracking-tighter whitespace-normal leading-none mb-[68px]">
-          THE FUTURE OF <br />
-          DATA STORAGE
+          THE WORLD&apos;S <br />
+          NEXT DATA LAYER
         </p>
         {data.map((definition) => (
           <ExpandableSection
@@ -95,7 +96,9 @@ const FooterMobile = ({ data }: {
             <TelegramIcon />
           </a>
         </section>
-        <p className="mt-[17px] mb-[36px]">{new Date().getFullYear()} Bundlr. All rights reserved.</p>
+        <p className="mt-[17px] mb-[36px]">
+          {new Date().getFullYear()} Bundlr. All rights reserved.
+        </p>
       </footer>
     </>
   )
@@ -123,7 +126,12 @@ const ExpandableSection = ({
       <ul className="mt-[20px]">
         {options.map((option, index) => (
           <li className="mt-[20px]" key={`option-${option}-${index}`}>
-            <Link href={option.href} className="text-[15px]" target={option.newTab ? '_blank' : '_self'} rel="noreferrer">
+            <Link
+              href={option.href}
+              className="text-[15px]"
+              target={option.newTab ? '_blank' : '_self'}
+              rel="noreferrer"
+            >
               {option.name}
             </Link>
             {option.label && (

@@ -101,20 +101,21 @@ const About: NextPage = () => {
         <img src="/assets/about/header.png" alt="" className='absolute bottom-36 right-0' />
       </header>
 
-      <section className="px-5 lg:px-[109px] relative bg-seashell flex justify-between">
+      <section className="px-5 lg:px-[109px] items-center bg-seashell flex justify-between relative">
         <div>
           <SectionTitle title="What is Bundlr?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
-            <p className="">
+            <p className="z-10">
               Bundlr is developing a decentralized data network to help developers solve complex data integrity issues. {' '}
             </p>
-            <p className="">
+            <p className="z-10">
               We provide solutions for storage, provenance, and data availability that help you establish a trustless data foundation.{' '}
             </p>
-            <p>Our vision is to be data’s trustless source of truth.</p>
+            <p className='z-10'>Our vision is to be data’s trustless source of truth.</p>
           </div>
 
         </div>
+        <img src="/assets/about/section.png" alt="" className='absolute right-0 hidden lg:block' />
       </section>
 
       <div className="py-28">
@@ -124,14 +125,14 @@ const About: NextPage = () => {
       <section className='flex flex-col lg:flex-row px-5 lg:px-[109px] justify-start gap-10 lg:gap-0'>
         <p className='text-5xl font-fkDisplay text-center lg:text-left'>Our<br />Team</p>
         {/* 3 column grid  */}
-        <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:ml-auto">
+        <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:ml-auto w-full lg:w-4/5">
           {MEMBERS.map((item, index) => {
             return (
 
               <li key={index} className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
                 {/* add gradient background that goes from gray to transparent */}
 
-                <div className="hover:shadow-md transition-all flex flex-col gap-8 w-full lg:w-[204px] xl:w-[334px] bg-seashell rounded-lg overflow-hidden">
+                <div className="hover:shadow-md transition-all flex flex-col gap-8 w-full bg-seashell rounded-lg overflow-hidden">
                   {/* make image as background of rectangle box */}
                   <div
                     className="w-full h-[348px] bg-cover bg-center hover:bg-zoom  overflow-hidden"

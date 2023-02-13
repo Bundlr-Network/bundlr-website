@@ -25,8 +25,8 @@ const useTestimonial = () => {
         '“Bundlr helped us streamline NFT’s minting with their super fast infrastructure and also very robust and easy to use JS client. By adding option to pay for storage in Sol, we love it even more.“',
       image: '/assets/home/solsea.svg',
       imageAlt: 'Solsea',
-      author: 'Who said that?',
-      authorRole: 'What the author role?'
+      author: 'Vitomir Jevremovic',
+      authorRole: 'Founder at Solsea'
     }
   ]
 
