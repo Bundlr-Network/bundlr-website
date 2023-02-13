@@ -36,13 +36,19 @@ const useAbout = () => {
       name:
         'Jesse Wright',
       role: 'Lead Engineer',
-      image: '/assets/about/heads/Jesse.jpg'
+      image: '/assets/about/heads/Jesse.jpeg'
     },
     {
       name:
         'Miko Nieminen',
       role: 'System Architect',
       image: '/assets/about/heads/Miko.jpeg'
+    },
+    {
+      name:
+        'Gustavo',
+      role: 'Engineer',
+      image: '/assets/about/heads/Gus.jpeg'
     },
     {
       name:

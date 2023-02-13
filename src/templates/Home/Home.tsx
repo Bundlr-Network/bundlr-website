@@ -71,22 +71,22 @@ const useHome = () => {
     href: string
   }[] = [
       {
-        title: 'Data Availability',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
-        href: '/solutions/data-availability'
-      },
-      {
         title: 'Decentralized Storage',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+          'Performant, scalable, and seamless data, stored permanently on Arweave',
         href: '/solutions/decentralized-storage'
       },
       {
         title: 'Proof of Provenance',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.',
+          'Identify original information by accurately attributing origin',
         href: '/solution/proof-of-provenance'
+      },
+      {
+        title: 'Data Availability',
+        description:
+          'Pay for consensus only when you need it',
+        href: '/solutions/data-availability'
       }
     ]
 

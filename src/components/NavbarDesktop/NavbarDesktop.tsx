@@ -146,10 +146,12 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
           EN
         </div> */}
         <div className="lg:w-[269px] flex items-center justify-center ml-auto lg:ml-0">
-          <Button>
-            START BUILDING
-            <DevIcon />
-          </Button>
+          <a href="https://docs.bundlr.network/" target="_blank" rel="noreferrer">
+            <Button>
+              START BUILDING
+              <DevIcon />
+            </Button>
+          </a>
         </div>
         <div className="flex lg:hidden ml-[10px] mr-[10px]">
           <MenuMobile />
