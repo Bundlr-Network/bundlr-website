@@ -140,7 +140,7 @@ const Home: NextPage = () => {
 
       <HomeHorizontalScroll />
 
-      <section className="px-5 lg:px-[109px] pt-24 lg:pt-[122px] bg-seashell overflow-hidden" style={{
+      <section className="flex items-center justify-center lg:items-start justify-start flex-col px-5 lg:px-[109px] pt-24 lg:pt-[122px] bg-seashell overflow-hidden" style={{
         boxShadow: '0 0 70px rgba(0,0,0,.2)'
       }}>
         <SectionTitle title="Testimonials" />
