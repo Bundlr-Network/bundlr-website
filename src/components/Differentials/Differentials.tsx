@@ -9,7 +9,7 @@ export interface BenefitsProps {
 const Benefits = ({ title, items }: BenefitsProps) => {
   return (
     <>
-      <section className="pb-24 lg:pb-0 h-auto lg:h-[584px] flex flex-col lg:flex-row justify-between text-white bg-black px-5 lg:px-[109px] gap-0 lg:gap-20">
+      <section className="pb-24 lg:pb-0 h-auto lg:h-[584px] flex flex-col lg:flex-row justify-between text-white bg-black px-5 lg:px-[79px] gap-0 lg:gap-20">
         <div className="hidden lg:inline-block">
           <p className="transform rotate-180 text-center mt-[133px] text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
             {title}

@@ -88,7 +88,7 @@ const About: NextPage = () => {
       <NavbarDesktop />
 
       <header
-        className="px-5 lg:px-[109px] relative overflow-hidden"
+        className="px-5 lg:px-[79px] relative overflow-hidden"
         style={{
           height: '894px'
         }}
@@ -101,7 +101,7 @@ const About: NextPage = () => {
         <img src="/assets/about/header.png" alt="" className='absolute bottom-36 right-0' />
       </header>
 
-      <section className="px-5 lg:px-[109px] items-center bg-seashell flex justify-between relative">
+      <section className="px-5 lg:px-[79px] items-center bg-seashell flex justify-between relative">
         <div>
           <SectionTitle title="What is Bundlr?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
@@ -122,7 +122,7 @@ const About: NextPage = () => {
         <SpotifySection />
       </div>
 
-      <section className='flex flex-col lg:flex-row px-5 lg:px-[109px] justify-start gap-10 lg:gap-0'>
+      <section className='flex flex-col lg:flex-row px-5 lg:px-[79px] justify-start gap-10 lg:gap-0'>
         <p className='text-5xl font-fkDisplay text-center lg:text-left'>Our<br />Team</p>
         {/* 3 column grid  */}
         <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:ml-auto w-full lg:w-4/5">

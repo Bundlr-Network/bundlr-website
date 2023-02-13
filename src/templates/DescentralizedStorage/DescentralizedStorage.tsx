@@ -86,7 +86,7 @@ const DescentralizedStorage: NextPage = () => {
       <header className="bg-ghostWhite ">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
         <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
-          <div className="hidden lg:flex absolute top-6 left-[109px] gap-4">
+          <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
             <Link href={'/solutions/descentralized-storage'}>
               <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer bg-black text-white">
                 Storage
@@ -119,7 +119,7 @@ const DescentralizedStorage: NextPage = () => {
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="relative h-auto lg:h-[911px] px-5 lg:px-[109px] w-full">
+      <section className="relative h-auto lg:h-[911px] px-5 lg:px-[79px] w-full">
         <h2 className="text-4xl lg:text-5xl font-fkDisplay py-12 lg:py-48 w-full lg:w-[440px] text-center lg:text-left">
           Data Stored for as Long as You Need
         </h2>
@@ -178,7 +178,7 @@ const DescentralizedStorage: NextPage = () => {
           </li>
         </ul>
       </section>
-      <section className="px-5 lg:px-[109px] flex py-24 relative overflow-hidden">
+      <section className="px-5 lg:px-[79px] flex py-24 relative overflow-hidden">
         <div className="">
           <h3 className="transform -rotate-90 mt-24 text-[26px] uppercase -ml-[96px] hidden lg:inline-block">
             WE ARE DIFFERENT

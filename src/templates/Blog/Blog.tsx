@@ -82,7 +82,7 @@ const Blog: NextPage = () => {
       <h1 className="text-5xl lg:text-7xl font-fkDisplay text-center pt-14 lg:pt-24 pb-14 font-light">
         Bundlr Blog
       </h1>
-      <section className="px-4 md:px-5 lg:px-[109px] flex gap-10 justify-center flex-col md:flex-row">
+      <section className="px-4 md:px-5 lg:px-[79px] flex gap-10 justify-center flex-col md:flex-row">
         <a href={featuredPosts[0]?.link} target="_blank" rel="noreferrer">
           <div className="md:sticky top-10 left-0 self-start">
             <div className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full md:w-[726px] ">

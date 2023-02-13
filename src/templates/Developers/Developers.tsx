@@ -105,7 +105,7 @@ const Developers: NextPage = () => {
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[109px] bg-seashell pt-20 lg:pt-32">
+      <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[79px] bg-seashell pt-20 lg:pt-32">
         <div className="flex flex-col items-start">
           <div className="text-9xl">&gt;90%</div>
           <p className="font-robotoMono text-lg">
@@ -121,12 +121,12 @@ const Developers: NextPage = () => {
       </section>
 
       <section className="bg-seashell pt-20 lg:pt-32 lg:pt-44 pb-20 lg:pb-32">
-        <div className="mx-5 lg:mx-[109px] rounded-[20px] overflow-hidden bg-black z-10">
+        <div className="mx-5 lg:mx-[79px] rounded-[20px] overflow-hidden bg-black z-10">
           <HomeTrustedBy scheme="dark" />
         </div>
       </section>
 
-      <section className="px-5 lg:px-[109px] bg-seashell lg:pt-16 pb-20 lg:pb-36 flex justify-between items-center gap-24">
+      <section className="px-5 lg:px-[79px] bg-seashell lg:pt-16 pb-20 lg:pb-36 flex justify-between items-center gap-24">
         <div className='flex flex-col items-center justify-center lg:items-start'>
           <SectionTitle title="How Bundlr Works" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-l lg:ml-24 pt-16 text-center lg:text-left">
@@ -147,7 +147,7 @@ const Developers: NextPage = () => {
           <img src="/assets/developers/cloud.png" alt="" width={689} />
         </div>
       </section>
-      <section className='bg-black text-white flex gap-20 items-center relative h-auto flex-col-reverse lg:flex-row px-4 lg:px-[109px] py-20'>
+      <section className='bg-black text-white flex gap-20 items-center relative h-auto flex-col-reverse lg:flex-row px-4 lg:px-[79px] py-20'>
         <div className="hidden lg:inline-block absolute top-32 left-0">
           <h2 className="transform -rotate-90 text-[26px] uppercase w-[300px]">
             BUILD ON BUNDLR
@@ -158,7 +158,7 @@ const Developers: NextPage = () => {
           <ExpandableSection />
         </div>
       </section>
-      <section className="px-5 lg:px-[109px] bg-seashell pt-16 flex justify-between gap-24 items-center">
+      <section className="px-5 lg:px-[79px] bg-seashell pt-16 flex justify-between gap-24 items-center">
         <div className='flex items-center justify-center flex-col lg:items-start'>
           <SectionTitle title="Why on Arweave?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-0 lg:ml-24 pt-16 text-center lg:text-left">

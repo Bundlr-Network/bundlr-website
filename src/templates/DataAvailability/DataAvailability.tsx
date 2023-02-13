@@ -88,8 +88,8 @@ const DataAvailability: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite border-b-2 lg:border-none">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-start justify-center relative lg:overflow-hidden px-5 lg:px-[109px] gap-5">
-          <div className="hidden lg:flex absolute top-6 left-[109px] gap-4">
+        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-start justify-center relative lg:overflow-hidden px-5 lg:px-[79px] gap-5">
+          <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
             <Link href={'/solutions/descentralized-storage'}>
               <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
                 Storage
@@ -119,7 +119,7 @@ const DataAvailability: NextPage = () => {
           </p>
         </div>
       </header>
-      <section className="px-5 lg:px-[109px] flex py-28 lg:py-56 relative  bg-ghostWhite">
+      <section className="px-5 lg:px-[79px] flex py-28 lg:py-56 relative  bg-ghostWhite">
         <div className="flex flex-col gap-36 w-full lg:w-1/2 ml-auto z-10">
           <div className="">
             <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
@@ -140,7 +140,7 @@ const DataAvailability: NextPage = () => {
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="px-5 lg:px-[109px] flex py-24 relative overflow-hidden">
+      <section className="px-5 lg:px-[79px] flex py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
             <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Opt-in to Consensus</h2>

@@ -17,7 +17,7 @@ const HomeProduct = ({
 }) => {
   return (
     <>
-      <section className="flex flex-col items-center md:items-center lg:items-start justify-center bg-black px-5 lg:px-[109px] pb-10 lg:pb-[120px]">
+      <section className="flex flex-col items-center md:items-center lg:items-start justify-center bg-black px-5 lg:px-[79px] pb-10 lg:pb-[120px]">
         <div className="text-white pt-20 lg:pt-[117px]">
           <SectionTitle title={title} />
         </div>

@@ -18,7 +18,7 @@ const HomeHeader = () => {
   return (
     <>
       <header
-        className="px-5 lg:px-[109px] border-b border-timberwolf relative pb-20 overflow-hidden"
+        className="px-5 lg:px-[79px] border-b border-timberwolf relative pb-20 overflow-hidden"
       // style={{
       //   backgroundImage: 'url()',
       //   backgroundRepeat: 'no-repeat',

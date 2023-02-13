@@ -220,7 +220,7 @@ const Solutions: NextPage = () => {
         <Button />
       </section> */}
 
-      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[109px] pb-2 lg:pb-24 relative overflow-hidden">
+      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[79px] pb-2 lg:pb-24 relative overflow-hidden">
         <div className="flex">
           <div className="container pt-28 lg:pt-[203px] z-40">
             <h1 className="text-5xl lg:text-7xl">
@@ -268,7 +268,7 @@ const Solutions: NextPage = () => {
               key={`section-${index}`}
               id={section.id}
               ref={section.ref}
-              className="w-full flex flex-col lg:flex-row gap-20 justify-end items-center bg-ghostWhite odd:bg-seashell py-14 lg:py-20 px-4 lg:pr-[109px]"
+              className="w-full flex flex-col lg:flex-row gap-20 justify-end items-center bg-ghostWhite odd:bg-seashell py-14 lg:py-20 px-4 lg:pr-[79px]"
             >
               <div
                 key={index}

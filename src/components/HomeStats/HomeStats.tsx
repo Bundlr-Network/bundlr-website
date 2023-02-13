@@ -58,7 +58,7 @@ const HomeStats = () => {
         {/* Vertical text 'stats' aligned to left */}
 
         <div className="hidden lg:inline-block">
-          <p className="transform rotate-180 text-center ml-5 lg:ml-[109px] text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
+          <p className="transform rotate-180 text-center ml-5 lg:ml-[79px] text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
             Stats
           </p>
         </div>
@@ -68,7 +68,7 @@ const HomeStats = () => {
         </div>
 
         {/* 2 columns grid */}
-        <div className="flex lg:flex-row flex-col gap-10 leading-none lg:ml-auto lg:pr-[109px] items-center justify-center lg:justify-start">
+        <div className="flex lg:flex-row flex-col gap-10 leading-none lg:ml-auto lg:pr-[79px] items-center justify-center lg:justify-start">
           {STATS.map((stat, index) => (
             <div key={index}>
               <small className="uppercase text-[13px] font-robotoMono leading-none">

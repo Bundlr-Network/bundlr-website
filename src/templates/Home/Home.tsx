@@ -132,7 +132,7 @@ const Home: NextPage = () => {
 
       <section className="bg-ghostWhite pb-10 lg:pb-[124px]">
         <HomeWhyUseBundlr content={WHY_USE_BUNDLR}>
-          <div className="mx-4 lg:mx-[109px] rounded-[20px] overflow-hidden mt-0 lg:mt-10">
+          <div className="mx-4 lg:mx-[79px] rounded-[20px] overflow-hidden mt-0 lg:mt-10">
             <SupportedCurrencies />
           </div>
         </HomeWhyUseBundlr>
@@ -140,12 +140,12 @@ const Home: NextPage = () => {
 
       <HomeHorizontalScroll />
 
-      <section className="flex items-center justify-center lg:items-start flex-col px-5 lg:px-[109px] pt-12 lg:pt-[122px] bg-seashell overflow-hidden" style={{
+      <section className="flex items-center justify-center lg:items-start flex-col px-5 lg:px-[79px] pt-12 lg:pt-[122px] bg-seashell overflow-hidden" style={{
         boxShadow: '0 0 70px rgba(0,0,0,.2)'
       }}>
         <SectionTitle title="Testimonials" />
         <div className="flex mt-[89px] justify-center relative">
-          <h2 className="text-5xl text-center lg:text-left lg:text-[76px] font-light leading-none font-fkDisplay">
+          <h2 className="text-5xl text-center lg:text-[76px] font-light leading-none font-fkDisplay">
             What Users Say About Us
           </h2>
         </div>

@@ -171,7 +171,7 @@ const Community: NextPage = () => {
           <NavbarDesktop scheme={SchemeColor.onyx} />
         </div>
         <header
-          className="px-5 lg:px-[109px] border-b border-timberwolf pt-[93px] h-auto pb-20 lg:pb-40 relative overflow-hidden"
+          className="px-5 lg:px-[79px] border-b border-timberwolf pt-[93px] h-auto pb-20 lg:pb-40 relative overflow-hidden"
         // style={{
         //   backgroundImage: 'url(/assets/home/header.png)',
         //   backgroundRepeat: 'no-repeat',
@@ -196,7 +196,7 @@ const Community: NextPage = () => {
           <HomeWhyUseBundlr content={COMMUNITY_VALUES} />
         </section> */}
 
-        <section className="px-5 lg:px-[109px] bg-seashell flex items-center justify-center pt-20">
+        <section className="px-5 lg:px-[79px] bg-seashell flex items-center justify-center pt-20">
           <NewsSection />
         </section>
 

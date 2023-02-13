@@ -216,7 +216,7 @@ const HomeHorizontalScroll = () => {
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
-        <div className="relative h-full w-screen	shrink-0 px-5 lg:px-[109px] pt-[120px]">
+        <div className="relative h-full w-screen	shrink-0 px-5 lg:px-[79px] pt-[120px]">
           <div className="w-full lg:w-2/5 ml-auto">
             <motion.h2
               className="text-7xl font-fkDispla z-10"
