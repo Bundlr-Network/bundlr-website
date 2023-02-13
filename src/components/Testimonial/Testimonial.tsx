@@ -16,6 +16,7 @@ const useTestimonial = () => {
         '“Bundlr has become a mainstay of Metaplex’s NFT toolkit and makes it much easier to store metadata on Arweave. The ability to pay for NFT storage in native SOL is a killer feature, as is the lightening fast upload capability.”',
       image: '/assets/home/metaplex.png',
       imageAlt: 'Metaplex',
+      invert: false,
       author: 'James Strawthorne',
       authorRole: 'CTO at Metaplex'
     },
@@ -46,7 +47,7 @@ const Testimonial = () => {
             src={TESTIMONIALS_CONTENT[currentTestimonial].image}
             alt={TESTIMONIALS_CONTENT[currentTestimonial].imageAlt}
             className={
-              TESTIMONIALS_CONTENT[currentTestimonial].invert && 'invert'
+              TESTIMONIALS_CONTENT[currentTestimonial].invert ? 'invert' : ''
             }
           />
         </div>
