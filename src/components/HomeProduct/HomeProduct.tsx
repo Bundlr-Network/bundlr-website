@@ -47,6 +47,11 @@ const HomeProduct = ({
           })}
         </div>
         <div className="self-start w-full">{children}</div>
+        {
+          !children && (
+            <div className='h-10' />
+          )
+        }
       </section>
     </>
   )

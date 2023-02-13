@@ -1,6 +1,6 @@
 import { CodeBlock, anOldHope } from 'react-code-blocks'
 
-import { useState } from 'react';
+import { useState } from 'react'
 
 const useExpandableSection = () => {
   const SECTION_CONTENT = [
@@ -60,38 +60,57 @@ const ExpandableSection = () => {
   return (
     <>
       <section className="flex flex-col gap-10">
-        <p className="text-lg font-robotoMono">
+        <p className="text-lg font-robotoMono text-center lg:text-left">
           There are three simple steps to building on Bundlr:
         </p>
-        <ul className="flex flex-col gap-24">
+        <ul className="flex flex-col gap-10 lg:gap-16">
           {SECTION_CONTENT.map((section) => (
             <li
               key={section.id}
               onClick={() => handleSectionClick(section.id)}
-              className="cursor-pointer flex flex-col gap-9"
+              className="cursor-pointer flex flex-col gap-2 lg:gap-9 items-center justify-center lg:items-start"
             >
               <h2
-                className={`text-7xl text-white ${currentlyOpen !== section.id && 'text-onyx hover:text-onyx/90'
+                className={`flex items-center gap-3 text-3xl lg:text-5xl text-white text-center lg:text-left ${currentlyOpen !== section.id && 'text-onyx hover:text-onyx/90'
                   }`}
               >
-                0{section.id} {section.title}
+                <span
+                  className={`hidden lg:flex bg-white text-base rounded-full w-6 h-6 text-black items-center justify-center ${currentlyOpen !== section.id &&
+                    'bg-onyx hover:bg-onyx/90'
+                    }`}
+                >
+                  {section.id}
+                </span>{' '}
+                {section.title}
               </h2>
               {currentlyOpen === section.id && (
-                <p className={`text-lg font-robotoMono max-w-5xl`}>
+                <p
+                  className={`text-base lg:text-lg font-robotoMono max-w-5xl text-center lg:text-left`}
+                >
                   {section.description}
                 </p>
               )}
             </li>
           ))}
         </ul>
-        <div className="text-7xl text-onyx font-bold">Here’s the Code!</div>
-        <div className="overflow-scroll lg:overflow-hidden max-w-[calc(100vw-30px)] lg:max-w-none">
-          <CodeBlock
-            text={CODE_EXAMPLE}
-            language={'javascript'}
-            theme={anOldHope}
-          />
+        <div
+          className={`text-3xl lg:text-5xl cursor-pointer text-whitfont-bold text-center lg:text-left ${currentlyOpen != 4 && 'text-onyx hover:text-onyx/90 '
+            }`}
+          onClick={() => handleSectionClick(4)}
+        >
+          Here’s the Code!
         </div>
+        {currentlyOpen === 4 && (
+          <div className="overflow-scroll lg:overflow-hidden max-w-[calc(100vw-30px)]">
+            <p className='text-transparent -mb-36 lg:-mb-10 pointer-events-none -z-50 select-none'>The function bundlr.upload(data) uploads any arbitrary data passed to it. The transaction id returned as part of the response is used to download the data, simply create a URL with the following format https://arweave.net/[transaction_id].</p>
+            <CodeBlock
+              text={CODE_EXAMPLE}
+              language={'javascript'}
+              theme={anOldHope}
+              showLineNumbers={false}
+            />
+          </div>
+        )}
       </section>
     </>
   )

@@ -26,12 +26,14 @@ import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
+import { motion } from 'framer-motion'
 import { useLatestArticles } from '../Blog/Blog'
 
 const useCommunity = () => {
   const PAGE_SEO = {
     title: 'Bundlr | Community',
-    description: 'Join a growing community of Bundloooors! Engage with users, devs, and an entire community of people at the frontier of data.'
+    description:
+      'Join a growing community of Bundloooors! Engage with users, devs, and an entire community of people at the frontier of data.'
   }
 
   const COMMUNITY_VALUES = [
@@ -89,15 +91,13 @@ const useCommunity = () => {
     newTab: true
   }
 
-
   return { PAGE_SEO, COMMUNITY_VALUES, CTA_CONTENT }
 }
 
 const NewsSection: React.FC = () => {
-
   const { latestArticles } = useLatestArticles()
 
-  // const [currentSlice, setCurrentSlice] = useState(3)
+  const [currentSlice, setCurrentSlice] = useState(3)
 
   return (
     <section>
@@ -113,14 +113,16 @@ const NewsSection: React.FC = () => {
       </div>
 
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        {latestArticles.map((item, index) => {
+        {latestArticles.slice(0, currentSlice).map((item, index) => {
           return (
-            <a
+            <motion.a
               href={item.link}
               target="_blank"
               rel="noreferrer"
               className="rounded-lg w-full"
               key={`blog-post-${index}`}
+              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
             >
               <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
                 {/* add gradient background that goes from gray to transparent */}
@@ -140,10 +142,20 @@ const NewsSection: React.FC = () => {
                   </div>
                 </div>
               </li>
-            </a>
+            </motion.a>
           )
         })}
       </ul>
+      {currentSlice < latestArticles.length && (
+        <div className="flex items-center justify-center">
+          <button
+            onClick={() => setCurrentSlice(currentSlice + 3)}
+            className="flex items-center gap-3 border rounded-full font-robotoMono px-3 py-2 border-black self-start"
+          >
+            Load more
+          </button>
+        </div>
+      )}
     </section>
   )
 }
@@ -159,7 +171,7 @@ const Community: NextPage = () => {
           <NavbarDesktop scheme={SchemeColor.onyx} />
         </div>
         <header
-          className="px-5 lg:px-[109px] border-b border-timberwolf pt-[93px] h-auto pb-40 relative overflow-hidden"
+          className="px-5 lg:px-[109px] border-b border-timberwolf pt-[93px] h-auto pb-20 lg:pb-40 relative overflow-hidden"
         // style={{
         //   backgroundImage: 'url(/assets/home/header.png)',
         //   backgroundRepeat: 'no-repeat',
@@ -168,13 +180,16 @@ const Community: NextPage = () => {
         // }}
         >
           <div className="leading-none flex flex-col gap-10 lg:gap-[197px] ">
-            <h1 className="font-light text-5xl lg:text-7xl text-white z-[99]">
-              Join the #bundloooor <br />
-              community
+            <h1 className="font-light text-5xl lg:text-7xl text-white z-[99] text-center lg:text-left">
+              Join the #BUNDLOOOOR <br />Community
             </h1>
             <Socials links={SOCIAL_LINKS} />
           </div>
-          <img src="/assets/home/header.png" alt="hero" className="absolute top-96 lg:top-0 lg:bottom-0" />
+          <img
+            src="/assets/home/header.png"
+            alt="hero"
+            className="absolute top-96 lg:top-0 lg:bottom-0 hidden lg:block"
+          />
         </header>
 
         {/* <section className="bg-seashell text-black">

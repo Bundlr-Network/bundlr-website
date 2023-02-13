@@ -79,7 +79,7 @@ const Blog: NextPage = () => {
     <>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
-      <h1 className="text-7xl font-fkDisplay text-center pt-24 pb-14 font-light">
+      <h1 className="text-5xl lg:text-7xl font-fkDisplay text-center pt-14 lg:pt-24 pb-14 font-light">
         Bundlr Blog
       </h1>
       <section className="px-4 md:px-5 lg:px-[109px] flex gap-10 justify-center flex-col md:flex-row">
@@ -90,7 +90,7 @@ const Blog: NextPage = () => {
               <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden">
                 {/* make image as background of rectangle box */}
                 <div
-                  className="w-full h-[427px] bg-cover bg-center"
+                  className="w-full h-[215px] lg:h-[427px] bg-cover bg-center"
                   style={{
                     backgroundImage: `url(${featuredPosts[0]?.thumbnail})`
                   }}

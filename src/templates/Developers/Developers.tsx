@@ -67,10 +67,10 @@ const Developers: NextPage = () => {
       <header className=" text-white bg-black">
         <NavbarDesktop scheme={SchemeColor.black} />
         <div className="px-5 lg:px-0 flex flex-col items-center gap-9 h-[calc(100vh-90px)] relative">
-          <h1 className="text-6xl lg:text-7xl leading-none mt-24 z-10 text-center">
+          <h1 className="text-5xl lg:text-7xl leading-none mt-24 z-10 text-center">
             Build Seamlessly with Bundlr
           </h1>
-          <p className="text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose">
+          <p className="hidden lg:block text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose">
             Bundlr is a decentralized data network to help developers solve
             complex data integrity issues. Our performant, scalable, seamless
             storage, proof of provenance, and data availability guarantees
@@ -96,9 +96,16 @@ const Developers: NextPage = () => {
         </div>
       </header>
 
+      <p className="block lg:hidden text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose py-10">
+        Bundlr is a decentralized data network to help developers solve
+        complex data integrity issues. Our performant, scalable, seamless
+        storage, proof of provenance, and data availability guarantees
+        allows you establish a trustless data foundation.
+      </p>
+
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[109px] bg-seashell pt-32">
+      <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[109px] bg-seashell pt-20 lg:pt-32">
         <div className="flex flex-col items-start">
           <div className="text-9xl">&gt;90%</div>
           <p className="font-robotoMono text-lg">
@@ -113,16 +120,16 @@ const Developers: NextPage = () => {
         </div>
       </section>
 
-      <section className="bg-seashell pt-44 pb-20">
+      <section className="bg-seashell pt-20 lg:pt-32 lg:pt-44 pb-20 lg:pb-32">
         <div className="mx-5 lg:mx-[109px] rounded-[20px] overflow-hidden bg-black z-10">
           <HomeTrustedBy scheme="dark" />
         </div>
       </section>
 
-      <section className="px-5 lg:px-[109px] bg-seashell pt-16 pb-36 flex justify-between items-center gap-24">
-        <div>
+      <section className="px-5 lg:px-[109px] bg-seashell lg:pt-16 pb-20 lg:pb-36 flex justify-between items-center gap-24">
+        <div className='flex flex-col items-center justify-center lg:items-start'>
           <SectionTitle title="How Bundlr Works" />
-          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
+          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-l lg:ml-24 pt-16 text-center lg:text-left">
             <p className="leading-loose">
               Bundlr uses binary encoding methods to compact multiple Layer 2
               transactions into a Layer 1 transaction know as a bundle. Like
@@ -152,9 +159,9 @@ const Developers: NextPage = () => {
         </div>
       </section>
       <section className="px-5 lg:px-[109px] bg-seashell pt-16 flex justify-between gap-24 items-center">
-        <div>
+        <div className='flex items-center justify-center flex-col lg:items-start'>
           <SectionTitle title="Why on Arweave?" />
-          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
+          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-0 lg:ml-24 pt-16 text-center lg:text-left">
             <p className="leading-loose">
               <a href="https://arweave.org" target={'_blank'} rel="noreferrer">
                 Arweave
@@ -175,7 +182,9 @@ const Developers: NextPage = () => {
       </section>
       <JoinTheCommunity />
 
-      <CtaCentralized {...CTA_CONTENT} />
+      <div className="-mt-10">
+        <CtaCentralized {...CTA_CONTENT} />
+      </div>
 
       <Footer />
     </div>

@@ -85,8 +85,8 @@ const DescentralizedStorage: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite ">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-        <div className="h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
-          <div className="flex absolute top-6 left-[109px] gap-4">
+        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
+          <div className="hidden lg:flex absolute top-6 left-[109px] gap-4">
             <Link href={'/solutions/descentralized-storage'}>
               <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer bg-black text-white">
                 Storage
@@ -120,7 +120,7 @@ const DescentralizedStorage: NextPage = () => {
       <Benefits {...BENEFITS_CONTENT} />
 
       <section className="relative h-auto lg:h-[911px] px-5 lg:px-[109px] w-full">
-        <h2 className="text-5xl font-fkDisplay py-48 w-full lg:w-[440px]">
+        <h2 className="text-4xl lg:text-5xl font-fkDisplay py-12 lg:py-48 w-full lg:w-[440px] text-center lg:text-left">
           Data Stored for as Long as You Need
         </h2>
         <img
@@ -186,10 +186,10 @@ const DescentralizedStorage: NextPage = () => {
         </div>
         <div className="flex flex-col gap-36 w-full lg:w-1/2 ml-auto">
           <div className="">
-            <h2 className="text-4xl font-fkDisplay">
+            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
               Lightning Fast Uploads, at Industrial Scale
             </h2>
-            <p className="font-robotoMono max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg">
+            <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left">
               With uploads time under 8 milliseconds and the{' '}
               <u>ability to scale to millions of transactions per seconds</u>,
               Bundlr’s performance is on par with traditional providers. Bundlr
@@ -197,8 +197,8 @@ const DescentralizedStorage: NextPage = () => {
             </p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-fkDisplay">Seamless for Developers</h2>
-            <p className="font-robotoMono max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg">
+            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Seamless for Developers</h2>
+            <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left">
               Our intuitive docs and SDK help you integrate Bundlr with just 3-4
               lines of code. Further, you can sign and pay for storage in of our
               14 supported tokens, including ETH, SOL, and MATIC.{' '}

@@ -86,8 +86,8 @@ const ProofOfProvenance: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-        <div className="h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[109px] gap-5">
-          <div className="flex absolute top-6 left-[109px] gap-4">
+        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[109px] gap-5">
+          <div className="hidden lg:flex absolute top-6 left-[109px] gap-4">
             <Link href={'/solutions/descentralized-storage'}>
               <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
                 Storage
@@ -106,7 +106,7 @@ const ProofOfProvenance: NextPage = () => {
           </div>
           <img
             src="/assets/proofofprovenance/data.png"
-            className="absolute -top-30 right-0"
+            className="absolute -bottom-20 lg:-top-30 right-0"
             alt="cloud"
           />
           <h1 className="text-5xl lg:text-7xl z-10">Proof of Provenance</h1>
@@ -119,19 +119,19 @@ const ProofOfProvenance: NextPage = () => {
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="px-5 lg:px-[109px] flex py-24 relative overflow-hidden">
+      <section className="px-5 lg:px-[109px] flex py-12 lg:py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
-            <h2 className="text-4xl font-fkDisplay">Proof of Time</h2>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg leading-loose">
+            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Proof of Time</h2>
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               Receive signed receipts timestamps down to the millisecond that
               serve as a verifiable ‘proof of time’ for when information was
               stored on Bundlr.
             </p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-fkDisplay">Custom Metadata Tagging</h2>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg leading-loose">
+            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Custom Metadata Tagging</h2>
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               You can add custom tags to the metadata of the content that you
               store on Bundlr. This makes it simple to index and query any data
               that you need to find on Bundlr.
@@ -139,7 +139,7 @@ const ProofOfProvenance: NextPage = () => {
           </div>
         </div>
         <div className="w-[310px] hidden lg:block">
-          <h3 className="inline-block transform -rotate-90 mt-24 text-[20px] uppercase ml-auto">
+          <h3 className="inline-block transform -rotate-90 mt-24 text-xl uppercase ml-auto">
             PROVE AND FIND TRUTH
           </h3>
         </div>
@@ -147,7 +147,7 @@ const ProofOfProvenance: NextPage = () => {
 
       <div className="overflow-hidden">
         <Marquee gradientColor={[254, 244, 238]} speed={25}>
-          <motion.h2 className="text-8xl whitespace-nowrap py-32 uppercase">
+          <motion.h2 className="text-4xl lg:text-8xl whitespace-nowrap py-10 lg:py-32 uppercase">
             Identify original information with true provenance Identify original
             information with true provenance Identify original information with
             true provenance{' '}

@@ -86,10 +86,10 @@ const DataAvailability: NextPage = () => {
   return (
     <>
       <NextSeo {...PAGE_SEO} />
-      <header className="bg-ghostWhite">
+      <header className="bg-ghostWhite border-b-2 lg:border-none">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-        <div className="h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[109px] gap-5">
-          <div className="flex absolute top-6 left-[109px] gap-4">
+        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-start justify-center relative lg:overflow-hidden px-5 lg:px-[109px] gap-5">
+          <div className="hidden lg:flex absolute top-6 left-[109px] gap-4">
             <Link href={'/solutions/descentralized-storage'}>
               <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
                 Storage
@@ -119,13 +119,13 @@ const DataAvailability: NextPage = () => {
           </p>
         </div>
       </header>
-      <section className="px-5 lg:px-[109px] flex py-56 relative  bg-ghostWhite">
-        <div className="flex flex-col gap-36 w-2/3 lg:w-1/2 ml-auto z-10">
+      <section className="px-5 lg:px-[109px] flex py-28 lg:py-56 relative  bg-ghostWhite">
+        <div className="flex flex-col gap-36 w-full lg:w-1/2 ml-auto z-10">
           <div className="">
-            <h2 className="text-4xl font-fkDisplay">
+            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
               What is Optimistic Data Availability?
             </h2>
-            <p className="font-robotoMono max-w-[770px] pl-28 pt-16 text-lg leading-loose">
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-8 lg:pt-16 text-lg leading-loose text-center lg:text-left">
               Bundlr is the trust assumption, but it always gets settled on L1,
               Arweave.
             </p>
@@ -134,7 +134,7 @@ const DataAvailability: NextPage = () => {
         <img
           src="/assets/dataavailability/cloud.png"
           alt="data-splash"
-          className="absolute bottom-0 -left-40 md:-left-96 lg:-left-32 w-[767px]"
+          className="hidden lg:block absolute bottom-0 -left-40 md:-left-96 lg:-left-32 w-[767px]"
         />
       </section>
 
@@ -143,23 +143,23 @@ const DataAvailability: NextPage = () => {
       <section className="px-5 lg:px-[109px] flex py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
-            <h2 className="text-4xl font-fkDisplay">Opt-in to Consensus</h2>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg leading-loose">
+            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Opt-in to Consensus</h2>
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-16 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               People pay for consensus to update the state of a blockchain in
               every transaction. For non-financial transactions, this is
               wasteful and unnecessarily increases blockchain fees.
             </p>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg leading-loose">
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               For such use cases, you can have stateless transactions, which
               don’t require consensus. This allows incredibly low latency
               transactions at industrial scales for an affordable price.
             </p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-fkDisplay">
+            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
               “And What If I Need My Data On-chain?”
             </h2>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-16 lg:pl-28 pt-16 text-lg leading-loose">
+            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               Easy,just connect to an oracle. Bundlr allows you to pay for state
               only when you need it.
             </p>
@@ -173,8 +173,8 @@ const DataAvailability: NextPage = () => {
       </section>
 
       <div className="overflow-hidden">
-        <Marquee gradientColor={[254, 244, 238]} speed={95}>
-          <motion.h2 className="text-8xl whitespace-nowrap py-32 uppercase">
+        <Marquee gradientColor={[254, 244, 238]} speed={155}>
+          <motion.h2 className="text-4xl lg:text-8xl whitespace-nowrap py-10 lg:py-32 uppercase">
             {Array.from({ length: 50 }).map((_, i) => (
               <span key={i}> OPTIMISM IS SENSIBLE {';) '} </span>
             ))}

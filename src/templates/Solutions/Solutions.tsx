@@ -222,7 +222,7 @@ const Solutions: NextPage = () => {
 
       <header className="flex flex-col bg-ghostWhite px-5 lg:px-[109px] pb-2 lg:pb-24 relative overflow-hidden">
         <div className="flex">
-          <div className="container pt-[203px] z-40">
+          <div className="container pt-28 lg:pt-[203px] z-40">
             <h1 className="text-5xl lg:text-7xl">
               Solutions for Every <br />Use Case
             </h1>
@@ -268,14 +268,14 @@ const Solutions: NextPage = () => {
               key={`section-${index}`}
               id={section.id}
               ref={section.ref}
-              className="w-full flex flex-col lg:flex-row gap-20 justify-end items-center bg-ghostWhite odd:bg-seashell py-20 px-4 lg:pr-[109px]"
+              className="w-full flex flex-col lg:flex-row gap-20 justify-end items-center bg-ghostWhite odd:bg-seashell py-14 lg:py-20 px-4 lg:pr-[109px]"
             >
               <div
                 key={index}
-                className="flex flex-col items-start justify-center gap-8 "
+                className="flex flex-col items-center lg:items-start justify-center gap-8 "
               >
                 <SectionTitle title={section.title} />
-                <p className="font-robotoMono lg:max-w-[600px] lg:ml-[126px] ml-[90px] pt-12 leading-loose">
+                <p className="font-robotoMono lg:max-w-[600px] lg:ml-[126px] ml-0 pt-0 lg:pt-12 leading-loose text-center lg:text-left">
                   {section.description}
                 </p>
               </div>
@@ -303,16 +303,12 @@ const Solutions: NextPage = () => {
 
       <div className="mb-20 mt-10">
         <CtaSection>
-          <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
-            <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
+          <div className="flex flex-col items-center md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+            <p className="text-4xl md:text-5xl text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
               Ready to Become a BUNDLOOOOR?
             </p>
             <div className="mt-0 lg:mt-10">
-              <a
-                href="https://docs.bundlr.network/"
-                target={'_blank'}
-                rel="noreferrer"
-              >
+              <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer">
                 <Button scheme={ButtonScheme.white}>
                   START BUILDING
                   <DevIcon color="black" />

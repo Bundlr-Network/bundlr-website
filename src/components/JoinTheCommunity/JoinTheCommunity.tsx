@@ -17,13 +17,13 @@ export const Socials = ({
     icon: React.FC
   }[]
 }) => (
-  <ul className="flex flex-wrap items-center justify-center z-[99] w-full gap-11">
+  <ul className="flex flex-wrap items-center justify-center z-[99] w-full gap-8 xl:gap-11">
     {links.map((link, index) => {
       const Icon = link.icon
       return (
         <a href={link.href} target="_blank" rel="noreferrer" key={index} className="w-full md:w-1/4 xl:w-1/5">
           <li
-            className="text-white font-light flex items-center justify-center gap-4 bg-smoky rounded-3xl py-11 text-4xl communityShadow"
+            className="text-white font-light flex items-center justify-center gap-4 bg-smoky rounded-3xl py-11 text-2xl communityShadow"
           >
             <Icon />
             {link.name}

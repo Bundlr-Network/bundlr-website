@@ -347,7 +347,7 @@ const MenuMobile = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className='uppercase text-xs'>Solutions</p>
+                    <p className='uppercase text-base'>Solutions</p>
                     {MENU_OPTIONS.Solutions.map((option) => {
                       return (
                         <Link href={option.href} key={option.name}>
@@ -364,11 +364,11 @@ const MenuMobile = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className='uppercase text-xs'>Learn</p>
+                    <p className='uppercase text-base'>Learn</p>
                     {MENU_OPTIONS.Learn.map((option) => {
                       return (
                         <Link href={option.href} key={option.name}>
-                          <p className="uppercase text-3xl">{option.name}</p>
+                          <p className="uppercase text-3xl z-[999]">{option.name}</p>
                         </Link>
                       )
                     })}
@@ -383,7 +383,7 @@ const MenuMobile = () => {
                             href={MENU_OPTIONS[key][0].href}
                             key={MENU_OPTIONS[key][0].name}
                           >
-                            <div className="uppercase text-3xl">
+                            <div className="uppercase text-3xl z-[999]">
                               {MENU_OPTIONS[key][0].name}
                             </div>
                           </Link>
