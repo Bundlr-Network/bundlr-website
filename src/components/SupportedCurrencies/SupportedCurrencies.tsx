@@ -106,7 +106,7 @@ const SupportedCurrencies = ({
                 <div key={index} className="flex flex-col items-center justify-center gap-5">
                   <img
                     src={currency.icon}
-                    alt={currency.title}
+                    alt={currency.ticker}
                     width={54}
                     height={54}
                   // className="invert"
