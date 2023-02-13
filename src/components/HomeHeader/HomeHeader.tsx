@@ -27,7 +27,7 @@ const HomeHeader = () => {
       //   height: '894px'
       // }}
       >
-        <img src="/assets/home/header.png" alt="" className='absolute top-52 md:top-28 lg:top-10 lg:-right-18' />
+        <img src="/assets/home/header.png" alt="" className='absolute top-80 md:top-28 lg:top-10 lg:-right-18' />
 
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px]">
           <h1 className="text-5xl lg:text-[76px] font-fkDisplay z-10">
