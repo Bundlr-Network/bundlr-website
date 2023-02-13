@@ -12,6 +12,7 @@ import Benefits from '@/components/Differentials'
 import { BenefitsProps } from '@/components/Differentials/Differentials'
 import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import { DevIcon } from '@/svg'
+import Image from 'next/image'
 import Link from 'next/link'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
@@ -103,13 +104,16 @@ const DescentralizedStorage: NextPage = () => {
               </div>
             </Link>
           </div>
-          <img
-            src="/assets/descentralizedStorage/cloud.png"
-            className="absolute -top-30 left-0 -bottom-20 lg:bottom-auto"
-            width={'600px'}
-            alt="cloud"
-            loading="eager"
-          />
+
+          <div className="absolute -top-30 left-0 -bottom-32 lg:bottom-auto">
+            <Image
+              src="/assets/descentralizedStorage/cloud.png"
+              width={'600px'}
+              height={'542px'}
+              alt="cloud"
+              loading="eager"
+            />
+          </div>
           <h1 className="text-5xl lg:text-7xl z-10">Decentralized Storage</h1>
           <p className="font-robotoMono text-base z-10 mt-5">
             Performant, scalable, and seamless – forever.{' '}
