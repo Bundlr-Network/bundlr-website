@@ -113,7 +113,7 @@ const Blog: NextPage = () => {
           </div>
         </a>
         <div className="">
-          <ul className="flex gap-7 flex-wrap">
+          <ul className="flex gap-7 flex-col">
             {latestArticles.map((article, index) => {
               return (
                 <a
