@@ -11,7 +11,7 @@ const CtaSection = ({ children }: { children: React.ReactNode }) => {
         {/* <img src="/assets/home/cta-blocks.png" alt="" className="absolute -left-20 hidden xl:block" /> */}
         {/* <img src="/assets/home/cta-blocks-mobile.png" alt="" className="absolute bottom-0 xl:hidden block w-full bg-cover" /> */}
         <img src="/assets/home/cta-block.png" alt="" className="absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[300px] block w-full lg:w-auto bg-cover" />
-        <div className="w-full lg:w-1/2 p-4 lg:p-0 text-white ml-auto mr-10">{children}</div>
+        <div className="w-full lg:w-1/2 p-4 lg:p-0 text-white ml-auto lg:mr-10">{children}</div>
       </section>
       {/* <section className='mx-[109px] my-[88px]'>
         <div className="bg-black rounded-[30px] overflow-hidden flex items-center h-[473px]">

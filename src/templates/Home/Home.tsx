@@ -145,7 +145,7 @@ const Home: NextPage = () => {
       }}>
         <SectionTitle title="Testimonials" />
         <div className="flex mt-[89px] justify-center relative">
-          <h2 className="text-[76px] font-light leading-none font-fkDisplay">
+          <h2 className="text-5xl text-center lg:text-left lg:text-[76px] font-light leading-none font-fkDisplay">
             What Users Say About Us
           </h2>
         </div>
@@ -154,8 +154,8 @@ const Home: NextPage = () => {
 
       <div className="bg-seashell py-[88px]">
         <CtaSection>
-          <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
-            <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
+          <div className="flex flex-col items-center md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+            <p className="text-4xl md:text-5xl text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
               Ready to Become a BUNDLOOOOR?
             </p>
             <div className="mt-0 lg:mt-10">

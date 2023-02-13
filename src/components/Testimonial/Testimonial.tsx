@@ -41,7 +41,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <section className="flex flex-col lg:flex-row relative order-solid border text-black bg-[rgba(251,242,237,1)] border-[rgba(216,_207,_202,_1.00)] overflow-clip rounded-[30px] p-4 lg:py-[43px] lg:px-[40px] gap-10 lg:gap-10 mt-[99px]">
+      <section className="flex flex-col lg:flex-row relative order-solid border text-black bg-[rgba(251,242,237,1)] border-[rgba(216,_207,_202,_1.00)] overflow-clip rounded-[30px] p-4 lg:py-[43px] lg:px-[40px] gap-10 lg:gap-10 mt-20 lg:mt-[99px]">
         <div className="bg-white text-black lg:w-[488px] h-[210px] lg:h-auto flex items-center justify-center">
           <img
             src={TESTIMONIALS_CONTENT[currentTestimonial].image}
@@ -53,7 +53,7 @@ const Testimonial = () => {
         </div>
         <div className="flex flex-col w-full h-auto">
           <div className="h-auto w-full lg:mt-[27px]">
-            <p className="text-3xl leading-tight font-light leading-relaxed">
+            <p className="text-xl lg:text-3xl leading-tight font-light leading-relaxed">
               {TESTIMONIALS_CONTENT[currentTestimonial].description}
             </p>
           </div>

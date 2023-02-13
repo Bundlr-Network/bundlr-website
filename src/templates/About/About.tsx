@@ -94,7 +94,7 @@ const About: NextPage = () => {
         }}
       >
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px] mb-10">
-          <h1 className="text-[76px]">
+          <h1 className="text-5xl text-[76px]">
             Meet the World&apos;s Next Data Layer
           </h1>
         </div>
