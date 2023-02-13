@@ -54,13 +54,19 @@ const HomeStats = () => {
 
   return (
     <>
-      <section className="h-auto px-4 py-20 lg:py-0 lg:h-[332px] flex items-center">
+      <section className="h-auto px-4 py-10 lg:py-20 lg:py-0 lg:h-[232px] flex flex-col lg:flex-row items-left lg:items-center gap-10 overflow-hidden">
         {/* Vertical text 'stats' aligned to left */}
-        <div>
-          <h3 className="hidden lg:inline-block transform -rotate-90 ml-[108px] text-[26px] uppercase font-fkDisplay">
-            STATS
-          </h3>
+
+        <div className="hidden lg:inline-block">
+          <p className="transform rotate-180 text-center ml-5 lg:ml-[109px] text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
+            Stats
+          </p>
         </div>
+
+        <div className="lg:hidden inline-block">
+          <h3 className="text-[26px] uppercase">Stats</h3>
+        </div>
+
         {/* 2 columns grid */}
         <div className="flex lg:flex-row flex-col gap-10 leading-none lg:ml-auto lg:pr-[109px]">
           {STATS.map((stat, index) => (

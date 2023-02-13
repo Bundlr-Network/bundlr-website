@@ -7,6 +7,7 @@ import {
   NavbarDesktop
 } from '@/components'
 import {
+  ChevronRight,
   DevIcon,
   DiscordIcon,
   GitIcon,
@@ -88,6 +89,7 @@ const useCommunity = () => {
     newTab: true
   }
 
+
   return { PAGE_SEO, COMMUNITY_VALUES, CTA_CONTENT }
 }
 
@@ -95,11 +97,22 @@ const NewsSection: React.FC = () => {
 
   const { latestArticles } = useLatestArticles()
 
+  // const [currentSlice, setCurrentSlice] = useState(3)
+
   return (
     <section>
-      <h2 className="text-7xl font-light pb-[60px]">News</h2>
+      <div className="flex justify-between">
+        <h2 className="text-7xl font-light pb-[60px]">News</h2>
+        {/* <button
+          onClick={() => setCurrentSlice(currentSlice + 3)}
+          className="flex items-center gap-3 border rounded-full font-robotoMono px-3 py-2 border-black self-start"
+        >
+          More
+          <ChevronRight width={13} height={13} />
+        </button> */}
+      </div>
 
-      <ul className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {latestArticles.map((item, index) => {
           return (
             <a
@@ -112,7 +125,7 @@ const NewsSection: React.FC = () => {
               <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
                 {/* add gradient background that goes from gray to transparent */}
 
-                <div className="flex flex-col items-center gap-11 max-w-[348px] bg-seashell rounded-lg overflow-hidden">
+                <div className="flex flex-col items-center gap-11 w-full lg:max-w-[348px] bg-seashell rounded-lg overflow-hidden">
                   {/* make image as background of rectangle box */}
                   <div
                     className="w-full h-[200px] bg-cover bg-center"
@@ -120,8 +133,8 @@ const NewsSection: React.FC = () => {
                       backgroundImage: `url(${item.thumbnail})`
                     }}
                   />
-                  <div className="flex flex-col gap-4 px-5 pb-10">
-                    <h3 className="text-black font-light text-2xl line-clamp-2">
+                  <div className="flex flex-col gap-4 px-5 pb-10 -mt-6">
+                    <h3 className="text-black font-light text-xl line-clamp-2">
                       {item.title}
                     </h3>
                   </div>
@@ -146,21 +159,22 @@ const Community: NextPage = () => {
           <NavbarDesktop scheme={SchemeColor.onyx} />
         </div>
         <header
-          className="px-5 lg:px-[109px] border-b border-timberwolf bg-black pt-[113px] h-auto pb-40"
-          style={{
-            backgroundImage: 'url(/assets/home/header.png)',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: '50% 50%',
-            backgroundSize: '100%'
-          }}
+          className="px-5 lg:px-[109px] border-b border-timberwolf pt-[93px] h-auto pb-40 relative overflow-hidden"
+        // style={{
+        //   backgroundImage: 'url(/assets/home/header.png)',
+        //   backgroundRepeat: 'no-repeat',
+        //   backgroundPosition: '50% 140%',
+        //   backgroundSize: '100%'
+        // }}
         >
-          <div className="leading-none flex flex-col gap-[197px]">
-            <h1 className="font-light text-5xl lg:text-7xl text-white">
+          <div className="leading-none flex flex-col gap-10 lg:gap-[197px] ">
+            <h1 className="font-light text-5xl lg:text-7xl text-white z-[99]">
               Join the #bundloooor <br />
               community
             </h1>
             <Socials links={SOCIAL_LINKS} />
           </div>
+          <img src="/assets/home/header.png" alt="hero" className="absolute top-96 lg:top-0 lg:bottom-0" />
         </header>
 
         {/* <section className="bg-seashell text-black">

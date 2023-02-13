@@ -18,20 +18,22 @@ const HomeHeader = () => {
   return (
     <>
       <header
-        className="px-5 lg:px-[109px] border-b border-timberwolf"
-        style={{
-          backgroundImage: 'url(/assets/home/header.png)',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: '20% -10%',
-          backgroundSize: '120%',
-          height: '894px'
-        }}
+        className="px-5 lg:px-[109px] border-b border-timberwolf relative pb-20 overflow-hidden"
+      // style={{
+      //   backgroundImage: 'url()',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundPosition: '20% -10%',
+      //   backgroundSize: '120%',
+      //   height: '894px'
+      // }}
       >
+        <img src="/assets/home/header.png" alt="" className='absolute top-52 md:top-28 lg:top-10 lg:-right-18' />
+
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px]">
-          <h1 className="text-[76px] font-fkDisplay">
+          <h1 className="text-5xl lg:text-[76px] font-fkDisplay z-10">
             {TITLE}
           </h1>
-          <h2 className='font-robotoMono leading-6 font-normal' dangerouslySetInnerHTML={{
+          <h2 className='font-robotoMono leading-6 font-normal z-10' dangerouslySetInnerHTML={{
             __html: SUBTITLE
           }} />
         </div>
@@ -40,7 +42,7 @@ const HomeHeader = () => {
             START BUILDING
             <DevIcon />
           </Button>
-          Permanent on Arweave
+          <span className='z-10 bg-white -ml-12 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-10 rounded-tr-full rounded-br-full'>Permanent on Arweave</span>
         </div>
       </header>
     </>

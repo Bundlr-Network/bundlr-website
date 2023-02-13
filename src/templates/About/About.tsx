@@ -157,21 +157,23 @@ const About: NextPage = () => {
 
 
 
-      <CtaSection>
-        <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
-          <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
-            Ready to Become a BUNDLOOOOR?
-          </p>
-          <div className="mt-0 lg:mt-10">
-            <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer">
-              <Button scheme={ButtonScheme.white}>
-                START BUILDING
-                <DevIcon color="black" />
-              </Button>
-            </a>
+      <div className="py-10">
+        <CtaSection>
+          <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+            <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
+              Ready to Become a BUNDLOOOOR?
+            </p>
+            <div className="mt-0 lg:mt-10">
+              <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer">
+                <Button scheme={ButtonScheme.white}>
+                  START BUILDING
+                  <DevIcon color="black" />
+                </Button>
+              </a>
+            </div>
           </div>
-        </div>
-      </CtaSection>
+        </CtaSection>
+      </div>
       <Footer />
     </>
   )

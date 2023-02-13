@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import { ButtonScheme } from '@/components/Button/Button'
 import { DevIcon } from '@/svg'
+import Image from 'next/image'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
@@ -103,13 +104,12 @@ const useSolutions = () => {
     {
       id: 'decentralized-social-media',
       ref: decentralizedStorageRef,
-      title: 'Decentralized Social Media',
+      title: 'Social Media',
       description:
         'Prior to Bundlr, decentralized social media networks have  not had the infrastructure that allows the transactional throughout needed for mass adoption. With Bundlr’s Optimisitc Data Availability, social media dApps have access to performant and affordable infrastructure that delivers a seamless user experience, regardless of traffic volume.',
-      image: 'lens.png',
-      invert: true,
-      href: 'https://www.lens.xyz/',
-      example: 'Lens Protocol'
+      image: 'orb.webp',
+      href: 'https://orb.ac/',
+      example: 'Orb'
     },
     {
       id: 'audio',
@@ -129,7 +129,6 @@ const useSolutions = () => {
       description:
         'DApps can pay once and store their videos forever on Arweave. Once stored, videos do not require any ongoing maintenance. And of course, users can stream and upload seamlessly.',
       image: 'glass.png',
-      noResize: true,
       href: 'https://www.glass.xyz/',
       example: 'Glass.xyz'
     },
@@ -225,8 +224,7 @@ const Solutions: NextPage = () => {
         <div className="flex">
           <div className="container pt-[203px] z-40">
             <h1 className="text-5xl lg:text-7xl">
-              Solutions for every <br />
-              use case
+              Solutions for Every <br />Use Case
             </h1>
             <p className="text-base font-robotoMono font-light mt-5">
               Check out our solutions below
@@ -283,10 +281,10 @@ const Solutions: NextPage = () => {
               </div>
               <div className="flex flex-col items-center justify-center gap-10">
                 <div className="bg-black p-10 rounded-lg flex items-center justify-center">
-                  <img
+                  <Image
                     src={`/assets/solutions/logos/${section.image}`}
                     alt=""
-                    width={section.noResize ? '150px' : '200px'}
+                    width={'200px'}
                     height={140}
                     className={`object-contain ${section.invert && 'invert'}`}
                   />
@@ -303,25 +301,27 @@ const Solutions: NextPage = () => {
         </section>
       </div>
 
-      <CtaSection>
-        <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
-          <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
-            Ready to Become a BUNDLOOOOR?
-          </p>
-          <div className="mt-0 lg:mt-10">
-            <a
-              href="https://docs.bundlr.network/"
-              target={'_blank'}
-              rel="noreferrer"
-            >
-              <Button scheme={ButtonScheme.white}>
-                START BUILDING
-                <DevIcon color="black" />
-              </Button>
-            </a>
+      <div className="mb-20 mt-10">
+        <CtaSection>
+          <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+            <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
+              Ready to Become a BUNDLOOOOR?
+            </p>
+            <div className="mt-0 lg:mt-10">
+              <a
+                href="https://docs.bundlr.network/"
+                target={'_blank'}
+                rel="noreferrer"
+              >
+                <Button scheme={ButtonScheme.white}>
+                  START BUILDING
+                  <DevIcon color="black" />
+                </Button>
+              </a>
+            </div>
           </div>
-        </div>
-      </CtaSection>
+        </CtaSection>
+      </div>
       <Footer />
     </div>
   )

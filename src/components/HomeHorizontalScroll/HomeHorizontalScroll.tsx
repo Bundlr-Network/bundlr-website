@@ -166,7 +166,7 @@ const HomeHorizontalScroll = () => {
 
   return (
     <>
-      <div className="w-screen h-screen flex flex-col items-center justify-between p-24 text-7xl sticky top-0 left-0 bg-seashell -z-10"
+      <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-between p-24 text-7xl sticky top-0 left-0 bg-seashell -z-10"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -211,7 +211,7 @@ const HomeHorizontalScroll = () => {
           transition={{ delay: 0.6 }}
         />
       </div>
-      <div className="w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
+      <div className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -258,7 +258,7 @@ const HomeHorizontalScroll = () => {
           />
         </div>
       </div>
-      <div className="w-screen h-screen flex items-start justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
+      <div className="overflow-hidden relative w-screen h-screen flex items-start justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -293,7 +293,7 @@ const HomeHorizontalScroll = () => {
           className="absolute bottom-0 left-0 right-0 mx-auto"
         />
       </div>
-      <div className="w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-10"
+      <div className="overflow-hidden relative w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -307,7 +307,7 @@ const HomeHorizontalScroll = () => {
           >
             Bundlr is the trustless <br /> source of truth
           </motion.h2>
-          <div className="self-center z-10">
+          <div className="self-center">
             <Button>
               LEARN MORE
               <DevIcon />

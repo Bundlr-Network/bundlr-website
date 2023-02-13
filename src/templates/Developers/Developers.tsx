@@ -70,7 +70,7 @@ const Developers: NextPage = () => {
           <h1 className="text-6xl lg:text-7xl leading-none mt-24 z-10 text-center">
             Build Seamlessly with Bundlr
           </h1>
-          <p className="text-lg font-robotoMono font-light z-10 text-center max-w-5xl">
+          <p className="text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose">
             Bundlr is a decentralized data network to help developers solve
             complex data integrity issues. Our performant, scalable, seamless
             storage, proof of provenance, and data availability guarantees
@@ -114,7 +114,7 @@ const Developers: NextPage = () => {
       </section>
 
       <section className="bg-seashell pt-44 pb-20">
-        <div className="mx-5 lg:mx-44 rounded-[20px] overflow-hidden bg-black z-10">
+        <div className="mx-5 lg:mx-[109px] rounded-[20px] overflow-hidden bg-black z-10">
           <HomeTrustedBy scheme="dark" />
         </div>
       </section>
@@ -123,12 +123,12 @@ const Developers: NextPage = () => {
         <div>
           <SectionTitle title="How Bundlr Works" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
-            <p className="">
+            <p className="leading-loose">
               Bundlr uses binary encoding methods to compact multiple Layer 2
               transactions into a Layer 1 transaction know as a bundle. Like
               Ethereum rollups, Bundles reduce block usage.
             </p>
-            <p className="">
+            <p className="leading-loose">
               {' '}
               As bundle sizes increase, Bundlr permits transactions per second
               to scale horizontally and linearly, which means that Bunldr can
@@ -155,7 +155,7 @@ const Developers: NextPage = () => {
         <div>
           <SectionTitle title="Why on Arweave?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
-            <p className="">
+            <p className="leading-loose">
               <a href="https://arweave.org" target={'_blank'} rel="noreferrer">
                 Arweave
               </a>{' '}
@@ -163,7 +163,7 @@ const Developers: NextPage = () => {
               ever. This is fundamental to solving the data integrity challenges
               we face today.{' '}
             </p>
-            <p className="">
+            <p className="leading-loose">
               In the same way that the internet connected humans across
               geographies, Arweave connects humans across time.{' '}
             </p>

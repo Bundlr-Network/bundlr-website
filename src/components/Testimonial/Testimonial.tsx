@@ -53,7 +53,7 @@ const Testimonial = () => {
         </div>
         <div className="flex flex-col w-full h-auto">
           <div className="h-auto w-full lg:mt-[27px]">
-            <p className="text-3xl leading-tight font-light">
+            <p className="text-3xl leading-tight font-light leading-relaxed">
               {TESTIMONIALS_CONTENT[currentTestimonial].description}
             </p>
           </div>

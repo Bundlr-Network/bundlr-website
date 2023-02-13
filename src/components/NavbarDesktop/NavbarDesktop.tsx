@@ -180,7 +180,7 @@ const NavDropdown = ({
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative h-[89px] flex items-center justify-center z-50"
+        className="relative h-[89px] flex items-center justify-center z-[9999]"
       >
         <div className=" px-4 uppercase font-bold ">{title}</div>
         {options.length > 0 && (
