@@ -14,8 +14,8 @@ import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 const useProofOfProvenance = () => {
 
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Proof Of Provenance',
+    description: 'Identify original information by accurately attributing characteristics of its origin. Ensure authenticity and traceability for your data.'
   }
 
   const PRODUCT_CONTENT: {

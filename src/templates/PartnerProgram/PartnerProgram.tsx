@@ -7,8 +7,8 @@ import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 
 const usePartnerProgram = () => {
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Partner Program',
+    description: 'Join us at the frontier of data by becoming a Bundlr partner. Contact us for token integrations and other opportunities.'
   }
 
   return { PAGE_SEO }

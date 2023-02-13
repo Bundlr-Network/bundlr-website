@@ -13,8 +13,8 @@ import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 const useDescentralizedStorage = () => {
 
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Decentralized Storage',
+    description: 'Reliable and secure decentralized storage solutions. Upgrade your data management with performant, scalable, and permanent storage.'
   }
 
   const PRODUCT_CONTENT: {

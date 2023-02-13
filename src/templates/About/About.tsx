@@ -9,8 +9,8 @@ import { NextSeo } from 'next-seo'
 const useAbout = () => {
 
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description',
+    title: 'Bundlr | About',
+    description: 'Learn about Bundlr’s vision and technology. Discover how our innovative solutions are revolutionizing data.',
   }
 
   const MEMBERS = [

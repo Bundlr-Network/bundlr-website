@@ -13,8 +13,8 @@ import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 const useDataAvailability = () => {
 
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Optimistic Data Availability',
+    description: 'Improve performance, scalability, and costs by opting into consensus. Use a level of consensus that makes sense for your app.'
   }
 
   const PRODUCT_CONTENT: {

@@ -11,8 +11,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 const useRoadmap = () => {
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Roadmap',
+    description: 'Bear or bull, Bundlr will keep building. Check out what’s coming.'
   }
 
   return { PAGE_SEO }

@@ -6,8 +6,8 @@ import { NextSeo } from 'next-seo'
 
 const useBlog = () => {
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Blog',
+    description: 'Read expert insights and thought-provoking articles on all that’s happening at the frontier of data.'
   }
 
   return { PAGE_SEO }

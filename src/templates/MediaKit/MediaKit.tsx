@@ -38,8 +38,8 @@ const useMediaKit = () => {
   }, [brandOnScreen, assetOnScreen, pressOnScreen])
 
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Media Kit',
+    description: 'All the resources you need to work to use Bundlr branding.'
   }
 
   const STICKY_MENU = [

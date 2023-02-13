@@ -61,8 +61,8 @@ const useFaq = () => {
   const [search, setSearch] = useState('')
 
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | FAQs',
+    description: 'Get answers to your questions about Bundlr in our comprehensive FAQ. Clear and concise information for all levels of users.'
   }
 
   const FAQ_CONTENT = [

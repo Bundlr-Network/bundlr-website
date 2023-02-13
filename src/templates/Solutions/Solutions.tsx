@@ -17,8 +17,8 @@ import useOnScreen from '@/hooks/useOnScreen'
 
 const useSolutions = () => {
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Use Cases',
+    description: 'Bundlr is the data solution for audio, video, and metaverse applications – to name a few. Discover our diverse range of use cases.'
   }
 
   const [latestCurrentlyOnScreen, setLatestCurrentlyOnScreen] = useState<

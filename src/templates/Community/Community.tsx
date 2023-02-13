@@ -29,8 +29,8 @@ import { useLatestArticles } from '../Blog/Blog'
 
 const useCommunity = () => {
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Community',
+    description: 'Join a growing community of Bundloooors! Engage with users, devs, and an entire community of people at the frontier of data.'
   }
 
   const COMMUNITY_VALUES = [
