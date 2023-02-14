@@ -88,37 +88,34 @@ const About: NextPage = () => {
       <NavbarDesktop />
 
       <header
-        className="px-5 lg:px-[79px] relative overflow-hidden"
-        style={{
-          height: '894px'
-        }}
+        className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[794px] px-5 lg:px-[79px] relative overflow-hidden border-b border-2 mb-10 lg:border-none"
       >
-        <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px] mb-10">
-          <h1 className="text-5xl text-[76px]">
+        <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-10 lg:pt-[83px] mb-10">
+          <h1 className="text-5xl lg:text-[76px]">
             Meet the World&apos;s Next Data Layer
           </h1>
         </div>
         <img src="/assets/about/header.png" alt="" className='absolute bottom-36 right-0' />
       </header>
 
-      <section className="px-5 lg:px-[79px] items-center bg-seashell flex justify-between relative">
-        <div>
+      <section className="px-5 lg:px-[79px] items-center bg-seashell flex lg:justify-between relative justify-center">
+        <div className='flex flex-col items-center justify-center lg:items-start'>
           <SectionTitle title="What is Bundlr?" />
-          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-24 pt-16">
-            <p className="z-10">
+          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-0 lg:ml-24 pt-16">
+            <p className="z-10 text-center lg:text-left">
               Bundlr is developing a decentralized data network to help developers solve complex data integrity issues. {' '}
             </p>
-            <p className="z-10">
+            <p className="z-10 text-center lg:text-left">
               We provide solutions for storage, provenance, and data availability that help you establish a trustless data foundation.{' '}
             </p>
-            <p className='z-10'>Our vision is to be data’s trustless source of truth.</p>
+            <p className='z-10 text-center lg:text-left'>Our vision is to be data’s trustless source of truth.</p>
           </div>
 
         </div>
         <img src="/assets/about/section.png" alt="" className='absolute right-0 hidden lg:block -mb-4' />
       </section>
 
-      <div className="py-28">
+      <div className="py-16 lg:py-28">
         <SpotifySection />
       </div>
 
