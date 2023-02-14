@@ -31,15 +31,15 @@ const useDescentralizedStorage = () => {
     href: string
   }[] = [
       {
-        title: 'Optimistic Data Availability',
-        description: 'Pay for consensus only when you need it',
-        href: '/solutions/data-availability'
-      },
-      {
         title: 'Proof of Provenance',
         description:
           'Identify original information by accurately attributing origin',
         href: '/solutions/proof-of-provenance'
+      },
+      {
+        title: 'Optimistic Data Availability',
+        description: 'Pay for consensus only when you need it',
+        href: '/solutions/data-availability'
       }
     ]
 
@@ -134,28 +134,29 @@ const DescentralizedStorage: NextPage = () => {
         />
         <ul className="flex flex-col lg:flex-row gap-10">
           <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
-            {/* add gradient background that goes from gray to transparent */}
-
-            <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11">
-              {/* make image as background of rectangle box */}
-              <div className="flex flex-col gap-4 px-5 pb-10">
-                <h3 className="text-black font-light text-5xl font-fkDisplay">
-                  Arweave
-                </h3>
-                <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
-                  Launched
+            <a href="https://arweave.org/" target={"_blank"} rel="noreferrer">
+              {/* add gradient background that goes from gray to transparent */}
+              <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11">
+                {/* make image as background of rectangle box */}
+                <div className="flex flex-col gap-4 px-5 pb-10">
+                  <h3 className="text-black font-light text-5xl font-fkDisplay">
+                    Arweave
+                  </h3>
+                  <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
+                    Launched
+                  </div>
+                  <p className="font-robotoMono text-lg">
+                    Permanent storage on Arweave.{' '}
+                  </p>
+                  <p className="font-robotoMono text-lg">
+                    In the same way the internet connected people across
+                    geographies, Arweave connects people across time. Bundlr is
+                    currently handling over 90% of all transaction volume on
+                    Arweave.{' '}
+                  </p>
                 </div>
-                <p className="font-robotoMono text-lg">
-                  Permanent storage on Arweave.{' '}
-                </p>
-                <p className="font-robotoMono text-lg">
-                  In the same way the internet connected people across
-                  geographies, Arweave connects people across time. Bundlr is
-                  currently handling over 90% of all transaction volume on
-                  Arweave.{' '}
-                </p>
               </div>
-            </div>
+            </a>
           </li>
           <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
             {/* add gradient background that goes from gray to transparent */}
@@ -195,7 +196,7 @@ const DescentralizedStorage: NextPage = () => {
             </h2>
             <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left">
               With uploads time under 8 milliseconds and the{' '}
-              <u>ability to scale to millions of transactions per seconds</u>,
+              ability to scale to millions of transactions per seconds,
               Bundlr’s performance is on par with traditional providers. Bundlr
               is ready to store the world’s data.
             </p>
