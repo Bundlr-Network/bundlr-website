@@ -312,7 +312,7 @@ const HomeHorizontalScroll = () => {
           // /assets/home/dataverse.png 
           src="/assets/home/dataverse.png"
           alt="dataverse"
-          className="absolute bottom-0 left-0 right-0 mx-auto hidden"
+          className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:flex"
         />
         <motion.img
           ref={successorImageRef}
@@ -324,7 +324,7 @@ const HomeHorizontalScroll = () => {
           // /assets/home/dataverse.png 
           src="/assets/home/dataverse-mobile.png"
           alt="dataverse"
-          className="absolute -bottom-10 left-0 right-0 mx-auto"
+          className="absolute -bottom-10 left-0 right-0 mx-auto lg:hidden"
         />
       </div>
       <div className="overflow-hidden relative w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
@@ -358,7 +358,7 @@ const HomeHorizontalScroll = () => {
           // /assets/home/dataverse.png 
           src="/assets/home/dataverse.png"
           alt="dataverse"
-          className="absolute bottom-0 left-0 right-0 mx-auto hidden"
+          className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:flex"
         />
         <motion.img
           ref={conclusionImageRef}
@@ -370,7 +370,7 @@ const HomeHorizontalScroll = () => {
           // /assets/home/dataverse.png 
           src="/assets/home/dataverse-mobile.png"
           alt="dataverse"
-          className="absolute -bottom-10 left-0 right-0 mx-auto"
+          className="absolute -bottom-10 left-0 right-0 mx-auto lg:hidden"
         />
       </div>
     </>
