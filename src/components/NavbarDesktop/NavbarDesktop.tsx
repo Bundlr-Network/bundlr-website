@@ -24,7 +24,7 @@ const useNavbarDesktop = () => {
     Solutions: [
       {
         name: 'Decentralized Storage',
-        href: '/solutions/decentralized-storage.ts'
+        href: '/solutions/decentralized-storage'
       },
       {
         name: 'Proof of Provenance',
@@ -246,7 +246,7 @@ const MenuMobile = () => {
     Solutions: [
       {
         name: 'Decentralized Storage',
-        href: '/solutions/decentralized-storage.ts'
+        href: '/solutions/decentralized-storage'
       },
       {
         name: 'Proof of Provenance',

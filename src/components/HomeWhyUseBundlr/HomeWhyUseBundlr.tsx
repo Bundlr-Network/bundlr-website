@@ -11,7 +11,7 @@ const HomeWhyUseBundlr = ({ content, children }: {
   return (
     <>
       <section>
-        <div className="flex items-center justify-center lg:justify-start pt-[52px] mx-4 lg:ml-[79px]">
+        <div className="flex items-center justify-center lg:justify-start pt-[52px] mx-4 md:ml-[79px]">
           <SectionTitle title="How We’re Different" />
         </div>
         <ul className="flex flex-col gap-10 lg:ml-auto mx-4 lg:mr-[79px] max-w-[1128px] mt-[49px] lg:mt-[126px] pb-[50px]">

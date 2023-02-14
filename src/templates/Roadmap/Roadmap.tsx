@@ -59,7 +59,7 @@ const Roadmap: NextPage = () => {
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
             <div />
             <div className="flex flex-col gap-7">
-              <h2 className="text-7xl z-10">Roadmap</h2>
+              <h2 className="text-5xl lg:text-7xl z-10">Roadmap</h2>
               <p className="font-robotoMono z-10">
                 We’re building a seamless developer experience while
                 decentralizing our infrastructure.
@@ -83,7 +83,7 @@ const Roadmap: NextPage = () => {
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">Ongoing</p>
-              <h2 className="text-7xl z-10">Chain Integrations </h2>
+              <h2 className="text-5xl lg:text-7xl z-10">Chain Integrations </h2>
               <p className="font-robotoMono z-10">
                 By supporting the cryptography and clients of a chain, Bundlr
                 lets users pay for Bundlr in the token of their preferred chain.
@@ -106,12 +106,12 @@ const Roadmap: NextPage = () => {
             <img
               src="/assets/roadmap/chain-1.png"
               alt="roadmap"
-              className="absolute top-0 left-0"
+              className="absolute top-0 left-0 hidden lg:block"
             />
             <img
               src="/assets/roadmap/chain-2.png"
               alt="roadmap"
-              className="absolute bottom-0 right-0"
+              className="absolute -bottom-20 lg:bottom-0 right-0"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
@@ -119,7 +119,7 @@ const Roadmap: NextPage = () => {
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">Q1 2023</p>
-              <h2 className="text-7xl z-10">Preweave</h2>
+              <h2 className="text-5xl lg:text-7xl z-10">Preweave</h2>
               <p className="font-robotoMono z-10">
                 Preweave is a peer-to-peer caching layer built on Bundlr.
                 Preweave users will also have the option of permanently storing
@@ -146,7 +146,7 @@ const Roadmap: NextPage = () => {
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">Q2 2023</p>
-              <h2 className="text-7xl z-10">Bundlr Studio</h2>
+              <h2 className="text-5xl lg:text-7xl z-10">Bundlr Studio</h2>
               <p className="font-robotoMono z-10">
                 Bundlr Studio gives users the option to pay for Bundlr in their
                 preferred fiat currency through a simple user interface.
@@ -176,13 +176,16 @@ const Roadmap: NextPage = () => {
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">Q4 2023</p>
-              <h2 className="text-7xl z-10">Testnet </h2>
+              <h2 className="text-5xl lg:text-7xl z-10">Testnet </h2>
               <p className="font-robotoMono z-10">
                 Testnet will be the final version of the network before Bundlr
                 goes to Mainnet.
               </p>
             </div>
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div className="text-white mr-10">
+              <ChevronRight width={'40px'} height={'40px'} />
+            </div>
             <img
               src="/assets/roadmap/testnet-1.png"
               alt="testnet"
@@ -195,16 +198,20 @@ const Roadmap: NextPage = () => {
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div />
             <div className="flex flex-col gap-7 max-w-2xl">
               <p className="font-robotoMono text-xs uppercase z-10">2024</p>
-              <h2 className="text-7xl z-10">Mainnet</h2>
+              <h2 className="text-5xl lg:text-7xl z-10">Mainnet</h2>
               <p className="font-robotoMono z-10">
                 With the launch of Mainnet, Bundlr will become a fully
                 decentralized Proof-of-Stake network.
               </p>
             </div>
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div className="text-white mr-10">
+              <ChevronRight width={'40px'} height={'40px'} />
+            </div>
             <img
               src="/assets/roadmap/mainnet-1.png"
               alt="mainnet"
@@ -216,10 +223,11 @@ const Roadmap: NextPage = () => {
               className="absolute bottom-0 right-0"
             />
           </div>
-          <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
-            <div className="border-dashed border-t-2 w-24 h-2 border-white" />
+          <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative p-5 lg:p-0">
+            {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
+            <div />
             <div className="flex flex-col gap-7 max-w-2xl">
-              <h2 className="text-9xl z-10">THE FUTURE</h2>
+              <h2 className="text-5xl lg:text-9xl z-10">THE FUTURE</h2>
               <p className="font-robotoMono z-10">
                 We will continue to incorporate feedback from our community to
                 deliver innovations that make Bundlr the world’s data layer.
