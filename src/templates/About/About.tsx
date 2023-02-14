@@ -226,7 +226,7 @@ const About: NextPage = () => {
           {INVESTORS.map((item, index) => {
             return (
               <a href={item.link} target="_blank" rel="noreferrer" key={index}>
-                <img src={item.logoHref} className="h-8" />
+                <img src={item.logoHref} className="h-7" />
               </a>
             )
           })}
