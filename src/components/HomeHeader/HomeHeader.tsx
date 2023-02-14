@@ -45,12 +45,6 @@ const HomeHeader = () => {
             }}
             size="sm"
           />
-          <h2
-            className="font-robotoMono leading-6 font-normal z-10"
-            dangerouslySetInnerHTML={{
-              __html: SUBTITLE
-            }}
-          />
         </div>
         <div className="flex gap-[21px] mt-56 lg:mt-[450px] items-center font-robotoMono">
           <Button>
