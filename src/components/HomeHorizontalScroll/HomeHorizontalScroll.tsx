@@ -166,7 +166,7 @@ const HomeHorizontalScroll = () => {
 
   return (
     <>
-      <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+      <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
