@@ -2,6 +2,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 import Button from '../Button'
+import { ButtonScheme } from '../Button/Button'
 import { DevIcon } from '@/svg'
 import SectionTitle from '../SectionTitle'
 import Testimonial from '../Testimonial'
@@ -25,8 +26,8 @@ const HomeHorizontalScroll = () => {
 
   const serverVariants = {
     title: {
-      visible: { opacity: 1, x: 0 },
-      hidden: { opacity: 0, x: 100 }
+      visible: { opacity: 1 },
+      hidden: { opacity: 0 }
     },
     description: {
       visible: { opacity: 1, duration: 2000 },
@@ -71,8 +72,8 @@ const HomeHorizontalScroll = () => {
 
   const cloudVariants = {
     title: {
-      visible: { opacity: 1, x: 0 },
-      hidden: { opacity: 0, x: -100 }
+      visible: { opacity: 1 },
+      hidden: { opacity: 0, }
     },
     description: {
       visible: { opacity: 1, duration: 2000 },
@@ -103,8 +104,8 @@ const HomeHorizontalScroll = () => {
 
   const successorVariants = {
     title: {
-      visible: { opacity: 1, x: 0 },
-      hidden: { opacity: 0, x: 100 }
+      visible: { opacity: 1 },
+      hidden: { opacity: 0 }
     },
     image: {
       visible: { opacity: 1, y: 0 },
@@ -139,8 +140,8 @@ const HomeHorizontalScroll = () => {
 
   const conclusionVariants = {
     title: {
-      visible: { opacity: 1, x: 0 },
-      hidden: { opacity: 0, x: -100 }
+      visible: { opacity: 1 },
+      hidden: { opacity: 0 }
     },
     image: {
       visible: { opacity: 1, y: 0 },
@@ -173,7 +174,7 @@ const HomeHorizontalScroll = () => {
         </h2>
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+        className="w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
           // boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -209,7 +210,7 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.serverLeft}
           initial="hidden"
           src={'/assets/home/server.png'}
-          className="absolute bottom-56 lg:-bottom-36 -left-20 hidden lg:block lg:w-auto"
+          className="absolute bottom-56 lg:-bottom-8 -left-20 hidden lg:block lg:w-auto"
           transition={{ delay: 0.6 }}
         />
         <motion.img
@@ -218,7 +219,7 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.serverRight}
           initial="hidden"
           src={'/assets/home/serverRight.png'}
-          className="absolute bottom-56 lg:-bottom-36 -right-20 hidden lg:block lg:w-auto"
+          className="absolute bottom-56 lg:-bottom-8 -right-20 hidden lg:block lg:w-auto"
           transition={{ delay: 0.6 }}
         />
       </div>
@@ -351,7 +352,7 @@ const HomeHorizontalScroll = () => {
         /> */}
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
+        className="bg-black overflow-hidden text-white w-screen h-screen flex items-start justify-center sticky top-0 left-0 -z-[2]"
         style={{
           // boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -367,7 +368,7 @@ const HomeHorizontalScroll = () => {
             Bundlr is the Trustless <br /> Source of Truth
           </motion.h2>
           <div className="self-center">
-            <Button>
+            <Button scheme={ButtonScheme.white}>
               LEARN MORE
               <DevIcon />
             </Button>
