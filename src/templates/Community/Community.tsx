@@ -180,7 +180,7 @@ const Community: NextPage = () => {
         // }}
         >
           <div className="leading-none flex flex-col gap-10 lg:gap-[197px] ">
-            <h1 className="font-light text-5xl lg:text-7xl text-white z-[99] text-center lg:text-left">
+            <h1 className="font-light text-4xl lg:text-7xl text-white z-[99] text-center lg:text-left">
               Join the #BUNDLOOOOR <br />Community
             </h1>
             <Socials links={SOCIAL_LINKS} />

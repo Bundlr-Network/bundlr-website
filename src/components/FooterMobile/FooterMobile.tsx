@@ -27,7 +27,7 @@ const FooterMobile = ({
 }) => {
   return (
     <>
-      <footer className="border-t border-timberwolf pt-[56px] px-[20px] font-robotoMono lg:hidden bg-seashell">
+      <footer className="border-t border-timberwolf pt-[56px] px-[20px] font-robotoMono lg:hidden bg-seashell pb-10">
         <FooterLogo />
         <p className="mt-[60px] text-[40px] tracking-tighter whitespace-normal leading-none mb-[68px]">
           THE WORLD&apos;S <br />
