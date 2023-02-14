@@ -276,7 +276,7 @@ const HomeHorizontalScroll = () => {
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
-        <div className="flex flex-col gap-10 mt-36 px-6 lg:px-0 justify-center items-center mb-48">
+        <div className="flex flex-col gap-10 mt-36 px-6 lg:px-0 justify-center items-center mb-72 lg:mb-48 lg:mb-72">
           <motion.h2
             className="max-w-5xl z-10 text-center text-4xl lg:text-6xl"
             ref={successorTitleRef}
@@ -298,6 +298,40 @@ const HomeHorizontalScroll = () => {
             you expect
           </motion.h3>
         </div>
+        <motion.img
+          ref={successorImageRef}
+          animate={successorImageControls}
+          initial="hidden"
+          variants={successorVariants.image}
+          src="/assets/home/cta-block.png"
+          alt=""
+          className="hidden lg:block absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[400px] block w-full lg:w-auto bg-cover"
+        />
+        <motion.img
+          ref={successorImageRef}
+          animate={successorImageControls}
+          initial="hidden"
+          variants={successorVariants.image}
+          src="/assets/home/cta-block-inverted.png"
+          alt=""
+          className="absolute -bottom-[140px] md:-bottom-[580px] lg:bottom-auto -right-[140px] lg:-right-[400px] block w-full lg:w-auto bg-cover"
+        />
+
+        {/* <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
+          <img
+            src="/assets/community/cta-blocks-2.png"
+            className="w-full h-full rounded-lg"
+            alt="image1"
+          />
+        </div>
+        <div className="lg:flex absolute -bottom-36 lg:top-0 left-0 overflow-hidden">
+          <img
+            src="/assets/community/cta-blocks-2.png"
+            className="w-full h-full rounded-lg"
+            alt="image2"
+          />
+        </div> */}
+
         {/* <motion.img
           className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:block"
           ref={successorImageRef}

@@ -206,7 +206,7 @@ const DescentralizedStorage: NextPage = () => {
               Our intuitive docs and SDK help you integrate Bundlr with just 3-4
               lines of code. Further, you can sign and pay for storage in of our
               14 supported tokens, including ETH, SOL, and MATIC.{' '}
-              <a href="#">
+              <a href="https://www.youtube.com/watch?v=Wxfyd0veaEc&t=847s" target={"_blank"} rel="noreferrer">
                 <u>Find out</u>
               </a>{' '}
               how simple working with Bundlr is.
