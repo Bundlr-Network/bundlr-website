@@ -24,7 +24,7 @@ const FooterDesktop = ({
             <FooterLogo className="cursor-pointer" />
           </Link>
           <p className="mt-[230px] lg:text-[31px] text-[62px] tracking-tighter whitespace-normal">
-            THE WORLD&apos;S NEXT DATA LAYER
+            THE WORLD&apos;S NEXT <br />DATA LAYER
           </p>
           <p className="mt-[47px]">
             {new Date().getFullYear()} Bundlr. All rights reserved.
