@@ -208,11 +208,8 @@ const HomeHorizontalScroll = () => {
         </motion.h3>
         <div className='mb-36 lg:mb-0' />
         <img
-
           src={'/assets/home/server.png'}
-          // className="absolute bottom-0 -left-20 w-auto blur-[2px]"
           className="absolute -bottom-48 -left-20 w-auto lg:hidden"
-          transition={{ delay: 0.6 }}
         />
         <motion.img
           ref={serverImageRef}
