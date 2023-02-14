@@ -165,7 +165,7 @@ const HomeHorizontalScroll = () => {
       <div
         className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
-          boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
         <h2 className={'z-[99] text-center text-5xl lg:text-7xl'}>
@@ -175,7 +175,7 @@ const HomeHorizontalScroll = () => {
       <div
         className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
-          boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
         <motion.h2
@@ -225,7 +225,7 @@ const HomeHorizontalScroll = () => {
       <div
         className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
         style={{
-          boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
         <div className="h-full w-screen	shrink-0 px-5 lg:px-[79px] pt-[120px]">
@@ -273,7 +273,7 @@ const HomeHorizontalScroll = () => {
       <div
         className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
         style={{
-          boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
         <div className="flex flex-col gap-10 mt-36 px-6 lg:px-0 justify-center items-center mb-72 lg:mb-48 lg:mb-72">
@@ -353,7 +353,7 @@ const HomeHorizontalScroll = () => {
       <div
         className="overflow-hidden w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
         style={{
-          boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
         <div className="flex flex-col gap-6 mt-36">
