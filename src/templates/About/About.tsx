@@ -2,16 +2,24 @@ import {
   Button,
   CtaSection,
   Footer,
+  Heading,
   NavbarDesktop,
   SectionTitle,
   SpotifySection
 } from '@/components'
 import { useEffect, useState } from 'react'
 
+import ArweaveLogo from '@assets/about/investors/arweave.svg'
 import { ButtonScheme } from '@/components/Button/Button'
 import { DevIcon } from '@/svg'
+import FrameworkLogo from '@assets/about/investors/framework.svg'
+import HypersphereLogo from '@assets/about/investors/hypersphere.svg'
+import Image from 'next/image'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import OpenseaLogo from '@assets/about/investors/opensea.webp'
+import PermanentVenturesLogo from '@assets/about/investors/permanent.webp'
+import RaceCapitalLogo from '@assets/about/investors/racecapital.webp'
 
 const useAbout = () => {
   const PAGE_SEO = {
@@ -78,11 +86,50 @@ const useAbout = () => {
     }
   ]
 
-  return { PAGE_SEO, MEMBERS }
+  const INVESTORS = [
+    {
+      name: 'Arweave',
+      logo: ArweaveLogo,
+      logoHref: '/assets/about/investors/arweave.svg',
+      link: 'https://www.arweave.org/'
+    },
+    {
+      name: 'Framework',
+      logo: FrameworkLogo,
+      logoHref: '/assets/about/investors/framework.svg',
+      link: 'https://framework.ventures/'
+    },
+    {
+      name: 'OpenSea',
+      logo: OpenseaLogo,
+      logoHref: '/assets/about/investors/opensea.webp',
+      link: 'https://opensea.io/'
+    },
+    {
+      name: 'Race Capital',
+      logo: RaceCapitalLogo,
+      logoHref: '/assets/about/investors/racecapital.webp',
+      link: 'https://race.capital'
+    },
+    {
+      name: 'Hypersphere',
+      logo: HypersphereLogo,
+      logoHref: '/assets/about/investors/hypersphere.svg',
+      link: 'https://hypersphere.capital/'
+    },
+    {
+      name: 'Permanent Ventures',
+      logo: PermanentVenturesLogo,
+      logoHref: '/assets/about/investors/permanent.webp',
+      link: 'https://tqjushdada2qw2abowhuntnplwacih4pa4nb6mitibg2i645xkvq.arweave.net/nBNJHGAYNQtoAXWPRs2vXYAkH48HGh8xE0BNpHuduqs'
+    }
+  ]
+
+  return { PAGE_SEO, MEMBERS, INVESTORS }
 }
 
 const About: NextPage = () => {
-  const { PAGE_SEO, MEMBERS } = useAbout()
+  const { PAGE_SEO, MEMBERS, INVESTORS } = useAbout()
 
   return (
     <>
@@ -168,6 +215,22 @@ const About: NextPage = () => {
             )
           })}
         </ul>
+      </section>
+
+      <section className="bg-white mx-2 lg:mx-[59px] p-14 flex flex-col gap-20 rounded-[30px] pb-52 -mb-40 mt-10">
+        <Heading level={2} className="text-center lg:text-left">
+          Backed by Visionaries
+        </Heading>
+
+        <div className="flex items-center xl:justify-between flex-wrap justify-center gap-10">
+          {INVESTORS.map((item, index) => {
+            return (
+              <a href={item.link} target="_blank" rel="noreferrer" key={index}>
+                <img src={item.logoHref} className="h-8" />
+              </a>
+            )
+          })}
+        </div>
       </section>
 
       <div className="py-10">
