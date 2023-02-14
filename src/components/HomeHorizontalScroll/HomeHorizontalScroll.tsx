@@ -166,7 +166,7 @@ const HomeHorizontalScroll = () => {
 
   return (
     <>
-      <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-between p-24 text-7xl sticky top-0 left-0 bg-seashell -z-10"
+      <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -176,13 +176,28 @@ const HomeHorizontalScroll = () => {
           animate={serverControls}
           initial="hidden"
           variants={serverVariants.title}
-          className={'z-10'}
+          className={'z-[99] text-center text-5xl lg:text-7xl'}
+        >
+          Data is Evolving
+        </motion.h2>
+      </div>
+      <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+        style={{
+          boxShadow: '0 0 70px rgba(0,0,0,.2)'
+        }}
+      >
+        <motion.h2
+          ref={serverTitleRef}
+          animate={serverControls}
+          initial="hidden"
+          variants={serverVariants.title}
+          className={'z-[99] text-center text-5xl lg:text-7xl'}
         >
           On-Premise Servers
         </motion.h2>
         <motion.h3
           ref={serverDescriptionRef}
-          className="font-robotoMono text-lg max-w-md text-center"
+          className="font-robotoMono text-lg max-w-md text-center z-[99] leading-loose"
           initial="hidden"
           animate={serverControls}
           variants={serverVariants.description}
@@ -191,14 +206,21 @@ const HomeHorizontalScroll = () => {
           In the internet’s early days, online data was stored in local servers.
           This was inconvenient and expensive for most people.
         </motion.h3>
-        <div />
+        <div className='mb-36 lg:mb-0' />
+        <img
+
+          src={'/assets/home/server.png'}
+          // className="absolute bottom-0 -left-20 w-auto blur-[2px]"
+          className="absolute -bottom-48 -left-20 w-auto lg:hidden"
+          transition={{ delay: 0.6 }}
+        />
         <motion.img
           ref={serverImageRef}
           animate={imageControls}
           variants={serverVariants.serverLeft}
           initial="hidden"
           src={'/assets/home/server.png'}
-          className="absolute bottom-56 lg:top-0 left-0 w-[20%] lg:w-auto"
+          className="absolute bottom-56 lg:-bottom-36 -left-20 hidden lg:block lg:w-auto"
           transition={{ delay: 0.6 }}
         />
         <motion.img
@@ -207,7 +229,7 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.serverRight}
           initial="hidden"
           src={'/assets/home/serverRight.png'}
-          className="absolute bottom-56 lg:top-0 right-0 w-[20%] lg:w-auto"
+          className="absolute bottom-56 lg:-bottom-36 -right-20 hidden lg:block lg:w-auto"
           transition={{ delay: 0.6 }}
         />
       </div>
@@ -219,7 +241,7 @@ const HomeHorizontalScroll = () => {
         <div className="relative h-full w-screen	shrink-0 px-5 lg:px-[79px] pt-[120px]">
           <div className="w-full lg:w-2/5 ml-auto">
             <motion.h2
-              className="text-7xl font-fkDispla z-10"
+              className="z-[99] text-center text-5xl lg:text-7xl lg:text-left"
               ref={cloudTitleRef}
               animate={cloudControls}
               initial="hidden"
@@ -228,17 +250,17 @@ const HomeHorizontalScroll = () => {
               The Cloud
             </motion.h2>
             <motion.div
-              className="flex flex-col gap-6 mt-12 ml-16"
+              className="flex flex-col gap-6 mt-12 ml-0 lg:ml-16 items-center justify-center lg:items-start"
               ref={cloudDescriptionRef}
               animate={cloudControls}
               initial="hidden"
               variants={cloudVariants.description}
             >
-              <p className="font-robotoMono text-base max-w-md z-10">
+              <p className="font-robotoMono text-base max-w-md z-10 leading-loose text-center lg:text-left">
                 With the advent of the cloud, data storage became more
                 affordable, convenient, and performant.
               </p>
-              <p className="font-robotoMono text-base max-w-md z-10">
+              <p className="font-robotoMono text-base max-w-md z-10 text-center lg:text-left">
                 But, data centralized in the cloud.
               </p>
             </motion.div>
@@ -254,7 +276,7 @@ const HomeHorizontalScroll = () => {
             }}
             src="/assets/home/cloud.png"
             alt="cloud"
-            className="absolute bottom-52 lg:bottom-10 -left-32 right-0 mx-auto max-w-[70%]"
+            className="absolute bottom-52 lg:bottom-10 lg:-left-32 left-4 right-0 mx-auto lg:max-w-[70%] scale-110 lg:scale-100"
           />
         </div>
       </div>
@@ -263,8 +285,8 @@ const HomeHorizontalScroll = () => {
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
-        <div className="flex flex-col gap-6 mt-36">
-          <motion.h2 className="font-robotoMono text-base max-w-md z-10 text-center"
+        <div className="flex flex-col gap-6 mt-36 px-6 lg:px-0">
+          <motion.h2 className="font-robotoMono text-base max-w-md z-10 text-center leading-loose"
             ref={successorTitleRef}
             animate={successorControls}
             initial="hidden"
@@ -272,7 +294,7 @@ const HomeHorizontalScroll = () => {
           >
             Bundlr is the successor to on-premise servers and the cloud.
           </motion.h2>
-          <motion.h3 className="font-robotoMono text-base max-w-md z-10 text-center"
+          <motion.h3 className="font-robotoMono text-base max-w-md z-10 text-center leading-loose"
             animate={successorControls}
             initial="hidden"
             variants={successorVariants.title}
@@ -288,9 +310,24 @@ const HomeHorizontalScroll = () => {
           animate={successorImageControls}
           initial="hidden"
           variants={successorVariants.image}
+          // mobile and desktop image
+          //  /assets/home/dataverse-mobile.png,
+          // /assets/home/dataverse.png 
           src="/assets/home/dataverse.png"
           alt="dataverse"
-          className="absolute bottom-0 left-0 right-0 mx-auto"
+          className="absolute bottom-0 left-0 right-0 mx-auto hidden"
+        />
+        <motion.img
+          ref={successorImageRef}
+          animate={successorImageControls}
+          initial="hidden"
+          variants={successorVariants.image}
+          // mobile and desktop image
+          //  /assets/home/dataverse-mobile.png,
+          // /assets/home/dataverse.png 
+          src="/assets/home/dataverse-mobile.png"
+          alt="dataverse"
+          className="absolute -bottom-10 left-0 right-0 mx-auto"
         />
       </div>
       <div className="overflow-hidden relative w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
@@ -299,7 +336,7 @@ const HomeHorizontalScroll = () => {
         }}
       >
         <div className="flex flex-col gap-6 mt-36">
-          <motion.h2 className="text-center text-7xl font-fkDisplay z-10"
+          <motion.h2 className="text-center text-5xl lg:text-7xl font-fkDisplay z-10"
             ref={conclusionTitleRef}
             animate={conclusionControls}
             initial="hidden"
@@ -319,9 +356,24 @@ const HomeHorizontalScroll = () => {
           animate={conclusionImageControls}
           initial="hidden"
           variants={conclusionVariants.image}
+          // mobile and desktop image
+          //  /assets/home/dataverse-mobile.png,
+          // /assets/home/dataverse.png 
           src="/assets/home/dataverse.png"
           alt="dataverse"
-          className="absolute bottom-0 left-0 right-0 mx-auto"
+          className="absolute bottom-0 left-0 right-0 mx-auto hidden"
+        />
+        <motion.img
+          ref={conclusionImageRef}
+          animate={conclusionImageControls}
+          initial="hidden"
+          variants={conclusionVariants.image}
+          // mobile and desktop image
+          //  /assets/home/dataverse-mobile.png,
+          // /assets/home/dataverse.png 
+          src="/assets/home/dataverse-mobile.png"
+          alt="dataverse"
+          className="absolute -bottom-10 left-0 right-0 mx-auto"
         />
       </div>
     </>
