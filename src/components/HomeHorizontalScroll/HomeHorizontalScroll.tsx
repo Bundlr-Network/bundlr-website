@@ -305,7 +305,7 @@ const HomeHorizontalScroll = () => {
           variants={successorVariants.image}
           src="/assets/home/cta-block.png"
           alt=""
-          className="hidden lg:block absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[400px] block w-full lg:w-auto bg-cover"
+          className="hidden lg:block absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[450px] block w-full lg:w-auto bg-cover"
         />
         <motion.img
           ref={successorImageRef}
@@ -314,7 +314,7 @@ const HomeHorizontalScroll = () => {
           variants={successorVariants.image}
           src="/assets/home/cta-block-inverted.png"
           alt=""
-          className="absolute -bottom-[140px] md:-bottom-[580px] lg:bottom-auto -right-[140px] lg:-right-[400px] block w-full lg:w-auto bg-cover"
+          className="absolute -bottom-[140px] md:-bottom-[580px] lg:bottom-auto -right-[140px] lg:-right-[450px] block w-full lg:w-auto bg-cover"
         />
 
         {/* <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
