@@ -94,10 +94,10 @@ const useAbout = () => {
       link: 'https://www.arweave.org/'
     },
     {
-      name: 'Framework',
-      logo: FrameworkLogo,
-      logoHref: '/assets/about/investors/framework.svg',
-      link: 'https://framework.ventures/'
+      name: 'Permanent Ventures',
+      logo: PermanentVenturesLogo,
+      logoHref: '/assets/about/investors/permanent.webp',
+      link: 'https://tqjushdada2qw2abowhuntnplwacih4pa4nb6mitibg2i645xkvq.arweave.net/nBNJHGAYNQtoAXWPRs2vXYAkH48HGh8xE0BNpHuduqs'
     },
     {
       name: 'OpenSea',
@@ -118,11 +118,11 @@ const useAbout = () => {
       link: 'https://hypersphere.capital/'
     },
     {
-      name: 'Permanent Ventures',
-      logo: PermanentVenturesLogo,
-      logoHref: '/assets/about/investors/permanent.webp',
-      link: 'https://tqjushdada2qw2abowhuntnplwacih4pa4nb6mitibg2i645xkvq.arweave.net/nBNJHGAYNQtoAXWPRs2vXYAkH48HGh8xE0BNpHuduqs'
-    }
+      name: 'Framework',
+      logo: FrameworkLogo,
+      logoHref: '/assets/about/investors/framework.svg',
+      link: 'https://framework.ventures/'
+    },
   ]
 
   return { PAGE_SEO, MEMBERS, INVESTORS }
