@@ -59,14 +59,14 @@ const HomeTrustedBy = ({
       icon: '/assets/home/users/backpack.svg',
       invert: false,
       whiteinvert: true,
-      link: '#'
+      link: 'https://www.backpack.app/'
     },
     {
       title: 'Exchange',
       icon: '/assets/home/users/exchange.svg',
       invert: false,
       whiteinvert: true,
-      link: '#'
+      link: 'https://exchange.art/'
     },
     {
       title: 'Beem XYZ',

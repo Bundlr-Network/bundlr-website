@@ -26,8 +26,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 const useHome = () => {
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Home',
+    description: 'Bundlr is the world’s next data layer. We solve data integrity issues through permanent storage, proof of provenance, and optimistic data availability.'
   }
 
   const WHY_USE_BUNDLR = [

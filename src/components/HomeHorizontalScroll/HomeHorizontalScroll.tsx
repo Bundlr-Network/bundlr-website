@@ -271,23 +271,23 @@ const HomeHorizontalScroll = () => {
         </div>
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex items-start justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
+        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
-        <div className="flex flex-col gap-6 mt-36 px-6 lg:px-0">
+        <div className="flex flex-col gap-10 mt-36 px-6 lg:px-0 justify-center items-center mb-48">
           <motion.h2
-            className="font-robotoMono text-base max-w-md z-10 text-center leading-loose"
+            className="max-w-5xl z-10 text-center text-4xl lg:text-6xl"
             ref={successorTitleRef}
             animate={successorControls}
             initial="hidden"
             variants={successorVariants.title}
           >
-            Bundlr is the successor to on-premise servers and the cloud.
+            Bundlr is the Successor to Local Servers and the Cloud
           </motion.h2>
           <motion.h3
-            className="font-robotoMono text-base max-w-md z-10 text-center leading-loose"
+            className="font-robotoMono text-base max-w-2xl z-10 text-center leading-loose"
             animate={successorControls}
             initial="hidden"
             variants={successorVariants.title}
@@ -298,7 +298,7 @@ const HomeHorizontalScroll = () => {
             you expect
           </motion.h3>
         </div>
-        <motion.img
+        {/* <motion.img
           className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:block"
           ref={successorImageRef}
           animate={successorImageControls}
@@ -314,7 +314,7 @@ const HomeHorizontalScroll = () => {
           variants={successorVariants.image}
           src="/assets/home/dataverse-mobile.png"
           alt="dataverse"
-        />
+        /> */}
       </div>
       <div
         className="overflow-hidden w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
