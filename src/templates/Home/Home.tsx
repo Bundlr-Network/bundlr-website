@@ -95,8 +95,8 @@ const useHome = () => {
 const Home: NextPage = () => {
   const { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT } = useHome()
 
-  const wrapper = useRef<any>()
-  const slider = useRef<any>()
+  // const wrapper = useRef<any>()
+  // const slider = useRef<any>()
 
   // useLayoutEffect(() => {
   //   let ctx = gsap.context(() => {

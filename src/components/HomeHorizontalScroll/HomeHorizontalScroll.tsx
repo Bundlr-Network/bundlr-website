@@ -171,15 +171,11 @@ const HomeHorizontalScroll = () => {
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
-        <motion.h2
-          ref={serverTitleRef}
-          animate={serverControls}
-          initial="hidden"
-          variants={serverVariants.title}
+        <h2
           className={'z-[99] text-center text-5xl lg:text-7xl'}
         >
           Data is Evolving
-        </motion.h2>
+        </h2>
       </div>
       <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
