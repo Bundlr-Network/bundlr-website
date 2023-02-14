@@ -163,7 +163,7 @@ const HomeHorizontalScroll = () => {
   return (
     <>
       <div
-        className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+        className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -173,7 +173,7 @@ const HomeHorizontalScroll = () => {
         </h2>
       </div>
       <div
-        className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+        className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -228,7 +228,7 @@ const HomeHorizontalScroll = () => {
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
-        <div className="relative h-full w-screen	shrink-0 px-5 lg:px-[79px] pt-[120px]">
+        <div className="h-full w-screen	shrink-0 px-5 lg:px-[79px] pt-[120px]">
           <div className="w-full lg:w-2/5 ml-auto">
             <motion.h2
               className="z-[99] text-center text-5xl lg:text-7xl lg:text-left"
@@ -266,7 +266,7 @@ const HomeHorizontalScroll = () => {
             }}
             src="/assets/home/cloud.png"
             alt="cloud"
-            className="absolute bottom-52 lg:bottom-10 lg:-left-32 left-4 right-0 mx-auto lg:max-w-[70%] scale-110 lg:scale-100"
+            className="absolute bottom-52  md:bottom-10 lg:-left-32 left-4 right-0 mx-auto lg:max-w-[70%] scale-110 md:scale-100"
           />
         </div>
       </div>
@@ -308,7 +308,7 @@ const HomeHorizontalScroll = () => {
           alt="dataverse"
         />
         <motion.img
-          className="absolute -bottom-36 left-0 right-0 mx-auto lg:hidden"
+          className="absolute -bottom-36 md:-bottom-[496px] left-0 right-0 mx-auto lg:hidden"
           animate={successorControls}
           initial="hidden"
           variants={successorVariants.image}
@@ -317,7 +317,7 @@ const HomeHorizontalScroll = () => {
         />
       </div>
       <div
-        className="overflow-hidden relative w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
+        className="overflow-hidden w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -349,7 +349,7 @@ const HomeHorizontalScroll = () => {
           // /assets/home/dataverse.png
           src="/assets/home/dataverse.png"
           alt="dataverse"
-          className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:flex"
+          className="absolute bottom-0 left-0 right-0 mx-auto hidden md:flex"
         />
         <motion.img
           animate={conclusionControls}
@@ -360,7 +360,7 @@ const HomeHorizontalScroll = () => {
           // /assets/home/dataverse.png
           src="/assets/home/dataverse-mobile.png"
           alt="dataverse"
-          className="absolute -bottom-36 left-0 right-0 mx-auto lg:hidden"
+          className="absolute -bottom-36 md:-bottom-[468px] left-0 right-0 mx-auto lg:hidden"
         />
       </div>
     </>

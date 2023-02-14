@@ -22,7 +22,7 @@ const HomeProduct = ({
           <SectionTitle title={title} />
         </div>
         <div style={{
-        }} className={`flex flex-col lg:flex-row gap-20 lg:gap-0 items-center lg:justify-evenly w-full mt-16 lg:mt-28`} >
+        }} className={`flex flex-col md:flex-row gap-20 lg:gap-0 items-center lg:justify-evenly w-full mt-16 lg:mt-28`} >
           {/* 1st column title, text, and find out more button */}
           {content.map((info, index) => {
             return (
