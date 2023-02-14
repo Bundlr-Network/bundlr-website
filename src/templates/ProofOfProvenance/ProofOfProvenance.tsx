@@ -138,7 +138,7 @@ const ProofOfProvenance: NextPage = () => {
             </p>
           </div>
         </div>
-        <p className="transform rotate-180 text-center text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
+        <p className="hidden lg:block transform rotate-180 text-center text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
           PROVE AND FIND TRUTH
         </p>
       </section>
