@@ -77,7 +77,7 @@ const HomeTrustedBy = ({
     },
     {
       title: 'Orb',
-      icon: '/assets/home/users/orb.jpg',
+      icon: '/assets/solutions/logos/orb.webp',
       invert: false,
       whiteinvert: true,
       link: 'https://orb.ac'
