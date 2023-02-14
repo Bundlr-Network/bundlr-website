@@ -88,7 +88,7 @@ const DescentralizedStorage: NextPage = () => {
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
         <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
           <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
-            <Link href={'/solutions/descentralized-storage'}>
+            <Link href={'/solutions/decentralized-storage.ts'}>
               <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer bg-black text-white">
                 Storage
               </div>
