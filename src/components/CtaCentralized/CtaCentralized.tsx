@@ -36,7 +36,7 @@ const CtaCentralized = ({
           }`}
       >
         <h2
-          className="z-10 font-light text-4xl lg:text-[76px] max-w-2xl text-center leading-none mb-11"
+          className="z-10 font-light text-4xl lg:text-7xl max-w-2xl text-center leading-none mb-11"
           dangerouslySetInnerHTML={{
             __html: title
           }}

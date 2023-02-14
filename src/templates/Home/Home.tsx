@@ -147,7 +147,7 @@ const Home: NextPage = () => {
       }}>
         <SectionTitle title="Testimonials" />
         <div className="flex mt-[89px] justify-center relative">
-          <h2 className="text-5xl text-center lg:text-[76px] font-light leading-none font-fkDisplay">
+          <h2 className="text-5xl text-center lg:text-7xl font-light leading-none font-fkDisplay">
             What Users Say About Us
           </h2>
         </div>
