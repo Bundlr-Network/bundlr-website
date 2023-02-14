@@ -109,7 +109,7 @@ const Developers: NextPage = () => {
         <div className="flex flex-col items-start">
           <div className="text-9xl">&gt;90%</div>
           <p className="font-robotoMono text-lg">
-            Bundlr processes over 90% of data uploaded to Arweave
+            Bundlr processes over 90% of transactions on Arweave
           </p>
         </div>
         <div className="flex flex-col items-end">

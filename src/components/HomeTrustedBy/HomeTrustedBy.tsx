@@ -36,56 +36,58 @@ const HomeTrustedBy = ({
 
   const USERS = [
     {
-      title: 'Orb',
-      icon: '/assets/home/users/orb.jpg',
-      invert: false,
-      whiteinvert: true
-    },
-    {
       title: 'Sound XYZ',
       icon: '/assets/home/users/sound.svg',
       invert: false,
-      whiteinvert: true
+      whiteinvert: true,
+      link: 'https://sound.xyz'
     },
     {
       title: 'Metaplex',
       icon: '/assets/home/users/metaplex.svg',
       invert: false,
-      whiteinvert: true
+      whiteinvert: true,
+      link: 'https://metaplex.com'
     },
     {
       title: 'Glass XYZ',
       icon: '/assets/home/users/glass.png',
+      link: 'https://glass.xyz',
     },
     {
       title: 'Backpack',
       icon: '/assets/home/users/backpack.svg',
       invert: false,
-      whiteinvert: true
+      whiteinvert: true,
+      link: '#'
     },
     {
       title: 'Exchange',
       icon: '/assets/home/users/exchange.svg',
       invert: false,
-      whiteinvert: true
+      whiteinvert: true,
+      link: '#'
     },
     {
       title: 'Beem XYZ',
       icon: '/assets/home/users/beem.svg',
       invert: false,
-      whiteinvert: true
+      whiteinvert: true,
+      link: 'https://beem.xyz'
     },
     {
       title: 'Orb',
       icon: '/assets/home/users/orb.jpg',
       invert: false,
-      whiteinvert: true
+      whiteinvert: true,
+      link: 'https://orb.ac'
     },
     {
       title: 'Alex',
       icon: '/assets/home/users/alex.svg',
       invert: false,
-      whiteinvert: true
+      whiteinvert: true,
+      link: 'https://alex.arweave.dev/'
     },
     // {
     //   title: 'Lens',
@@ -98,12 +100,14 @@ const HomeTrustedBy = ({
       icon: '/assets/home/users/wordcel.svg',
       invert: true,
       whiteinvert: false,
+      link: 'https://wordcelclub.com'
     },
     {
       title: 'CryptoUnicorns',
       icon: '/assets/home/users/unicorns.png',
       invert: false,
-      whiteinvert: true
+      whiteinvert: true,
+      link: 'https://cryptounicorns.fun'
     }
   ]
 
@@ -132,23 +136,25 @@ const HomeTrustedBy = ({
               ...USERS,
               ...USERS
             ].map((user, index) => (
-              <div
-                key={index}
-                className={`flex flex-col items-center rounded-xl p-4 ${index === 0 && 'ml-[40px]'
-                  }`}
-              >
-                <img
-                  src={user.icon}
-                  alt={user.title}
-                  // width={103}
-                  // (scheme === 'light' && user.whiteinvert) ? 'whiteinvert' : '')
-                  className={`
-                    h-12
-                    ${(scheme === 'dark') && user.invert && 'invert'}
-                    ${(!scheme || scheme === 'light') && user.whiteinvert && 'invert'}
-                    `}
-                />
-              </div>
+              <a href={user.link} target="_blank" key={index} rel="noreferrer">
+                <div
+
+                  className={`flex flex-col items-center rounded-xl p-4 ${index === 0 && 'ml-[40px]'
+                    }`}
+                >
+                  <img
+                    src={user.icon}
+                    alt={user.title}
+                    // width={103}
+                    // (scheme === 'light' && user.whiteinvert) ? 'whiteinvert' : '')
+                    className={`
+                      h-12
+                      ${(scheme === 'dark') && user.invert && 'invert'}
+                      ${(!scheme || scheme === 'light') && user.whiteinvert && 'invert'}
+                      `}
+                  />
+                </div>
+              </a>
             ))}
           </div>
         </Marquee>

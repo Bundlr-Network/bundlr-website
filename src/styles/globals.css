@@ -10,7 +10,13 @@
 
 .communityShadow {
   box-shadow: 1px 1px 0px rgba(255, 255, 255, .5);
+  transition: box-shadow 0.2s ease;
 }
+
+.communityShadow:hover {
+  box-shadow: -1px -1px 0px rgba(255, 255, 255, .5);
+}
+
 
 details > summary {
   list-style: none;
