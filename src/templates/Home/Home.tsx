@@ -138,7 +138,9 @@ const Home: NextPage = () => {
         </HomeWhyUseBundlr>
       </section>
 
-      <HomeHorizontalScroll />
+      <div className="overflow-hidden">
+        <HomeHorizontalScroll />
+      </div>
 
       <section className="flex items-center justify-center lg:items-start flex-col px-5 lg:px-[79px] pt-12 lg:pt-[122px] bg-seashell overflow-hidden" style={{
         boxShadow: '0 0 70px rgba(0,0,0,.2)'
