@@ -99,9 +99,7 @@ const HomeHorizontalScroll = () => {
   const [successorTitleRef, successorTitleInView] = useInView({
     threshold: 0.4
   })
-  const [successorImageRef, successorImageInView] = useInView({
-    threshold: 0.2
-  })
+  const [successorImageRef, successorImageInView] = useInView()
 
   const successorVariants = {
     title: {
@@ -162,22 +160,20 @@ const HomeHorizontalScroll = () => {
     }
   }, [conclusionImageControls, conclusionImageInView])
 
-
-
   return (
     <>
-      <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+      <div
+        className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
-        <h2
-          className={'z-[99] text-center text-5xl lg:text-7xl'}
-        >
+        <h2 className={'z-[99] text-center text-5xl lg:text-7xl'}>
           Data is Evolving
         </h2>
       </div>
-      <div className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+      <div
+        className="relative overflow-hidden w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -202,7 +198,7 @@ const HomeHorizontalScroll = () => {
           In the internet’s early days, online data was stored in local servers.
           This was inconvenient and expensive for most people.
         </motion.h3>
-        <div className='mb-36 lg:mb-0' />
+        <div className="mb-36 lg:mb-0" />
         <img
           src={'/assets/home/server.png'}
           className="absolute -bottom-48 -left-20 w-auto lg:hidden"
@@ -226,7 +222,8 @@ const HomeHorizontalScroll = () => {
           transition={{ delay: 0.6 }}
         />
       </div>
-      <div className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
+      <div
+        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
@@ -273,13 +270,15 @@ const HomeHorizontalScroll = () => {
           />
         </div>
       </div>
-      <div className="overflow-hidden relative w-screen h-screen flex items-start justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
+      <div
+        className="overflow-hidden w-screen h-screen flex items-start justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
         <div className="flex flex-col gap-6 mt-36 px-6 lg:px-0">
-          <motion.h2 className="font-robotoMono text-base max-w-md z-10 text-center leading-loose"
+          <motion.h2
+            className="font-robotoMono text-base max-w-md z-10 text-center leading-loose"
             ref={successorTitleRef}
             animate={successorControls}
             initial="hidden"
@@ -287,49 +286,45 @@ const HomeHorizontalScroll = () => {
           >
             Bundlr is the successor to on-premise servers and the cloud.
           </motion.h2>
-          <motion.h3 className="font-robotoMono text-base max-w-md z-10 text-center leading-loose"
+          <motion.h3
+            className="font-robotoMono text-base max-w-md z-10 text-center leading-loose"
             animate={successorControls}
             initial="hidden"
             variants={successorVariants.title}
           >
-            Through cryptographic guarantees and trustless provenance, you
-            can now secure your data, make it censorship resistant and
-            available forever – all while retaining the performance and
-            convenience that you expect
+            Through cryptographic guarantees and trustless provenance, you can
+            now secure your data, make it censorship resistant and available
+            forever – all while retaining the performance and convenience that
+            you expect
           </motion.h3>
         </div>
         <motion.img
+          className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:block"
           ref={successorImageRef}
           animate={successorImageControls}
           initial="hidden"
           variants={successorVariants.image}
-          // mobile and desktop image
-          //  /assets/home/dataverse-mobile.png,
-          // /assets/home/dataverse.png 
           src="/assets/home/dataverse.png"
           alt="dataverse"
-          className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:flex"
         />
         <motion.img
-          ref={successorImageRef}
-          animate={successorImageControls}
+          className="absolute -bottom-36 left-0 right-0 mx-auto lg:hidden"
+          animate={successorControls}
           initial="hidden"
           variants={successorVariants.image}
-          // mobile and desktop image
-          //  /assets/home/dataverse-mobile.png,
-          // /assets/home/dataverse.png 
           src="/assets/home/dataverse-mobile.png"
           alt="dataverse"
-          className="absolute -bottom-10 left-0 right-0 mx-auto lg:hidden"
         />
       </div>
-      <div className="overflow-hidden relative w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
+      <div
+        className="overflow-hidden relative w-screen h-screen flex items-start justify-center sticky top-0 left-0 bg-seashell -z-[2]"
         style={{
           boxShadow: '0 0 70px rgba(0,0,0,.2)'
         }}
       >
         <div className="flex flex-col gap-6 mt-36">
-          <motion.h2 className="text-center text-5xl lg:text-7xl font-fkDisplay z-10"
+          <motion.h2
+            className="text-center text-5xl lg:text-7xl font-fkDisplay z-10"
             ref={conclusionTitleRef}
             animate={conclusionControls}
             initial="hidden"
@@ -351,22 +346,21 @@ const HomeHorizontalScroll = () => {
           variants={conclusionVariants.image}
           // mobile and desktop image
           //  /assets/home/dataverse-mobile.png,
-          // /assets/home/dataverse.png 
+          // /assets/home/dataverse.png
           src="/assets/home/dataverse.png"
           alt="dataverse"
           className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:flex"
         />
         <motion.img
-          ref={conclusionImageRef}
-          animate={conclusionImageControls}
+          animate={conclusionControls}
           initial="hidden"
           variants={conclusionVariants.image}
           // mobile and desktop image
           //  /assets/home/dataverse-mobile.png,
-          // /assets/home/dataverse.png 
+          // /assets/home/dataverse.png
           src="/assets/home/dataverse-mobile.png"
           alt="dataverse"
-          className="absolute -bottom-10 left-0 right-0 mx-auto lg:hidden"
+          className="absolute -bottom-36 left-0 right-0 mx-auto lg:hidden"
         />
       </div>
     </>

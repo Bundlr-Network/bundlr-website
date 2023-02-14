@@ -36,7 +36,7 @@ const HomeProduct = ({
                     __html: info.title
                   }}
                 ></h3>
-                <p className="text-lg mt-auto font-robotoMono font-normal">
+                <p className="text-lg mt-auto font-robotoMono font-normal leading-loose">
                   {info.description}
                 </p>
                 <a href={info.href} className="text-white font-robotoMono text-base mt-auto hover:font-bold">

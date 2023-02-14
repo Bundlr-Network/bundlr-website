@@ -220,11 +220,11 @@ const Solutions: NextPage = () => {
         <Button />
       </section> */}
 
-      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[79px] pb-2 lg:pb-24 relative overflow-hidden">
+      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[79px] pb-2 lg:pb-24 relative overflow-visible lg:overflow-hidden">
         <div className="flex">
-          <div className="container pt-28 lg:pt-[203px] z-40">
+          <div className="container pt-20 lg:pb-0 lg:pt-[203px] z-40">
             <h1 className="text-5xl lg:text-7xl">
-              Solutions for Every <br />Use Case
+              Solutions <br className='lg:hidden' />for <br className='hidden lg:inline' />Every <br className='lg:hidden' />Use Case
             </h1>
             <p className="text-base font-robotoMono font-light mt-5">
               Check out our solutions below
@@ -233,11 +233,11 @@ const Solutions: NextPage = () => {
           <img
             src="/assets/solutions/blocks.png"
             alt=""
-            className="absolute lg:-right-32 -bottom-20 lg:bottom-0 right-0"
+            className="absolute lg:-right-32 -bottom-32 lg:bottom-0 right-0"
           />
         </div>
 
-        <div className="rounded-[20px] overflow-hidden bg-black mt-40 z-10 mb-10 lg:mb-0">
+        <div className="rounded-[20px] overflow-hidden bg-black mt-20 lg:mt-40 z-10 mb-10 lg:mb-0">
           <HomeTrustedBy />
         </div>
       </header>

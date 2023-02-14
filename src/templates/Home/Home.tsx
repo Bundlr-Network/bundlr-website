@@ -125,7 +125,7 @@ const Home: NextPage = () => {
       <HomeStats />
 
       <HomeProduct content={PRODUCT_CONTENT} title={'The Technology'}>
-        <div className="h-[271px] text-white mt-[122px]">
+        <div className="h-[271px] lg:h-[171px] text-white mt-[122px]">
           <HomeTrustedBy scheme={'dark'} />
         </div>
       </HomeProduct>
