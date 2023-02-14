@@ -39,7 +39,7 @@ const HomeProduct = ({
                 <p className="text-lg mt-auto font-robotoMono font-normal leading-loose">
                   {info.description}
                 </p>
-                <a href={info.href} className="text-white font-robotoMono text-base mt-auto hover:font-bold">
+                <a href={info.href} className="text-white font-robotoMono text-base mt-auto hover:font-bold whitespace-nowrap">
                   [ Find out more ]
                 </a>
               </div>

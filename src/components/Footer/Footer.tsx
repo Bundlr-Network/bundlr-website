@@ -82,7 +82,8 @@ const Footer = () => {
             rel="nofollow noreferrer"
             className="hover:rotate-6 hover:scale-105 transition-all"
           >
-            <MirrorIcon className="w-6 h-6 text-black" />
+            <img src="/assets/home/mirror.svg" alt="mirror" className="w-6 h-6" />
+            {/* <MirrorIcon className="w-6 h-6 text-black" /> */}
           </a>
           <a
             href="https://twitter.com/BundlrNetwork"

@@ -10,30 +10,30 @@ const MirrorIcon = (props: SVGAttributes<SVGElement>) => {
       viewBox="0 0 17 20"
       {...props}
     >
-      <g clipPath="url(#clip0_3_18)">
-        <mask id="path-1-inside-1_3_18" fill="#fff">
+      <g clipPath="url(#mirror)">
+        <mask id="mirror_3" fill="#fff">
           <path d="M0 0h17v18a2 2 0 01-2 2H2a2 2 0 01-2-2V0z"></path>
         </mask>
         <path
-          stroke="currentColor"
+          stroke="#000"
           strokeWidth="6"
           d="M0 0h17v18a2 2 0 01-2 2H2a2 2 0 01-2-2V0z"
-          mask="url(#path-1-inside-1_3_18)"
+          mask="url(#mirror_3)"
         ></path>
       </g>
-      <rect width="13" height="15" x="2" y="3" fill="currentColor" rx="4"></rect>
-      <g clipPath="url(#clip1_3_18)">
+      <g clipPath="url(#mirror_2)">
         <path
-          stroke="currentColor"
+          stroke="#000"
           strokeWidth="3"
           d="M15.5 10.55c0 4.933-3.353 8.5-7 8.5s-7-3.567-7-8.5c0-4.932 3.353-8.5 7-8.5s7 3.568 7 8.5z"
         ></path>
       </g>
+      <rect width="13" height="16" x="2" y="3" fill="#000" rx="4"></rect>
       <defs>
-        <clipPath id="clip0_3_18">
+        <clipPath id="mirror">
           <path fill="#fff" d="M0 0H17V9H0z" transform="translate(0 11)"></path>
         </clipPath>
-        <clipPath id="clip1_3_18">
+        <clipPath id="mirror_2">
           <path fill="#fff" d="M0 0H17V11H0z"></path>
         </clipPath>
       </defs>

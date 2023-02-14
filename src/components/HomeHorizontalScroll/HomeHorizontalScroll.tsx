@@ -364,7 +364,7 @@ const HomeHorizontalScroll = () => {
             initial="hidden"
             variants={conclusionVariants.title}
           >
-            Bundlr is the trustless <br /> source of truth
+            Bundlr is the Trustless <br /> Source of Truth
           </motion.h2>
           <div className="self-center">
             <Button>
