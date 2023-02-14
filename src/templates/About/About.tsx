@@ -156,8 +156,8 @@ const About: NextPage = () => {
 
       <div className="py-10">
         <CtaSection>
-          <div className="flex flex-col items-start md:items-center lg:items-start justify-center gap-10 lg:gap-0">
-            <p className="text-4xl md:text-5xl text-left md:text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
+          <div className="flex flex-col items-center md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+            <p className="text-4xl md:text-5xl text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
               Ready to Become a BUNDLOOOOR?
             </p>
             <div className="mt-0 lg:mt-10">
