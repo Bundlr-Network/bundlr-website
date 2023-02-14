@@ -73,7 +73,7 @@ const HomeHorizontalScroll = () => {
   const cloudVariants = {
     title: {
       visible: { opacity: 1 },
-      hidden: { opacity: 0, }
+      hidden: { opacity: 0 }
     },
     description: {
       visible: { opacity: 1, duration: 2000 },
@@ -164,20 +164,24 @@ const HomeHorizontalScroll = () => {
   return (
     <>
       <div
-        className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
-        style={{
-          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
-        }}
+        className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 relative top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+        style={
+          {
+            // boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          }
+        }
       >
         <h2 className={'z-[99] text-center text-5xl lg:text-7xl'}>
           Data is Evolving
         </h2>
       </div>
       <div
-        className="w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 sticky top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
-        style={{
-          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
-        }}
+        className="w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 relative top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+        style={
+          {
+            // boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          }
+        }
       >
         <motion.h2
           ref={serverTitleRef}
@@ -224,10 +228,12 @@ const HomeHorizontalScroll = () => {
         />
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
-        style={{
-          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
-        }}
+        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl relative top-0 left-0 bg-seashell -z-10"
+        style={
+          {
+            // boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          }
+        }
       >
         <div className="h-full w-screen	shrink-0 px-5 lg:px-[79px] pt-[120px]">
           <div className="w-full lg:w-2/5 ml-auto">
@@ -272,10 +278,12 @@ const HomeHorizontalScroll = () => {
         </div>
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl sticky top-0 left-0 bg-seashell -z-10"
-        style={{
-          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
-        }}
+        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl relative top-0 left-0 bg-seashell -z-10"
+        style={
+          {
+            // boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          }
+        }
       >
         <div className="flex flex-col gap-10 mt-36 px-6 lg:px-0 justify-center items-center mb-72 lg:mb-48 lg:mb-72">
           <motion.h2
@@ -352,10 +360,12 @@ const HomeHorizontalScroll = () => {
         /> */}
       </div>
       <div
-        className="bg-black overflow-hidden text-white w-screen h-screen flex items-start justify-center sticky top-0 left-0 -z-[2]"
-        style={{
-          // boxShadow: '0 0 70px rgba(0,0,0,.2)'
-        }}
+        className="z-[9999] bg-black overflow-hidden text-white w-screen h-screen flex items-start justify-center relative top-0 left-0 -z-[2]"
+        style={
+          {
+            // boxShadow: '0 0 70px rgba(0,0,0,.2)'
+          }
+        }
       >
         <div className="flex flex-col gap-6 mt-36">
           <motion.h2
@@ -367,12 +377,17 @@ const HomeHorizontalScroll = () => {
           >
             Bundlr is the Trustless <br /> Source of Truth
           </motion.h2>
-          <div className="self-center">
-            <Button scheme={ButtonScheme.white}>
+          <a
+            className="self-center"
+            href={'https://docs.bundlr.network/'}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button scheme={ButtonScheme.white} className="z-[9999]">
               LEARN MORE
               <DevIcon />
             </Button>
-          </div>
+          </a>
         </div>
         <motion.img
           ref={conclusionImageRef}

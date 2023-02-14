@@ -2,6 +2,7 @@ import {
   Button,
   CtaSection,
   Footer,
+  Heading,
   HomeTrustedBy,
   NavbarDesktop,
   SectionTitle
@@ -223,11 +224,11 @@ const Solutions: NextPage = () => {
       <header className="flex flex-col bg-ghostWhite px-5 lg:px-[79px] pb-2 lg:pb-24 relative overflow-visible lg:overflow-hidden">
         <div className="flex">
           <div className="container pt-20 lg:pb-0 lg:pt-[203px] z-40">
-            <h1 className="text-5xl lg:text-7xl">
+            <Heading level={1}>
               Solutions <br className='lg:hidden' />for <br className='hidden lg:inline' />Every <br className='lg:hidden' />Use Case
-            </h1>
+            </Heading>
             <p className="text-base font-robotoMono font-light mt-5">
-              Check out our solutions below
+              Here are just a few examples
             </p>
           </div>
           <img

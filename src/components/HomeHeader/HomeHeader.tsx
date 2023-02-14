@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Button from '../Button'
 import { DevIcon } from '@/svg'
 import Heading from '../Heading'
+import Paragraph from '../Paragraph'
 
 const useHomeHeader = () => {
   const TITLE = 'THE WORLD’S NEXT DATA LAYER'
@@ -34,12 +35,16 @@ const HomeHeader = () => {
         />
 
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px]">
-          <Heading level={1}>
-            {TITLE}
-          </Heading>
+          <Heading level={1}>{TITLE}</Heading>
           {/* <h1 className="text-5xl lg:text-7xl font-fkDisplay z-10">
             {TITLE}
           </h1> */}
+          <Paragraph
+            dangerouslySetInnerHTML={{
+              __html: SUBTITLE
+            }}
+            size="sm"
+          />
           <h2
             className="font-robotoMono leading-6 font-normal z-10"
             dangerouslySetInnerHTML={{

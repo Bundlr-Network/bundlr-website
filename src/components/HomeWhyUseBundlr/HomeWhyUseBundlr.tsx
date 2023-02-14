@@ -1,3 +1,4 @@
+import Heading from '../Heading'
 import SectionTitle from '../SectionTitle'
 
 const HomeWhyUseBundlr = ({ content, children }: {
@@ -23,9 +24,10 @@ const HomeWhyUseBundlr = ({ content, children }: {
                 className={`flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between border-b-[2.5px] border-dotted pb-9 border-gray-400 border-spacing-4 ${index === content.length - 1 ? 'border-b-0' : ''
                   }`}
               >
-                <h3 className="text-3xl whitespace-nowrap font-fkDisplay text-center lg:text-left">
+                <Heading level={3} className="whitespace-nowrap text-center lg:text-left">
                   {definition.title}
-                </h3>
+                </Heading>
+
                 <p className="text-base font-robotoMono text-center lg:text-left">
                   {definition.description}
                 </p>
