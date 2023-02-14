@@ -201,8 +201,8 @@ const DescentralizedStorage: NextPage = () => {
             </p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Seamless for Developers</h2>
-            <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left">
+            <h2 className="text-4xl font-fkDisplay text-center lg:text-left z-50">Seamless for Developers</h2>
+            <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left z-50">
               Our intuitive docs and SDK help you integrate Bundlr with just 3-4
               lines of code. Further, you can sign and pay for storage in of our
               14 supported tokens, including ETH, SOL, and MATIC.{' '}
@@ -216,7 +216,7 @@ const DescentralizedStorage: NextPage = () => {
         <img
           src="/assets/descentralizedStorage/data-splash.png"
           alt="data-splash"
-          className="absolute -bottom-64 left-0"
+          className="absolute -bottom-64 left-0 hidden lg:block"
         />
       </section>
 
