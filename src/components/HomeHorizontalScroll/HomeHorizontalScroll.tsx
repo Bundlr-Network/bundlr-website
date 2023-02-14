@@ -205,7 +205,7 @@ const HomeHorizontalScroll = () => {
         </motion.h3>
         <div className="mb-36 lg:mb-0" />
         <img
-          src={'/assets/home/server.png'}
+          src={'/new/assets/home/server-left.webp'}
           className="absolute -bottom-48 -left-20 w-auto lg:hidden"
         />
         <motion.img
@@ -213,8 +213,8 @@ const HomeHorizontalScroll = () => {
           animate={imageControls}
           variants={serverVariants.serverLeft}
           initial="hidden"
-          src={'/assets/home/server.png'}
-          className="absolute bottom-56 lg:-bottom-8 -left-20 hidden lg:block lg:w-auto"
+          src={'/new/assets/home/server-left.webp'}
+          className="absolute bottom-56 lg:-bottom-8 -left-20 hidden lg:block w-[500px]"
           transition={{ delay: 0.6 }}
         />
         <motion.img
@@ -222,8 +222,8 @@ const HomeHorizontalScroll = () => {
           animate={imageControls}
           variants={serverVariants.serverRight}
           initial="hidden"
-          src={'/assets/home/serverRight.png'}
-          className="absolute bottom-56 lg:-bottom-8 -right-20 hidden lg:block lg:w-auto"
+          src={'/new/assets/home/server-right.webp'}
+          className="absolute bottom-56 lg:-bottom-8 -right-20 hidden lg:block w-[500px]"
           transition={{ delay: 0.6 }}
         />
       </div>
@@ -271,7 +271,7 @@ const HomeHorizontalScroll = () => {
             transition={{
               delay: 0.6
             }}
-            src="/assets/home/cloud.png"
+            src="/new/assets/home/cloud.webp"
             alt="cloud"
             className="absolute bottom-52  md:bottom-10 lg:-left-32 left-4 right-0 mx-auto lg:max-w-[70%] scale-110 md:scale-100"
           />
@@ -312,18 +312,18 @@ const HomeHorizontalScroll = () => {
           animate={successorImageControls}
           initial="hidden"
           variants={successorVariants.image}
-          src="/assets/home/cta-block.png"
+          src="/new/assets/home/data-sphere.webp"
           alt=""
-          className="hidden lg:block absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[450px] block w-full lg:w-auto bg-cover"
+          className="hidden lg:block absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[450px] block bg-cover w-[700px]"
         />
         <motion.img
           ref={successorImageRef}
           animate={successorImageControls}
           initial="hidden"
           variants={successorVariants.image}
-          src="/assets/home/cta-block-inverted.png"
+          src="/new/assets/home/data-sphere-flop.webp"
           alt=""
-          className="absolute -bottom-[140px] md:-bottom-[580px] lg:bottom-auto -right-[140px] lg:-right-[450px] block w-full lg:w-auto bg-cover"
+          className="absolute -bottom-[140px] md:-bottom-[580px] lg:bottom-auto -right-[140px] lg:-right-[450px] block bg-cover w-[700px]"
         />
 
         {/* <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
@@ -397,7 +397,7 @@ const HomeHorizontalScroll = () => {
           // mobile and desktop image
           //  /assets/home/dataverse-mobile.png,
           // /assets/home/dataverse.png
-          src="/assets/home/dataverse.png"
+          src="/new/assets/home/dataverse.webp"
           alt="dataverse"
           className="absolute bottom-0 left-0 right-0 mx-auto hidden md:flex"
         />
