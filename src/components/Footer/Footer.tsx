@@ -38,19 +38,27 @@ const Footer = () => {
       options: [
         {
           name: 'Get Started',
-          href: 'https://docs.bundlr.network/sdk/basic-features/'
+          href: 'https://docs.bundlr.network/sdk/basic-features/',
+          newTab: true
+
         },
         {
           name: 'Docs',
-          href: 'https://docs.bundlr.network/'
+          href: 'https://docs.bundlr.network/',
+          newTab: true
+
         },
         {
           name: 'Tutorials',
-          href: 'https://docs.bundlr.network/tutorials/bundlr-nodejs'
+          href: 'https://docs.bundlr.network/tutorials/bundlr-nodejs',
+          newTab: true
+
         },
         {
           name: 'JS SDK',
-          href: 'https://docs.bundlr.network/category/basic-features'
+          href: 'https://docs.bundlr.network/category/basic-features',
+          newTab: true
+
         }
       ]
     },
