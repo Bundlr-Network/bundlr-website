@@ -351,7 +351,7 @@ const MenuMobile = () => {
                     {MENU_OPTIONS.Solutions.map((option) => {
                       return (
                         <Link href={option.href} key={option.name}>
-                          <p className="uppercase text-3xl">{option.name}</p>
+                          <p className="uppercase text-3xl z-[999]">{option.name}</p>
                         </Link>
                       )
                     })}
