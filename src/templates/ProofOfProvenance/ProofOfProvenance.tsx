@@ -144,7 +144,7 @@ const ProofOfProvenance: NextPage = () => {
       </section>
 
       <div className="overflow-hidden">
-        <Marquee gradientColor={[254, 244, 238]} speed={55}>
+        <Marquee gradientColor={[254, 244, 238]} speed={155}>
           <motion.h2 className="text-4xl lg:text-8xl whitespace-nowrap py-10 lg:py-32 uppercase">
             Identify original information with true provenance Identify original
             information with true provenance Identify original information with
