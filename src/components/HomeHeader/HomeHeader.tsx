@@ -44,6 +44,7 @@ const HomeHeader = () => {
               __html: SUBTITLE
             }}
             size="sm"
+            className='z-50'
           />
         </div>
         <div className="flex gap-[21px] mt-56 lg:mt-[450px] items-center font-robotoMono">

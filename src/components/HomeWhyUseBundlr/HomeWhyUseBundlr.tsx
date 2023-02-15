@@ -15,7 +15,7 @@ const HomeWhyUseBundlr = ({ content, children }: {
         <div className="flex items-center justify-center lg:justify-start pt-[52px] mx-4 md:ml-[79px]">
           <SectionTitle title="How We’re Different" />
         </div>
-        <ul className="flex flex-col gap-10 lg:ml-auto mx-4 lg:mr-[79px] max-w-[1128px] mt-[49px] lg:mt-[126px] pb-[50px]">
+        <ul className="flex flex-col gap-10 lg:ml-auto mx-4 lg:mr-[79px] max-w-[1128px] mt-[49px] lg:mt-[126px] pb-[50px] pl-10">
           {/* Dots border bottom */}
           {content.map((definition, index) => {
             return (
@@ -28,7 +28,7 @@ const HomeWhyUseBundlr = ({ content, children }: {
                   {definition.title}
                 </Heading>
 
-                <p className="text-base font-robotoMono text-center lg:text-left">
+                <p className="pl-6 text-base font-robotoMono text-center lg:text-left">
                   {definition.description}
                 </p>
               </li>

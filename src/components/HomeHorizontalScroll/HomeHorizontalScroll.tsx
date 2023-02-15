@@ -206,7 +206,7 @@ const HomeHorizontalScroll = () => {
         <div className="mb-36 lg:mb-0" />
         <img
           src={'/new/assets/home/server-left.webp'}
-          className="absolute -bottom-48 -left-20 w-auto lg:hidden"
+          className="absolute -bottom-48 -left-20 w-[350px] md:w-[480px] lg:hidden"
         />
         <motion.img
           ref={serverImageRef}

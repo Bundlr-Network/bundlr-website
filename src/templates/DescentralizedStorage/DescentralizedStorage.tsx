@@ -2,6 +2,7 @@ import {
   Button,
   CtaCentralized,
   Footer,
+  Heading,
   HomeProduct,
   NavbarDesktop
 } from '@/components'
@@ -17,6 +18,7 @@ import Link from 'next/link'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
+import { useRouter } from 'next/router'
 
 const useDescentralizedStorage = () => {
   const PAGE_SEO = {
@@ -77,6 +79,41 @@ const useDescentralizedStorage = () => {
   return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT }
 }
 
+const SubNav = () => {
+
+  const currentRoute = useRouter().pathname
+
+  const SUBNAV_CONTENT = [
+    {
+      title: 'Storage',
+      href: '/solutions/decentralized-storage'
+    },
+    {
+      title: 'Provenance',
+      href: '/solutions/proof-of-provenance'
+    },
+    // {
+    //   title: 'Data Availability',
+    //   href: '/solutions/data-availability'
+    // }
+  ]
+
+  return (
+    <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
+      {
+        SUBNAV_CONTENT.map((item, index) => (
+          <Link href={item.href} key={`sub-nav-${index}`}>
+            <div className={`uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer ${currentRoute === item.href ? 'bg-black text-white' : ''
+              }`}>
+              {item.title}
+            </div>
+          </Link>
+        ))
+      }
+    </div>
+  )
+}
+
 const DescentralizedStorage: NextPage = () => {
   const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT } =
     useDescentralizedStorage()
@@ -87,23 +124,7 @@ const DescentralizedStorage: NextPage = () => {
       <header className="bg-ghostWhite ">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
         <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
-          <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
-            <Link href={'/solutions/decentralized-storage'}>
-              <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer bg-black text-white">
-                Storage
-              </div>
-            </Link>
-            <Link href={'/solutions/proof-of-provenance'}>
-              <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
-                Provenance
-              </div>
-            </Link>
-            <Link href={'/solutions/data-availability'}>
-              <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
-                Data availability
-              </div>
-            </Link>
-          </div>
+          <SubNav></SubNav>
 
           <div className="absolute -left-[650px] -bottom-52 lg:bottom-auto">
             <Image
@@ -114,7 +135,9 @@ const DescentralizedStorage: NextPage = () => {
               loading="eager"
             />
           </div>
-          <h1 className="text-5xl lg:text-7xl z-10">Decentralized Storage</h1>
+          <Heading level={1} className={'z-10'}>
+            Decentralized Storage
+          </Heading>
           <p className="font-robotoMono text-base z-10 mt-5">
             Performant, scalable, and seamless – forever.{' '}
           </p>
@@ -124,9 +147,17 @@ const DescentralizedStorage: NextPage = () => {
       <Benefits {...BENEFITS_CONTENT} />
 
       <section className="relative h-auto lg:h-[911px] px-5 lg:px-[79px] w-full">
-        <h2 className="text-4xl lg:text-5xl font-fkDisplay py-12 lg:py-48 w-full lg:w-[440px] text-center lg:text-left">
+        {/* <h2 className="text-4xl lg:text-5xl font-fkDisplay py-12 lg:py-48 w-full lg:w-[440px] text-center lg:text-left">
           Data Stored for as Long as You Need
-        </h2>
+        </h2> */}
+        <Heading
+          level={3}
+          className={
+            'w-full lg:w-[440px] text-center lg:text-left  py-12 lg:py-48'
+          }
+        >
+          Data Stored for as Long as You Need
+        </Heading>
         <img
           src="/new/assets/home/spiral.webp"
           alt="data-spiral"
@@ -135,7 +166,7 @@ const DescentralizedStorage: NextPage = () => {
         />
         <ul className="flex flex-col lg:flex-row gap-10">
           <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
-            <a href="https://arweave.org/" target={"_blank"} rel="noreferrer">
+            <a href="https://arweave.org/" target={'_blank'} rel="noreferrer">
               {/* add gradient background that goes from gray to transparent */}
               <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11">
                 {/* make image as background of rectangle box */}
@@ -192,23 +223,33 @@ const DescentralizedStorage: NextPage = () => {
         </div>
         <div className="flex flex-col gap-36 w-full lg:w-1/2 ml-auto">
           <div className="">
-            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
+            {/* <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
               Lightning Fast Uploads, at Industrial Scale
-            </h2>
+            </h2> */}
+            <Heading level={3} className="text-center lg:text-left">
+              Lightning Fast Uploads, at Industrial Scale
+            </Heading>
             <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left">
-              With uploads time under 8 milliseconds and the{' '}
-              ability to scale to millions of transactions per seconds,
-              Bundlr’s performance is on par with traditional providers. Bundlr
-              is ready to store the world’s data.
+              With uploads time under 8 milliseconds and the ability to scale to
+              millions of transactions per seconds, Bundlr’s performance is on
+              par with traditional providers. Bundlr is ready to store the
+              world’s data.
             </p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-fkDisplay text-center lg:text-left z-50">Seamless for Developers</h2>
+            {/* <h2 className="text-4xl font-fkDisplay text-center lg:text-left z-50">Seamless for Developers</h2> */}
+            <Heading level={3} className="text-center lg:text-left z-50">
+              Seamless for Developers
+            </Heading>
             <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left z-50">
               Our intuitive docs and SDK help you integrate Bundlr with just 3-4
               lines of code. Further, you can sign and pay for storage in of our
               14 supported tokens, including ETH, SOL, and MATIC.{' '}
-              <a href="https://www.youtube.com/watch?v=Wxfyd0veaEc&t=847s" target={"_blank"} rel="noreferrer">
+              <a
+                href="https://www.youtube.com/watch?v=Wxfyd0veaEc&t=847s"
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 <u>Find out</u>
               </a>{' '}
               how simple working with Bundlr is.
