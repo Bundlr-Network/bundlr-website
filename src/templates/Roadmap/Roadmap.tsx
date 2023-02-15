@@ -141,7 +141,7 @@ const Roadmap: NextPage = () => {
               className="absolute -bottom-56 -right-0 w-[700px]"
             />
           </div>
-          <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative z-1">
+          <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative z-10">
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
