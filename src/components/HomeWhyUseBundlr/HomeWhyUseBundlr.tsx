@@ -21,7 +21,7 @@ const HomeWhyUseBundlr = ({ content, children }: {
             return (
               <li
                 key={`definition-${index}`}
-                className={`flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between border-b-[2.5px] border-dotted pb-9 border-gray-400 border-spacing-4 ${index === content.length - 1 ? 'border-b-0' : ''
+                className={`flex flex-col lg:flex-row items-center gap-5 lg:gap-0 justify-between border-b-[2.5px] border-dotted pb-9 border-gray-400 border-spacing-4 ${index === content.length - 1 ? 'border-b-0' : ''
                   }`}
               >
                 <Heading level={3} className="whitespace-nowrap text-center lg:text-left">

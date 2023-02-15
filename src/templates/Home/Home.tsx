@@ -60,7 +60,7 @@ const useHome = () => {
     },
     {
       title: 'Enduring',
-      description: 'Affordable, long-term data solutions'
+      description: 'Affordable long-term data solutions'
     }
   ]
 
@@ -81,12 +81,12 @@ const useHome = () => {
           'Identify original information by accurately attributing origin',
         href: '/solution/proof-of-provenance'
       },
-      {
-        title: 'Data Availability',
-        description:
-          'Pay for consensus only when you need it',
-        href: '/solutions/data-availability'
-      }
+      // {
+      //   title: 'Data Availability',
+      //   description:
+      //     'Pay for consensus only when you need it',
+      //   href: '/solutions/data-availability'
+      // }
     ]
 
   return { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT }

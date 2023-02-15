@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Button from '../Button'
 import { ButtonScheme } from '../Button/Button'
 import { DevIcon } from '@/svg'
+import Heading from '../Heading'
 import SectionTitle from '../SectionTitle'
 import Testimonial from '../Testimonial'
 import { useInView } from 'react-intersection-observer'
@@ -27,37 +28,47 @@ const HomeHorizontalScroll = () => {
   const serverVariants = {
     title: {
       visible: { opacity: 1 },
-      hidden: { opacity: 0 }
+      hidden: { opacity: 0 },
+      exit: { opacity: 0 }
     },
     description: {
       visible: { opacity: 1, duration: 2000 },
-      hidden: { opacity: 0, duration: 2000 }
+      hidden: { opacity: 0, duration: 2000 },
+      exit: { opacity: 0 },
     },
     serverLeft: {
       visible: { opacity: 1, x: 0 },
-      hidden: { opacity: 0, x: -50 }
+      hidden: { opacity: 0, x: -50 },
+      exit: { opacity: 0, x: -50 }
     },
     serverRight: {
       visible: { opacity: 1, x: 0 },
-      hidden: { opacity: 0, x: 50 }
+      hidden: { opacity: 0, x: 50 },
+      exit: { opacity: 0, x: 50 }
     }
   }
 
   useEffect(() => {
     if (serverTitleInView) {
       serverControls.start('visible')
+    } else {
+      serverControls.start('hidden')
     }
   }, [serverControls, serverTitleInView])
 
   useEffect(() => {
     if (serverDescriptionInView) {
       serverControls.start('visible')
+    } else {
+      serverControls.start('hidden')
     }
   }, [serverControls, serverDescriptionInView])
 
   useEffect(() => {
     if (serverImageInView) {
       imageControls.start('visible')
+    } else {
+      imageControls.start('hidden')
     }
   }, [imageControls, serverImageInView])
 
@@ -73,21 +84,26 @@ const HomeHorizontalScroll = () => {
   const cloudVariants = {
     title: {
       visible: { opacity: 1 },
-      hidden: { opacity: 0 }
+      hidden: { opacity: 0 },
+      exit: { opacity: 0 },
     },
     description: {
       visible: { opacity: 1, duration: 2000 },
-      hidden: { opacity: 0, duration: 2000 }
+      hidden: { opacity: 0, duration: 2000 },
+      exit: { opacity: 0, duration: 2000 },
     },
     cloud: {
       visible: { opacity: 1 },
-      hidden: { opacity: 0 }
+      hidden: { opacity: 0 },
+      exit: { opacity: 0 },
     }
   }
 
   useEffect(() => {
     if (cloudTitleInView) {
       cloudControls.start('visible')
+    } else {
+      cloudControls.start('hidden')
     }
   }, [cloudControls, cloudTitleInView])
 
@@ -105,23 +121,29 @@ const HomeHorizontalScroll = () => {
   const successorVariants = {
     title: {
       visible: { opacity: 1 },
-      hidden: { opacity: 0 }
+      hidden: { opacity: 0 },
+      exit: { opacity: 0 },
     },
     image: {
       visible: { opacity: 1, y: 0 },
-      hidden: { opacity: 0, y: 100 }
+      hidden: { opacity: 0, y: 100 },
+      exit: { opacity: 0, y: 100 },
     }
   }
 
   useEffect(() => {
     if (successorTitleInView) {
       successorControls.start('visible')
+    } else {
+      successorControls.start('hidden')
     }
   }, [successorControls, successorTitleInView])
 
   useEffect(() => {
     if (successorImageInView) {
       successorImageControls.start('visible')
+    } else {
+      successorControls.start('hidden')
     }
   }, [successorImageControls, successorImageInView])
 
@@ -141,23 +163,30 @@ const HomeHorizontalScroll = () => {
   const conclusionVariants = {
     title: {
       visible: { opacity: 1 },
-      hidden: { opacity: 0 }
+      hidden: { opacity: 0 },
+      exit: { opacity: 0 },
     },
     image: {
       visible: { opacity: 1, y: 0 },
-      hidden: { opacity: 0, y: 100 }
+      hidden: { opacity: 0, y: 100 },
+      exit: { opacity: 0, y: 100 },
     }
   }
 
   useEffect(() => {
     if (conclusionTitleInView) {
       conclusionControls.start('visible')
+    } else {
+      conclusionControls.start('hidden')
     }
   }, [conclusionControls, conclusionTitleInView])
 
   useEffect(() => {
     if (conclusionImageInView) {
       conclusionImageControls.start('visible')
+    }
+    else {
+      conclusionImageControls.start('hidden')
     }
   }, [conclusionImageControls, conclusionImageInView])
 
@@ -183,15 +212,16 @@ const HomeHorizontalScroll = () => {
           }
         }
       >
-        <motion.h2
+        <motion.div
           ref={serverTitleRef}
           animate={serverControls}
           initial="hidden"
           variants={serverVariants.title}
-          className={'z-[99] text-center text-5xl lg:text-7xl'}
+        // className={'z-[99] text-center text-5xl lg:text-7xl'}
         >
-          On-Premise Servers
-        </motion.h2>
+          <Heading level={2} className="text-center"> On-Premise Servers</Heading>
+
+        </motion.div>
         <motion.h3
           ref={serverDescriptionRef}
           className="font-robotoMono text-lg max-w-md text-center z-[99] leading-loose"
@@ -215,7 +245,7 @@ const HomeHorizontalScroll = () => {
           initial="hidden"
           src={'/new/assets/home/server-left.webp'}
           className="absolute bottom-56 lg:-bottom-8 -left-20 hidden lg:block w-[500px]"
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.4 }}
         />
         <motion.img
           ref={serverImageRef}
@@ -224,7 +254,7 @@ const HomeHorizontalScroll = () => {
           initial="hidden"
           src={'/new/assets/home/server-right.webp'}
           className="absolute bottom-56 lg:-bottom-8 -right-20 hidden lg:block w-[500px]"
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.4 }}
         />
       </div>
       <div
@@ -237,15 +267,16 @@ const HomeHorizontalScroll = () => {
       >
         <div className="h-full w-screen	shrink-0 px-5 lg:px-[79px] pt-[120px]">
           <div className="w-full lg:w-2/5 ml-auto">
-            <motion.h2
-              className="z-[99] text-center text-5xl lg:text-7xl lg:text-left"
+            <motion.div
+              // className="z-[99] text-center text-5xl lg:text-7xl lg:text-left"
               ref={cloudTitleRef}
               animate={cloudControls}
               initial="hidden"
               variants={cloudVariants.title}
             >
-              The Cloud
-            </motion.h2>
+              <Heading level={2} className="text-center lg:text-left">  The Cloud</Heading>
+
+            </motion.div>
             <motion.div
               className="flex flex-col gap-6 mt-12 ml-0 lg:ml-16 items-center justify-center lg:items-start"
               ref={cloudDescriptionRef}
@@ -286,15 +317,16 @@ const HomeHorizontalScroll = () => {
         }
       >
         <div className="flex flex-col gap-10 mt-36 px-6 lg:px-0 justify-center items-center mb-72 lg:mb-48 lg:mb-72">
-          <motion.h2
-            className="max-w-5xl z-10 text-center text-4xl lg:text-6xl"
+          <motion.div
+            // className="max-w-5xl z-10 text-center text-4xl lg:text-6xl"
             ref={successorTitleRef}
             animate={successorControls}
             initial="hidden"
             variants={successorVariants.title}
           >
-            The Next Generation of Data Infrastructure
-          </motion.h2>
+            <Heading level={2} className="max-w-5xl z-10 text-center">The Next Generation of Data Infrastructure</Heading>
+
+          </motion.div>
           <motion.h3
             className="font-robotoMono text-base max-w-2xl z-10 text-center leading-loose"
             animate={successorControls}
@@ -368,15 +400,15 @@ const HomeHorizontalScroll = () => {
         }
       >
         <div className="flex flex-col gap-6 mt-36">
-          <motion.h2
-            className="text-center text-5xl lg:text-7xl font-fkDisplay z-10"
+          <motion.div
+            // className="text-center text-5xl lg:text-7xl font-fkDisplay z-10"
             ref={conclusionTitleRef}
             animate={conclusionControls}
             initial="hidden"
             variants={conclusionVariants.title}
           >
-            Bundlr is the Trustless <br /> Source of Truth
-          </motion.h2>
+            <Heading level={2} className="text-center">Bundlr is Building a <br />Trustless Source of Truth</Heading>
+          </motion.div>
           <a
             className="self-center"
             href={'https://docs.bundlr.network/'}
