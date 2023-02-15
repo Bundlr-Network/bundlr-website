@@ -59,17 +59,17 @@ const CtaCentralized = ({
           </Button>
         </a>
 
-        <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
+        <div className="hidden lg:flex absolute top-0 -right-10 overflow-hidden transform rotate-180">
           <img
-            src="/assets/community/cta-blocks-2.png"
-            className="w-full h-full rounded-lg"
+            src="/new/assets/home/splash.webp"
+            className="w-[400px] rounded-lg"
             alt="image1"
           />
         </div>
-        <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
+        <div className="hidden lg:flex absolute top-0 -left-10 overflow-hidden">
           <img
-            src="/assets/community/cta-blocks-2.png"
-            className="w-full h-full rounded-lg"
+            src="/new/assets/home/splash.webp"
+            className="w-[400px] rounded-lg"
             alt="image2"
           />
         </div>

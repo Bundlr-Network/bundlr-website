@@ -105,11 +105,11 @@ const DescentralizedStorage: NextPage = () => {
             </Link>
           </div>
 
-          <div className="absolute -top-30 left-0 -bottom-32 lg:bottom-auto">
+          <div className="absolute -left-[650px] -bottom-52 lg:bottom-auto">
             <Image
-              src="/assets/descentralizedStorage/cloud.png"
-              width={'600px'}
-              height={'542px'}
+              src="/new/assets/home/cloud.webp"
+              width={'1200px'}
+              height={'614px'}
               alt="cloud"
               loading="eager"
             />
@@ -128,9 +128,10 @@ const DescentralizedStorage: NextPage = () => {
           Data Stored for as Long as You Need
         </h2>
         <img
-          src="/assets/descentralizedStorage/data-spiral.png"
+          src="/new/assets/home/spiral.webp"
           alt="data-spiral"
-          className="absolute right-0 top-0 hidden lg:block"
+          width={400}
+          className="absolute right-10 top-20 hidden lg:block"
         />
         <ul className="flex flex-col lg:flex-row gap-10">
           <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">

@@ -186,9 +186,9 @@ const Community: NextPage = () => {
             <Socials links={SOCIAL_LINKS} />
           </div>
           <img
-            src="/assets/home/header.png"
+            src="/new/assets/home/header.webp"
             alt="hero"
-            className="absolute top-96 lg:top-0 lg:bottom-0 hidden lg:block"
+            className="absolute top-96 lg:top-0 lg:bottom-0 hidden lg:block rotate-[-20.24deg]"
           />
         </header>
 

@@ -89,7 +89,7 @@ const Developers: NextPage = () => {
           </a>
 
           <img
-            src="/assets/developers/header.png"
+            src="/new/assets/home/dataverse.webp"
             alt="hero"
             className="absolute bg-cover bottom-0 w-full h-64"
           />
@@ -144,7 +144,7 @@ const Developers: NextPage = () => {
           </div>
         </div>
         <div className="hidden lg:block">
-          <img src="/assets/developers/cloud.png" alt="" width={689} />
+          <img src="/new/assets/home/cloud.webp" alt="" width={689} />
         </div>
       </section>
       <section className='bg-black text-white flex gap-20 items-center relative h-auto flex-col-reverse lg:flex-row px-4 lg:px-[79px] py-20'>

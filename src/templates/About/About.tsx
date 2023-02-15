@@ -143,7 +143,7 @@ const About: NextPage = () => {
           </h1>
         </div>
         <img
-          src="/assets/about/header.png"
+          src="/new/assets/home/data-exponential.webp"
           alt=""
           className="absolute bottom-36 right-0"
         />
