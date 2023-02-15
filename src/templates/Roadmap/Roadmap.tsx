@@ -104,14 +104,14 @@ const Roadmap: NextPage = () => {
             </div>
 
             <img
-              src="/assets/roadmap/chain-1.png"
+              src="/new/assets/home/cloud.webp"
               alt="roadmap"
-              className="absolute top-0 left-0 hidden lg:block"
+              className="absolute -top-28 -left-56 hidden lg:block w-[900px]"
             />
             <img
-              src="/assets/roadmap/chain-2.png"
+              src="/new/assets/home/cloud.webp"
               alt="roadmap"
-              className="absolute -bottom-20 lg:bottom-0 right-0"
+              className="absolute -bottom-44 right-0 w-[900px]"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
@@ -131,14 +131,14 @@ const Roadmap: NextPage = () => {
               <ChevronRight width={'40px'} height={'40px'} />
             </div>
             <img
-              src="/assets/roadmap/preweave-1.png"
+              src="/new/assets/home/data-spiral-flop.webp"
               alt="preweave"
-              className="absolute top-0 left-0"
+              className="absolute top-0 -left-20 w-[500px]"
             />
             <img
-              src="/assets/roadmap/preweave-2.png"
+              src="/new/assets/home/data-spiral.webp"
               alt="preweave"
-              className="absolute bottom-0 right-0"
+              className="absolute bottom-0 right-0 w-[500px]"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
