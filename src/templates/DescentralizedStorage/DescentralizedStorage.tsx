@@ -6,8 +6,8 @@ import {
   HomeProduct,
   NavbarDesktop
 } from '@/components'
+import { FC, useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useEffect, useState } from 'react'
 
 import Benefits from '@/components/Differentials'
 import { BenefitsProps } from '@/components/Differentials/Differentials'
@@ -38,11 +38,11 @@ const useDescentralizedStorage = () => {
           'Identify original information by accurately attributing origin',
         href: '/solutions/proof-of-provenance'
       },
-      {
-        title: 'Optimistic Data Availability',
-        description: 'Pay for consensus only when you need it',
-        href: '/solutions/data-availability'
-      }
+      // {
+      //   title: 'Optimistic Data Availability',
+      //   description: 'Pay for consensus only when you need it',
+      //   href: '/solutions/data-availability'
+      // }
     ]
 
   const BENEFITS_CONTENT: BenefitsProps = {
@@ -79,7 +79,7 @@ const useDescentralizedStorage = () => {
   return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT }
 }
 
-const SubNav = () => {
+export const SubNav: FC = () => {
 
   const currentRoute = useRouter().pathname
 
@@ -124,7 +124,7 @@ const DescentralizedStorage: NextPage = () => {
       <header className="bg-ghostWhite ">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
         <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
-          <SubNav></SubNav>
+          <SubNav />
 
           <div className="absolute -left-[650px] -bottom-52 lg:bottom-auto">
             <Image
@@ -175,7 +175,7 @@ const DescentralizedStorage: NextPage = () => {
                     Arweave
                   </h3>
                   <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
-                    Launched
+                    Generally Available
                   </div>
                   <p className="font-robotoMono text-lg">
                     Permanent storage on Arweave.{' '}

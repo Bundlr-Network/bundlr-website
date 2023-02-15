@@ -17,6 +17,7 @@ import Marquee from 'react-fast-marquee'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
+import { SubNav } from '../DescentralizedStorage/DescentralizedStorage'
 
 const useProofOfProvenance = () => {
   const PAGE_SEO = {
@@ -36,11 +37,11 @@ const useProofOfProvenance = () => {
           'Performant, scalable, and seamless data, stored permanently on Arweave ',
         href: '/solutions/decentralized-storage'
       },
-      {
-        title: 'Optimistic Data Availability',
-        description: 'Pay for consensus only when you need it',
-        href: '/solutions/data-availability'
-      }
+      // {
+      //   title: 'Optimistic Data Availability',
+      //   description: 'Pay for consensus only when you need it',
+      //   href: '/solutions/data-availability'
+      // }
     ]
 
   const CTA_CONTENT: CtaCentralizedProps = {
@@ -87,23 +88,7 @@ const ProofOfProvenance: NextPage = () => {
       <header className="bg-ghostWhite">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
         <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[79px] gap-5">
-          <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
-            <Link href={'/solutions/decentralized-storage'}>
-              <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
-                Storage
-              </div>
-            </Link>
-            <Link href={'/solutions/proof-of-provenance'}>
-              <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer bg-black text-white">
-                Provenance
-              </div>
-            </Link>
-            <Link href={'/solutions/data-availability'}>
-              <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
-                Data availability
-              </div>
-            </Link>
-          </div>
+          <SubNav />
           <img
             src="/new/assets/home/data-cluster-rotated.webp"
             className="absolute -bottom-20 lg:-top-30 -right-52 w-[900px]"

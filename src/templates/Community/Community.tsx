@@ -2,6 +2,7 @@ import {
   Button,
   CtaCentralized,
   Footer,
+  Heading,
   HomeHeader,
   HomeWhyUseBundlr,
   NavbarDesktop
@@ -102,7 +103,8 @@ const NewsSection: React.FC = () => {
   return (
     <section>
       <div className="flex justify-between">
-        <h2 className="text-7xl font-light pb-[60px]">News</h2>
+        {/* <h2 className="text-7xl font-light pb-[60px]">Updates</h2> */}
+        <Heading level={2} className='pb-[60px]'>Updates</Heading>
         {/* <button
           onClick={() => setCurrentSlice(currentSlice + 3)}
           className="flex items-center gap-3 border rounded-full font-robotoMono px-3 py-2 border-black self-start"

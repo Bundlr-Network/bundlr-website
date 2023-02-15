@@ -67,7 +67,8 @@ const useAbout = () => {
     {
       name: 'William',
       role: 'Lead Front-end Engineer',
-      image: '/assets/about/heads/Will.jpeg'
+      image: '/assets/about/heads/Will.jpeg',
+      link: 'https://twitter.com/ih0ltz'
     },
     {
       name: 'Rez',
