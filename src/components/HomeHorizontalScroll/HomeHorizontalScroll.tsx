@@ -293,7 +293,7 @@ const HomeHorizontalScroll = () => {
             initial="hidden"
             variants={successorVariants.title}
           >
-            Bundlr is the Successor to Local Servers and the Cloud
+            The Next Generation of Data Infrastructure
           </motion.h2>
           <motion.h3
             className="font-robotoMono text-base max-w-2xl z-10 text-center leading-loose"

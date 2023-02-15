@@ -56,7 +56,8 @@ const useAbout = () => {
     {
       name: 'Miko',
       role: 'Engineer',
-      image: '/assets/about/heads/Miko.jpeg'
+      image: '/assets/about/heads/Miko.jpeg',
+      link: 'https://mobile.twitter.com/miko_nieminen'
     },
     {
       name: 'Gustavo',
@@ -71,7 +72,8 @@ const useAbout = () => {
     {
       name: 'Rez',
       role: 'Community Moderator',
-      image: '/assets/about/heads/Rez.jpeg'
+      image: '/assets/about/heads/Rez.jpeg',
+      link: 'https://twitter.com/Rez_aahmadi'
     },
     {
       name: 'Luke',
@@ -102,8 +104,8 @@ const useAbout = () => {
     {
       name: 'OpenSea',
       logo: OpenseaLogo,
-      logoHref: '/assets/about/investors/opensea.webp',
-      link: 'https://opensea.io/'
+      logoHref: '/assets/about/investors/opensea-logo.png',
+      link: 'https://opensea.io/',
     },
     {
       name: 'Race Capital',
@@ -136,7 +138,7 @@ const About: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
 
-      <header className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[794px] px-5 lg:px-[79px] relative overflow-hidden border-b border-2 mb-10 lg:border-none">
+      <header className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[794px] px-5 lg:px-[79px] relative overflow-hidden border-b mb-10 lg:border-none">
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-10 lg:pt-[83px] mb-10">
           <h1 className="text-5xl lg:text-7xl">
             Meet the World&apos;s Next Data Layer
@@ -149,7 +151,7 @@ const About: NextPage = () => {
         />
       </header>
 
-      <section className="px-5 lg:px-[79px] items-center bg-seashell flex lg:justify-between relative justify-center">
+      <section className="px-5 lg:px-[79px] items-center bg-seashell flex lg:justify-between relative justify-center -z-20">
         <div className="flex flex-col items-center justify-center lg:items-start">
           <SectionTitle title="What is Bundlr?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-0 lg:ml-24 pt-16">
@@ -167,9 +169,9 @@ const About: NextPage = () => {
           </div>
         </div>
         <img
-          src="/assets/about/section.png"
+          src="/new/assets/home/data-cluster.webp"
           alt=""
-          className="absolute right-0 hidden lg:block -mb-4"
+          className="absolute -right-48 hidden lg:block -mb-4 w-[600px] -z-10"
         />
       </section>
 

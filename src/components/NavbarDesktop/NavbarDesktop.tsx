@@ -30,10 +30,10 @@ const useNavbarDesktop = () => {
         name: 'Proof of Provenance',
         href: '/solutions/proof-of-provenance'
       },
-      {
-        name: 'Data Availability',
-        href: '/solutions/data-availability'
-      }
+      // {
+      //   name: 'Data Availability',
+      //   href: '/solutions/data-availability'
+      // }
     ],
     'Use Cases': [
       {
@@ -210,7 +210,7 @@ const NavDropdown = ({
                   >
                     {
                       {
-                        Solutions: <ParenthesisIcon />,
+                        Solutions: <BracesIcon />,
                         Learn: <BracesIcon />
                       }[title]
                     }

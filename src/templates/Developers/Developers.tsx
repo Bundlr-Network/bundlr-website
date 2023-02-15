@@ -153,7 +153,7 @@ const Developers: NextPage = () => {
             BUILD ON BUNDLR
           </h2>
         </div>
-        <img src="/assets/developers/data-donuts.png" alt="" />
+        <img src="/new/assets/home/data-donuts.webp" alt="" className='w-[440px]' />
         <div className="ml-auto">
           <ExpandableSection />
         </div>

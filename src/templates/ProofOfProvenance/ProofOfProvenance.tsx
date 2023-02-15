@@ -105,8 +105,8 @@ const ProofOfProvenance: NextPage = () => {
             </Link>
           </div>
           <img
-            src="/assets/proofofprovenance/data.png"
-            className="absolute -bottom-20 lg:-top-30 right-0"
+            src="/new/assets/home/data-cluster-rotated.webp"
+            className="absolute -bottom-20 lg:-top-30 -right-52 w-[900px]"
             alt="cloud"
           />
           <h1 className="text-5xl lg:text-7xl z-10">Proof of Provenance</h1>
