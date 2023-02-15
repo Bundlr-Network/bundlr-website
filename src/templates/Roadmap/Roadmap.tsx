@@ -72,11 +72,11 @@ const Roadmap: NextPage = () => {
             <div className="text-white mr-10">
               <ChevronRight width={'40px'} height={'40px'} />
             </div>
-            <img
+            {/* <img
               src="/assets/roadmap/roadmap.png"
               alt="roadmap"
               className="absolute lg:-left-96 xl:-left-72 -top-96"
-            />
+            /> */}
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
@@ -133,15 +133,15 @@ const Roadmap: NextPage = () => {
             <img
               src="/new/assets/home/data-spiral-flop.webp"
               alt="preweave"
-              className="absolute top-0 -left-20 w-[500px]"
+              className="absolute -top-48 -left-48 w-[700px]"
             />
             <img
               src="/new/assets/home/data-spiral.webp"
               alt="preweave"
-              className="absolute bottom-0 right-0 w-[500px]"
+              className="absolute -bottom-56 -right-0 w-[700px]"
             />
           </div>
-          <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
+          <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative z-1">
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
@@ -161,14 +161,14 @@ const Roadmap: NextPage = () => {
               <ChevronRight width={'40px'} height={'40px'} />
             </div>
             <img
-              src="/assets/roadmap/studio-1.png"
+              src="/new/assets/home/data-cloud-v2.webp"
               alt="studio"
-              className="absolute top-0 left-0"
+              className="absolute top-0 -left-56 w-[800px]"
             />
             <img
-              src="/assets/roadmap/studio-2.png"
+              src="/new/assets/home/data-cloud-v2.webp"
               alt="studio"
-              className="absolute bottom-0 right-0"
+              className="absolute bottom-0 -right-56 w-[800px]"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between">
@@ -187,15 +187,20 @@ const Roadmap: NextPage = () => {
               <ChevronRight width={'40px'} height={'40px'} />
             </div>
             <img
-              src="/assets/roadmap/testnet-1.png"
+              src="/new/assets/home/data-exponential.webp"
               alt="testnet"
-              className="absolute top-0 left-0"
+              className="absolute -top-56 left-0 rotate-180 w-[900px]"
             />
             <img
-              src="/assets/roadmap/testnet-2.png"
+              src="/new/assets/home/data-exponential.webp"
+              alt="testnet"
+              className="absolute -bottom-56 right-0 rotate-180 w-[900px]"
+            />
+            {/* <img
+              src="/new/assets/home/data-exponential.webp"
               alt="testnet"
               className="absolute bottom-0 right-0"
-            />
+            /> */}
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
@@ -213,14 +218,14 @@ const Roadmap: NextPage = () => {
               <ChevronRight width={'40px'} height={'40px'} />
             </div>
             <img
-              src="/assets/roadmap/mainnet-1.png"
+              src="/new/assets/home/data-sphere.webp"
               alt="mainnet"
-              className="absolute top-0 left-0"
+              className="absolute -top-64 -left-20 w-[600px]"
             />
             <img
-              src="/assets/roadmap/mainnet-2.png"
+              src="/new/assets/home/data-sphere.webp"
               alt="mainnet"
-              className="absolute bottom-0 right-0"
+              className="absolute -bottom-36 right-0 w-[600px]"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative p-5 lg:p-0">
@@ -238,14 +243,14 @@ const Roadmap: NextPage = () => {
             </div>
             <div />
             <img
-              src="/assets/roadmap/future-1.png"
+              src="/new/assets/home/data-cluster-rotated.webp"
               alt="future"
-              className="absolute top-0 left-0"
+              className="absolute -top-64 left-0 w-[800px]"
             />
             <img
-              src="/assets/roadmap/future-2.png"
+              src="/new/assets/home/data-cluster.webp"
               alt="future"
-              className="absolute bottom-0 right-0"
+              className="absolute -bottom-56 right-0 w-[600px]"
             />
           </div>
         </div>
