@@ -191,7 +191,7 @@ const Community: NextPage = () => {
           <img
             src="/new/assets/home/data-wing.webp"
             alt="hero"
-            className="absolute top-96 lg:-right-72 lg:-top-10 xl:-top-20 xl:-right-72 hidden lg:block rotate-[-30.24deg]"
+            className="absolute top-[480px] lg:-right-72 lg:top-10 xl:top-0 xl:-right-72 hidden md:block rotate-[-30.24deg]"
           />
         </header>
 
