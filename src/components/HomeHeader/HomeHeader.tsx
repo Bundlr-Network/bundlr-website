@@ -31,7 +31,7 @@ const HomeHeader = () => {
         <img
           src="/new/assets/home/header.webp"
           alt=""
-          className="absolute top-80 md:top-28 lg:top-10 lg:-right-18 scale-150 rotate-[-20.24deg]"
+          className="absolute top-80 md:top-28 lg:top-36 lg:-right-18 xl:top-10 xl:-right-18 scale-150 rotate-[-20.24deg]"
         />
 
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px]">

@@ -48,7 +48,7 @@ const HomeProduct = ({
               </p>
               <a
                 href={info.href}
-                className="text-white font-robotoMono text-base mt-auto hover:font-bold whitespace-nowrap uppercase tracking-widest"
+                className="text-white font-robotoMono text-base mt-auto hover:font-bold whitespace-nowrap uppercase tracking-widest font-bold"
               >
                 [ Find out more ]
               </a>

@@ -269,7 +269,7 @@ const Solutions: NextPage = () => {
               key={`section-${index}`}
               id={section.id}
               ref={section.ref}
-              className="w-full flex flex-col lg:flex-row gap-20 justify-end items-center bg-ghostWhite odd:bg-seashell py-14 lg:py-20 px-4 lg:pr-[79px]"
+              className="w-full flex flex-col lg:flex-row gap-20 justify-end items-center bg-ghostWhite odd:bg-seashell py-14 lg:py-20 px-4 lg:px-[79px] xl:pl-[200px]"
             >
               <div
                 key={index}

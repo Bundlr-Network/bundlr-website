@@ -167,9 +167,9 @@ const HomeHorizontalScroll = () => {
       exit: { opacity: 0 },
     },
     image: {
-      visible: { opacity: 1, y: 0 },
-      hidden: { opacity: 0, y: 100 },
-      exit: { opacity: 0, y: 100 },
+      visible: { opacity: 1 },
+      hidden: { opacity: 0 },
+      exit: { opacity: 0 },
     }
   }
 
