@@ -54,7 +54,7 @@ const HomeHeader = () => {
             START BUILDING
             <DevIcon />
           </Button>
-          <span className="z-10 bg-white -ml-12 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-10 rounded-tr-full rounded-br-full">
+          <span className="z-10 -ml-12 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-10 rounded-tr-full rounded-br-full uppercase font-bold">
             Permanent on{' '}
             <a href="https://arweave.net/" target={'_blank'} rel="noreferrer">
               Arweave
