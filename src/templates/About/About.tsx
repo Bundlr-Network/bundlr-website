@@ -154,15 +154,15 @@ const About: NextPage = () => {
         <div className="flex flex-col items-center justify-center lg:items-start">
           <SectionTitle title="What is Bundlr?" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-0 lg:ml-24 pt-16">
-            <p className="z-10 text-center lg:text-left">
+            <p className="z-10 text-center lg:text-left leading-loose">
               Bundlr is developing a decentralized data network to help
               developers solve complex data integrity issues.{' '}
             </p>
-            <p className="z-10 text-center lg:text-left">
+            <p className="z-10 text-center lg:text-left leading-loose">
               We provide solutions for storage, provenance, and data
               availability that help you establish a trustless data foundation.{' '}
             </p>
-            <p className="z-10 text-center lg:text-left">
+            <p className="z-10 text-center lg:text-left leading-loose">
               Our vision is to be data’s trustless source of truth.
             </p>
           </div>
