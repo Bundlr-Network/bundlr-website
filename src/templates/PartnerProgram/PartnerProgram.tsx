@@ -1,4 +1,4 @@
-import { Footer, NavbarDesktop, SectionTitle } from '@/components'
+import { Footer, Heading, NavbarDesktop, Paragraph, SectionTitle } from '@/components'
 import { useEffect, useRef, useState } from 'react'
 
 import type { NextPage } from 'next'
@@ -46,11 +46,12 @@ const PartnerProgram: NextPage = () => {
     <div className="bg-ghostWhite">
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-      <header className="hidden lg:flex flex-col justify-center items-center my-28">
-        <p className="text-2xl font-robotoMono text-center">
-          Interested in partnering with Bundlr?
-        </p>
-        <p className="text-8xl">Let&apos;s talk</p>
+      <header className="hidden lg:flex flex-col justify-center items-center mt-20 mb-28 gap-4">
+        {/* <p className="text-2xl font-robotoMono text-center">
+         
+        </p> */}
+        <Paragraph size='md'> Interested in partnering with Bundlr?</Paragraph>
+        <Heading level={1}>Let&apos;s talk</Heading>
       </header>
       <section className="mt-10 lg:mt-0 flex flex-col md:flex-row justify-between md:px-5 lg:px-[89px] pb-[105px] px-5 gap-12 lg:gap-0">
         <div className="max-w-[564px] flex flex-col gap-9">

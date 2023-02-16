@@ -194,7 +194,7 @@ const Roadmap: NextPage = () => {
             <img
               src="/new/assets/home/data-exponential.webp"
               alt="testnet"
-              className="absolute -bottom-56 right-0 rotate-180 w-[900px]"
+              className="absolute -bottom-56 right-0 w-[900px]"
             />
             {/* <img
               src="/new/assets/home/data-exponential.webp"
