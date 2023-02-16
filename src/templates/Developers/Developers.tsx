@@ -46,7 +46,8 @@ const useDevelopers = () => {
       },
       {
         title: 'Seamless Integration',
-        description: 'It takes 3-4 lines of code to integrate Bundlr'
+        description:
+          'It takes 3-4 lines of code to integrate Bundlr'
       },
       {
         title: 'Pay in Any Token',

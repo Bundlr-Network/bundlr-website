@@ -56,9 +56,9 @@ const useProofOfProvenance = () => {
     title: 'What Bundlr Offers',
     items: [
       {
-        title: 'Unlimited Scalability',
+        title: 'Scales to Millions of TPS',
         description:
-          'There are no limits to the transactions per second that Bundlr can handle'
+          'Bundlr can scale horizontally to handle millions of transactions per second'
       },
       {
         title: 'Instant Uploads',
@@ -66,12 +66,12 @@ const useProofOfProvenance = () => {
       },
       {
         title: 'Seamless Integration',
-        description: 'It takes 3-4 lines of code to integrate Bundlr'
+        description:
+          'It takes 3-4 lines of code to integrate Bundlr'
       },
       {
-        title: 'Multichain',
-        description:
-          'Bundlr is a multichain, meaning that it can store data on multiple blockchains'
+        title: 'Pay in Any Token',
+        description: 'You can pay to use Bundlr in 14 supported tokens'
       }
     ]
   }

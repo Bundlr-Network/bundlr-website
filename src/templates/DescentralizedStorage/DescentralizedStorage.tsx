@@ -60,7 +60,7 @@ const useDescentralizedStorage = () => {
       {
         title: 'Seamless Integration',
         description:
-          'Bundlr is easy to integrate into your existing infrastructure'
+          'It takes 3-4 lines of code to integrate Bundlr'
       },
       {
         title: 'Pay in Any Token',
@@ -126,7 +126,7 @@ const DescentralizedStorage: NextPage = () => {
         <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
           <SubNav />
 
-          <div className="absolute -left-[650px] -bottom-52 lg:bottom-auto">
+          <div className="absolute -left-[650px] -bottom-80 lg:-left-[650px] lg:bottom-auto">
             <Image
               src="/new/assets/home/cloud.webp"
               width={'1200px'}
@@ -135,12 +135,14 @@ const DescentralizedStorage: NextPage = () => {
               loading="eager"
             />
           </div>
-          <Heading level={1} className={'z-10'}>
-            Decentralized Storage
-          </Heading>
-          <p className="font-robotoMono text-base z-10 mt-5">
-            Performant, scalable, and seamless – forever.{' '}
-          </p>
+          <div className="ml-auto pr-5 lg:pr-[79px]">
+            <Heading level={1} className={'z-10 text-center md:text-end'}>
+              Decentralized <br /> Storage
+            </Heading>
+            <p className="font-robotoMono text-base z-10 mt-5 text-center md:text-end">
+              Performant, scalable, and seamless – forever.{' '}
+            </p>
+          </div>
         </div>
       </header>
 
@@ -161,26 +163,26 @@ const DescentralizedStorage: NextPage = () => {
         <img
           src="/new/assets/home/spiral.webp"
           alt="data-spiral"
-          width={400}
-          className="absolute right-10 top-20 hidden lg:block"
+          width={500}
+          className="absolute right-10 top-10 hidden lg:block"
         />
         <ul className="flex flex-col lg:flex-row gap-10">
           <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
             <a href="https://arweave.org/" target={'_blank'} rel="noreferrer">
               {/* add gradient background that goes from gray to transparent */}
-              <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11">
+              <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden px-2 py-8 lg:p-11">
                 {/* make image as background of rectangle box */}
                 <div className="flex flex-col gap-4 px-5 pb-10">
                   <Heading level={3}>
                     Arweave
                   </Heading>
                   <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
-                    Generally Available
+                    LIVE
                   </div>
-                  <p className="font-robotoMono text-lg">
+                  <p className="font-robotoMono text-lg leading-loose">
                     Permanent storage on Arweave.{' '}
                   </p>
-                  <p className="font-robotoMono text-lg">
+                  <p className="font-robotoMono text-lg leading-loose">
                     In the same way the internet connected people across
                     geographies, Arweave connects people across time. Bundlr is
                     currently handling over 90% of all transaction volume on
@@ -193,7 +195,7 @@ const DescentralizedStorage: NextPage = () => {
           <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
             {/* add gradient background that goes from gray to transparent */}
 
-            <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11 h-full">
+            <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden px-2 py-8 lg:p-11 h-full">
               {/* make image as background of rectangle box */}
               <div className="flex flex-col gap-4 px-5 pb-10">
                 <Heading level={3}>
@@ -202,10 +204,10 @@ const DescentralizedStorage: NextPage = () => {
                 <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
                   Coming soon
                 </div>
-                <p className="font-robotoMono text-lg">
+                <p className="font-robotoMono text-lg leading-loose">
                   Storage for as long as you need.{' '}
                 </p>
-                <p className="font-robotoMono text-lg">
+                <p className="font-robotoMono text-lg leading-loose">
                   Preweave is a peer-to-peer caching layer built on top of
                   Bundlr. Data on Preweave can also easily be transferred to
                   Arweave for permanent storage.
@@ -221,7 +223,7 @@ const DescentralizedStorage: NextPage = () => {
             WE ARE DIFFERENT
           </h3>
         </div>
-        <div className="flex flex-col gap-36 w-full lg:w-1/2 ml-auto">
+        <div className="flex flex-col gap-36 w-full lg:w-2/3 ml-auto">
           <div className="">
             {/* <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
               Lightning Fast Uploads, at Industrial Scale
@@ -229,7 +231,7 @@ const DescentralizedStorage: NextPage = () => {
             <Heading level={3} className="text-center lg:text-left">
               Lightning Fast Uploads, at Industrial Scale
             </Heading>
-            <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left">
+            <p className="font-robotoMono max-w-[870px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left leading-loose">
               With uploads time under 8 milliseconds and the ability to scale to
               millions of transactions per seconds, Bundlr’s performance is on
               par with traditional providers. Bundlr is ready to store the
@@ -241,7 +243,7 @@ const DescentralizedStorage: NextPage = () => {
             <Heading level={3} className="text-center lg:text-left z-50">
               Seamless for Developers
             </Heading>
-            <p className="font-robotoMono max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left z-50">
+            <p className="font-robotoMono max-w-[870px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left z-50 leading-loose">
               Our intuitive docs and SDK help you integrate Bundlr with just 3-4
               lines of code. Further, you can sign and pay for storage in of our
               14 supported tokens, including ETH, SOL, and MATIC.{' '}
@@ -257,9 +259,9 @@ const DescentralizedStorage: NextPage = () => {
           </div>
         </div>
         <img
-          src="/assets/descentralizedStorage/data-splash.png"
+          src="/new/assets/home/data-donuts.webp"
           alt="data-splash"
-          className="absolute -bottom-64 left-0 hidden lg:block"
+          className="absolute -bottom-72 -left-32 hidden lg:block w-[600px] rotate-[-30deg]"
         />
       </section>
 
