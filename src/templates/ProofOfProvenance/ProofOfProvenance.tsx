@@ -97,8 +97,8 @@ const ProofOfProvenance: NextPage = () => {
           />
           <Heading level={1} className="z-10">Proof of Provenance</Heading>
 
-          <p className="font-robotoMono text-base z-10">
-            Trustlessly identify original information by accurately attributing
+          <p className="font-robotoMono text-base z-10 leading-loose">
+            Trustlessly identify original information <br />by accurately attributing
             characteristics of its origin.
           </p>
         </div>
