@@ -182,7 +182,7 @@ const useSolutions = () => {
       title: 'Data Archiving',
       description:
         'It is often said that “history is written by the victors.” This is no longer true. Bundlr enables permanent, censorship-resistant storage on Arweave. With dynamic customization with unlimited data-tagging, this information information becomes simple to find. Bundlr enables the preservation of history, forever.',
-      image: 'alex.png',
+      image: 'alex.svg',
       href: 'https://alex.arweave.dev/',
       example: 'Alex'
     }
@@ -216,10 +216,10 @@ const Solutions: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop scheme={SchemeColor.ghostWhite} />
       {/* <section className='flex flex-col items-center justify-center gap-8 pt-28'>
-        <h1 className='text-7xl font-fkDisplay font-light'>Technology</h1>
-        <p className='font-robotoMono max-w-[830px] text-center'>Bundlr is the world’s next data layer. It provides true provenance with data availability guarantees backed by permanent, decentralized storage.</p>
-        <Button />
-      </section> */}
+          <h1 className='text-7xl font-fkDisplay font-light'>Technology</h1>
+          <p className='font-robotoMono max-w-[830px] text-center'>Bundlr is the world’s next data layer. It provides true provenance with data availability guarantees backed by permanent, decentralized storage.</p>
+          <Button />
+        </section> */}
 
       <header className="flex flex-col bg-ghostWhite px-5 lg:px-[79px] pb-2 lg:pb-24 relative overflow-visible lg:overflow-hidden">
         <div className="flex">
@@ -280,23 +280,26 @@ const Solutions: NextPage = () => {
                   {section.description}
                 </p>
               </div>
-              <div className="flex flex-col items-center justify-center gap-10">
-                <div className="bg-black p-10 rounded-lg flex items-center justify-center">
-                  <Image
-                    src={`/assets/solutions/logos/${section.image}`}
-                    alt=""
-                    width={'200px'}
-                    height={140}
-                    className={`object-contain ${section.invert && 'invert'}`}
-                  />
-                </div>
-                <p className="font-robotoMono">
-                  Example:{' '}
-                  <a href={section.href} target="_blank" rel="noreferrer">
+              <a href={section.href} target="_blank" rel="noreferrer">
+                <div className="flex flex-col items-center justify-center gap-10">
+                  <div className={`p-10 rounded-lg flex items-center justify-center ${index % 2 === 0 ? 'bg-black' : 'bg-white'
+                    }`}>
+                    <Image
+                      src={`/assets/solutions/logos/${section.image}`}
+                      alt=""
+                      width={'200px'}
+                      height={140}
+                      className={`object-contain ${(section.invert && index % 2 === 0) && 'invert'}`}
+                    />
+                  </div>
+                  <p className="font-robotoMono">
+                    Example:{' '}
+
                     <u>{section.example}</u>
-                  </a>
-                </p>
-              </div>
+
+                  </p>
+                </div>
+              </a>
             </section>
           ))}
         </section>
@@ -321,7 +324,7 @@ const Solutions: NextPage = () => {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default Solutions
