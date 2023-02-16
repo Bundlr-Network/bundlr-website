@@ -37,7 +37,7 @@ const useProofOfProvenance = () => {
         description:
           'Performant, scalable, and seamless data, stored permanently on Arweave ',
         href: '/solutions/decentralized-storage'
-      },
+      }
       // {
       //   title: 'Optimistic Data Availability',
       //   description: 'Pay for consensus only when you need it',
@@ -66,8 +66,7 @@ const useProofOfProvenance = () => {
       },
       {
         title: 'Seamless Integration',
-        description:
-          'It takes 3-4 lines of code to integrate Bundlr'
+        description: 'It takes 3-4 lines of code to integrate Bundlr'
       },
       {
         title: 'Pay in Any Token',
@@ -95,11 +94,13 @@ const ProofOfProvenance: NextPage = () => {
             className="absolute -bottom-20 lg:-top-30 -right-52 w-[900px]"
             alt="cloud"
           />
-          <Heading level={1} className="z-10">Proof of Provenance</Heading>
+          <Heading level={1} className="z-10">
+            Proof of Provenance
+          </Heading>
 
           <p className="font-robotoMono text-base z-10 leading-loose">
-            Trustlessly identify original information <br />by accurately attributing
-            characteristics of its origin.
+            Trustlessly identify original information <br />
+            by accurately attributing characteristics of its origin.
           </p>
         </div>
       </header>
@@ -109,7 +110,9 @@ const ProofOfProvenance: NextPage = () => {
       <section className="px-5 lg:px-[79px] flex py-12 lg:py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
-            <Heading level={3} className="text-center lg:text-left">Proof of Time</Heading>
+            <Heading level={3} className="text-center lg:text-left">
+              Proof of Time
+            </Heading>
             <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               Receive signed receipts timestamps down to the millisecond that
               serve as a verifiable ‘proof of time’ for when information was
@@ -117,7 +120,9 @@ const ProofOfProvenance: NextPage = () => {
             </p>
           </div>
           <div className="">
-            <Heading level={3} className="text-center lg:text-left">Custom Metadata Tagging</Heading>
+            <Heading level={3} className="text-center lg:text-left">
+              Custom Metadata Tagging
+            </Heading>
             <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               You can add custom tags to the metadata of the content that you
               store on Bundlr. This makes it simple to index and query any data
@@ -125,7 +130,10 @@ const ProofOfProvenance: NextPage = () => {
             </p>
           </div>
         </div>
-        <p className="hidden lg:block transform rotate-180 text-center text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
+        <p
+          className="hidden lg:block transform rotate-180 text-center text-[26px] uppercase"
+          style={{ writingMode: 'vertical-rl' }}
+        >
           PROVE AND FIND TRUTH
         </p>
       </section>
@@ -133,9 +141,10 @@ const ProofOfProvenance: NextPage = () => {
       <div className="overflow-hidden">
         <Marquee gradientColor={[254, 244, 238]} speed={155}>
           <motion.h2 className="text-4xl lg:text-8xl whitespace-nowrap py-10 lg:py-32 uppercase">
-            Identify original information with true provenance Identify original
-            information with true provenance Identify original information with
-            true provenance{' '}
+            {Array.from({ length: 10 })
+              .fill('IDENTIFY ORIGINAL INFORMATION WITH TRUE PROVENANCE. ')
+              .toString()
+              .replace(/,/g, '')}
           </motion.h2>
         </Marquee>
       </div>

@@ -223,9 +223,9 @@ const Solutions: NextPage = () => {
 
       <header className="flex flex-col bg-ghostWhite px-5 lg:px-[79px] pb-2 lg:pb-24 relative overflow-visible lg:overflow-hidden">
         <div className="flex">
-          <div className="container pt-20 lg:pb-0 lg:pt-[203px] z-40">
+          <div className="container pt-20 lg:pb-0 lg:pt-[203px] z-40 text-center md:text-left">
             <Heading level={1}>
-              Solutions <br className='lg:hidden' />for <br className='hidden lg:inline' />Every <br className='lg:hidden' />Use Case
+              Solutions for <br className='hidden lg:inline' />Every <br className='lg:hidden' />Use Case
             </Heading>
             <p className="text-base font-robotoMono font-light mt-5">
               Here are just a few examples

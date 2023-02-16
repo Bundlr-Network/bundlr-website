@@ -136,10 +136,10 @@ const DescentralizedStorage: NextPage = () => {
             />
           </div>
           <div className="ml-auto pr-5 lg:pr-[79px]">
-            <Heading level={1} className={'z-10 text-center md:text-end'}>
+            <Heading level={1} className={'z-10 text-center md:text-left'}>
               Decentralized <br /> Storage
             </Heading>
-            <p className="font-robotoMono text-base z-10 mt-5 text-center md:text-end">
+            <p className="font-robotoMono text-base z-10 mt-5 text-center md:text-left">
               Performant, scalable, and seamless – forever.{' '}
             </p>
           </div>
