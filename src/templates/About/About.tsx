@@ -7,14 +7,12 @@ import {
   SectionTitle,
   SpotifySection
 } from '@/components'
-import { useEffect, useState } from 'react'
 
 import ArweaveLogo from '@assets/about/investors/arweave.svg'
 import { ButtonScheme } from '@/components/Button/Button'
 import { DevIcon } from '@/svg'
 import FrameworkLogo from '@assets/about/investors/framework.svg'
 import HypersphereLogo from '@assets/about/investors/hypersphere.svg'
-import Image from 'next/image'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import OpenseaLogo from '@assets/about/investors/opensea.webp'
@@ -142,7 +140,7 @@ const About: NextPage = () => {
       <header className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[794px] px-5 lg:px-[79px] relative overflow-hidden mb-10 lg:border-none">
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-10 lg:pt-[83px] mb-10">
           <Heading level={1} className="z-10">
-            Meet the World&apos;s Next Data Layer
+            Meet the World&apos;s Data Layer
           </Heading>
         </div>
         <img
