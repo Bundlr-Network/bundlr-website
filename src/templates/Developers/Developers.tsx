@@ -6,6 +6,7 @@ import {
   CtaCentralized,
   ExpandableSection,
   Footer,
+  Heading,
   HomeTrustedBy,
   JoinTheCommunity,
   NavbarDesktop,
@@ -67,27 +68,29 @@ const Developers: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <header className=" text-white bg-black">
         <NavbarDesktop scheme={SchemeColor.black} />
-        <div className="px-5 lg:px-0 flex flex-col items-center gap-9 h-[calc(100vh-90px)] relative">
-          <h1 className="text-5xl lg:text-7xl leading-none mt-24 z-10 text-center">
-            Build Seamlessly
-          </h1>
-          {/* <p className="hidden text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose">
-            Bundlr is a decentralized data network to help developers solve
-            complex data integrity issues. Our performant, scalable, seamless
-            storage, proof of provenance, and data availability guarantees
-            allows you establish a trustless data foundation.
-          </p> */}
-          <a
-            href="https://docs.bundlr.network/"
-            target={'_blank'}
-            rel="noreferrer"
-            className="z-10"
-          >
-            <Button scheme={ButtonScheme.white}>
-              START BUILDING
-              <DevIcon />
-            </Button>
-          </a>
+        <div className="px-5 lg:px-0 flex flex-col items-center justify-center h-[calc(100vh-90px)] relative">
+          <div className="flex flex-col gap-9 mb-32 items-center justify-center">
+            <Heading level={1} className="z-10 text-center">
+              Build Seamlessly
+            </Heading>
+            {/* <p className="hidden text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose">
+              Bundlr is a decentralized data network to help developers solve
+              complex data integrity issues. Our performant, scalable, seamless
+              storage, proof of provenance, and data availability guarantees
+              allows you establish a trustless data foundation.
+            </p> */}
+            <a
+              href="https://docs.bundlr.network/"
+              target={'_blank'}
+              rel="noreferrer"
+              className="z-10"
+            >
+              <Button scheme={ButtonScheme.white}>
+                START BUILDING
+                <DevIcon />
+              </Button>
+            </a>
+          </div>
 
           <img
             src="/new/assets/home/dataverse.webp"
@@ -148,14 +151,14 @@ const Developers: NextPage = () => {
           <img src="/new/assets/home/cloud.webp" alt="" width={689} />
         </div>
       </section>
-      <section className='bg-black text-white flex gap-20 items-center relative h-auto flex-col-reverse lg:flex-row px-4 lg:px-[79px] py-20'>
-        <div className="hidden lg:inline-block absolute top-32 left-0">
+      <section className='bg-black text-white flex gap-20 items-start relative h-auto md:flex-row px-4 lg:px-[79px] pt-20 min-h-[990px] overflow-hidden'>
+        <div className="hidden md:inline-block absolute top-32 left-0">
           <h2 className="transform -rotate-90 text-[26px] uppercase w-[300px]">
             BUILD ON BUNDLR
           </h2>
         </div>
-        <img src="/new/assets/home/data-donuts.webp" alt="" className='w-[440px]' />
-        <div className="ml-auto">
+        <img src="/new/assets/home/data-donuts.webp" alt="" className='w-[320px] md:w-[450px] lg:w-[640px] absolute -left-40 -bottom-40' />
+        <div className="ml-auto w-full md:w-2/3">
           <ExpandableSection />
         </div>
       </section>
