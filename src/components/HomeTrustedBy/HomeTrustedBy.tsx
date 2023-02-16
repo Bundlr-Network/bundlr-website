@@ -52,6 +52,13 @@ const HomeTrustedBy = ({
       link: 'https://metaplex.com'
     },
     {
+      title: 'Solana mobile',
+      icon: '/assets/home/users/sol-mobile.png',
+      invert: false,
+      whiteinvert: true,
+      link: 'https://solanamobile.com/'
+    },
+    {
       title: 'Glass XYZ',
       icon: '/assets/home/users/glass.png',
       link: 'https://glass.xyz',
