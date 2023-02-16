@@ -34,6 +34,8 @@ const HomeTrustedBy = ({
 }) => {
   const { TITLE } = useHomeTrustedBy()
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+
   const USERS = [
     {
       title: 'Sound XYZ',
@@ -124,7 +126,7 @@ const HomeTrustedBy = ({
         {/* <Marquee gradientColor={[238, 240, 246]} speed={50}> */}
         <Marquee
           gradientColor={scheme === 'dark' ? [0, 0, 0] : [255, 255, 255]}
-          speed={50}
+          speed={isMobile ? 90 : 50}
         >
           <div className="flex items-center gap-20">
             {[

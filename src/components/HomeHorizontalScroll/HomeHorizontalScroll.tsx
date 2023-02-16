@@ -21,9 +21,7 @@ const HomeHorizontalScroll = () => {
   const imageControls = useAnimation()
   const [serverTitleRef, serverTitleInView] = useInView()
   const [serverDescriptionRef, serverDescriptionInView] = useInView()
-  const [serverImageRef, serverImageInView] = useInView({
-    threshold: 0.4
-  })
+  const [serverImageRef, serverImageInView] = useInView()
 
   const serverVariants = {
     title: {
@@ -124,10 +122,15 @@ const HomeHorizontalScroll = () => {
       hidden: { opacity: 0 },
       exit: { opacity: 0 },
     },
-    image: {
-      visible: { opacity: 1, y: 0 },
-      hidden: { opacity: 0, y: 100 },
-      exit: { opacity: 0, y: 100 },
+    imageLeft: {
+      visible: { opacity: 1, x: 0 },
+      hidden: { opacity: 0, x: -50 },
+      exit: { opacity: 0, x: -50 },
+    },
+    imageRight: {
+      visible: { opacity: 1, x: 0 },
+      hidden: { opacity: 0, x: 50 },
+      exit: { opacity: 0, x: 50 },
     }
   }
 
@@ -143,7 +146,7 @@ const HomeHorizontalScroll = () => {
     if (successorImageInView) {
       successorImageControls.start('visible')
     } else {
-      successorControls.start('hidden')
+      successorImageControls.start('hidden')
     }
   }, [successorImageControls, successorImageInView])
 
@@ -228,7 +231,7 @@ const HomeHorizontalScroll = () => {
           initial="hidden"
           animate={serverControls}
           variants={serverVariants.description}
-          transition={{ delay: 0.1, duration: 0.5 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
         >
           In the internet’s early days, online data was stored in local servers.
           This was inconvenient and expensive for most people.
@@ -245,7 +248,7 @@ const HomeHorizontalScroll = () => {
           initial="hidden"
           src={'/new/assets/home/server-left.webp'}
           className="absolute bottom-56 lg:-bottom-32 -left-52 hidden lg:block w-[500px]"
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3 }}
         />
         <motion.img
           ref={serverImageRef}
@@ -254,7 +257,7 @@ const HomeHorizontalScroll = () => {
           initial="hidden"
           src={'/new/assets/home/server-right.webp'}
           className="absolute bottom-56 lg:-bottom-32 -right-52 hidden lg:block w-[500px]"
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3 }}
         />
       </div>
       <div
@@ -299,9 +302,6 @@ const HomeHorizontalScroll = () => {
             animate={cloudControls}
             variants={cloudVariants.cloud}
             initial="hidden"
-            transition={{
-              delay: 0.6
-            }}
             src="/new/assets/home/cloud.webp"
             alt="cloud"
             className="absolute bottom-32 md:bottom-10 lg:-left-32 left-4 right-0 mx-auto lg:max-w-[70%] scale-110 md:scale-100"
@@ -343,7 +343,8 @@ const HomeHorizontalScroll = () => {
           ref={successorImageRef}
           animate={successorImageControls}
           initial="hidden"
-          variants={successorVariants.image}
+          variants={successorVariants.imageLeft}
+          transition={{ delay: 0.7 }}
           src="/new/assets/home/data-sphere.webp"
           alt=""
           className="hidden lg:block absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[450px] block bg-cover w-[700px]"
@@ -352,7 +353,8 @@ const HomeHorizontalScroll = () => {
           ref={successorImageRef}
           animate={successorImageControls}
           initial="hidden"
-          variants={successorVariants.image}
+          variants={successorVariants.imageRight}
+          transition={{ delay: 0.7 }}
           src="/new/assets/home/data-sphere-flop.webp"
           alt=""
           className="absolute -bottom-[140px] md:-bottom-[580px] lg:bottom-auto -right-[140px] lg:-right-[450px] block bg-cover w-[700px]"

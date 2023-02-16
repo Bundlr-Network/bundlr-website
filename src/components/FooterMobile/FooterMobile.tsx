@@ -31,7 +31,7 @@ const FooterMobile = ({
         <FooterLogo />
         <p className="mt-[60px] text-[40px] tracking-tighter whitespace-normal leading-none mb-[68px]">
           THE WORLD&apos;S <br />
-          NEXT DATA LAYER
+          DATA LAYER
         </p>
         {data.map((definition) => (
           <ExpandableSection
