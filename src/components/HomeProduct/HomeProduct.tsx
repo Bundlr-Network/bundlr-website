@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 
+import Heading from '../Heading'
 import SectionTitle from '../SectionTitle'
 
 const HomeProduct = ({
@@ -32,19 +33,22 @@ const HomeProduct = ({
               className={`flex flex-col gap-4 text-white items-start max-w-[275px] ${content.length === 1 ? 'flex-row items-center max-w-full' : ''
                 }`}
             >
-              <h3
+              {/* <h3
                 className="text-3xl lg:text-5xl leading-none font-fkDisplay"
                 dangerouslySetInnerHTML={{
                   __html: info.title
                 }}
-              ></h3>
+              ></h3> */}
+              <Heading level={3} className="text-white" dangerouslySetInnerHTML={{
+                __html: info.title
+              }}></Heading>
               <p className={`text-lg mt-auto font-robotoMono font-normal leading-loose ${content.length === 1 ? 'text-center' : ''
                 }`}>
                 {info.description}
               </p>
               <a
                 href={info.href}
-                className="text-white font-robotoMono text-base mt-auto hover:font-bold whitespace-nowrap"
+                className="text-white font-robotoMono text-base mt-auto hover:font-bold whitespace-nowrap uppercase tracking-widest"
               >
                 [ Find out more ]
               </a>

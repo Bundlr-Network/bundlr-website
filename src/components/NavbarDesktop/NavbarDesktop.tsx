@@ -147,7 +147,7 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
         </div> */}
         <div className="lg:w-[269px] flex items-center justify-center ml-auto lg:ml-0">
           <a href="https://docs.bundlr.network/" target="_blank" rel="noreferrer">
-            <Button>
+            <Button className='px-3 py-2 whiteSpace-nowrap text-base'>
               START BUILDING
               <DevIcon />
             </Button>

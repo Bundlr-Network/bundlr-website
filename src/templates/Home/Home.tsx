@@ -2,6 +2,7 @@ import {
   Button,
   CtaSection,
   Footer,
+  Heading,
   HomeHeader,
   HomeHorizontalScroll,
   HomeProduct,
@@ -143,7 +144,7 @@ const Home: NextPage = () => {
       </div>
 
       <section className="flex items-center justify-center lg:items-start flex-col px-5 lg:px-[79px] pt-12 lg:pt-[122px] bg-seashell overflow-hidden" style={{
-        boxShadow: '0 0 70px rgba(0,0,0,.2)'
+        // boxShadow: '0 0 70px rgba(0,0,0,.2)'
       }}>
         <SectionTitle title="Testimonials" />
         <div className="flex mt-[89px] justify-center relative">
@@ -157,9 +158,9 @@ const Home: NextPage = () => {
       <div className="bg-seashell py-[88px]">
         <CtaSection>
           <div className="flex flex-col items-center md:items-center lg:items-start justify-center gap-10 lg:gap-0">
-            <p className="text-4xl md:text-5xl text-center lg:text-[62px] lg:text-start font-light leading-none -mt-20 lg:mt-0">
+            <Heading level={2} className="text-center lg:text-left">
               Ready to Become a BUNDLOOOOR?
-            </p>
+            </Heading>
             <div className="mt-0 lg:mt-10">
               <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer">
                 <Button scheme={ButtonScheme.white}>

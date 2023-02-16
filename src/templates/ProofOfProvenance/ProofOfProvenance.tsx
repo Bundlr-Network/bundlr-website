@@ -2,6 +2,7 @@ import {
   Button,
   CtaCentralized,
   Footer,
+  Heading,
   HomeProduct,
   NavbarDesktop
 } from '@/components'
@@ -94,7 +95,8 @@ const ProofOfProvenance: NextPage = () => {
             className="absolute -bottom-20 lg:-top-30 -right-52 w-[900px]"
             alt="cloud"
           />
-          <h1 className="text-5xl lg:text-7xl z-10">Proof of Provenance</h1>
+          <Heading level={1} className="z-10">Proof of Provenance</Heading>
+
           <p className="font-robotoMono text-base z-10">
             Trustlessly identify original information by accurately attributing
             characteristics of its origin.
@@ -107,7 +109,7 @@ const ProofOfProvenance: NextPage = () => {
       <section className="px-5 lg:px-[79px] flex py-12 lg:py-24 relative overflow-hidden">
         <div className="flex flex-col gap-36 w-full">
           <div className="">
-            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Proof of Time</h2>
+            <Heading level={3} className="text-center lg:text-left">Proof of Time</Heading>
             <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               Receive signed receipts timestamps down to the millisecond that
               serve as a verifiable ‘proof of time’ for when information was
@@ -115,7 +117,7 @@ const ProofOfProvenance: NextPage = () => {
             </p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Custom Metadata Tagging</h2>
+            <Heading level={3} className="text-center lg:text-left">Custom Metadata Tagging</Heading>
             <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
               You can add custom tags to the metadata of the content that you
               store on Bundlr. This makes it simple to index and query any data

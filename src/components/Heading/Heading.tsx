@@ -18,14 +18,14 @@ const useHeading = ({ level }: { level: HeadingProps['level'] }) => {
   return { Tag, HEADING_DEFINITION }
 }
 
-const Heading = ({ level, className, children }: HeadingProps) => {
+const Heading = ({ level, className, children, ...props }: HeadingProps) => {
   const { Tag, HEADING_DEFINITION } = useHeading({
     level
   })
 
   return (
     <>
-      <Tag className={`${HEADING_DEFINITION} ${className ? className : ''}`}>
+      <Tag className={`${HEADING_DEFINITION} ${className ? className : ''}`} {...props}>
         {children}
       </Tag>
     </>

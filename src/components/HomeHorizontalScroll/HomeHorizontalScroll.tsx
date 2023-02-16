@@ -193,7 +193,7 @@ const HomeHorizontalScroll = () => {
   return (
     <>
       <div
-        className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 relative top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+        className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 relative top-0 left-0  -z-10 gap-10 lg:gap-0"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
@@ -205,7 +205,7 @@ const HomeHorizontalScroll = () => {
         </h2>
       </div>
       <div
-        className="w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 relative top-0 left-0 bg-seashell -z-10 gap-10 lg:gap-0"
+        className="w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 relative top-0 left-0  -z-10 gap-10 lg:gap-0"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
@@ -236,7 +236,7 @@ const HomeHorizontalScroll = () => {
         <div className="mb-36 lg:mb-0" />
         <img
           src={'/new/assets/home/server-left.webp'}
-          className="absolute -bottom-48 -left-20 w-[350px] md:w-[480px] lg:hidden"
+          className="absolute -bottom-20 md:-bottom-20 -left-20 w-[300px] md:w-[320px] lg:hidden z-10"
         />
         <motion.img
           ref={serverImageRef}
@@ -244,7 +244,7 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.serverLeft}
           initial="hidden"
           src={'/new/assets/home/server-left.webp'}
-          className="absolute bottom-56 lg:-bottom-8 -left-20 hidden lg:block w-[500px]"
+          className="absolute bottom-56 lg:-bottom-32 -left-52 hidden lg:block w-[500px]"
           transition={{ delay: 0.4 }}
         />
         <motion.img
@@ -253,12 +253,12 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.serverRight}
           initial="hidden"
           src={'/new/assets/home/server-right.webp'}
-          className="absolute bottom-56 lg:-bottom-8 -right-20 hidden lg:block w-[500px]"
+          className="absolute bottom-56 lg:-bottom-32 -right-52 hidden lg:block w-[500px]"
           transition={{ delay: 0.4 }}
         />
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl relative top-0 left-0 bg-seashell -z-10"
+        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl relative top-0 left-0  -z-10"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
@@ -274,7 +274,7 @@ const HomeHorizontalScroll = () => {
               initial="hidden"
               variants={cloudVariants.title}
             >
-              <Heading level={2} className="text-center lg:text-left">  The Cloud</Heading>
+              <Heading level={2} className="text-center lg:text-left">The Cloud</Heading>
 
             </motion.div>
             <motion.div
@@ -304,12 +304,12 @@ const HomeHorizontalScroll = () => {
             }}
             src="/new/assets/home/cloud.webp"
             alt="cloud"
-            className="absolute bottom-52  md:bottom-10 lg:-left-32 left-4 right-0 mx-auto lg:max-w-[70%] scale-110 md:scale-100"
+            className="absolute bottom-32 md:bottom-10 lg:-left-32 left-4 right-0 mx-auto lg:max-w-[70%] scale-110 md:scale-100"
           />
         </div>
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl relative top-0 left-0 bg-seashell -z-10"
+        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl relative top-0 left-0  -z-10"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
@@ -392,7 +392,7 @@ const HomeHorizontalScroll = () => {
         /> */}
       </div>
       <div
-        className="z-[9999] bg-black overflow-hidden text-white w-screen h-screen flex items-start justify-center relative top-0 left-0 -z-[2]"
+        className="bg-black overflow-hidden text-white w-screen h-screen flex items-start justify-center relative top-0 left-0"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
@@ -415,7 +415,7 @@ const HomeHorizontalScroll = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Button scheme={ButtonScheme.white} className="z-[9999]">
+            <Button scheme={ButtonScheme.white} className="">
               LEARN MORE
               <DevIcon />
             </Button>

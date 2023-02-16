@@ -171,9 +171,9 @@ const DescentralizedStorage: NextPage = () => {
               <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11">
                 {/* make image as background of rectangle box */}
                 <div className="flex flex-col gap-4 px-5 pb-10">
-                  <h3 className="text-black font-light text-5xl font-fkDisplay">
+                  <Heading level={3}>
                     Arweave
-                  </h3>
+                  </Heading>
                   <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
                     Generally Available
                   </div>
@@ -196,9 +196,9 @@ const DescentralizedStorage: NextPage = () => {
             <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11 h-full">
               {/* make image as background of rectangle box */}
               <div className="flex flex-col gap-4 px-5 pb-10">
-                <h3 className="text-black font-light text-5xl font-fkDisplay">
+                <Heading level={3}>
                   Preweave
-                </h3>
+                </Heading>
                 <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
                   Coming soon
                 </div>
