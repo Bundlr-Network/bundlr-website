@@ -1,4 +1,4 @@
-import { Footer, JoinTheCommunity, NavbarDesktop } from '@/components'
+import { Footer, Heading, JoinTheCommunity, NavbarDesktop } from '@/components'
 import { useEffect, useState } from 'react'
 
 import type { NextPage } from 'next'
@@ -58,12 +58,19 @@ export const useLatestArticles = () => {
 
   const MEDIUM_FEED_URL = 'https://medium.com/feed/bundlr-network'
 
+  const CUSTOM_ARTICLE = {
+    title: 'New Year’s NFT from Bundlr',
+    pubDate: 'January 18, 2023',
+    link: 'https://mirror.xyz/0x9AbB09BF9F58E72A532E859d798eB4E8e10A35e1/DwsDnsqP9qU11dtnsE6w1VpgQ-rvxnR8RvXO6-Wmhe8',
+    thumbnail: '/new/assets/shared/mirror-post.webp'
+  }
+
   useEffect(() => {
     setLoading(true)
     fetch(`https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED_URL}`)
       .then((res) => res.json())
       .then((res) => {
-        setLatestArticles(res.items)
+        setLatestArticles([CUSTOM_ARTICLE, ...res.items])
         setLoading(false)
       })
   }, [])
@@ -79,13 +86,16 @@ const Blog: NextPage = () => {
     <>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
-      <h1 className="text-5xl lg:text-7xl font-fkDisplay text-center pt-14 lg:pt-24 pb-14 font-light">
-        Bundlr Blog
-      </h1>
-      <section className="px-4 md:px-5 lg:px-[79px] flex gap-10 justify-center flex-col md:flex-row">
+      <div className="relative">
+        <Heading level={1} className="text-center py-14 lg:pt-24 z-10">
+          Bundlr Blog
+        </Heading>
+        <img src="/new/assets/home/data-donuts.webp" alt="delicious donuts of data" className="mx-auto w-[500px] absolute -left-28 top-10 hidden lg:block" />
+      </div>
+      <section className="px-4 md:px-5 lg:px-[79px] flex gap-10 justify-center flex-col lg:flex-row">
         <a href={featuredPosts[0]?.link} target="_blank" rel="noreferrer">
           <div className="md:sticky top-10 left-0 self-start">
-            <div className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full md:w-[726px] ">
+            <div className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-[726px] ">
               {/* add gradient background that goes from gray to transparent */}
               <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden">
                 {/* make image as background of rectangle box */}
@@ -120,7 +130,7 @@ const Blog: NextPage = () => {
                   href={article.link}
                   target="_blank"
                   rel="noreferrer"
-                  className='rounded-lg w-full md:w-[334px]'
+                  className='rounded-lg w-full lg:w-[334px]'
                   key={`blog-post-${index}`}
                 >
                   <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
