@@ -82,7 +82,7 @@ const Roadmap: NextPage = () => {
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
-              <p className="font-robotoMono text-xs uppercase z-10">Ongoing</p>
+              <p className="font-robotoMono text-xs uppercase z-10 bg-black px-3 py-2 border rounded-full self-start border-white">Ongoing</p>
               <h2 className="text-5xl lg:text-7xl z-10">Chain Integrations </h2>
               <p className="font-robotoMono z-10">
                 By supporting the cryptography and clients of a chain, Bundlr
@@ -106,19 +106,19 @@ const Roadmap: NextPage = () => {
             <img
               src="/new/assets/home/cloud.webp"
               alt="roadmap"
-              className="absolute -top-28 -left-56 hidden lg:block w-[900px]"
+              className="absolute -top-32 md:-top-72 -left-56 hidden lg:block w-[900px]"
             />
             <img
               src="/new/assets/home/cloud.webp"
               alt="roadmap"
-              className="absolute -bottom-44 right-0 w-[900px]"
+              className="absolute -bottom-32 md:-bottom-72 right-0 w-[900px]"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative">
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
-              <p className="font-robotoMono text-xs uppercase z-10">Q1 2023</p>
+              <p className="font-robotoMono text-xs uppercase z-10 bg-black px-3 py-2 border rounded-full self-start border-white">Q1 2023</p>
               <h2 className="text-5xl lg:text-7xl z-10">Preweave</h2>
               <p className="font-robotoMono z-10">
                 Preweave is a peer-to-peer caching layer built on Bundlr.
@@ -133,19 +133,19 @@ const Roadmap: NextPage = () => {
             <img
               src="/new/assets/home/data-spiral-flop.webp"
               alt="preweave"
-              className="absolute -top-48 -left-48 w-[700px]"
+              className="absolute -top-80 -left-48 w-[700px]"
             />
             <img
               src="/new/assets/home/data-spiral.webp"
               alt="preweave"
-              className="absolute -bottom-56 -right-0 w-[700px]"
+              className="absolute -bottom-80 -right-0 w-[700px]"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative z-10">
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
-              <p className="font-robotoMono text-xs uppercase z-10">Q2 2023</p>
+              <p className="font-robotoMono text-xs uppercase z-10 bg-black px-3 py-2 border rounded-full self-start border-white">Q2 2023</p>
               <h2 className="text-5xl lg:text-7xl z-10">Bundlr Studio</h2>
               <p className="font-robotoMono z-10">
                 Bundlr Studio gives users the option to pay for Bundlr in their
@@ -163,19 +163,19 @@ const Roadmap: NextPage = () => {
             <img
               src="/new/assets/home/data-cloud-v2.webp"
               alt="studio"
-              className="absolute top-0 -left-56 w-[800px]"
+              className="absolute -top-36 md:-top-56 -left-56 w-[800px]"
             />
             <img
               src="/new/assets/home/data-cloud-v2.webp"
               alt="studio"
-              className="absolute bottom-0 -right-56 w-[800px]"
+              className="absolute -bottom-36 md:-bottom-56 -right-56 w-[800px]"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between">
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
-              <p className="font-robotoMono text-xs uppercase z-10">Q4 2023</p>
+              <p className="font-robotoMono text-xs uppercase z-10 bg-black px-3 py-2 border rounded-full self-start border-white">Q4 2023</p>
               <h2 className="text-5xl lg:text-7xl z-10">Testnet </h2>
               <p className="font-robotoMono z-10">
                 Testnet will be the final version of the network before Bundlr
@@ -206,7 +206,7 @@ const Roadmap: NextPage = () => {
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" /> */}
             <div />
             <div className="flex flex-col gap-7 max-w-2xl">
-              <p className="font-robotoMono text-xs uppercase z-10">2024</p>
+              <p className="font-robotoMono text-xs uppercase z-10 bg-black px-3 py-2 border rounded-full self-start border-white">2024</p>
               <h2 className="text-5xl lg:text-7xl z-10">Mainnet</h2>
               <p className="font-robotoMono z-10">
                 With the launch of Mainnet, Bundlr will become a fully
@@ -220,12 +220,12 @@ const Roadmap: NextPage = () => {
             <img
               src="/new/assets/home/data-sphere.webp"
               alt="mainnet"
-              className="absolute -top-64 -left-20 w-[600px]"
+              className="absolute -top-96 -left-20 w-[600px]"
             />
             <img
               src="/new/assets/home/data-sphere.webp"
               alt="mainnet"
-              className="absolute -bottom-36 right-0 w-[600px]"
+              className="absolute -bottom-80 right-0 w-[600px]"
             />
           </div>
           <div className="h-screen w-screen bg-black text-white flex items-center justify-between relative p-5 lg:p-0">
@@ -245,12 +245,12 @@ const Roadmap: NextPage = () => {
             <img
               src="/new/assets/home/data-cluster-rotated.webp"
               alt="future"
-              className="absolute -top-64 left-0 w-[800px]"
+              className="absolute -top-96 left-0 w-[800px]"
             />
             <img
               src="/new/assets/home/data-cluster.webp"
               alt="future"
-              className="absolute -bottom-56 right-0 w-[600px]"
+              className="absolute -bottom-96 right-0 w-[600px]"
             />
           </div>
         </div>
