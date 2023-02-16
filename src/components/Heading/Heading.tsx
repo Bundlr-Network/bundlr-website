@@ -25,6 +25,7 @@ const Heading = ({ level, className, children, ...props }: HeadingProps) => {
 
   return (
     <>
+      {/* @ts-ignore */}
       <Tag className={`${HEADING_DEFINITION} ${className ? className : ''}`} {...props}>
         {children}
       </Tag>

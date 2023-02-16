@@ -35,7 +35,7 @@ const HomeHeader = () => {
         />
 
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px]">
-          <Heading level={1}>{TITLE}</Heading>
+          <Heading level={1} className="z-10">{TITLE}</Heading>
           {/* <h1 className="text-5xl lg:text-7xl font-fkDisplay z-10">
             {TITLE}
           </h1> */}
