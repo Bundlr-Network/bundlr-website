@@ -135,7 +135,7 @@ const About: NextPage = () => {
   const { PAGE_SEO, MEMBERS, INVESTORS } = useAbout()
 
   return (
-    <>
+    <div className='overflow-hidden'>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
 
@@ -258,7 +258,7 @@ const About: NextPage = () => {
         </CtaSection>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 
