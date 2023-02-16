@@ -139,16 +139,16 @@ const About: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
 
-      <header className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[794px] px-5 lg:px-[79px] relative overflow-hidden border-b mb-10 lg:border-none">
+      <header className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[794px] px-5 lg:px-[79px] relative overflow-hidden mb-10 lg:border-none">
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-10 lg:pt-[83px] mb-10">
-          <h1 className="text-5xl lg:text-7xl">
+          <Heading level={1} className="z-10">
             Meet the World&apos;s Next Data Layer
-          </h1>
+          </Heading>
         </div>
         <img
           src="/new/assets/home/data-exponential.webp"
           alt=""
-          className="absolute bottom-36 right-0"
+          className="absolute bottom-20 md:bottom-10 lg:bottom-36 right-0"
         />
       </header>
 

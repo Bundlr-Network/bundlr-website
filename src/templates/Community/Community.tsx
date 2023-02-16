@@ -182,15 +182,16 @@ const Community: NextPage = () => {
         // }}
         >
           <div className="leading-none flex flex-col gap-10 lg:gap-[197px] ">
-            <h1 className="font-light text-4xl lg:text-7xl text-white z-[99] text-center lg:text-left">
+            <Heading level={1} className="z-[99] text-center lg:text-left text-white">
               Join the #BUNDLOOOOR <br />Community
-            </h1>
+            </Heading>
+
             <Socials links={SOCIAL_LINKS} />
           </div>
           <img
-            src="/new/assets/home/header.webp"
+            src="/new/assets/home/data-wing.webp"
             alt="hero"
-            className="absolute top-96 lg:top-0 lg:bottom-0 hidden lg:block rotate-[-20.24deg]"
+            className="absolute top-96 lg:-right-72 lg:-top-10 xl:-top-20 xl:-right-72 hidden lg:block rotate-[-30.24deg]"
           />
         </header>
 
