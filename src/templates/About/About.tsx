@@ -97,22 +97,10 @@ const useAbout = () => {
       link: 'https://www.arweave.org/'
     },
     {
-      name: 'Permanent Ventures',
-      logo: PermanentVenturesLogo,
-      logoHref: '/assets/about/investors/permanent.webp',
-      link: 'https://tqjushdada2qw2abowhuntnplwacih4pa4nb6mitibg2i645xkvq.arweave.net/nBNJHGAYNQtoAXWPRs2vXYAkH48HGh8xE0BNpHuduqs'
-    },
-    {
-      name: 'OpenSea',
-      logo: OpenseaLogo,
-      logoHref: '/assets/about/investors/opensea-logo.png',
-      link: 'https://opensea.io/',
-    },
-    {
-      name: 'Race Capital',
-      logo: RaceCapitalLogo,
-      logoHref: '/assets/about/investors/racecapital.webp',
-      link: 'https://race.capital'
+      name: 'Framework',
+      logo: FrameworkLogo,
+      logoHref: '/assets/about/investors/framework.svg',
+      link: 'https://framework.ventures/'
     },
     {
       name: 'Hypersphere',
@@ -121,10 +109,22 @@ const useAbout = () => {
       link: 'https://hypersphere.capital/'
     },
     {
-      name: 'Framework',
-      logo: FrameworkLogo,
-      logoHref: '/assets/about/investors/framework.svg',
-      link: 'https://framework.ventures/'
+      name: 'Permanent Ventures',
+      logo: PermanentVenturesLogo,
+      logoHref: '/assets/about/investors/permanent.webp',
+      link: 'https://tqjushdada2qw2abowhuntnplwacih4pa4nb6mitibg2i645xkvq.arweave.net/nBNJHGAYNQtoAXWPRs2vXYAkH48HGh8xE0BNpHuduqs'
+    },
+    {
+      name: 'Race Capital',
+      logo: RaceCapitalLogo,
+      logoHref: '/assets/about/investors/racecapital.webp',
+      link: 'https://race.capital'
+    },
+    {
+      name: 'OpenSea',
+      logo: OpenseaLogo,
+      logoHref: '/assets/about/investors/opensea-logo.png',
+      link: 'https://opensea.io/',
     },
   ]
 
