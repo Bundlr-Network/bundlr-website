@@ -107,7 +107,7 @@ const useSolutions = () => {
       ref: decentralizedStorageRef,
       title: 'Social Media',
       description:
-        'Prior to Bundlr, decentralized social media networks have  not had the infrastructure that allows the transactional throughout needed for mass adoption. With Bundlr’s Optimisitc Data Availability, social media dApps have access to performant and affordable infrastructure that delivers a seamless user experience, regardless of traffic volume.',
+        'Before Bundlr, neither could social media dApps scale nor could users prevent the censorship of their content. With Bundlr, they have access to affordable, performant and scalable data infrastructure. Plus, users retain ownership of their data.',
       image: 'orb.webp',
       href: 'https://orb.ac/',
       example: 'Orb'
@@ -225,11 +225,8 @@ const Solutions: NextPage = () => {
         <div className="flex">
           <div className="container pt-20 lg:pb-0 lg:pt-[203px] z-40 text-center md:text-left">
             <Heading level={1}>
-              Solutions for <br className='hidden lg:inline' />Every <br className='lg:hidden' />Use Case
+              Use cases for<br className='hidden lg:inline' /> Everyone
             </Heading>
-            <p className="text-base font-robotoMono font-light mt-5">
-              Here are just a few examples
-            </p>
           </div>
           <img
             src="/assets/solutions/blocks.png"

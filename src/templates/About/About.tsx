@@ -7,6 +7,7 @@ import {
   SectionTitle,
   SpotifySection
 } from '@/components'
+import { useEffect, useState } from 'react'
 
 import ArweaveLogo from '@assets/about/investors/arweave.svg'
 import { ButtonScheme } from '@/components/Button/Button'
@@ -18,6 +19,22 @@ import { NextSeo } from 'next-seo'
 import OpenseaLogo from '@assets/about/investors/opensea.webp'
 import PermanentVenturesLogo from '@assets/about/investors/permanent.webp'
 import RaceCapitalLogo from '@assets/about/investors/racecapital.webp'
+
+const useMediaQuery = (query: any) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
+  }, [matches, query]);
+
+  return matches;
+}
 
 const useAbout = () => {
   const PAGE_SEO = {
@@ -31,59 +48,69 @@ const useAbout = () => {
       name: 'Josh',
       role: 'FOUNDER & CEO',
       image: '/assets/about/heads/Josh.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Josh.jpeg',
       link: 'https://twitter.com/josh_benaron'
     },
     {
       name: 'Amélia',
       role: 'COO',
       image: '/assets/about/heads/Amelia.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Amelia.jpeg',
       link: 'https://twitter.com/amelia_guertin'
     },
     {
       name: 'Pranit',
       role: 'Head of Marketing',
       image: '/assets/about/heads/Pranit.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Pranit.jpeg',
       link: 'https://twitter.com/PranitGarg'
     },
     {
       name: 'Jesse',
       role: 'Lead Engineer',
       image: '/assets/about/heads/Jesse.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Jesse.jpeg',
       link: 'https://twitter.com/JesseCruzWright'
     },
     {
       name: 'Miko',
       role: 'Engineer',
       image: '/assets/about/heads/Miko.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Miko.jpeg',
       link: 'https://mobile.twitter.com/miko_nieminen'
     },
     {
       name: 'Gustavo',
       role: 'Engineer',
-      image: '/assets/about/heads/Gus.jpeg'
+      image: '/assets/about/heads/Gus.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Gus.jpeg',
     },
     {
       name: 'William',
       role: 'Lead Front-end Engineer',
       image: '/assets/about/heads/Will.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Will.jpeg',
       link: 'https://twitter.com/ih0ltz'
     },
     {
       name: 'Rez',
       role: 'Community Moderator',
       image: '/assets/about/heads/Rez.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Rez.jpeg',
       link: 'https://twitter.com/Rez_aahmadi'
     },
     {
       name: 'Luke',
       role: 'Developer Relations',
       image: '/assets/about/heads/Luke.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Luke.jpeg',
       link: 'https://twitter.com/spaceagente'
     },
     {
       name: 'Kevin',
       role: 'Engineer',
-      image: '/assets/about/heads/Kevin.jpeg'
+      image: '/assets/about/heads/Kevin.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Kevin.jpeg',
     }
   ]
 
@@ -131,6 +158,7 @@ const useAbout = () => {
 
 const About: NextPage = () => {
   const { PAGE_SEO, MEMBERS, INVESTORS } = useAbout()
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
   return (
     <div className='overflow-hidden'>
@@ -199,7 +227,7 @@ const About: NextPage = () => {
                     <div
                       className="w-full h-[348px] bg-cover bg-center hover:bg-zoom  overflow-hidden"
                       style={{
-                        backgroundImage: `url(${item.image})`
+                        backgroundImage: `url(${isMobile ? item.mobileImage : item.image})`
                       }}
                     />
                     <div className="flex flex-col gap-4 px-5 pb-10">

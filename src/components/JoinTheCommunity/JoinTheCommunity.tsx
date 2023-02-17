@@ -75,7 +75,7 @@ export const SOCIAL_LINKS = [
 const JoinTheCommunity = () => {
   return (
     <>
-      <section className="px-4 md:px-5 lg:px-[79px] bg-seashell py-24">
+      <section className="px-4 md:px-5 lg:px-[79px] py-24">
         <div className="bg-black px-4 lg:px-7 py-20 rounded-3xl">
           <h2 className="text-white hidden md:block text-7xl text-center pb-20 font-fkDisplay font-light">
             Join the Community

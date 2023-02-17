@@ -563,7 +563,9 @@ const Faq: NextPage = () => {
           })}
         </ul>
         <ul className="pt-4 lg:pt-12 px-4 lg:px-0">
-          {FAQ_CONTENT.filter((faq) =>
+          {FAQ_CONTENT.sort(
+            (a, b) => a.title.charCodeAt(0) - b.title.charCodeAt(0)
+          ).filter((faq) =>
             (currentCategory as string) === 'All'
               ? true
               : // @ts-ignore

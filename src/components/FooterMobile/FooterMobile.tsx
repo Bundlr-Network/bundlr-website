@@ -40,12 +40,6 @@ const FooterMobile = ({
             key={definition.title}
           />
         ))}
-        <a href="">
-          <p className="uppercase text-[15px] mt-[26px]">Community</p>
-        </a>
-        <a href="">
-          <p className="uppercase text-[15px] mt-[26px]">Partner Program</p>
-        </a>
         <section className="flex items-center gap-[21px] pb-[10px] mt-[60px]">
           <a
             href="https://medium.com/bundlr-network"

@@ -3,11 +3,13 @@ import { useEffect, useState } from 'react'
 
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 
 const useBlog = () => {
   const PAGE_SEO = {
     title: 'Bundlr | Blog',
-    description: 'Read expert insights and thought-provoking articles on all that’s happening at the frontier of data.'
+    description:
+      'Read expert insights and thought-provoking articles on all that’s happening at the frontier of data.'
   }
 
   return { PAGE_SEO }
@@ -90,7 +92,11 @@ const Blog: NextPage = () => {
         <Heading level={1} className="text-center py-14 lg:pt-24 z-10">
           Bundlr Blog
         </Heading>
-        <img src="/new/assets/home/data-donuts.webp" alt="delicious donuts of data" className="mx-auto w-[500px] absolute -left-28 top-10 hidden lg:block" />
+        <img
+          src="/new/assets/home/data-donuts.webp"
+          alt="delicious donuts of data"
+          className="mx-auto w-[500px] fixed -left-28 top-32 hidden lg:block -z-10"
+        />
       </div>
       <section className="px-4 md:px-5 lg:px-[79px] flex gap-10 justify-center flex-col lg:flex-row">
         <a href={featuredPosts[0]?.link} target="_blank" rel="noreferrer">
@@ -111,7 +117,14 @@ const Blog: NextPage = () => {
                   </h3>
                   <div className="flex justify-between">
                     <p className="text-black font-light text-sm font-robotoMono uppercase">
-                      {featuredPosts[0]?.pubDate}
+                      {new Date(featuredPosts[0]?.pubDate).toLocaleDateString(
+                        'en-US',
+                        {
+                          month: 'short',
+                          day: 'numeric',
+                          year: 'numeric'
+                        }
+                      )}
                     </p>
                     <p className="text-black font-light text-sm font-robotoMono">
                       [ 3 min read ]
@@ -130,7 +143,7 @@ const Blog: NextPage = () => {
                   href={article.link}
                   target="_blank"
                   rel="noreferrer"
-                  className='rounded-lg w-full lg:w-[334px]'
+                  className="rounded-lg w-full lg:w-[334px]"
                   key={`blog-post-${index}`}
                 >
                   <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
@@ -150,7 +163,14 @@ const Blog: NextPage = () => {
                         </h3>
                         <div className="flex justify-between">
                           <p className="text-black font-light text-sm font-robotoMono uppercase">
-                            {article.pubDate}
+                            {new Date(article?.pubDate).toLocaleDateString(
+                              'en-US',
+                              {
+                                month: 'short',
+                                day: 'numeric',
+                                year: 'numeric'
+                              }
+                            )}
                           </p>
                           <p className="text-black font-light text-sm font-robotoMono">
                             [ 3 min read ]

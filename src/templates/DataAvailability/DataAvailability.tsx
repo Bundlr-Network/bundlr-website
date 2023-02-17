@@ -58,7 +58,7 @@ const useDataAvailability = () => {
       {
         title: 'Scales to Millions <br/>of TPS',
         description:
-          'Bundlr can scale horizontally to handle millions of transactions per second'
+          'Can scale horizontally to handle millions of transactions per second'
       },
       {
         title: 'Optimize Costs',

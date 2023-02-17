@@ -102,7 +102,7 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
               transparent: 'bg-transparent',
               onyx: 'bg-onyx',
               black: 'bg-ghostWhite',
-              ghostWhite: 'bg-timberwolf'
+              ghostWhite: 'bg-timberwolf',
             }[scheme]
             }`}
         />
@@ -114,7 +114,7 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
                   href={MENU_OPTIONS[key][0].href}
                   key={`menu-option-${index}`}
                 >
-                  <div className="cursor-pointer  px-4 uppercase font-bold">
+                  <div className="cursor-pointer  px-4 uppercase font-bold  hover:font-black">
                     {MENU_OPTIONS[key][0].name}
                   </div>
                 </Link>
@@ -182,7 +182,7 @@ const NavDropdown = ({
         onMouseLeave={() => setIsHovered(false)}
         className="relative h-[89px] flex items-center justify-center z-[9999]"
       >
-        <div className=" px-4 uppercase font-bold cursor-default">{title}</div>
+        <div className="px-4 uppercase font-bold cursor-default">{title}</div>
         {options.length > 0 && (
           <div
             className={`absolute top-[89px] left-0 bg-seashell ${isHovered ? 'block' : 'hidden'
@@ -252,10 +252,10 @@ const MenuMobile = () => {
         name: 'Proof of Provenance',
         href: '/solutions/proof-of-provenance'
       },
-      {
-        name: 'Data Availability',
-        href: '/solutions/data-availability'
-      }
+      // {
+      //   name: 'Data Availability',
+      //   href: '/solutions/data-availability'
+      // }
     ],
     'Use Cases': [
       {

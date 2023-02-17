@@ -58,19 +58,19 @@ const useProofOfProvenance = () => {
       {
         title: 'Scales to Millions of TPS',
         description:
-          'Bundlr can scale horizontally to handle millions of transactions per second'
+          'Can scale horizontally to handle millions of transactions per second'
       },
       {
         title: 'Instant Uploads',
-        description: 'You can upload data to Bundlr in under 8ms'
+        description: 'Upload data to Bundlr in under 8ms'
       },
       {
         title: 'Seamless Integration',
-        description: 'It takes 3-4 lines of code to integrate Bundlr'
+        description: '3-4 lines of code to integrate Bundlr'
       },
       {
         title: 'Pay in Any Token',
-        description: 'You can pay to use Bundlr in 14 supported tokens'
+        description: 'Sign and pay to use Bundlr in 14 supported tokens'
       }
     ]
   }
@@ -91,7 +91,7 @@ const ProofOfProvenance: NextPage = () => {
           <SubNav />
           <img
             src="/new/assets/home/data-cluster-rotated.webp"
-            className="absolute -bottom-20 lg:-top-30 -right-52 w-[900px]"
+            className="absolute -bottom-60 sm:-bottom-[400px] lg:-bottom-20 lg:-top-30 md:-right-[500px] lg:-right-96 w-[900px]"
             alt="cloud"
           />
           <Heading level={1} className="z-10">

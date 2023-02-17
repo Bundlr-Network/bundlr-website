@@ -39,20 +39,20 @@ const useDevelopers = () => {
       {
         title: 'Scales to Millions of TPS',
         description:
-          'Bundlr can scale horizontally to handle millions of transactions per second'
+          'Can scale horizontally to handle millions of transactions per second'
       },
       {
         title: 'Instant Uploads',
-        description: 'You can upload data to Bundlr in under 8ms'
+        description: 'Upload data to Bundlr in under 8ms'
       },
       {
         title: 'Seamless Integration',
         description:
-          'It takes 3-4 lines of code to integrate Bundlr'
+          '3-4 lines of code to integrate Bundlr'
       },
       {
         title: 'Pay in Any Token',
-        description: 'You can pay to use Bundlr in 14 supported tokens'
+        description: 'Sign and pay to use Bundlr in 14 supported tokens'
       }
     ]
   }
@@ -73,12 +73,9 @@ const Developers: NextPage = () => {
             <Heading level={1} className="z-10 text-center">
               Build Seamlessly
             </Heading>
-            {/* <p className="hidden text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose">
-              Bundlr is a decentralized data network to help developers solve
-              complex data integrity issues. Our performant, scalable, seamless
-              storage, proof of provenance, and data availability guarantees
-              allows you establish a trustless data foundation.
-            </p> */}
+            <p className="text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose">
+              Develop your dApp with delightful data infrastructure
+            </p>
             <a
               href="https://docs.bundlr.network/"
               target={'_blank'}
@@ -100,16 +97,16 @@ const Developers: NextPage = () => {
         </div>
       </header>
 
-      <p className="block lg:hidden text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose py-10">
+      {/* <p className="block lg:hidden text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose py-10">
         Bundlr is a decentralized data network to help developers solve
         complex data integrity issues. Our performant, scalable, seamless
         storage, proof of provenance, and data availability guarantees
         allows you establish a trustless data foundation.
-      </p>
+      </p> */}
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[79px] bg-seashell pt-20 lg:pt-32">
+      {/* <section className="flex flex-col lg:block gap-20 lg:gap-0 h-auto lg:h-[489px] text-black px-5 lg:px-[79px] bg-seashell pt-20 lg:pt-32">
         <div className="flex flex-col items-start">
           <div className="text-9xl">&gt;90%</div>
           <p className="font-robotoMono text-lg">
@@ -122,15 +119,11 @@ const Developers: NextPage = () => {
             Data is uploaded to Bundlr in less than 8 milliseconds
           </p>
         </div>
-      </section>
+      </section> */}
 
-      <section className="bg-seashell pt-20 lg:pt-32 lg:pt-44 pb-20 lg:pb-32">
-        <div className="mx-5 lg:mx-[79px] rounded-[20px] overflow-hidden bg-black z-10">
-          <HomeTrustedBy scheme="dark" />
-        </div>
-      </section>
 
-      <section className="px-5 lg:px-[79px] bg-seashell lg:pt-16 pb-20 lg:pb-36 flex justify-between items-center gap-24">
+
+      <section className="px-5 lg:px-[79px] bg-seashell lg:pt-16 pb-20 flex justify-between items-center gap-24 flex-col lg:flex-row pt-20">
         <div className='flex flex-col items-center justify-center lg:items-start'>
           <SectionTitle title="How Bundlr Works" />
           <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-l lg:ml-24 pt-16 text-center lg:text-left">
@@ -147,10 +140,23 @@ const Developers: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="hidden lg:block">
+        <div className="flex flex-col items-center lg:items-start">
+          <div className="text-9xl">&gt;90%</div>
+          <p className="font-robotoMono text-lg text-center lg:text-left">
+            Bundlr processes over 90% of transactions on Arweave
+          </p>
+        </div>
+        {/* <div className="hidden lg:block">
           <img src="/new/assets/home/cloud.webp" alt="" width={689} />
+        </div> */}
+      </section>
+
+      <section className="bg-seashell pt-20 pb-20 lg:pb-32">
+        <div className="mx-5 lg:mx-[79px] rounded-[20px] overflow-hidden bg-black z-10">
+          <HomeTrustedBy scheme="dark" />
         </div>
       </section>
+
       <section className='bg-black text-white flex gap-20 items-start relative h-auto md:flex-row px-4 lg:px-[79px] pt-20 min-h-[990px] overflow-hidden'>
         <div className="hidden md:inline-block absolute top-32 left-0">
           <h2 className="transform -rotate-90 text-[26px] uppercase w-[300px]">

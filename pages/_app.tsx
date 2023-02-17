@@ -1,5 +1,6 @@
 import "@fontsource/roboto-mono"
 import "@fontsource/roboto-mono/600.css"
+import "@fontsource/roboto-mono/700.css"
 import "@fontsource/space-grotesk"
 import "@fontsource/space-grotesk/300.css"
 import '@/styles/globals.css'
