@@ -50,10 +50,12 @@ const HomeHeader = () => {
           />
         </div>
         <div className="flex gap-[21px] mt-56 lg:mt-[450px] items-center font-robotoMono">
-          <Button>
-            START BUILDING
-            <DevIcon />
-          </Button>
+          <a href="https://docs.bundlr.network" className='z-50'>
+            <Button>
+              START BUILDING
+              <DevIcon />
+            </Button>
+          </a>
           <span className="z-10 -ml-12 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-10 rounded-tr-full rounded-br-full uppercase font-bold">
             Permanent on{' '}
             <a href="https://arweave.net/" target={'_blank'} rel="noreferrer">

@@ -135,7 +135,7 @@ const HomeTrustedBy = ({
           gradientColor={scheme === 'dark' ? [0, 0, 0] : [255, 255, 255]}
           speed={isMobile ? 90 : 50}
         >
-          <div className="flex items-center gap-20">
+          <div className="flex items-center gap-10 lg:gap-20">
             {[
               ...USERS,
               ...USERS,

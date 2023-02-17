@@ -15,6 +15,26 @@ const useHomeHorizontalScroll = () => {
 
 const HomeHorizontalScroll = () => {
   /**
+   * Data is evolving
+   */
+  const dataControls = useAnimation()
+  const [dataRef, dataInView] = useInView()
+
+  const dataVariants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+    exit: { opacity: 0 }
+  }
+
+  useEffect(() => {
+    if (dataInView) {
+      dataControls.start('visible')
+    } else {
+      dataControls.start('hidden')
+    }
+  }, [dataControls, dataInView])
+
+  /**
    * Server Section
    */
   const serverControls = useAnimation()
@@ -32,7 +52,7 @@ const HomeHorizontalScroll = () => {
     description: {
       visible: { opacity: 1, duration: 2000 },
       hidden: { opacity: 0, duration: 2000 },
-      exit: { opacity: 0 },
+      exit: { opacity: 0 }
     },
     serverLeft: {
       visible: { opacity: 1, x: 0 },
@@ -83,17 +103,17 @@ const HomeHorizontalScroll = () => {
     title: {
       visible: { opacity: 1 },
       hidden: { opacity: 0 },
-      exit: { opacity: 0 },
+      exit: { opacity: 0 }
     },
     description: {
       visible: { opacity: 1, duration: 2000 },
       hidden: { opacity: 0, duration: 2000 },
-      exit: { opacity: 0, duration: 2000 },
+      exit: { opacity: 0, duration: 2000 }
     },
     cloud: {
       visible: { opacity: 1 },
       hidden: { opacity: 0 },
-      exit: { opacity: 0 },
+      exit: { opacity: 0 }
     }
   }
 
@@ -120,17 +140,17 @@ const HomeHorizontalScroll = () => {
     title: {
       visible: { opacity: 1 },
       hidden: { opacity: 0 },
-      exit: { opacity: 0 },
+      exit: { opacity: 0 }
     },
     imageLeft: {
       visible: { opacity: 1, x: 0 },
       hidden: { opacity: 0, x: -50 },
-      exit: { opacity: 0, x: -50 },
+      exit: { opacity: 0, x: -50 }
     },
     imageRight: {
       visible: { opacity: 1, x: 0 },
       hidden: { opacity: 0, x: 50 },
-      exit: { opacity: 0, x: 50 },
+      exit: { opacity: 0, x: 50 }
     }
   }
 
@@ -167,12 +187,12 @@ const HomeHorizontalScroll = () => {
     title: {
       visible: { opacity: 1 },
       hidden: { opacity: 0 },
-      exit: { opacity: 0 },
+      exit: { opacity: 0 }
     },
     image: {
       visible: { opacity: 1 },
       hidden: { opacity: 0 },
-      exit: { opacity: 0 },
+      exit: { opacity: 0 }
     }
   }
 
@@ -187,8 +207,7 @@ const HomeHorizontalScroll = () => {
   useEffect(() => {
     if (conclusionImageInView) {
       conclusionImageControls.start('visible')
-    }
-    else {
+    } else {
       conclusionImageControls.start('hidden')
     }
   }, [conclusionImageControls, conclusionImageInView])
@@ -203,9 +222,15 @@ const HomeHorizontalScroll = () => {
           }
         }
       >
-        <h2 className={'z-[99] text-center text-5xl lg:text-7xl'}>
+        <motion.h2
+          className={'z-[99] text-center text-5xl lg:text-7xl'}
+          ref={dataRef}
+          animate={dataControls}
+          variants={dataVariants}
+          initial="hidden"
+        >
           Data is Evolving
-        </h2>
+        </motion.h2>
       </div>
       <div
         className="w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 relative top-0 left-0  -z-10 gap-10 lg:gap-0"
@@ -222,16 +247,18 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.title}
         // className={'z-[99] text-center text-5xl lg:text-7xl'}
         >
-          <Heading level={2} className="text-center"> On-Premise Servers</Heading>
-
+          <Heading level={2} className="text-center">
+            {' '}
+            On-Premise Servers
+          </Heading>
         </motion.div>
         <motion.h3
           ref={serverDescriptionRef}
-          className="font-robotoMono text-lg max-w-md text-center z-[99] leading-loose"
-          initial="hidden"
           animate={serverControls}
           variants={serverVariants.description}
+          initial="hidden"
           transition={{ delay: 0.1, duration: 0.3 }}
+          className="font-robotoMono text-lg max-w-md text-center z-[99] leading-loose"
         >
           In the internet’s early days, online data was stored in local servers.
           This was inconvenient and expensive for most people.
@@ -277,8 +304,9 @@ const HomeHorizontalScroll = () => {
               initial="hidden"
               variants={cloudVariants.title}
             >
-              <Heading level={2} className="text-center lg:text-left">The Cloud</Heading>
-
+              <Heading level={2} className="text-center lg:text-left">
+                The Cloud
+              </Heading>
             </motion.div>
             <motion.div
               className="flex flex-col gap-6 mt-12 ml-0 lg:ml-16 items-center justify-center lg:items-start"
@@ -324,8 +352,9 @@ const HomeHorizontalScroll = () => {
             initial="hidden"
             variants={successorVariants.title}
           >
-            <Heading level={2} className="max-w-5xl z-10 text-center">The Next Generation of Data Infrastructure</Heading>
-
+            <Heading level={2} className="max-w-5xl z-10 text-center">
+              The Next Generation of Data Infrastructure
+            </Heading>
           </motion.div>
           <motion.h3
             className="font-robotoMono text-base max-w-2xl z-10 text-center leading-loose"
@@ -409,7 +438,10 @@ const HomeHorizontalScroll = () => {
             initial="hidden"
             variants={conclusionVariants.title}
           >
-            <Heading level={2} className="text-center">Bundlr is Building a <br />Trustless Source of Truth</Heading>
+            <Heading level={2} className="text-center">
+              Bundlr is Building a <br />
+              Trustless Source of Truth
+            </Heading>
           </motion.div>
           <a
             className="self-center"

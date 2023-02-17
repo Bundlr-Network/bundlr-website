@@ -41,7 +41,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <section className="flex flex-col lg:flex-row relative order-solid border text-black bg-[rgba(251,242,237,1)] border-[rgba(216,_207,_202,_1.00)] overflow-clip rounded-[30px] p-4 lg:py-[43px] lg:px-[40px] gap-10 lg:gap-10 mt-20 lg:mt-[99px] min-h-[725px] md:min-h-[390px]">
+      <section className="flex flex-col lg:flex-row relative order-solid border text-black bg-[rgba(251,242,237,1)] border-[rgba(216,_207,_202,_1.00)] overflow-clip rounded-[30px] p-4 lg:py-[43px] lg:px-[40px] gap-10 lg:gap-10 mt-20 lg:mt-[99px]">
         <div className="bg-white text-black lg:w-[488px] h-[210px] lg:h-auto flex items-center justify-center">
           <img
             src={TESTIMONIALS_CONTENT[currentTestimonial].image}
@@ -51,14 +51,14 @@ const Testimonial = () => {
             }
           />
         </div>
-        <div className="flex flex-col w-full h-auto">
+        <div className="flex flex-col w-full ">
           <div className="h-auto w-full lg:mt-[27px]">
-            <p className="text-xl lg:text-3xl font-light leading-loose">
+            <p className="text-lg lg:text-3xl font-light leading-loose h-[280px] md:h-[140px] lg:h-[330px] xl:h-[220px]">
               {TESTIMONIALS_CONTENT[currentTestimonial].description}
             </p>
           </div>
-          <div className="pt-[43px] flex flex-col lg:flex-row justify-between mt-auto gap-6 lg:gap-0">
-            <div className="">
+          <div className="flex flex-col">
+            <div className="mt-auto">
               <p className="uppercase text-[13px] tracking-[2.72px] leading-[1.66]">
                 {TESTIMONIALS_CONTENT[currentTestimonial].author}
               </p>
@@ -67,7 +67,7 @@ const Testimonial = () => {
               </p>
             </div>
             <button
-              className="flex items-center justify-center gap-2 border rounded-full px-3 py-2 border-black uppercase font-robotoMono"
+              className="mt-6 flex items-center justify-center gap-2 border rounded-full px-3 py-2 border-black uppercase font-robotoMono"
               onClick={() => {
                 if (currentTestimonial === TESTIMONIALS_CONTENT.length - 1) {
                   setCurrentTestimonial(0)

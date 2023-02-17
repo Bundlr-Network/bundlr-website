@@ -41,7 +41,7 @@ const FooterDesktop = ({
                 <ul className="mt-[50px] flex flex-col gap-[10px]">
                   {definition.options.map((option) => {
                     return (
-                      <li key={option.name} className="hover:font-bold">
+                      <li key={option.name} className="hover:font-bold self-start">
                         <Link
                           href={option.href}
                           className="text-base whitespace-nowrap"

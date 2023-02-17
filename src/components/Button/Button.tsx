@@ -27,7 +27,7 @@ const Button = ({
   return (
     <>
       <button
-        className={`z-20 font-robotoMono uppercase text-md flex items-center gap-2 px-4 py-3 lg:px-6 lg:py-5 rounded-full hover:font-bold ${{
+        className={`z-50 font-robotoMono uppercase text-md flex items-center gap-2 px-4 py-3 lg:px-6 lg:py-5 rounded-full hover:font-bold ${{
           [ButtonScheme.black]: 'bg-black text-white',
           [ButtonScheme.white]: 'bg-white text-black'
         }[scheme]
