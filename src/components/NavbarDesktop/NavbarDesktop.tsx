@@ -92,7 +92,7 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
           }`}
       >
         <Link href="/">
-          <div className="w-[120px] flex items-center justify-center cursor-pointer">
+          <div className="w-[100px] md:w-[120px] flex items-center justify-center cursor-pointer">
             <BundlrIcon />
           </div>
         </Link>
@@ -147,7 +147,9 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
         </div> */}
         <div className="lg:w-[269px] flex items-center justify-center ml-auto lg:ml-0">
           <a href="https://docs.bundlr.network/" target="_blank" rel="noreferrer">
-            <Button className='px-3 py-2 whiteSpace-nowrap text-base'>
+            <Button className='px-3 py-2 whiteSpace-nowrap text-base' scheme={
+              scheme === SchemeColor.black ? ButtonScheme.white : ButtonScheme.black
+            }>
               START BUILDING
               <DevIcon />
             </Button>

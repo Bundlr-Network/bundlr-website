@@ -71,6 +71,13 @@ const HomeTrustedBy = ({
       link: 'https://www.backpack.app/'
     },
     {
+      title: 'KYVE',
+      icon: '/assets/home/users/kyve.svg',
+      invert: true,
+      whiteinvert: false,
+      link: 'https://www.kyve.network/'
+    },
+    {
       title: 'Exchange',
       icon: '/assets/home/users/exchange.svg',
       invert: false,
