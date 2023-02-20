@@ -245,12 +245,12 @@ const Roadmap: NextPage = () => {
             <img
               src="/new/assets/home/data-cluster-rotated.webp"
               alt="future"
-              className="absolute -top-56 lg:-top-96 left-0 w-[800px]"
+              className="absolute -top-32 md:-top-96 left-0 w-[800px]"
             />
             <img
-              src="/new/assets/home/data-cluster.webp"
+              src="/new/assets/home/data-cluster-rotated.webp"
               alt="future"
-              className="absolute -bottom-56 lg:-bottom-96 right-0 w-[600px]"
+              className="absolute -bottom-56 lg:-bottom-70 right-0 w-[600px]"
             />
           </div>
         </div>
