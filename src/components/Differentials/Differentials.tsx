@@ -1,3 +1,5 @@
+import Heading from "../Heading"
+
 export interface BenefitsProps {
   title: string
   items: {
@@ -16,19 +18,25 @@ const Benefits = ({ title, items }: BenefitsProps) => {
           </p>
         </div>
 
-        <div className="lg:hidden inline-block ">
-          <h3 className="mt-[93px] text-[26px] uppercase">{title}</h3>
+        <div className="lg:hidden inline-block text-center">
+          <Heading level={3} className="uppercase mt-[93px]">
+            {title}
+          </Heading>
+          {/* <h3 className="mt-[93px] text-[26px] uppercase">{title}</h3> */}
         </div>
 
         {/* 2 columns grid */}
-        <div className="grid gap-y-24 grid-cols-1 lg:grid-cols-2 gap-[32px] lg:gap-y-0 ml-auto leading-none pt-16 lg:pt-[133px]">
+        <div className="grid gap-y-24 grid-cols-1 lg:grid-cols-2 gap-[32px] lg:gap-y-0 lg:ml-auto leading-none pt-16 lg:pt-[133px]">
           {items.map((item, index) => (
             // <div key={index} className="max-w-[501px]">
             <div key={index} className="">
-              <h2 className="font-fkDisplay font-light text-4xl leading-none" dangerouslySetInnerHTML={{
+              {/* <h2 className="font-fkDisplay font-light text-4xl leading-none" dangerouslySetInnerHTML={{
                 __html: item.title
-              }} />
-              <p className="text-lg font-robotoMono leading-none mt-4 leading-loose">
+              }} /> */}
+              <Heading level={4} dangerouslySetInnerHTML={{
+                __html: item.title
+              }} className=" text-center lg:text-left"></Heading>
+              <p className="text-lg font-robotoMono leading-none mt-4 leading-loose text-center lg:text-left">
                 {item.description}
               </p>
             </div>
