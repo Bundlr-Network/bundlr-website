@@ -185,7 +185,6 @@ const NavDropdown = ({
   scheme?: SchemeColor
 }) => {
   const [isHovered, setIsHovered] = useState(false)
-  const [childHovered, setChildHovered] = useState<null | string>(null)
 
   return (
     <>
@@ -195,15 +194,13 @@ const NavDropdown = ({
         className="relative h-[89px] flex items-center justify-center z-[9999]"
       >
         <div
-          className={`px-4 uppercase hover:font-bold cursor-default whitespace-nowrap ${title === childHovered ? 'font-bold' : ''
+          className={`px-4 uppercase hover:font-bold cursor-default whitespace-nowrap ${isHovered ? 'font-bold' : ''
             }`}
         >
           {title}
         </div>
         {options.length > 0 && (
           <div
-            onMouseEnter={() => setChildHovered(title)}
-            onMouseLeave={() => setChildHovered(null)}
             className={`absolute top-[89px] left-0 bg-seashell ${isHovered ? 'block' : 'hidden'
               } rounded-b-[6px] border border-timberwolf ${{
                 Solutions: 'w-[260px]',
