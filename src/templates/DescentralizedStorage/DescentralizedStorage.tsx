@@ -126,7 +126,7 @@ const DescentralizedStorage: NextPage = () => {
         <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
           <SubNav />
 
-          <div className="absolute -left-[650px] -bottom-80 lg:-left-[650px] lg:bottom-auto">
+          <div className="absolute -left-[650px] -bottom-80 lg:-left-[650px] xl:-left-[350px] 2xl:-left-48 lg:bottom-auto">
             <Image
               src="/new/assets/home/cloud.webp"
               width={'1200px'}
@@ -135,11 +135,11 @@ const DescentralizedStorage: NextPage = () => {
               loading="eager"
             />
           </div>
-          <div className="ml-auto pr-5 lg:pr-[79px]">
+          <div className="ml-auto pr-5 lg:pr-[79px] z-50">
             <Heading level={1} className={'z-10 text-center md:text-left'}>
               Decentralized <br /> Storage
             </Heading>
-            <p className="font-robotoMono text-base z-10 mt-5 text-center md:text-left">
+            <p className="font-robotoMono text-base z-50 mt-5 text-center md:text-left">
               Performant, scalable, and seamless – forever.{' '}
             </p>
           </div>
