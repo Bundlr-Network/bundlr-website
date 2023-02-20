@@ -204,7 +204,7 @@ const MediaKit: NextPage = () => {
             </div>
           </section>
           <section className="">
-            <div className="flex flex-col lg:flex-row justify-between items-start gap-3 lg:gap-0 mb-16 max-w-[726px]">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-3 lg:gap-0 mb-16 max-w-[726px]">
               <h2 className="text-5xl" id="asset-downloads" ref={assetRef}>
                 Asset Downloads
               </h2>
@@ -283,12 +283,12 @@ const MediaKit: NextPage = () => {
             </div>
           </section>
         </div>
-        <ul className="sticky hidden lg:flex cursor-pointer flex-col gap-3 top-10 ml-auto self-start mt-28 pr-5 lg:pr-[109px] uppercase">
+        <ul className="sticky hidden lg:flex cursor-pointer flex-col gap-3 top-10 ml-auto self-start mt-28 pr-5 pl-5 lg:pr-[109px] uppercase">
           {STICKY_MENU.map((item, index) => (
             <li
               key={index}
               onClick={() => scrollToSection(item.id)}
-              className={`font-robotoMono text-sm mb-4 p-1 ${item.id === latestCurrentlyOnScreen && 'bg-black text-white'
+              className={`font-robotoMono text-sm mb-4 p-1 ${item.id === latestCurrentlyOnScreen && 'bg-black text-white whitespace-nowrap'
                 }`}
             >
               {item.title}
