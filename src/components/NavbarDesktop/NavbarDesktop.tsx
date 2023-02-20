@@ -114,7 +114,7 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
                   href={MENU_OPTIONS[key][0].href}
                   key={`menu-option-${index}`}
                 >
-                  <div className="cursor-pointer  px-4 uppercase font-bold hover:underline underline-offset-8">
+                  <div className="cursor-pointer  px-4 uppercase hover:font-bold">
                     {MENU_OPTIONS[key][0].name}
                   </div>
                 </Link>
@@ -184,7 +184,7 @@ const NavDropdown = ({
         onMouseLeave={() => setIsHovered(false)}
         className="relative h-[89px] flex items-center justify-center z-[9999]"
       >
-        <div className="px-4 uppercase font-bold cursor-default whitespace-nowrap">{title}</div>
+        <div className="px-4 uppercase hover:font-bold cursor-default whitespace-nowrap">{title}</div>
         {options.length > 0 && (
           <div
             className={`absolute top-[89px] left-0 bg-seashell ${isHovered ? 'block' : 'hidden'
@@ -208,7 +208,7 @@ const NavDropdown = ({
                 return (
                   <li
                     key={option.name}
-                    className="h-[50px] w-full flex items-center justify-start gap-3 uppercase font-bold hover:underline underline-offset-8"
+                    className="h-[50px] w-full flex items-center justify-start gap-3 uppercase hover:font-bold"
                   >
                     {
                       {
