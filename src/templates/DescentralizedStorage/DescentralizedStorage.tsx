@@ -1,176 +1,213 @@
-import { Button, Footer, HomeProduct, NavbarDesktop } from '@/components'
+import {
+  Button,
+  CtaCentralized,
+  Footer,
+  Heading,
+  HomeProduct,
+  NavbarDesktop
+} from '@/components'
+import { FC, useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useEffect, useState } from 'react'
 
+import Benefits from '@/components/Differentials'
+import { BenefitsProps } from '@/components/Differentials/Differentials'
+import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
+import { DevIcon } from '@/svg'
+import Image from 'next/image'
+import Link from 'next/link'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
+import { useRouter } from 'next/router'
 
 const useDescentralizedStorage = () => {
-
-  const { scrollYProgress } = useScroll()
-
-  const x = useTransform(scrollYProgress, [0, 1], [600, -1000])
-
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Decentralized Storage',
+    description:
+      'Reliable and secure decentralized storage solutions. Upgrade your data management with performant, scalable, and permanent storage.'
   }
 
-  const PRODUCT_CONTENT = [
-    {
-      title: 'Optimistic Data Availability',
-      description: 'Pay for consensus only when you need it'
-    },
-    {
-      title: 'Proof of Provenance',
-      description:
-        'Identify original information by accurately attributing origin'
-    }
-  ]
+  const PRODUCT_CONTENT: {
+    title: string
+    description: string
+    href: string
+  }[] = [
+      {
+        title: 'Proof of Provenance',
+        description:
+          'Identify original information by accurately attributing origin',
+        href: '/solutions/proof-of-provenance'
+      },
+      // {
+      //   title: 'Optimistic Data Availability',
+      //   description: 'Pay for consensus only when you need it',
+      //   href: '/solutions/data-availability'
+      // }
+    ]
 
-  return { PAGE_SEO, PRODUCT_CONTENT, x }
+  const BENEFITS_CONTENT: BenefitsProps = {
+    title: 'What Bundlr Offers',
+    items: [
+      {
+        title: 'Scales to Millions of TPS',
+        description:
+          'Can scale horizontally to handle millions of transactions per second'
+      },
+      {
+        title: 'Instant Uploads',
+        description: 'Upload data to Bundlr in under 8ms'
+      },
+      {
+        title: 'Seamless Integration',
+        description:
+          '3-4 lines of code to integrate Bundlr'
+      },
+      {
+        title: 'Pay in Any Token',
+        description: 'Sign and pay to use Bundlr in 14 supported tokens'
+      }
+    ]
+  }
+
+  const CTA_CONTENT: CtaCentralizedProps = {
+    title: 'Ready to Become <br /> a BUNDLOOOOR?',
+    cta: 'Start Building',
+    href: 'https://docs.bundlr.network',
+    newTab: true
+  }
+
+  return { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT }
 }
 
-const CTA: React.FC = () => {
-  return (
-    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 flex flex-col items-center justify-center">
-      <h2 className="text-black font-light mb-2 text-[76px] max-w-[668px] text-center leading-none mb-11">
-        Ready to Become a <br /> BUNDLOOOOR?
-      </h2>
-      <Button />
+export const SubNav: FC = () => {
 
-      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image1"
-        />
-      </div>
-      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image2"
-        />
-      </div>
+  const currentRoute = useRouter().pathname
+
+  const SUBNAV_CONTENT = [
+    {
+      title: 'Storage',
+      href: '/solutions/decentralized-storage'
+    },
+    {
+      title: 'Provenance',
+      href: '/solutions/proof-of-provenance'
+    },
+    // {
+    //   title: 'Data Availability',
+    //   href: '/solutions/data-availability'
+    // }
+  ]
+
+  return (
+    <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
+      {
+        SUBNAV_CONTENT.map((item, index) => (
+          <Link href={item.href} key={`sub-nav-${index}`}>
+            <div className={`uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer ${currentRoute === item.href ? 'bg-black text-white' : ''
+              }`}>
+              {item.title}
+            </div>
+          </Link>
+        ))
+      }
     </div>
   )
 }
 
 const DescentralizedStorage: NextPage = () => {
-  const { PAGE_SEO, PRODUCT_CONTENT, x } = useDescentralizedStorage()
+  const { PAGE_SEO, PRODUCT_CONTENT, CTA_CONTENT, BENEFITS_CONTENT } =
+    useDescentralizedStorage()
 
   return (
     <>
       <NextSeo {...PAGE_SEO} />
-      <header className="bg-ghostWhite">
-        <NavbarDesktop />
-        <div className="h-[700px] flex flex-col items-center justify-center relative overflow-hidden">
-          <img
-            src="/assets/descentralizedStorage/cloud.png"
-            className="absolute -top-30 left-0"
-            alt="cloud"
-          />
-          <h1 className="text-7xl z-10">Decentralized Storage</h1>
-          <p className="font-robotoMono text-base">
-            Performant, scalable, and seamless – forever.{' '}
-          </p>
+      <header className="bg-ghostWhite ">
+        <NavbarDesktop scheme={SchemeColor.ghostWhite} />
+        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
+          <SubNav />
+
+          <div className="absolute -left-[650px] -bottom-96 lg:-left-[650px] xl:-left-[450px] 2xl:-left-48 lg:-bottom-10 -scale-x-100">
+            <Image
+              src="/new/assets/home/data-dust.webp"
+              width={'1200px'}
+              height={'614px'}
+              alt="cloud"
+              loading="eager"
+            />
+          </div>
+          <div className="ml-auto pr-5 lg:pr-[79px] z-50">
+            <Heading level={1} className={'z-10 text-center md:text-left'}>
+              Decentralized <br /> Storage
+            </Heading>
+            <p className="font-robotoMono text-base z-50 mt-5 text-center md:text-left">
+              Performant, scalable, and seamless – forever.{' '}
+            </p>
+          </div>
         </div>
       </header>
-      <section className="h-[584px] flex justify-between text-white bg-black">
-        {/* Vertical text 'stats' aligned to left */}
-        <div>
-          <h3 className="inline-block transform -rotate-90 mt-[92px] ml-[108px] text-[26px] uppercase">
-            WHAT BUNDLR OFFERS
-          </h3>
-        </div>
-        {/* 2 columns grid */}
-        <div className="grid grid-cols-2 gap-[32px] gap-y-0 pr-[109px] leading-none pt-[83px]">
-          <div className="max-w-[501px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
-              Scales to Millions of TPS
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              Bundlr can scale horizontally to handle millions of transactions
-              per second
-            </h2>
-          </div>
-          <div className="max-w-[441px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
-              Instant Uploads
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              You can upload data to Bundlr in under 8ms
-            </h2>
-          </div>
-          <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
-              Seamless Integration
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              It takes 3-4 lines of code to integrate Bundlr
-            </h2>
-          </div>
-          <div className="max-w-[332px]">
-            <small className="font-spaceGrotesk font-light text-5xl leading-none">
-              Multichain
-            </small>
-            <h2 className="text-lg font-robotoMono leading-none mt-4">
-              You can pay to use Bundlr in 14 supported tokens
-            </h2>
-          </div>
-        </div>
-      </section>
-      <section className="relative h-[911px] px-[109px]">
-        <h2 className="text-5xl font-spaceGrotesk py-48 w-[440px]">
+
+      <Benefits {...BENEFITS_CONTENT} />
+
+      <section className="relative h-auto lg:h-[911px] px-5 lg:px-[79px] w-full">
+        {/* <h2 className="text-4xl lg:text-5xl font-fkDisplay py-12 lg:py-48 w-full lg:w-[440px] text-center lg:text-left">
           Data Stored for as Long as You Need
-        </h2>
+        </h2> */}
+        <Heading
+          level={3}
+          className={
+            'w-full lg:w-[440px] text-center lg:text-left  py-12 lg:py-48'
+          }
+        >
+          Data Stored for as Long as You Need
+        </Heading>
         <img
-          src="/assets/descentralizedStorage/data-spiral.png"
+          src="/new/assets/home/spiral.webp"
           alt="data-spiral"
-          className="absolute right-0 top-0"
+          width={500}
+          className="absolute right-10 top-10 hidden lg:block"
         />
-        <ul className="flex gap-10">
-          <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-1/2">
-            {/* add gradient background that goes from gray to transparent */}
-
-            <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11">
-              {/* make image as background of rectangle box */}
-              <div className="flex flex-col gap-4 px-5 pb-10">
-                <h3 className="text-black font-light text-5xl font-spaceGrotesk">
-                  Arweave
-                </h3>
-                <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
-                  Launched
+        <ul className="flex flex-col lg:flex-row gap-10">
+          <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
+            <a href="https://arweave.org/" target={'_blank'} rel="noreferrer">
+              {/* add gradient background that goes from gray to transparent */}
+              <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden px-2 py-8 lg:p-11">
+                {/* make image as background of rectangle box */}
+                <div className="flex flex-col gap-4 px-5 pb-10">
+                  <Heading level={3}>
+                    Arweave
+                  </Heading>
+                  <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
+                    LIVE
+                  </div>
+                  <p className="font-robotoMono text-lg leading-loose">
+                    Permanent storage on Arweave.{' '}
+                  </p>
+                  <p className="font-robotoMono text-lg leading-loose">
+                    In the same way the internet connected people across
+                    geographies, Arweave connects people across time. Bundlr is
+                    currently handling over 90% of all transaction volume on
+                    Arweave.{' '}
+                  </p>
                 </div>
-                <p className="font-robotoMono text-lg">
-                  Permanent storage on Arweave.{' '}
-                </p>
-                <p className="font-robotoMono text-lg">
-                  In the same way the internet connected people across
-                  geographies, Arweave connects people across time. Bundlr is
-                  currently handling over 90% of all transaction volume on
-                  Arweave.{' '}
-                </p>
               </div>
-            </div>
+            </a>
           </li>
-          <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-1/2">
+          <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
             {/* add gradient background that goes from gray to transparent */}
 
-            <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden p-11 h-full">
+            <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden px-2 py-8 lg:p-11 h-full">
               {/* make image as background of rectangle box */}
               <div className="flex flex-col gap-4 px-5 pb-10">
-                <h3 className="text-black font-light text-5xl font-spaceGrotesk">
+                <Heading level={3}>
                   Preweave
-                </h3>
+                </Heading>
                 <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
                   Coming soon
                 </div>
-                <p className="font-robotoMono text-lg">
+                <p className="font-robotoMono text-lg leading-loose">
                   Storage for as long as you need.{' '}
                 </p>
-                <p className="font-robotoMono text-lg">
+                <p className="font-robotoMono text-lg leading-loose">
                   Preweave is a peer-to-peer caching layer built on top of
                   Bundlr. Data on Preweave can also easily be transferred to
                   Arweave for permanent storage.
@@ -180,37 +217,59 @@ const DescentralizedStorage: NextPage = () => {
           </li>
         </ul>
       </section>
-      <section className='px-[109px] flex py-24 relative overflow-hidden'>
+      <section className="px-5 lg:px-[79px] flex py-24 relative overflow-hidden">
         <div className="">
-          <h3 className="inline-block transform -rotate-90 mt-24 text-[26px] uppercase -ml-[96px]">
+          <h3 className="transform -rotate-90 mt-24 text-[26px] uppercase -ml-[96px] hidden lg:inline-block">
             WE ARE DIFFERENT
           </h3>
         </div>
-        <div className="flex flex-col gap-36 w-1/2 ml-auto">
+        <div className="flex flex-col gap-36 w-full lg:w-2/3 ml-auto">
           <div className="">
-            <h2 className='text-4xl font-spaceGrotesk'>Lightning Fast Uploads, at Industrial Scale</h2>
-            <p className='font-robotoMono max-w-[770px] pl-28 pt-16 text-lg'>With uploads time under 8 milliseconds and the <u>ability to  scale to millions of transactions per seconds</u>, Bundlr’s performance is on par with traditional providers. Bundlr is ready to store the world’s data.</p>
+            {/* <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
+              Lightning Fast Uploads, at Industrial Scale
+            </h2> */}
+            <Heading level={3} className="text-center lg:text-left">
+              Lightning Fast Uploads, at Industrial Scale
+            </Heading>
+            <p className="font-robotoMono max-w-[870px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left leading-loose">
+              With uploads time under 8 milliseconds and the ability to scale to
+              millions of transactions per seconds, Bundlr’s performance is on
+              par with traditional providers. Bundlr is ready to store the
+              world’s data.
+            </p>
           </div>
           <div className="">
-            <h2 className='text-4xl font-spaceGrotesk'>Seamless for Developers</h2>
-            <p className='font-robotoMono max-w-[770px] pl-28 pt-16 text-lg'>Our intuitive docs and SDK help you integrate Bundlr with just 3-4 lines of code. Further, you can sign and pay for storage in of our 14 supported tokens, including ETH, SOL, and MATIC. <a href="#"><u>Find out</u></a> how simple working with Bundlr is.</p>
+            {/* <h2 className="text-4xl font-fkDisplay text-center lg:text-left z-50">Seamless for Developers</h2> */}
+            <Heading level={3} className="text-center lg:text-left z-50">
+              Seamless for Developers
+            </Heading>
+            <p className="font-robotoMono max-w-[870px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left z-50 leading-loose">
+              Our intuitive docs and SDK help you integrate Bundlr with just 3-4
+              lines of code. Further, you can sign and pay for storage in of our
+              14 supported tokens, including ETH, SOL, and MATIC.{' '}
+              <a
+                href="https://www.youtube.com/watch?v=Wxfyd0veaEc&t=847s"
+                target={'_blank'}
+                rel="noreferrer"
+              >
+                <u>Find out</u>
+              </a>{' '}
+              how simple working with Bundlr is.
+            </p>
           </div>
         </div>
-        <img src="/assets/descentralizedStorage/data-splash.png" alt="data-splash" className='absolute -bottom-64 left-0' />
+        <img
+          src="/new/assets/home/data-donuts.webp"
+          alt="data-splash"
+          className="absolute -bottom-72 -left-32 hidden lg:block w-[600px] rotate-[-30deg]"
+        />
       </section>
-
-      <div className="overflow-hidden">
-        <motion.h2 className="text-8xl whitespace-nowrap py-32" style={{ x }}>
-          ONE STEP CLOSER TO OUR FULLY ONE STEP CLOSER TO OUR FULLY ONE STEP
-          CLOSER TO OUR FULLY
-        </motion.h2>
-      </div>
 
       <HomeProduct
         content={PRODUCT_CONTENT}
         title={'Learn More About'}
       ></HomeProduct>
-      <CTA />
+      <CtaCentralized {...CTA_CONTENT} />
       <Footer />
     </>
   )

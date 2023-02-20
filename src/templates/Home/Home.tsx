@@ -2,98 +2,121 @@ import {
   Button,
   CtaSection,
   Footer,
-  HomeCloudImage,
+  Heading,
   HomeHeader,
+  HomeHorizontalScroll,
   HomeProduct,
   HomeStats,
   HomeTrustedBy,
   HomeWhyUseBundlr,
   NavbarDesktop,
   SectionTitle,
-  Testimonial
-} from '@/components'
+  SupportedCurrencies,
+  Testimonial,
+} from '@/components';
+import { useLayoutEffect, useRef } from 'react';
 
-import { DevIcon } from '@/svg'
+import { ButtonScheme } from '@/components/Button/Button'
+import { DevIcon } from '@/svg';
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
-import { url } from 'inspector'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import gsap from 'gsap'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const useHome = () => {
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Home',
+    description: 'Bundlr is the world’s data layer. We solve data integrity issues through permanent storage and proof of provenance.'
   }
 
   const WHY_USE_BUNDLR = [
     {
-      title: 'Multichain Compatible',
-      description: 'Upload your data from any major blockchain'
-    },
-
-    {
-      title: 'Pay With Any Token',
-      description: 'Pay in any major token including ETH, SOL, MATIC, and more'
-    },
-
-    {
-      title: 'Pay Once. Stored Forever.',
+      title: 'Performant',
       description:
-        'Pay just once when you have your data stored forever on Arweave'
+        'Instant uploads and retrievability. Finalized in under 8 milliseconds'
     },
 
     {
-      title: 'Own Your Data',
+      title: 'Scalable',
       description:
-        'With no singular entity holding your data, you’re always in control'
+        'Scales to millions of transactions per second with horizontal scaling'
     },
 
     {
-      title: 'Unlimited Storage',
+      title: 'Seamless',
       description:
-        'Thanks to Arweave, you’ll never be restricted by data limits ever again'
+        'Integrate with 3-4 lines of code. Sign and pay in 14 major tokens'
     },
-
     {
-      title: 'Guaranteed Seeding',
-      description: 'Your data is guaranteed to be uploaded to Arweave'
-    },
-
-    {
-      title: 'Instant Data',
+      title: 'Verifiable',
       description:
-        'From the moment you upload, your data is instantly accessible'
+        'Quick and easy to verify the provenance of data and transactions'
     },
 
     {
-      title: 'Free Transactions',
-      description: 'Free for data uploads under 100kb'
+      title: 'Customizable',
+      description: 'Customize data with metadata tags for easy querying'
+    },
+    {
+      title: 'Enduring',
+      description: 'Affordable long-term data solutions'
     }
   ]
 
-  const PRODUCT_CONTENT = [
-    {
-      title: "Permanent Storage",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
-    },
-    {
-      title: "Fiat <br/>On-Ramp",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
-    },
-    {
-      title: "Preweave <br/><br/>",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non.",
-    },
-    {
-      title: "Mutability Layer",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit donec neque velit enim non."
-    }
-  ]
+  const PRODUCT_CONTENT: {
+    title: string
+    description: string
+    href: string
+  }[] = [
+      {
+        title: 'Decentralized Storage',
+        description:
+          'Performant, scalable, and seamless data, stored permanently on Arweave',
+        href: '/solutions/decentralized-storage'
+      },
+      {
+        title: 'Proof of Provenance',
+        description:
+          'Identify original information by accurately attributing origin',
+        href: '/solution/proof-of-provenance'
+      },
+      // {
+      //   title: 'Data Availability',
+      //   description:
+      //     'Pay for consensus only when you need it',
+      //   href: '/solutions/data-availability'
+      // }
+    ]
 
   return { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT }
 }
 
 const Home: NextPage = () => {
   const { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT } = useHome()
+
+  // const wrapper = useRef<any>()
+  // const slider = useRef<any>()
+
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     let panels = slider.current.children
+  //     gsap.to(panels, {
+  //       xPercent: -100 * (panels.length - 1),
+  //       ease: 'none',
+  //       scrollTrigger: {
+  //         trigger: slider.current,
+  //         pin: true,
+  //         scrub: 1,
+  //         snap: 1 / (panels.length - 1),
+  //         end: () => '+=' + slider?.current?.offsetWidth * 4,
+  //         // markers: true
+  //       }
+  //     })
+  //   }, wrapper)
+  //   return () => ctx.revert()
+  // })
 
   return (
     <>
@@ -102,38 +125,53 @@ const Home: NextPage = () => {
       <HomeHeader />
       <HomeStats />
 
-      <HomeProduct content={PRODUCT_CONTENT} title={"The Product"}>
-        <div className="h-[271px] text-white border border-white mt-[192px]">
-          Supported currencies
+      <HomeProduct content={PRODUCT_CONTENT} title={'The Technology'}>
+        <div className="h-[271px] lg:h-[171px] text-white mt-[122px]">
+          <HomeTrustedBy scheme={'dark'} />
         </div>
       </HomeProduct>
 
-      <section className='bg-ghostWhite pb-[144px]'>
+      <section className="bg-ghostWhite pb-10 lg:pb-[124px]">
         <HomeWhyUseBundlr content={WHY_USE_BUNDLR}>
-          <div className="mx-44 rounded-[20px] overflow-hidden">
-            <HomeTrustedBy />
+          <div className="mx-4 lg:mx-[79px] rounded-[20px] overflow-hidden mt-0 lg:mt-10">
+            <SupportedCurrencies />
           </div>
         </HomeWhyUseBundlr>
       </section>
-      <HomeCloudImage />
 
-      <section className='px-[109px] mt-[122px]'>
-        <SectionTitle title='Testimonials' />
+      <div className="overflow-hidden">
+        <HomeHorizontalScroll />
+      </div>
+
+      <section className="flex items-center justify-center lg:items-start flex-col px-5 lg:px-[79px] pt-12 lg:pt-[122px] bg-seashell overflow-hidden" style={{
+        // boxShadow: '0 0 70px rgba(0,0,0,.2)'
+      }}>
+        <SectionTitle title="Testimonials" />
         <div className="flex mt-[89px] justify-center relative">
-          <h2 className='text-[76px] font-light max-w-[407px] leading-none'>Endorsed by the best</h2>
-          <p className='absolute bottom-0 right-0 font-robotoMono w-[321px]'>Our clients love us, but don’t just take our word for it. </p>
+          <h2 className="text-5xl text-center lg:text-7xl font-light leading-none font-fkDisplay">
+            What Users Say About Us
+          </h2>
         </div>
         <Testimonial />
       </section>
-      <CtaSection>
-        <p className="text-[62px] font-light leading-none">
-          We’re here to revolutionize data storage. Try us.
-        </p>
-        <button className='mt-[52px] font-robotoMono text-sm bg-white text-black flex items-center gap-2 px-4 py-3 rounded-full hover:font-bold'>
-          START BUILDING
-          <DevIcon color='black' />
-        </button>
-      </CtaSection>
+
+      <div className="bg-seashell py-[88px]">
+        <CtaSection>
+          <div className="flex flex-col items-center md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+            <Heading level={2} className="text-center lg:text-left">
+              Ready to Become a BUNDLOOOOR?
+            </Heading>
+            <div className="mt-0 lg:mt-10">
+              <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer">
+                <Button scheme={ButtonScheme.white}>
+                  START BUILDING
+                  <DevIcon color="black" />
+                </Button>
+              </a>
+            </div>
+          </div>
+        </CtaSection>
+      </div>
       <Footer />
     </>
   )

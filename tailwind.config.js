@@ -15,10 +15,12 @@ module.exports = {
       },
       fontFamily: {
         robotoMono: ['Roboto Mono', 'monospace'],
-        fkDisplay: ['FK Display', 'sans-serif'],
+        fkDisplay: ['FKDisplay', 'sans-serif'],
         spaceGrotesk: ['Space Grotesk', 'sans-serif']
       }
     }
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ]
 }
