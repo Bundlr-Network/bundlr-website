@@ -1,11 +1,15 @@
 import {
   Button,
+  CtaCentralized,
   Footer,
+  Heading,
   HomeHeader,
   HomeWhyUseBundlr,
   NavbarDesktop
 } from '@/components'
 import {
+  ChevronRight,
+  DevIcon,
   DiscordIcon,
   GitIcon,
   MediumIcon,
@@ -13,17 +17,24 @@ import {
   TelegramIcon,
   TwitterIcon
 } from '@/svg'
+import {
+  SOCIAL_LINKS,
+  Socials
+} from '@/components/JoinTheCommunity/JoinTheCommunity'
 import { useEffect, useState } from 'react'
 
+import { CtaCentralizedProps } from '@/components/CtaCentralized/CtaCentralized'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
-import { Socials } from '@/components/JoinTheCommunity/JoinTheCommunity'
+import { motion } from 'framer-motion'
+import { useLatestArticles } from '../Blog/Blog'
 
 const useCommunity = () => {
   const PAGE_SEO = {
-    title: 'Page Title',
-    description: 'Page Description'
+    title: 'Bundlr | Community',
+    description:
+      'Join a growing community of Bundloooors! Engage with users, devs, and an entire community of people at the frontier of data.'
   }
 
   const COMMUNITY_VALUES = [
@@ -74,101 +85,85 @@ const useCommunity = () => {
     }
   ]
 
-  return { PAGE_SEO, COMMUNITY_VALUES, SOCIAL_LINKS }
-}
+  const CTA_CONTENT: CtaCentralizedProps = {
+    title: 'Ready to Become <br /> a BUNDLOOOOR?',
+    cta: 'Start Building',
+    href: 'https://docs.bundlr.network',
+    newTab: true
+  }
 
-const CTA: React.FC = () => {
-  return (
-    <div className="h-[740px] relative bg-seashell text-white py-4 px-6 overflow-hidden flex flex-col items-center justify-center">
-      <h2 className="text-black font-light mb-2 text-[76px] max-w-[399px] text-center leading-none mb-11">
-        Join the community
-      </h2>
-      <Button />
-
-      <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image1"
-        />
-      </div>
-      <div className="hidden lg:flex absolute top-0 left-0 overflow-hidden">
-        <img
-          src="/assets/community/cta-blocks-2.png"
-          className="w-full h-full rounded-lg"
-          alt="image2"
-        />
-      </div>
-    </div>
-  )
+  return { PAGE_SEO, COMMUNITY_VALUES, CTA_CONTENT }
 }
 
 const NewsSection: React.FC = () => {
-  const NEWS_ITEMS = [
-    {
-      title:
-        'Wordcel integrates with Bundlr to permanently store it’s users data',
-      description: 'Lorem ipsum dolor sit amet.',
-      image: 'https://picsum.photos/400'
-    },
-    {
-      title:
-        'Wordcel integrates with Bundlr to permanently store it’s users data',
-      description: 'Lorem ipsum dolor sit amet.',
-      image: 'https://picsum.photos/400'
-    },
-    {
-      title:
-        'Wordcel integrates with Bundlr to permanently store it’s users data',
-      description: 'Lorem ipsum dolor sit amet.',
-      image: 'https://picsum.photos/400'
-    },
-    {
-      title:
-        'Wordcel integrates with Bundlr to permanently store it’s users data',
-      description: 'Lorem ipsum dolor sit amet.',
-      image: 'https://picsum.photos/400'
-    }
-  ]
+  const { latestArticles } = useLatestArticles()
+
+  const [currentSlice, setCurrentSlice] = useState(3)
 
   return (
     <section>
-      <h2 className='text-7xl font-light pb-[60px]'>News</h2>
+      <div className="flex justify-between">
+        {/* <h2 className="text-7xl font-light pb-[60px]">Updates</h2> */}
+        <Heading level={2} className='pb-[60px]'>Updates</Heading>
+        {/* <button
+          onClick={() => setCurrentSlice(currentSlice + 3)}
+          className="flex items-center gap-3 border rounded-full font-robotoMono px-3 py-2 border-black self-start"
+        >
+          More
+          <ChevronRight width={13} height={13} />
+        </button> */}
+      </div>
 
-      <ul className="flex gap-7">
-        {NEWS_ITEMS.map((item, index) => {
+      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        {latestArticles.slice(0, currentSlice).map((item, index) => {
           return (
+            <motion.a
+              href={item.link}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg w-full"
+              key={`blog-post-${index}`}
+              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+            >
+              <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
+                {/* add gradient background that goes from gray to transparent */}
 
-            <li key={index} className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
-              {/* add gradient background that goes from gray to transparent */}
-
-              <div className="flex flex-col items-center gap-11 max-w-[348px] bg-seashell rounded-lg overflow-hidden">
-                {/* make image as background of rectangle box */}
-                <div
-                  className="w-full h-[200px] bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${item.image})`
-                  }}
-                />
-                <div className="flex flex-col gap-4 px-5 pb-10">
-                  <h3 className="text-black font-light text-2xl ">
-                    {item.title}
-                  </h3>
-                  <p className="text-black font-light text-sm font-robotoMono">
-                    {item.description}
-                  </p>
+                <div className="flex flex-col items-center gap-11 w-full lg:max-w-[348px] bg-seashell rounded-lg overflow-hidden">
+                  {/* make image as background of rectangle box */}
+                  <div
+                    className="w-full h-[200px] bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url(${item.thumbnail})`
+                    }}
+                  />
+                  <div className="flex flex-col gap-4 px-5 pb-10 -mt-6">
+                    <h3 className="text-black font-light text-xl line-clamp-2">
+                      {item.title}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </motion.a>
           )
         })}
       </ul>
+      {currentSlice < latestArticles.length && (
+        <div className="flex items-center justify-center">
+          <button
+            onClick={() => setCurrentSlice(currentSlice + 3)}
+            className="flex items-center gap-3 border rounded-full font-robotoMono px-3 py-2 border-black self-start"
+          >
+            Load more
+          </button>
+        </div>
+      )}
     </section>
   )
 }
 
 const Community: NextPage = () => {
-  const { PAGE_SEO, COMMUNITY_VALUES, SOCIAL_LINKS } = useCommunity()
+  const { PAGE_SEO, COMMUNITY_VALUES, CTA_CONTENT } = useCommunity()
 
   return (
     <>
@@ -178,32 +173,37 @@ const Community: NextPage = () => {
           <NavbarDesktop scheme={SchemeColor.onyx} />
         </div>
         <header
-          className="px-[109px] border-b border-timberwolf bg-black pt-[183px]"
-          style={{
-            backgroundImage: 'url(/assets/home/blocks.png)',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: '50% 50%',
-            backgroundSize: '140%',
-            height: '1070px'
-          }}
+          className="px-5 lg:px-[79px] border-b border-timberwolf pt-[93px] h-auto pb-20 lg:pb-40 relative overflow-hidden"
+        // style={{
+        //   backgroundImage: 'url(/assets/home/header.png)',
+        //   backgroundRepeat: 'no-repeat',
+        //   backgroundPosition: '50% 140%',
+        //   backgroundSize: '100%'
+        // }}
         >
-          <div className="leading-none flex flex-col gap-[197px]">
-            <h1 className="max-w-[464px] font-light text-[76px] text-white">
-              Join the #bundloooor community
-            </h1>
+          <div className="leading-none flex flex-col gap-10 lg:gap-[197px] ">
+            <Heading level={1} className="z-[99] text-center lg:text-left text-white">
+              Join the #BUNDLOOOOR <br />Community
+            </Heading>
+
             <Socials links={SOCIAL_LINKS} />
           </div>
+          <img
+            src="/new/assets/home/data-wing.webp"
+            alt="hero"
+            className="absolute top-[480px] lg:-right-72 lg:top-10 xl:top-0 xl:-right-72 hidden md:block rotate-[-30.24deg]"
+          />
         </header>
 
-        <section className="bg-seashell text-black">
+        {/* <section className="bg-seashell text-black">
           <HomeWhyUseBundlr content={COMMUNITY_VALUES} />
-        </section>
+        </section> */}
 
-        <section className='px-[109px] bg-seashell flex items-center justify-center'>
+        <section className="px-5 lg:px-[79px] bg-seashell flex items-center justify-center pt-20">
           <NewsSection />
         </section>
 
-        <CTA />
+        <CtaCentralized {...CTA_CONTENT} />
         <Footer />
       </div>
     </>

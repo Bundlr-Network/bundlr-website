@@ -4,9 +4,19 @@
 
 @layer components {
   body {
-    @apply bg-seashell;
+    @apply bg-seashell font-fkDisplay;
   }
 }
+
+.communityShadow {
+  box-shadow: 1px 1px 0px rgba(255, 255, 255, .5);
+  transition: box-shadow 0.2s ease;
+}
+
+.communityShadow:hover {
+  box-shadow: -1px -1px 0px rgba(255, 255, 255, .5);
+}
+
 
 details > summary {
   list-style: none;
@@ -36,7 +46,7 @@ details[open] summary ~ * {
 
 @font-face {
   font-family: 'FKDisplay';
-  src: url('../asset/FKDisplay-RegularAlt.ttf');
+  src: url('/assets/fonts/fkd.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }

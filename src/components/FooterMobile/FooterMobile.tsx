@@ -11,100 +11,35 @@ import {
 } from '@/svg'
 import { useEffect, useState } from 'react'
 
-const useFooterMobile = () => {
-  const DEFINITIONS = [
-    {
-      title: 'BUNDLR',
-      options: [
-        {
-          name: 'About',
-          href: '/learn/about'
-        },
-        {
-          name: 'Join our team',
-          href: '/learn/join-our-team',
-          label: 'Hiring'
-        },
-        {
-          name: 'FAQs',
-          href: '/learn/faqs'
-        },
-        {
-          name: 'Media Kit',
-          href: '/media-kit'
-        },
-        {
-          name: 'Roadmap',
-          href: '/roadmap'
-        }
-      ]
-    },
-    {
-      title: 'DEVELOPERS',
-      options: [
-        {
-          name: 'Get Started',
-          href: '/learn/get-started'
-        },
-        {
-          name: 'Docs',
-          href: '/learn/docs'
-        },
-        {
-          name: 'Resources',
-          href: '/learn/resources'
-        },
-        {
-          name: 'Tutorials',
-          href: '/learn/tutorials'
-        },
-        {
-          name: 'JS Client',
-          href: '/learn/js-client'
-        }
-      ]
-    },
-    {
-      title: 'PARTICIPATE',
-      options: [
-        {
-          name: 'Testnet Faucet',
-          href: '/testnet-faucet'
-        },
-        {
-          name: 'Run a Validator',
-          href: '/learn/run-a-validator'
-        }
-      ]
-    }
-  ]
-  return { DEFINITIONS }
-}
+import Link from 'next/link'
 
-const FooterMobile = () => {
-  const { DEFINITIONS } = useFooterMobile()
-
+const FooterMobile = ({
+  data
+}: {
+  data: {
+    title: string
+    options: {
+      name: string
+      href: string
+      label?: string
+    }[]
+  }[]
+}) => {
   return (
     <>
-      <footer className="border-t border-timberwolf pt-[56px] px-[20px] font-robotoMono lg:hidden">
+      <footer className="border-t border-timberwolf pt-[56px] px-[20px] font-robotoMono lg:hidden bg-seashell pb-10">
         <FooterLogo />
         <p className="mt-[60px] text-[40px] tracking-tighter whitespace-normal leading-none mb-[68px]">
-          THE FUTURE OF <br />
-          DATA STORAGE
+          THE WORLD&apos;S <br />
+          DATA LAYER
         </p>
-        {DEFINITIONS.map((definition) => (
+        {data.map((definition) => (
           <ExpandableSection
             title={definition.title}
             options={definition.options}
             key={definition.title}
           />
         ))}
-        <a href="">
-          <p className="uppercase text-[15px] mt-[26px]">Community</p>
-        </a>
-        <a href="">
-          <p className="uppercase text-[15px] mt-[26px]">Partner Program</p>
-        </a>
         <section className="flex items-center gap-[21px] pb-[10px] mt-[60px]">
           <a
             href="https://medium.com/bundlr-network"
@@ -155,7 +90,9 @@ const FooterMobile = () => {
             <TelegramIcon />
           </a>
         </section>
-        <p className="mt-[17px] mb-[36px]">2022 Bundlr. All rights reserved.</p>
+        <p className="mt-[17px] mb-[36px]">
+          {new Date().getFullYear()} Bundlr. All rights reserved.
+        </p>
       </footer>
     </>
   )
@@ -170,6 +107,7 @@ const ExpandableSection = ({
     name: string
     href: string
     label?: string
+    newTab?: boolean
   }[]
 }) => {
   return (
@@ -182,9 +120,14 @@ const ExpandableSection = ({
       <ul className="mt-[20px]">
         {options.map((option, index) => (
           <li className="mt-[20px]" key={`option-${option}-${index}`}>
-            <a href={option.href} className="text-[15px]">
+            <Link
+              href={option.href}
+              className="text-[15px]"
+              target={option.newTab ? '_blank' : '_self'}
+              rel="noreferrer"
+            >
               {option.name}
-            </a>
+            </Link>
             {option.label && (
               <span className="ml-[10px] text-xs font-bold bg-black rounded-full px-[10px] py-[5px] text-white">
                 {option.label}

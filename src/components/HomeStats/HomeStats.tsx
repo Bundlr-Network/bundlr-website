@@ -1,37 +1,84 @@
 import { useEffect, useState } from 'react'
 
 const useHomeStats = () => {
-  return {}
+
+  const [transactions, setTransactions] = useState<null | number>(null)
+  const [totalTransactions, setTotalTransactions] = useState<null | number>(null)
+
+
+  const STATS = [
+    {
+      title: 'Transactions in last 24h',
+      description: transactions
+        ? transactions?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+        : 'Loading...',
+    },
+    {
+      title: 'Upload time',
+      description: '8ms'
+    },
+    {
+      title: 'Total number of transactions',
+      description: totalTransactions
+        ? totalTransactions?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+        : 'Loading...',
+    },
+  ]
+
+  useEffect(() => {
+    fetchTransactions()
+  }, [])
+
+  const fetchTransactions = async () => {
+    // get node1.bundlr.network/status
+    const node1 = await fetch('https://node1.bundlr.network/status')
+    const node1Json = await node1.json()
+
+    // get node2.bundlr.network/status
+    const node2 = await fetch('https://node2.bundlr.network/status')
+    const node2Json = await node2.json()
+
+    const last24Sum = node1Json.last24h + node2Json.last24h
+
+    const totalSum = node1Json.totalTransactions + node2Json.totalTransactions
+
+    setTransactions(last24Sum)
+    setTotalTransactions(totalSum)
+  }
+
+  return { STATS }
 }
 
 const HomeStats = () => {
-  const { } = useHomeStats()
+  const { STATS } = useHomeStats()
 
   return (
     <>
-      <section className='h-[489px] flex justify-between'>
+      <section className="items-center justify-center h-auto px-4 py-10 lg:py-20 lg:py-0 lg:h-[232px] flex flex-col md:flex-row md:items-left md:items-center gap-10 overflow-hidden">
         {/* Vertical text 'stats' aligned to left */}
-        <div>
-          <h3 className='inline-block transform -rotate-90 mt-[92px] ml-[108px] text-[26px] uppercase'>STATS</h3>
+
+        <div className="hidden md:inline-block">
+          <p className="transform rotate-180 text-center ml-5 lg:ml-[79px] text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
+            Stats
+          </p>
         </div>
+
+        <div className="md:hidden inline-block">
+          <h3 className="text-[26px] uppercase">Stats</h3>
+        </div>
+
         {/* 2 columns grid */}
-        <div className='grid grid-cols-2 gap-[32px] gap-y-0 pr-[108px] leading-none pt-[83px]'>
-          <div>
-            <small className="uppercase text-[13px] font-robotoMono leading-none">Upload time</small>
-            <h2 className="text-[84px] leading-none">50ms</h2>
-          </div>
-          <div>
-            <small className="uppercase text-[13px] font-robotoMono leading-none">Total number of transactions</small>
-            <h2 className="text-[84px] leading-none">302,355,014</h2>
-          </div>
-          <div>
-            <small className="uppercase text-[13px] font-robotoMono leading-none">Transactions in last 24h</small>
-            <h2 className="text-[84px] leading-none">402,907</h2>
-          </div>
-          <div>
-            <small className="uppercase text-[13px] font-robotoMono leading-none">TPS</small>
-            <h2 className="text-[84px] leading-none">infinity</h2>
-          </div>
+        <div className="flex md:flex-row flex-col gap-10 leading-none md:ml-auto md:pr-4 lg:pr-[79px] items-center justify-center md:justify-start">
+          {STATS.map((stat, index) => (
+            <div key={index}>
+              <small className="uppercase text-[13px] font-robotoMono leading-none">
+                {stat.title}
+              </small>
+              <h2 className="text-5xl lg:text-[74px] leading-none font-fkDisplay">
+                {stat.description}
+              </h2>
+            </div>
+          ))}
         </div>
       </section>
     </>
