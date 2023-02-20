@@ -114,7 +114,7 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
                   href={MENU_OPTIONS[key][0].href}
                   key={`menu-option-${index}`}
                 >
-                  <div className="cursor-pointer  px-4 uppercase font-bold  hover:font-black">
+                  <div className="cursor-pointer  px-4 uppercase font-bold hover:underline underline-offset-8">
                     {MENU_OPTIONS[key][0].name}
                   </div>
                 </Link>
@@ -208,7 +208,7 @@ const NavDropdown = ({
                 return (
                   <li
                     key={option.name}
-                    className="h-[50px] w-full flex items-center justify-start gap-3 uppercase font-bold"
+                    className="h-[50px] w-full flex items-center justify-start gap-3 uppercase font-bold hover:underline underline-offset-8"
                   >
                     {
                       {
