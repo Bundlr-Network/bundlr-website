@@ -106,12 +106,12 @@ const useAbout = () => {
       mobileImage: '/assets/about/heads/mobile/Luke.jpeg',
       link: 'https://twitter.com/spaceagente'
     },
-    {
-      name: 'Kevin',
-      role: 'Engineer',
-      image: '/assets/about/heads/Kevin.jpeg',
-      mobileImage: '/assets/about/heads/mobile/Kevin.jpeg',
-    }
+    // {
+    //   name: 'Kevin',
+    //   role: 'Engineer',
+    //   image: '/assets/about/heads/Kevin.jpeg',
+    //   mobileImage: '/assets/about/heads/mobile/Kevin.jpeg',
+    // }
   ]
 
   const INVESTORS = [

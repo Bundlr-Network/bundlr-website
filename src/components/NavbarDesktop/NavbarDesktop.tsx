@@ -220,24 +220,24 @@ const NavDropdown = ({
             <ul className="h-full w-full flex flex-col justify-start items-start pl-5 pt-4 pb-5">
               {options.map((option) => {
                 return (
-                  <li
+                  <Link
+                    href={option.href}
                     key={option.name}
-                    className="h-[50px] w-full flex items-center justify-start gap-3 uppercase hover:font-bold"
+                    className="h-full w-full flex items-center justify-center text-sm"
                   >
-                    {
-                      {
-                        Solutions: <BracesIcon />,
-                        Learn: <BracesIcon />
-                      }[title]
-                    }
-
-                    <Link
-                      href={option.href}
-                      className="h-full w-full flex items-center justify-center text-sm"
+                    <li
+                      className="h-[50px] w-full flex items-center justify-start gap-3 uppercase hover:font-bold cursor-pointer"
                     >
+                      {
+                        {
+                          Solutions: <BracesIcon />,
+                          Learn: <BracesIcon />
+                        }[title]
+                      }
+
                       {option.name}
-                    </Link>
-                  </li>
+                    </li>
+                  </Link>
                 )
               })}
             </ul>
