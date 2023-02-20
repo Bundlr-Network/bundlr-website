@@ -10,7 +10,7 @@ const CtaSection = ({ children }: { children: React.ReactNode }) => {
           ></div> */}
         {/* <img src="/assets/home/cta-blocks.png" alt="" className="absolute -left-20 hidden xl:block" /> */}
         {/* <img src="/assets/home/cta-blocks-mobile.png" alt="" className="absolute bottom-0 xl:hidden block w-full bg-cover" /> */}
-        <img src="/new/assets/home/data-sphere.webp" alt="" className="absolute -bottom-[350px] md:-bottom-[580px] lg:bottom-auto md:-left-[480px] xl:-left-[350px] block w-[600px] md:w-[800px]" />
+        <img src="/new/assets/home/data-sphere.webp" alt="" className="absolute -bottom-[350px] md:-bottom-[520px] lg:bottom-auto md:-left-[280px] xl:-left-[350px] block w-[600px] md:w-[800px]" />
         <div className="w-full lg:w-1/2 p-4 lg:p-0 text-white ml-auto lg:mr-10 z-10">{children}</div>
       </section>
       {/* <section className='mx-[79px] my-[88px]'>

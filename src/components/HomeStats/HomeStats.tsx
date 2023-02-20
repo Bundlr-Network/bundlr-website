@@ -68,7 +68,7 @@ const HomeStats = () => {
         </div>
 
         {/* 2 columns grid */}
-        <div className="flex md:flex-row flex-col gap-10 leading-none md:ml-auto md:pr-[79px] items-center justify-center md:justify-start">
+        <div className="flex md:flex-row flex-col gap-10 leading-none md:ml-auto md:pr-4 lg:pr-[79px] items-center justify-center md:justify-start">
           {STATS.map((stat, index) => (
             <div key={index}>
               <small className="uppercase text-[13px] font-robotoMono leading-none">

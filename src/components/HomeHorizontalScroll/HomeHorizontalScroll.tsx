@@ -389,7 +389,7 @@ const HomeHorizontalScroll = () => {
           transition={{ delay: 0.7, type: 'tween' }}
           src="/new/assets/home/data-sphere-flop.webp"
           alt=""
-          className="absolute -bottom-[140px] md:-bottom-[580px] lg:bottom-auto -right-[140px] lg:-right-[450px] block bg-cover w-[700px]"
+          className="absolute -bottom-[140px] md:-bottom-[280px] lg:bottom-auto -right-[140px] lg:-right-[450px] block bg-cover w-[700px]"
         />
 
         {/* <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
@@ -469,7 +469,7 @@ const HomeHorizontalScroll = () => {
           // /assets/home/dataverse.png
           src="/new/assets/home/dataverse.webp"
           alt="dataverse"
-          className="absolute bottom-0 left-0 right-0 mx-auto hidden md:flex"
+          className="absolute bottom-0 left-0 right-0 mx-auto hidden lg:flex"
         />
         <motion.img
           animate={conclusionControls}
