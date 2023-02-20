@@ -198,7 +198,7 @@ const About: NextPage = () => {
         <img
           src="/new/assets/home/data-cluster-rotated.webp"
           alt=""
-          className="absolute lg:-right-96 xl:-right-56 hidden lg:block -mb-4 w-[800px] -z-10"
+          className="absolute lg:-right-96 xl:-right-56 hidden lg:block -mb-4 w-[800px] -z-10 -scale-y-100"
         />
       </section>
 
