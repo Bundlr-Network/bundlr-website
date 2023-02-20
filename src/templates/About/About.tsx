@@ -166,7 +166,7 @@ const About: NextPage = () => {
       <NavbarDesktop />
 
       <header className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[794px] px-5 lg:px-[79px] relative overflow-hidden mb-10 lg:border-none">
-        <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-10 lg:pt-[83px] mb-10">
+        <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-10 md:pt-0 lg:pt-[83px] mb-10 md:mb-20">
           <Heading level={1} className="z-10">
             Meet the World&apos;s Data Layer
           </Heading>
@@ -213,7 +213,7 @@ const About: NextPage = () => {
           Team
         </p>
         {/* 3 column grid  */}
-        <ul className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:ml-auto w-full lg:w-4/5">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:ml-auto w-full lg:w-4/5">
           {MEMBERS.map((item, index) => {
             return (
               <li
