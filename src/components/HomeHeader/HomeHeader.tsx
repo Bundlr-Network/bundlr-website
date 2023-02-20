@@ -5,17 +5,7 @@ import { DevIcon } from '@/svg'
 import Heading from '../Heading'
 import Paragraph from '../Paragraph'
 
-const useHomeHeader = () => {
-  const TITLE = 'THE WORLD’S <br/>DATA LAYER'
-
-  const SUBTITLE = 'Store your data on the<br/> trustless source of truth'
-
-  return { TITLE, SUBTITLE }
-}
-
 const HomeHeader = () => {
-  const { TITLE, SUBTITLE } = useHomeHeader()
-
   return (
     <>
       <header
@@ -35,28 +25,28 @@ const HomeHeader = () => {
         />
 
         <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px]">
-          <Heading level={1} className="z-10" dangerouslySetInnerHTML={{
-            __html: TITLE
-          }}></Heading>
+          <Heading level={1} className="z-10">
+            THE <br className="md:hidden" />
+            WORLD’S <br />
+            DATA
+            <br className="md:hidden" /> LAYER
+          </Heading>
           {/* <h1 className="text-5xl lg:text-7xl font-fkDisplay z-10">
             {TITLE}
           </h1> */}
-          <Paragraph
-            dangerouslySetInnerHTML={{
-              __html: SUBTITLE
-            }}
-            size="sm"
-            className='z-50'
-          />
+          <Paragraph size="sm" className="z-50">
+            Store your data on the
+            <br /> trustless source of truth
+          </Paragraph>
         </div>
         <div className="flex gap-[21px] mt-56 lg:mt-[320px] items-center font-robotoMono">
-          <a href="https://docs.bundlr.network" className='z-50'>
-            <Button className='border-r border-white'>
+          <a href="https://docs.bundlr.network" className="z-50">
+            <Button className="border border-white">
               START BUILDING
               <DevIcon />
             </Button>
           </a>
-          <span className="z-10 -ml-14 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-10 rounded-tr-full rounded-br-full uppercase bg-black text-white">
+          <span className="z-10 -ml-14 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-14 rounded-tr-full rounded-br-full uppercase bg-black text-white">
             Permanent on{' '}
             <a href="https://arweave.net/" target={'_blank'} rel="noreferrer">
               Arweave

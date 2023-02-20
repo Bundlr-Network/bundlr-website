@@ -228,10 +228,15 @@ const Solutions: NextPage = () => {
               Use Cases for<br className='hidden lg:inline' /> Everyone
             </Heading>
           </div>
-          <img
+          {/* <img
             src="/assets/solutions/blocks.png"
             alt=""
             className="absolute lg:-right-32 -bottom-32 lg:bottom-0 right-0"
+          /> */}
+          <img
+            src="/new/assets/home/data-cluster-rotated.webp"
+            className="absolute -bottom-60 sm:-bottom-[400px] lg:top-0 md:-right-[500px] lg:-right-[570px] xl:-right-[450px] w-[900px] transform -rotate-180"
+            alt="cloud"
           />
         </div>
 
