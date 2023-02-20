@@ -20,7 +20,7 @@ import OpenseaLogo from '@assets/about/investors/opensea.webp'
 import PermanentVenturesLogo from '@assets/about/investors/permanent.webp'
 import RaceCapitalLogo from '@assets/about/investors/racecapital.webp'
 
-const useMediaQuery = (query: any) => {
+export const useMediaQuery = (query: any) => {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
@@ -80,7 +80,7 @@ const useAbout = () => {
       link: 'https://mobile.twitter.com/miko_nieminen'
     },
     {
-      name: 'Gustavo',
+      name: 'Gus',
       role: 'Engineer',
       image: '/assets/about/heads/Gus.jpeg',
       mobileImage: '/assets/about/heads/mobile/Gus.jpeg',

@@ -92,7 +92,7 @@ const Developers: NextPage = () => {
           <img
             src="/new/assets/home/dataverse.webp"
             alt="hero"
-            className="absolute bg-cover bottom-0 w-full h-96 lg:h-64"
+            className="absolute bg-cover bottom-0 w-full h-48 lg:h-64"
           />
         </div>
       </header>

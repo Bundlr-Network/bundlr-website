@@ -8,6 +8,7 @@ import Heading from '../Heading'
 import SectionTitle from '../SectionTitle'
 import Testimonial from '../Testimonial'
 import { useInView } from 'react-intersection-observer'
+import { useMediaQuery } from '@/templates/About/About'
 
 const useHomeHorizontalScroll = () => {
   return {}
@@ -29,7 +30,7 @@ const HomeHorizontalScroll = () => {
   useEffect(() => {
     if (dataInView) {
       dataControls.start('visible')
-    } else {
+    } else if (!isMobile) {
       dataControls.start('hidden')
     }
   }, [dataControls, dataInView])
@@ -42,6 +43,8 @@ const HomeHorizontalScroll = () => {
   const [serverTitleRef, serverTitleInView] = useInView()
   const [serverDescriptionRef, serverDescriptionInView] = useInView()
   const [serverImageRef, serverImageInView] = useInView()
+  const isMobile = useMediaQuery('(max-width: 768px)')
+
 
   const serverVariants = {
     title: {
@@ -69,23 +72,23 @@ const HomeHorizontalScroll = () => {
   useEffect(() => {
     if (serverTitleInView) {
       serverControls.start('visible')
-    } else {
+    } else if (!isMobile) {
       serverControls.start('hidden')
     }
   }, [serverControls, serverTitleInView])
 
-  useEffect(() => {
-    if (serverDescriptionInView) {
-      serverControls.start('visible')
-    } else {
-      serverControls.start('hidden')
-    }
-  }, [serverControls, serverDescriptionInView])
+  // useEffect(() => {
+  //   if (serverDescriptionInView) {
+  //     serverControls.start('visible')
+  //   } else if(!isMobile) {
+  //     serverControls.start('hidden')
+  //   }
+  // }, [serverControls, serverDescriptionInView])
 
   useEffect(() => {
     if (serverImageInView) {
       imageControls.start('visible')
-    } else {
+    } else if (!isMobile) {
       imageControls.start('hidden')
     }
   }, [imageControls, serverImageInView])
@@ -120,7 +123,7 @@ const HomeHorizontalScroll = () => {
   useEffect(() => {
     if (cloudTitleInView) {
       cloudControls.start('visible')
-    } else {
+    } else if (!isMobile) {
       cloudControls.start('hidden')
     }
   }, [cloudControls, cloudTitleInView])
@@ -157,7 +160,7 @@ const HomeHorizontalScroll = () => {
   useEffect(() => {
     if (successorTitleInView) {
       successorControls.start('visible')
-    } else {
+    } else if (!isMobile) {
       successorControls.start('hidden')
     }
   }, [successorControls, successorTitleInView])
@@ -165,7 +168,7 @@ const HomeHorizontalScroll = () => {
   useEffect(() => {
     if (successorImageInView) {
       successorImageControls.start('visible')
-    } else {
+    } else if (!isMobile) {
       successorImageControls.start('hidden')
     }
   }, [successorImageControls, successorImageInView])
@@ -199,7 +202,7 @@ const HomeHorizontalScroll = () => {
   useEffect(() => {
     if (conclusionTitleInView) {
       conclusionControls.start('visible')
-    } else {
+    } else if (!isMobile) {
       conclusionControls.start('hidden')
     }
   }, [conclusionControls, conclusionTitleInView])
@@ -207,7 +210,7 @@ const HomeHorizontalScroll = () => {
   useEffect(() => {
     if (conclusionImageInView) {
       conclusionImageControls.start('visible')
-    } else {
+    } else if (!isMobile) {
       conclusionImageControls.start('hidden')
     }
   }, [conclusionImageControls, conclusionImageInView])
@@ -266,7 +269,7 @@ const HomeHorizontalScroll = () => {
         <div className="mb-36 lg:mb-0" />
         <img
           src={'/new/assets/home/server-left.webp'}
-          className="absolute -bottom-20 md:-bottom-20 -left-20 w-[300px] md:w-[320px] lg:hidden z-10"
+          className="absolute -bottom-36 md:-bottom-20 -left-20 w-[300px] md:w-[320px] lg:hidden z-10"
         />
         <motion.img
           ref={serverImageRef}
@@ -275,7 +278,7 @@ const HomeHorizontalScroll = () => {
           initial="hidden"
           src={'/new/assets/home/server-left.webp'}
           className="absolute bottom-56 lg:-bottom-32 -left-52 hidden lg:block w-[500px]"
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3, type: 'tween' }}
         />
         <motion.img
           ref={serverImageRef}
@@ -284,7 +287,7 @@ const HomeHorizontalScroll = () => {
           initial="hidden"
           src={'/new/assets/home/server-right.webp'}
           className="absolute bottom-56 lg:-bottom-32 -right-52 hidden lg:block w-[500px]"
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3, type: 'tween' }}
         />
       </div>
       <div
@@ -373,7 +376,7 @@ const HomeHorizontalScroll = () => {
           animate={successorImageControls}
           initial="hidden"
           variants={successorVariants.imageLeft}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.7, type: 'tween' }}
           src="/new/assets/home/data-sphere.webp"
           alt=""
           className="hidden lg:block absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[450px] block bg-cover w-[700px]"
@@ -383,7 +386,7 @@ const HomeHorizontalScroll = () => {
           animate={successorImageControls}
           initial="hidden"
           variants={successorVariants.imageRight}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.7, type: 'tween' }}
           src="/new/assets/home/data-sphere-flop.webp"
           alt=""
           className="absolute -bottom-[140px] md:-bottom-[580px] lg:bottom-auto -right-[140px] lg:-right-[450px] block bg-cover w-[700px]"
@@ -460,6 +463,7 @@ const HomeHorizontalScroll = () => {
           animate={conclusionImageControls}
           initial="hidden"
           variants={conclusionVariants.image}
+          transition={{ type: 'tween' }}
           // mobile and desktop image
           //  /assets/home/dataverse-mobile.png,
           // /assets/home/dataverse.png
@@ -471,6 +475,7 @@ const HomeHorizontalScroll = () => {
           animate={conclusionControls}
           initial="hidden"
           variants={conclusionVariants.image}
+          transition={{ type: 'tween' }}
           // mobile and desktop image
           //  /assets/home/dataverse-mobile.png,
           // /assets/home/dataverse.png

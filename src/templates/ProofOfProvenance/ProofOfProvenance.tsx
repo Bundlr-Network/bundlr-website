@@ -91,7 +91,7 @@ const ProofOfProvenance: NextPage = () => {
           <SubNav />
           <img
             src="/new/assets/home/data-cluster-rotated.webp"
-            className="absolute -bottom-60 sm:-bottom-[400px] lg:-bottom-20 lg:-top-30 md:-right-[500px] lg:-right-96 w-[900px]"
+            className="absolute -bottom-60 sm:-bottom-[400px] lg:top-0 md:-right-[500px] lg:-right-[570px] xl:-right-[450px] w-[900px] transform -rotate-180"
             alt="cloud"
           />
           <Heading level={1} className="z-10">

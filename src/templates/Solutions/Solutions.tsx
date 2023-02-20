@@ -225,7 +225,7 @@ const Solutions: NextPage = () => {
         <div className="flex">
           <div className="container pt-20 lg:pb-0 lg:pt-[203px] z-40 text-center md:text-left">
             <Heading level={1}>
-              Use cases for<br className='hidden lg:inline' /> Everyone
+              Use Cases for<br className='hidden lg:inline' /> Everyone
             </Heading>
           </div>
           <img
