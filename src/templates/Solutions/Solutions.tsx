@@ -235,7 +235,7 @@ const Solutions: NextPage = () => {
           /> */}
           <img
             src="/new/assets/home/data-cluster-rotated.webp"
-            className="absolute -bottom-60 sm:-bottom-[400px] lg:top-0 md:-right-[500px] lg:-right-[570px] xl:-right-[450px] w-[900px] transform -rotate-180"
+            className="absolute -bottom-60 sm:-bottom-[400px] lg:top-10 md:-right-[500px] lg:-right-[470px] xl:-right-[350px] w-[900px] transform -rotate-180 -scale-y-100"
             alt="cloud"
           />
         </div>

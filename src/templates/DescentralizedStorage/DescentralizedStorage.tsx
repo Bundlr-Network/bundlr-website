@@ -126,9 +126,9 @@ const DescentralizedStorage: NextPage = () => {
         <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
           <SubNav />
 
-          <div className="absolute -left-[650px] -bottom-80 lg:-left-[650px] xl:-left-[350px] 2xl:-left-48 lg:bottom-auto">
+          <div className="absolute -left-[650px] -bottom-96 lg:-left-[650px] xl:-left-[450px] 2xl:-left-48 lg:-bottom-10 -scale-x-100">
             <Image
-              src="/new/assets/home/cloud.webp"
+              src="/new/assets/home/data-dust.webp"
               width={'1200px'}
               height={'614px'}
               alt="cloud"

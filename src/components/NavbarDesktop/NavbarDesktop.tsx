@@ -29,7 +29,7 @@ const useNavbarDesktop = () => {
       {
         name: 'Proof of Provenance',
         href: '/solutions/proof-of-provenance'
-      },
+      }
       // {
       //   name: 'Data Availability',
       //   href: '/solutions/data-availability'
@@ -102,7 +102,7 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
               transparent: 'bg-transparent',
               onyx: 'bg-onyx',
               black: 'bg-ghostWhite',
-              ghostWhite: 'bg-timberwolf',
+              ghostWhite: 'bg-timberwolf'
             }[scheme]
             }`}
         />
@@ -146,10 +146,19 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
           EN
         </div> */}
         <div className="lg:w-[269px] flex items-center justify-center ml-auto lg:ml-0">
-          <a href="https://docs.bundlr.network/" target="_blank" rel="noreferrer">
-            <Button className='px-3 py-2 whiteSpace-nowrap text-base' scheme={
-              scheme === SchemeColor.black ? ButtonScheme.white : ButtonScheme.black
-            }>
+          <a
+            href="https://docs.bundlr.network/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button
+              className="px-3 py-2 whiteSpace-nowrap text-base"
+              scheme={
+                scheme === SchemeColor.black
+                  ? ButtonScheme.white
+                  : ButtonScheme.black
+              }
+            >
               START BUILDING
               <DevIcon />
             </Button>
@@ -176,6 +185,7 @@ const NavDropdown = ({
   scheme?: SchemeColor
 }) => {
   const [isHovered, setIsHovered] = useState(false)
+  const [childHovered, setChildHovered] = useState<null | string>(null)
 
   return (
     <>
@@ -184,16 +194,23 @@ const NavDropdown = ({
         onMouseLeave={() => setIsHovered(false)}
         className="relative h-[89px] flex items-center justify-center z-[9999]"
       >
-        <div className="px-4 uppercase hover:font-bold cursor-default whitespace-nowrap">{title}</div>
+        <div
+          className={`px-4 uppercase hover:font-bold cursor-default whitespace-nowrap ${title === childHovered ? 'font-bold' : ''
+            }`}
+        >
+          {title}
+        </div>
         {options.length > 0 && (
           <div
+            onMouseEnter={() => setChildHovered(title)}
+            onMouseLeave={() => setChildHovered(null)}
             className={`absolute top-[89px] left-0 bg-seashell ${isHovered ? 'block' : 'hidden'
               } rounded-b-[6px] border border-timberwolf ${{
                 Solutions: 'w-[260px]',
                 Learn: 'w-[138px]'
               }[title]
               }
-              ${scheme &&
+            ${scheme &&
               {
                 transparent: '!bg-transparent',
                 onyx: '!bg-black border-onyx text-white',
@@ -201,7 +218,7 @@ const NavDropdown = ({
                 ghostWhite: '!bg-ghostWhite border-timberwolf text-onyx'
               }[scheme]
               }
-              `}
+            `}
           >
             <ul className="h-full w-full flex flex-col justify-start items-start pl-5 pt-4 pb-5">
               {options.map((option) => {
@@ -253,7 +270,7 @@ const MenuMobile = () => {
       {
         name: 'Proof of Provenance',
         href: '/solutions/proof-of-provenance'
-      },
+      }
       // {
       //   name: 'Data Availability',
       //   href: '/solutions/data-availability'
@@ -349,11 +366,13 @@ const MenuMobile = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className='uppercase text-base'>Solutions</p>
+                    <p className="uppercase text-base">Solutions</p>
                     {MENU_OPTIONS.Solutions.map((option) => {
                       return (
                         <Link href={option.href} key={option.name}>
-                          <p className="uppercase text-3xl z-[999]">{option.name}</p>
+                          <p className="uppercase text-3xl z-[999]">
+                            {option.name}
+                          </p>
                         </Link>
                       )
                     })}
@@ -366,11 +385,13 @@ const MenuMobile = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className='uppercase text-base'>Learn</p>
+                    <p className="uppercase text-base">Learn</p>
                     {MENU_OPTIONS.Learn.map((option) => {
                       return (
                         <Link href={option.href} key={option.name}>
-                          <p className="uppercase text-3xl z-[999]">{option.name}</p>
+                          <p className="uppercase text-3xl z-[999]">
+                            {option.name}
+                          </p>
                         </Link>
                       )
                     })}
