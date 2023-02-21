@@ -228,7 +228,7 @@ const Solutions: NextPage = () => {
               Use Cases for<br className='hidden lg:inline' /> Everyone
             </Heading>
             <p className="text-lg font-robotoMono font-light z-10 leading-loose mt-5">
-              Sizes doesn&apos;t matter
+              Size doesn&apos;t matter
             </p>
           </div>
           {/* <img

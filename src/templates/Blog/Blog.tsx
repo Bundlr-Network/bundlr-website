@@ -60,19 +60,24 @@ export const useLatestArticles = () => {
 
   const MEDIUM_FEED_URL = 'https://medium.com/feed/bundlr-network'
 
-  const CUSTOM_ARTICLE = {
+  const CUSTOM_ARTICLE = [{
+    title: 'Unveiling the Next Evolution of Bundlr',
+    pubDate: 'February 21, 2023',
+    link: 'https://bundlr.mirror.xyz/sJpTh3kVJd3XIGIFJ_cmn5u4CoyxAC3Ujiif-QKEHq0',
+    thumbnail: '/new/assets/shared/next-evolution.webp'
+  }, {
     title: 'New Year’s NFT from Bundlr',
     pubDate: 'January 18, 2023',
     link: 'https://mirror.xyz/0x9AbB09BF9F58E72A532E859d798eB4E8e10A35e1/DwsDnsqP9qU11dtnsE6w1VpgQ-rvxnR8RvXO6-Wmhe8',
     thumbnail: '/new/assets/shared/mirror-post.webp'
-  }
+  }]
 
   useEffect(() => {
     setLoading(true)
     fetch(`https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED_URL}`)
       .then((res) => res.json())
       .then((res) => {
-        setLatestArticles([CUSTOM_ARTICLE, ...res.items])
+        setLatestArticles([...CUSTOM_ARTICLE, ...res.items])
         setLoading(false)
       })
   }, [])

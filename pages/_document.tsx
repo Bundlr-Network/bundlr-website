@@ -16,6 +16,20 @@ const Document = () => {
           rel="stylesheet"
         />
 
+        <meta property="og:url" content="https://bundlr.network" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Bundlr | Home" />
+        <meta property="og:description" content="Bundlr is the world’s data layer. We solve data integrity issues through permanent storage and proof of provenance." />
+        <meta property="og:image" content="/new/assets/shared/open-graph.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="bundlr.network" />
+        <meta property="twitter:url" content="https://bundlr.network" />
+        <meta name="twitter:title" content="Bundlr | Home" />
+        <meta name="twitter:description" content="Bundlr is the world’s data layer. We solve data integrity issues through permanent storage and proof of provenance." />
+        <meta name="twitter:image" content="/new/assets/shared/open-graph.png" />
+
+
         {/* // favicon */}
         <link rel="icon" href="/favicon.png" />
       </Head>
