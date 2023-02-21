@@ -140,10 +140,10 @@ const Developers: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center lg:items-start">
+        <div className="flex flex-col items-center lg:items-center">
           <div className="text-9xl">&gt;90%</div>
-          <p className="font-robotoMono text-lg text-center lg:text-left">
-            Bundlr processes over 90% of transactions on Arweave
+          <p className="font-robotoMono text-lg text-center">
+            Bundlr processes over 90% <br />of transactions on Arweave
           </p>
         </div>
         {/* <div className="hidden lg:block">
