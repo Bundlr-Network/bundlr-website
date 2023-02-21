@@ -23,7 +23,7 @@ const useTestimonial = () => {
     {
       title: 'Solsea',
       description:
-        '“Bundlr helped us streamline NFT’s minting with their super fast infrastructure and also very robust and easy to use JS client. By adding option to pay for storage in Sol, we love it even more.“',
+        '“Bundlr helped us streamline NFT’s minting with their super fast infrastructure and also very robust and easy to use JS client. By adding option to pay for storage in SOL, we love it even more.“',
       image: '/assets/home/solsea.svg',
       imageAlt: 'Solsea',
       invert: true,
