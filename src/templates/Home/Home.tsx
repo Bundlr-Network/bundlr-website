@@ -80,7 +80,7 @@ const useHome = () => {
         title: 'Proof of Provenance',
         description:
           'Identify original information by accurately attributing origin',
-        href: '/solution/proof-of-provenance'
+        href: '/solutions/proof-of-provenance'
       },
     ]
 
