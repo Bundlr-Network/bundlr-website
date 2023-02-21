@@ -66,7 +66,7 @@ export const SOCIAL_LINKS = [
     href: 'https://mirror.xyz/0x9AbB09BF9F58E72A532E859d798eB4E8e10A35e1'
   },
   {
-    name: 'Youtube',
+    name: 'YouTube',
     icon: YoutubeIcon,
     href: 'https://www.youtube.com/@bundlr-network'
   }

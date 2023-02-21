@@ -1,4 +1,4 @@
-import { CodeBlock, anOldHope } from 'react-code-blocks'
+import { CodeBlock, dracula } from 'react-code-blocks'
 
 import { useState } from 'react'
 
@@ -8,19 +8,22 @@ const useExpandableSection = () => {
       id: 1,
       title: 'Connect to a Node',
       description:
-        'To connect to a Bundlr node, provide your private key to allow for access to stored funds and for signing transactions.'
+        'Start by connecting to a Bundlr node, simply provide a node address and your preferred payment currency. When working with NodeJS on the server, link a private key and when building browser-based dApps, use injected providers to link a user’s wallet.',
+      snippet: `const bundlr = new Bundlr("https://node1.bundlr.network", "matic", "<eth-private-key");`
     },
     {
       id: 2,
       title: 'Fund a Node',
       description:
-        'The function bundlr.fund(amountInAtomicUnits) funds the specified node using the wallet you linked when creating the Bundlr object. When working with WebBundlr in the browser, the end user’s private key is automatically linked using their wallet software using injected providers. Bundlr supports both upfront funding, sending over enough funds to cover all of a project’s uploads, and lazy funding where you fund per upload. Fund the node you intend to upload to, funded balances are not shared between nodes.'
+        'Fund a node to pay for uploads using any of the 14 tokens we support. Bundlr supports both upfront funding, sending over enough funds to cover all of a project’s uploads, and lazy funding where you fund per upload.',
+      snippet: `await bundlr.fund(1e18); // 1 matic`
     },
     {
       id: 3,
       title: 'Upload your Data, Forever',
       description:
-        'The function bundlr.upload(data) uploads any arbitrary data passed to it. The transaction id returned as part of the response is used to download the data, simply create a URL with the following format https://arweave.net/[transaction_id].'
+        'Upload data, files, or an entire folder of files with only one line of code. You’ll instantly get back a transaction id you can use to download the data.',
+      snippet: `await bundlr.upload("GM Bundloooors!");`
     }
   ]
 
@@ -84,11 +87,19 @@ const ExpandableSection = () => {
                 {section.title}
               </h2>
               {currentlyOpen === section.id && (
-                <p
-                  className={`text-base lg:text-lg font-robotoMono max-w-5xl text-center md:text-left`}
-                >
-                  {section.description}
-                </p>
+                <>
+                  <p
+                    className={`text-base lg:text-lg font-robotoMono max-w-5xl text-center md:text-left`}
+                  >
+                    {section.description}
+                  </p>
+                  <CodeBlock
+                    text={section.snippet}
+                    language={'javascript'}
+                    theme={dracula}
+                    showLineNumbers={false}
+                  />
+                </>
               )}
             </li>
           ))}
@@ -98,14 +109,14 @@ const ExpandableSection = () => {
             }`}
           onClick={() => handleSectionClick(4)}
         >
-          Here’s the Code!
+          Here’s the Full Code!
         </div>
         {currentlyOpen === 4 && (
           <div className="overflow-scroll md:overflow-y-hidden lg:overflow-hidden max-w-[calc(100vw-30px)] z-50">
             <CodeBlock
               text={CODE_EXAMPLE}
               language={'javascript'}
-              theme={anOldHope}
+              theme={dracula}
               showLineNumbers={false}
             />
           </div>
