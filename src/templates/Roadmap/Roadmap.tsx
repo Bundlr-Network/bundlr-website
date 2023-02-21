@@ -2,6 +2,7 @@ import { Footer, NavbarDesktop } from '@/components'
 import { useLayoutEffect, useRef } from 'react'
 
 import { ChevronRight } from '@/svg'
+import Link from 'next/link'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
@@ -89,13 +90,12 @@ const Roadmap: NextPage = () => {
                 lets users pay for Bundlr in the token of their preferred chain.
               </p>
               <p className="font-robotoMono z-10">
-                This leads to a more seamless developer experience and makes
-                Bundlr more accessible to builders in different ecosystems.
+                This leads to a seamless developer experience and makes Bundlr more accessible to builders in different ecosystems.
               </p>
               <p className="font-robotoMono z-10">
                 If you’re part of a project that’s interested in integrating
-                your token with Bundlr, feel free to contact us through our
-                Partner Program.
+                your token with Bundlr, feel free to contact us through our {' '}
+                <Link href="/partner-program">Partner Program.</Link>
               </p>
             </div>
             {/* <div className="border-dashed border-t-2 w-24 h-2 border-white" />\ */}

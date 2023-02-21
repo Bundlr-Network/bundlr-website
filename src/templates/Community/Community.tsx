@@ -170,7 +170,7 @@ const Community: NextPage = () => {
       <div className="bg-black">
         <NextSeo {...PAGE_SEO} />
         <div className="text-white">
-          <NavbarDesktop scheme={SchemeColor.onyx} />
+          <NavbarDesktop scheme={SchemeColor.black} />
         </div>
         <header
           className="px-5 lg:px-[79px] border-b border-timberwolf pt-[93px] h-auto pb-20 lg:pb-40 relative overflow-hidden"
@@ -183,7 +183,7 @@ const Community: NextPage = () => {
         >
           <div className="leading-none flex flex-col gap-10 lg:gap-[197px] ">
             <Heading level={1} className="z-[99] text-center lg:text-left text-white">
-              Join the #BUNDLOOOOR <br />Community
+              Join The Bundlr <br />Community
             </Heading>
 
             <Socials links={SOCIAL_LINKS} />

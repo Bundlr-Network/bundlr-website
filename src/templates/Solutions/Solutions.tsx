@@ -117,10 +117,10 @@ const useSolutions = () => {
       ref: audioRef,
       title: 'Audio',
       description:
-        'DApps can store audio permanently on Arweave while being to pay for storage in the token of their choice. With the ability to store metadata, dApps can incorporate algorithms to create personalized experiences for listeners. And even at peak listening times, Bundlr ensures a reliable streaming experience.',
+        'DApps can store audio permanently on Arweave and pay for storage in the token of their choice. With the ability to store metadata, dApps can incorporate algorithms to create personalized experiences for listeners. Even at peak listening time, Bundlr ensures a reliable streaming experience.',
       image: 'sound.png',
       invert: true,
-      href: 'Sound.xyz',
+      href: 'https://sound.xyz',
       example: 'Sound.xyz'
     },
     {
@@ -227,6 +227,9 @@ const Solutions: NextPage = () => {
             <Heading level={1}>
               Use Cases for<br className='hidden lg:inline' /> Everyone
             </Heading>
+            <p className="text-lg font-robotoMono font-light z-10 leading-loose mt-5">
+              Sizes doesn&apos;t matter
+            </p>
           </div>
           {/* <img
             src="/assets/solutions/blocks.png"

@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 import Button from '../Button'
 import { DevIcon } from '@/svg'
 import Heading from '../Heading'
@@ -35,23 +33,25 @@ const HomeHeader = () => {
             {TITLE}
           </h1> */}
           <Paragraph size="sm" className="z-50">
-            Store your data on the
+            Store your data on a
             <br /> trustless source of truth
           </Paragraph>
         </div>
         <div className="flex gap-[21px] mt-56 lg:mt-[320px] items-center font-robotoMono">
           <a href="https://docs.bundlr.network" className="z-50">
-            <Button className="border border-white">
+            <Button>
               START BUILDING
               <DevIcon />
             </Button>
           </a>
-          <span className="z-10 -ml-14 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-14 rounded-tr-full rounded-br-full uppercase bg-white text-black">
-            Permanent on{' '}
-            <a href="https://arweave.net/" target={'_blank'} rel="noreferrer">
-              Arweave
-            </a>
-          </span>
+          <a
+            href="https://arweave.net/"
+            target={'_blank'}
+            rel="noreferrer"
+            className="z-10 -ml-14 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-14 rounded-tr-full rounded-br-full uppercase bg-white text-black"
+          >
+            Permanent on Arweave
+          </a>
         </div>
       </header>
     </>

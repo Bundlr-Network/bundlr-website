@@ -16,9 +16,6 @@ const Document = () => {
           rel="stylesheet"
         />
 
-        <script src="https://www.google.com/recaptcha/api.js" async></script>
-
-
         {/* // favicon */}
         <link rel="icon" href="/favicon.png" />
       </Head>

@@ -34,7 +34,7 @@ const Footer = () => {
       ]
     },
     {
-      title: 'DEVELOPERS',
+      title: 'DEVELOP',
       options: [
         {
           name: 'Get Started',
