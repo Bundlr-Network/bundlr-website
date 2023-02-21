@@ -93,12 +93,14 @@ const ExpandableSection = () => {
                   >
                     {section.description}
                   </p>
-                  <CodeBlock
-                    text={section.snippet}
-                    language={'javascript'}
-                    theme={dracula}
-                    showLineNumbers={false}
-                  />
+                  <div className="w-full">
+                    <CodeBlock
+                      text={section.snippet}
+                      language={'javascript'}
+                      theme={dracula}
+                      showLineNumbers={false}
+                    />
+                  </div>
                 </>
               )}
             </li>
