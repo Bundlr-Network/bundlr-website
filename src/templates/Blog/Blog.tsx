@@ -145,14 +145,14 @@ const Blog: NextPage = () => {
           </div>
         </a>
         <div className="">
-          <ul className="flex gap-7 flex-col">
+          <ul className="flex flex-wrap gap-7">
             {latestArticles.map((article, index) => {
               return (
                 <a
                   href={article.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-lg w-full lg:w-[334px]"
+                  className="rounded-lg w-full md:w-[calc(50%-14px)] lg:w-full"
                   key={`blog-post-${index}`}
                 >
                   <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
