@@ -151,7 +151,7 @@ const Faucet: NextPage = () => {
         <header className="flex flex-col items-center justify-center">
           <Heading level={1}>Faucet</Heading>
           <Paragraph size="md" className="mt-2 max-w-2xl text-center">
-            To receive free tokens for our testnet, simply enter your crypto
+            To receive free tokens for our testnet, simply enter your arweave
             wallet address, share on twitter and copy and paste the twitter URL
             back into the field below.
           </Paragraph>
@@ -188,7 +188,7 @@ const Faucet: NextPage = () => {
                 ></path>
               </svg>
               <p className="font-robotoMono">
-                Enter crypto wallet address and share on Twitter
+                Enter arweave wallet address and share on Twitter
               </p>
             </div>
             <div className="flex border-white bg-black">
