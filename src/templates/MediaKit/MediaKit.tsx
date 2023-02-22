@@ -103,7 +103,7 @@ const MediaKit: NextPage = () => {
         </p>
         <img
           src="/new/assets/home/data-storm.webp"
-          className="absolute hidden lg:flex -bottom-60 sm:-bottom-[400px] lg:top-[0px] lg:-right-[270px] 2xl:right-0 w-[600px] transform -rotate-180 -scale-y-100"
+          className="absolute hidden lg:flex -bottom-60 sm:-bottom-[400px] lg:top-[0px] lg:-right-[270px] xl:-right-10 w-[600px] transform -rotate-180 -scale-y-100"
           alt="cloud"
         />
       </header>
