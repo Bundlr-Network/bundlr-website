@@ -9,7 +9,7 @@ type Props = {}
 const NotFound = (props: Props) => {
 
   const PAGE_SEO = {
-    title: 'Bundlr | Page not found',
+    title: 'Bundlr | Page Not Found',
     description:
       'The page you are looking for does not exist.'
   }
@@ -19,7 +19,7 @@ const NotFound = (props: Props) => {
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
       <div className="px-5 lg:px-[79px] overflow-hidden flex items-start justify-center flex-col gap-10 h-[400px] relative">
-        <Heading level={1}>Page not found</Heading>
+        <Heading level={1}>Page Not Found</Heading>
         <Link href={'/'}>
           <Button className='self-start'>Return to home</Button>
         </Link>
