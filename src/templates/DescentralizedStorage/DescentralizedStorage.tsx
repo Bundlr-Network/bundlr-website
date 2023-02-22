@@ -158,7 +158,7 @@ const DescentralizedStorage: NextPage = () => {
             'w-full lg:w-[440px] text-center lg:text-left  py-12 lg:py-48'
           }
         >
-          Data Stored for as Long as You Need
+          Data Stored Permanently
         </Heading>
         <img
           src="/new/assets/home/spiral.webp"
