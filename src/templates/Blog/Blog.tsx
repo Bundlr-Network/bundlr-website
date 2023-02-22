@@ -61,7 +61,7 @@ export const useLatestArticles = () => {
       title: 'Unveiling the Next Evolution of Bundlr',
       pubDate: 'February 21, 2023',
       link: 'https://bundlr.mirror.xyz/sJpTh3kVJd3XIGIFJ_cmn5u4CoyxAC3Ujiif-QKEHq0',
-      thumbnail: '/new/assets/shared/next-evolution.webp'
+      thumbnail: '/new/assets/shared/next-evolution.png'
     }
   ]
 
