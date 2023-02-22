@@ -58,7 +58,10 @@ const Footer = () => {
           name: 'JS SDK',
           href: 'https://docs.bundlr.network/category/basic-features',
           newTab: true
-
+        },
+        {
+          name: 'Faucet',
+          href: '/faucet',
         }
       ]
     },
