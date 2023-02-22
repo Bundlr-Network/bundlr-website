@@ -94,13 +94,18 @@ const MediaKit: NextPage = () => {
     <>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
-      <header className="flex flex-col gap-9 px-5 lg:px-[109px] pt-[193px] pb-14 border-b border-ghostWhite">
+      <header className="overflow-hidden flex flex-col gap-9 px-5 lg:px-[109px] pt-[193px] pb-14 border-b border-ghostWhite relative">
         <h1 className="text-6xl">Media Kit</h1>
         <p className="font-robotoMono max-w-[654px]">
           Please follow these guidelines when promoting Bundlr in all marketing
           communications, including advertising, articles, websites, and printed
           promotions.
         </p>
+        <img
+          src="/new/assets/home/data-storm.webp"
+          className="absolute hidden lg:flex -bottom-60 sm:-bottom-[400px] lg:top-[0px] lg:-right-[270px] 2xl:right-0 w-[600px] transform -rotate-180 -scale-y-100"
+          alt="cloud"
+        />
       </header>
       <div className="flex relative px-4 lg:px-[109px]">
         <div className="">
