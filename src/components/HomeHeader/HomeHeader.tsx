@@ -45,7 +45,7 @@ const HomeHeader = () => {
             </Button>
           </a>
           <a
-            href="https://arweave.net/"
+            href="https://viewblock.io/arweave/contract/OXcT1sVRSA5eGwt2k6Yuz8-3e3g9WJi5uSE99CWqsBs"
             target={'_blank'}
             rel="noreferrer"
             className="z-10 -ml-14 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-14 rounded-tr-full rounded-br-full uppercase bg-white text-black"
