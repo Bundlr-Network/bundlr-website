@@ -81,7 +81,7 @@ export const useLatestArticles = () => {
     fetch(`https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED_URL}`)
       .then((res) => res.json())
       .then((res) => {
-        setLatestArticles([...CUSTOM_ARTICLE, ...res.items])
+        setLatestArticles([...CUSTOM_ARTICLE, ...res.items.filter(article => article.title !== "Unveiling the Next Evolution of Bundlr")])
         setLoading(false)
       })
   }, [])

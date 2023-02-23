@@ -71,7 +71,7 @@ const Developers: NextPage = () => {
         <div className="px-5 lg:px-0 flex flex-col items-center justify-center h-[calc(100vh-90px)] relative">
           <div className="flex flex-col gap-9 mb-32 items-center justify-center">
             <Heading level={1} className="z-10 text-center">
-              Ferociously Fast, Super Scalable, <br />Simply Seamless
+              Ferociously Fast, Super Scalable, Simply Seamless
             </Heading>
             {/* <p className="text-lg font-robotoMono font-light z-10 text-center max-w-5xl leading-loose">
               Develop your dApp with delightful data infrastructure
