@@ -90,35 +90,38 @@ const SupportedCurrencies = ({
   return (
     <>
       <section
-        className={`pt-[40px] pb-[64px] flex flex-col items-center justify-center text-center bg-white text-black gap-11 rounded-[20px]`}
+        className={`flex flex-col items-center justify-center gap-11 rounded-[20px] bg-white pt-[40px] pb-[64px] text-center text-black`}
       >
-        <h2 className='font-robotoMono'>SUPPORTED TOKENS</h2>
+        <h2 className="font-robotoMono">SUPPORTED TOKENS</h2>
         <Marquee gradientColor={[255, 255, 255]} speed={45}>
           <div className="flex items-center gap-10 lg:gap-20">
             {[
-              ...SUPPORTED_CURRENCIES,
+              ...SUPPORTED_CURRENCIES
               // ...SUPPORTED_CURRENCIES,
               // ...SUPPORTED_CURRENCIES,
               // ...SUPPORTED_CURRENCIES,
               // ...SUPPORTED_CURRENCIES
             ].map((currency, index) => {
               return (
-                <div key={index} className={`flex flex-col items-center justify-center gap-5
+                <div
+                  key={index}
+                  className={`flex flex-col items-center justify-center gap-5
                 ${index === 0 && 'ml-[80px]'}
-                `}>
+                `}
+                >
                   <img
                     src={currency.icon}
                     alt={currency.ticker}
                     width={54}
                     height={54}
-                  // className="invert"
+                    // className="invert"
                   />
                   <div className="flex flex-col gap-1">
-                    <p className="uppercase font-robotoMono text-lg">
+                    <p className="font-robotoMono text-lg uppercase">
                       {' '}
                       {currency.ticker}
                     </p>
-                    <p className="uppercase font-robotoMono text-xs">
+                    <p className="font-robotoMono text-xs uppercase">
                       {' '}
                       {currency.company}
                     </p>

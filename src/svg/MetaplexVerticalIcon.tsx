@@ -12,7 +12,7 @@ const MetaplexVerticalIcon = (props: SVGAttributes<SVGElement>) => {
     >
       <mask
         id="mask0_1_550"
-        style={{ maskType: "alpha" }}
+        style={{ maskType: 'alpha' }}
         width="116"
         height="101"
         x="0"

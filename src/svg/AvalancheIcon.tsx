@@ -32,7 +32,6 @@ const AvalancheIcon = (props: SVGAttributes<SVGElement>) => {
         ></image>
       </defs>
     </svg>
-
   )
 }
 

@@ -1,4 +1,10 @@
-import { ReactNode, SVGAttributes, cloneElement, useEffect, useState } from 'react'
+import {
+  ReactNode,
+  SVGAttributes,
+  cloneElement,
+  useEffect,
+  useState
+} from 'react'
 
 import Button from '../Button'
 import { ButtonScheme } from '../Button/Button'
@@ -29,14 +35,15 @@ const CtaCentralized = ({
   return (
     <>
       <div
-        className={`w-full h-auto py-44 lg:h-[740px] overflow-hidden relative lg:py-4 px-6 flex flex-col items-center justify-center ${{
-          [CtaScheme.seashell]: 'bg-seashell text-black',
-          [CtaScheme.black]: 'text-white bg-black'
-        }[scheme]
-          }`}
+        className={`relative flex h-auto w-full flex-col items-center justify-center overflow-hidden py-44 px-6 lg:h-[740px] lg:py-4 ${
+          {
+            [CtaScheme.seashell]: 'bg-seashell text-black',
+            [CtaScheme.black]: 'bg-black text-white'
+          }[scheme]
+        }`}
       >
         <h2
-          className="z-10 font-light text-4xl lg:text-7xl max-w-2xl text-center leading-none mb-11"
+          className="z-10 mb-11 max-w-2xl text-center text-4xl font-light leading-none lg:text-7xl"
           dangerouslySetInnerHTML={{
             __html: title
           }}
@@ -59,14 +66,14 @@ const CtaCentralized = ({
           </Button>
         </a>
 
-        <div className="hidden lg:flex absolute -top-10 -right-[700px] xl:-right-[600px] overflow-hidden transform rotate-180">
+        <div className="absolute -top-10 -right-[700px] hidden rotate-180 transform overflow-hidden lg:flex xl:-right-[600px]">
           <img
             src="/new/assets/home/data-cluster-rotated.webp"
             className="w-[1000px] rounded-lg"
             alt="image1"
           />
         </div>
-        <div className="hidden lg:flex absolute -top-10 -left-[700px] xl:-left-[600px] overflow-hidden -scale-y-100">
+        <div className="absolute -top-10 -left-[700px] hidden -scale-y-100 overflow-hidden lg:flex xl:-left-[600px]">
           <img
             src="/new/assets/home/data-cluster-rotated.webp"
             className="w-[1000px] rounded-lg"

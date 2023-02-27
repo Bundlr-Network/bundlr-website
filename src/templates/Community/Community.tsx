@@ -104,7 +104,9 @@ const NewsSection: React.FC = () => {
     <section>
       <div className="flex justify-between">
         {/* <h2 className="text-7xl font-light pb-[60px]">Updates</h2> */}
-        <Heading level={2} className='pb-[60px]'>Updates</Heading>
+        <Heading level={2} className="pb-[60px]">
+          Updates
+        </Heading>
         {/* <button
           onClick={() => setCurrentSlice(currentSlice + 3)}
           className="flex items-center gap-3 border rounded-full font-robotoMono px-3 py-2 border-black self-start"
@@ -114,31 +116,31 @@ const NewsSection: React.FC = () => {
         </button> */}
       </div>
 
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {latestArticles.slice(0, currentSlice).map((item, index) => {
           return (
             <motion.a
               href={item.link}
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg w-full"
+              className="w-full rounded-lg"
               key={`blog-post-${index}`}
               animate={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 20 }}
             >
-              <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
+              <li className="rounded-lg bg-gradient-to-b from-[#968982] to-transparent p-[1px]">
                 {/* add gradient background that goes from gray to transparent */}
 
-                <div className="flex flex-col items-center gap-11 w-full lg:max-w-[348px] bg-seashell rounded-lg overflow-hidden">
+                <div className="flex w-full flex-col items-center gap-11 overflow-hidden rounded-lg bg-seashell lg:max-w-[348px]">
                   {/* make image as background of rectangle box */}
                   <div
-                    className="w-full h-[200px] bg-cover bg-center"
+                    className="h-[200px] w-full bg-cover bg-center"
                     style={{
                       backgroundImage: `url(${item.thumbnail})`
                     }}
                   />
-                  <div className="flex flex-col gap-4 px-5 pb-10 -mt-6">
-                    <h3 className="text-black font-light text-xl line-clamp-2">
+                  <div className="-mt-6 flex flex-col gap-4 px-5 pb-10">
+                    <h3 className="text-xl font-light text-black line-clamp-2">
                       {item.title}
                     </h3>
                   </div>
@@ -152,7 +154,7 @@ const NewsSection: React.FC = () => {
         <div className="flex items-center justify-center">
           <button
             onClick={() => setCurrentSlice(currentSlice + 3)}
-            className="flex items-center gap-3 border rounded-full font-robotoMono px-3 py-2 border-black self-start"
+            className="flex items-center gap-3 self-start rounded-full border border-black px-3 py-2 font-robotoMono"
           >
             Load more
           </button>
@@ -173,17 +175,21 @@ const Community: NextPage = () => {
           <NavbarDesktop scheme={SchemeColor.black} />
         </div>
         <header
-          className="px-5 lg:px-[79px] border-b border-timberwolf pt-[93px] h-auto pb-20 lg:pb-40 relative overflow-hidden"
-        // style={{
-        //   backgroundImage: 'url(/assets/home/header.png)',
-        //   backgroundRepeat: 'no-repeat',
-        //   backgroundPosition: '50% 140%',
-        //   backgroundSize: '100%'
-        // }}
+          className="relative h-auto overflow-hidden border-b border-timberwolf px-5 pt-[93px] pb-20 lg:px-[79px] lg:pb-40"
+          // style={{
+          //   backgroundImage: 'url(/assets/home/header.png)',
+          //   backgroundRepeat: 'no-repeat',
+          //   backgroundPosition: '50% 140%',
+          //   backgroundSize: '100%'
+          // }}
         >
-          <div className="leading-none flex flex-col gap-10 lg:gap-[197px] ">
-            <Heading level={1} className="z-[99] text-center lg:text-left text-white">
-              Join The Bundlr <br />Community
+          <div className="flex flex-col gap-10 leading-none lg:gap-[197px] ">
+            <Heading
+              level={1}
+              className="z-[99] text-center text-white lg:text-left"
+            >
+              Join The Bundlr <br />
+              Community
             </Heading>
 
             <Socials links={SOCIAL_LINKS} />
@@ -191,7 +197,7 @@ const Community: NextPage = () => {
           <img
             src="/new/assets/home/data-wing.webp"
             alt="hero"
-            className="absolute top-[480px] lg:-right-72 lg:top-10 xl:top-0 xl:-right-72 hidden md:block rotate-[-30.24deg]"
+            className="absolute top-[480px] hidden rotate-[-30.24deg] md:block lg:-right-72 lg:top-10 xl:top-0 xl:-right-72"
           />
         </header>
 
@@ -199,7 +205,7 @@ const Community: NextPage = () => {
           <HomeWhyUseBundlr content={COMMUNITY_VALUES} />
         </section> */}
 
-        <section className="px-5 lg:px-[79px] bg-seashell flex items-center justify-center pt-20">
+        <section className="flex items-center justify-center bg-seashell px-5 pt-20 lg:px-[79px]">
           <NewsSection />
         </section>
 

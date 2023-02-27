@@ -81,7 +81,8 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
   return (
     <>
       <nav
-        className={`flex items-center h-[90px] antialiased border-b font-robotoMono ${scheme &&
+        className={`flex h-[90px] items-center border-b font-robotoMono antialiased ${
+          scheme &&
           {
             timberwolf: 'border-timberwolf',
             transparent: 'border-transparent',
@@ -89,24 +90,25 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
             black: 'border-ghostWhite',
             ghostWhite: 'border-timberwolf'
           }[scheme]
-          }`}
+        }`}
       >
         <Link href="/">
-          <div className="w-[100px] md:w-[120px] flex items-center justify-center cursor-pointer">
+          <div className="flex w-[100px] cursor-pointer items-center justify-center md:w-[120px]">
             <BundlrIcon />
           </div>
         </Link>
         <div
-          className={`h-full w-[1px] bg-timberwolf ${scheme &&
+          className={`h-full w-[1px] bg-timberwolf ${
+            scheme &&
             {
               transparent: 'bg-transparent',
               onyx: 'bg-onyx',
               black: 'bg-ghostWhite',
               ghostWhite: 'bg-timberwolf'
             }[scheme]
-            }`}
+          }`}
         />
-        <ul className="items-center ml-[40px] gap-[30px] text-sm hidden lg:flex">
+        <ul className="ml-[40px] hidden items-center gap-[30px] text-sm lg:flex">
           {Object.keys(MENU_OPTIONS).map((key, index) => {
             if (MENU_OPTIONS[key].length === 1) {
               return (
@@ -133,26 +135,27 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
         </ul>
 
         <div
-          className={`h-full w-[1px] bg-timberwolf ml-auto hidden lg:block ${scheme &&
+          className={`ml-auto hidden h-full w-[1px] bg-timberwolf lg:block ${
+            scheme &&
             {
               transparent: 'bg-transparent',
               onyx: 'bg-onyx',
               black: 'bg-ghostWhite',
               ghostWhite: 'bg-timberwolf'
             }[scheme]
-            }`}
+          }`}
         />
         {/* <div className="w-[83px] items-center justify-center font-bold text-sm hidden lg:flex">
           EN
         </div> */}
-        <div className="lg:w-[269px] flex items-center justify-center ml-auto lg:ml-0">
+        <div className="ml-auto flex items-center justify-center lg:ml-0 lg:w-[269px]">
           <a
             href="https://docs.bundlr.network/"
             target="_blank"
             rel="noreferrer"
           >
             <Button
-              className="px-3 py-2 whiteSpace-nowrap text-base"
+              className="whiteSpace-nowrap px-3 py-2 text-base"
               scheme={
                 scheme === SchemeColor.black
                   ? ButtonScheme.white
@@ -164,7 +167,7 @@ const NavbarDesktop = ({ scheme }: { scheme?: SchemeColor }) => {
             </Button>
           </a>
         </div>
-        <div className="flex lg:hidden ml-[10px] mr-[10px]">
+        <div className="ml-[10px] mr-[10px] flex lg:hidden">
           <MenuMobile />
         </div>
       </nav>
@@ -191,43 +194,45 @@ const NavDropdown = ({
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative h-[89px] flex items-center justify-center z-[9999]"
+        className="relative z-[9999] flex h-[89px] items-center justify-center"
       >
         <div
-          className={`px-4 uppercase hover:font-bold cursor-default whitespace-nowrap ${isHovered ? 'font-bold' : ''
-            }`}
+          className={`cursor-default whitespace-nowrap px-4 uppercase hover:font-bold ${
+            isHovered ? 'font-bold' : ''
+          }`}
         >
           {title}
         </div>
         {options.length > 0 && (
           <div
-            className={`absolute top-[89px] left-0 bg-seashell ${isHovered ? 'block' : 'hidden'
-              } rounded-b-[6px] border border-timberwolf ${{
+            className={`absolute top-[89px] left-0 bg-seashell ${
+              isHovered ? 'block' : 'hidden'
+            } rounded-b-[6px] border border-timberwolf ${
+              {
                 Solutions: 'w-[260px]',
                 Learn: 'w-[138px]'
               }[title]
-              }
-            ${scheme &&
+            }
+            ${
+              scheme &&
               {
                 transparent: '!bg-transparent',
-                onyx: '!bg-black border-onyx text-white',
-                black: '!bg-black border-ghostWhite text-white',
-                ghostWhite: '!bg-ghostWhite border-timberwolf text-onyx'
+                onyx: 'border-onyx !bg-black text-white',
+                black: 'border-ghostWhite !bg-black text-white',
+                ghostWhite: 'border-timberwolf !bg-ghostWhite text-onyx'
               }[scheme]
-              }
+            }
             `}
           >
-            <ul className="h-full w-full flex flex-col justify-start items-start pl-5 pt-4 pb-5">
+            <ul className="flex h-full w-full flex-col items-start justify-start pl-5 pt-4 pb-5">
               {options.map((option) => {
                 return (
                   <Link
                     href={option.href}
                     key={option.name}
-                    className="h-full w-full flex items-center justify-center text-sm"
+                    className="flex h-full w-full items-center justify-center text-sm"
                   >
-                    <li
-                      className="h-[50px] w-full flex items-center justify-start gap-3 uppercase hover:font-bold cursor-pointer"
-                    >
+                    <li className="flex h-[50px] w-full cursor-pointer items-center justify-start gap-3 uppercase hover:font-bold">
                       {
                         {
                           Solutions: <BracesIcon />,
@@ -307,10 +312,11 @@ const MenuMobile = () => {
     <>
       {/* overlay */}
       <motion.div
-        className={`fixed top-0 left-0 w-full h-full text-white bg-black z-[9999] ${isPressed ? 'block' : 'hidden'
-          }`}
+        className={`fixed top-0 left-0 z-[9999] h-full w-full bg-black text-white ${
+          isPressed ? 'block' : 'hidden'
+        }`}
       >
-        <div className="flex flex-col h-full justify-between">
+        <div className="flex h-full flex-col justify-between">
           {
             {
               Solutions: (
@@ -333,10 +339,10 @@ const MenuMobile = () => {
               )
             }[currentSubmenu || 'Default']
           }
-          <div className="flex justify-between pt-5 px-3">
+          <div className="flex justify-between px-3 pt-5">
             <div>
               {currentSubmenu && (
-                <div className="bg-smoky border border-onyx rounded-md p-4 flex items-center justify-center">
+                <div className="flex items-center justify-center rounded-md border border-onyx bg-smoky p-4">
                   <ChevronRight
                     className="rotate-180"
                     onClick={() => setCurrentSubmenu(null)}
@@ -346,7 +352,7 @@ const MenuMobile = () => {
             </div>
 
             <div
-              className="bg-smoky border border-onyx rounded-md p-4 flex items-center justify-center self-start"
+              className="flex items-center justify-center self-start rounded-md border border-onyx bg-smoky p-4"
               onClick={() => setIsPressed(false)}
             >
               <CloseIcon />
@@ -358,16 +364,16 @@ const MenuMobile = () => {
               {
                 Solutions: (
                   <motion.div
-                    className="flex flex-col gap-8 -mt-32"
+                    className="-mt-32 flex flex-col gap-8"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="uppercase text-base">Solutions</p>
+                    <p className="text-base uppercase">Solutions</p>
                     {MENU_OPTIONS.Solutions.map((option) => {
                       return (
                         <Link href={option.href} key={option.name}>
-                          <p className="uppercase text-3xl z-[999]">
+                          <p className="z-[999] text-3xl uppercase">
                             {option.name}
                           </p>
                         </Link>
@@ -377,16 +383,16 @@ const MenuMobile = () => {
                 ),
                 Learn: (
                   <motion.div
-                    className="flex flex-col gap-8 -mt-52"
+                    className="-mt-52 flex flex-col gap-8"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="uppercase text-base">Learn</p>
+                    <p className="text-base uppercase">Learn</p>
                     {MENU_OPTIONS.Learn.map((option) => {
                       return (
                         <Link href={option.href} key={option.name}>
-                          <p className="uppercase text-3xl z-[999]">
+                          <p className="z-[999] text-3xl uppercase">
                             {option.name}
                           </p>
                         </Link>
@@ -403,7 +409,7 @@ const MenuMobile = () => {
                             href={MENU_OPTIONS[key][0].href}
                             key={MENU_OPTIONS[key][0].name}
                           >
-                            <div className="uppercase text-3xl z-[999]">
+                            <div className="z-[999] text-3xl uppercase">
                               {MENU_OPTIONS[key][0].name}
                             </div>
                           </Link>
@@ -411,7 +417,7 @@ const MenuMobile = () => {
                       } else {
                         return (
                           <div
-                            className="uppercase text-3xl flex justify-between items-center"
+                            className="flex items-center justify-between text-3xl uppercase"
                             key={key}
                             onClick={() => setCurrentSubmenu(key as any)}
                           >
@@ -432,7 +438,7 @@ const MenuMobile = () => {
               Learn: <div />,
               Default: (
                 <div className="w-full self-center p-7">
-                  <div className="font-robotoMono uppercase text-md flex items-center justify-center gap-2 px-4 py-3 lg:px-6 lg:py-5 rounded-full hover:font-bold bg-white text-black">
+                  <div className="text-md flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 font-robotoMono uppercase text-black hover:font-bold lg:px-6 lg:py-5">
                     START BUILDING
                     <DevIcon />
                   </div>
@@ -444,10 +450,10 @@ const MenuMobile = () => {
       </motion.div>
 
       <button
-        className="relative group z-50"
+        className="group relative z-50"
         onClick={() => setIsPressed((prev) => !prev)}
       >
-        <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all duration-200">
+        <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden rounded-full transition-all duration-200">
           <MenuIcon />
         </div>
       </button>

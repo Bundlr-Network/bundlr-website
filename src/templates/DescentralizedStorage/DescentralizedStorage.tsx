@@ -32,18 +32,18 @@ const useDescentralizedStorage = () => {
     description: string
     href: string
   }[] = [
-      {
-        title: 'Proof of Provenance',
-        description:
-          'Identify original information by accurately attributing origin',
-        href: '/solutions/proof-of-provenance'
-      },
-      // {
-      //   title: 'Optimistic Data Availability',
-      //   description: 'Pay for consensus only when you need it',
-      //   href: '/solutions/data-availability'
-      // }
-    ]
+    {
+      title: 'Proof of Provenance',
+      description:
+        'Identify original information by accurately attributing origin',
+      href: '/solutions/proof-of-provenance'
+    }
+    // {
+    //   title: 'Optimistic Data Availability',
+    //   description: 'Pay for consensus only when you need it',
+    //   href: '/solutions/data-availability'
+    // }
+  ]
 
   const BENEFITS_CONTENT: BenefitsProps = {
     title: 'What Bundlr Offers',
@@ -59,8 +59,7 @@ const useDescentralizedStorage = () => {
       },
       {
         title: 'Seamless Integration',
-        description:
-          '3-4 lines of code to integrate Bundlr'
+        description: '3-4 lines of code to integrate Bundlr'
       },
       {
         title: 'Pay in Any Token',
@@ -80,7 +79,6 @@ const useDescentralizedStorage = () => {
 }
 
 export const SubNav: FC = () => {
-
   const currentRoute = useRouter().pathname
 
   const SUBNAV_CONTENT = [
@@ -91,7 +89,7 @@ export const SubNav: FC = () => {
     {
       title: 'Provenance',
       href: '/solutions/proof-of-provenance'
-    },
+    }
     // {
     //   title: 'Data Availability',
     //   href: '/solutions/data-availability'
@@ -99,17 +97,18 @@ export const SubNav: FC = () => {
   ]
 
   return (
-    <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
-      {
-        SUBNAV_CONTENT.map((item, index) => (
-          <Link href={item.href} key={`sub-nav-${index}`}>
-            <div className={`uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer ${currentRoute === item.href ? 'bg-black text-white' : ''
-              }`}>
-              {item.title}
-            </div>
-          </Link>
-        ))
-      }
+    <div className="absolute top-6 left-[79px] hidden gap-4 lg:flex">
+      {SUBNAV_CONTENT.map((item, index) => (
+        <Link href={item.href} key={`sub-nav-${index}`}>
+          <div
+            className={`cursor-pointer px-2 py-1 font-robotoMono text-xs uppercase ${
+              currentRoute === item.href ? 'bg-black text-white' : ''
+            }`}
+          >
+            {item.title}
+          </div>
+        </Link>
+      ))}
     </div>
   )
 }
@@ -123,10 +122,10 @@ const DescentralizedStorage: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite ">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-center justify-center relative overflow-hidden px-4 lg:px-0">
+        <div className="relative flex flex-col items-center justify-center overflow-hidden px-4 pt-20 pb-52 lg:h-[700px] lg:px-0 lg:pt-0 lg:pb-0">
           <SubNav />
 
-          <div className="absolute -left-[650px] -bottom-96 lg:-left-[650px] xl:-left-[450px] 2xl:-left-48 lg:-bottom-10 -scale-x-100">
+          <div className="absolute -left-[650px] -bottom-96 -scale-x-100 lg:-left-[650px] lg:-bottom-10 xl:-left-[450px] 2xl:-left-48">
             <Image
               src="/new/assets/home/data-dust.webp"
               width={'1200px'}
@@ -135,11 +134,11 @@ const DescentralizedStorage: NextPage = () => {
               loading="eager"
             />
           </div>
-          <div className="ml-auto pr-5 lg:pr-[79px] z-50">
+          <div className="z-50 ml-auto pr-5 lg:pr-[79px]">
             <Heading level={1} className={'z-10 text-center md:text-left'}>
               Decentralized <br /> Storage
             </Heading>
-            <p className="font-robotoMono text-base z-50 mt-5 text-center md:text-left">
+            <p className="z-50 mt-5 text-center font-robotoMono text-base md:text-left">
               Performant, scalable, and seamless – forever.{' '}
             </p>
           </div>
@@ -148,14 +147,14 @@ const DescentralizedStorage: NextPage = () => {
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="relative h-auto lg:h-[911px] px-5 lg:px-[79px] w-full">
+      <section className="relative h-auto w-full px-5 lg:h-[911px] lg:px-[79px]">
         {/* <h2 className="text-4xl lg:text-5xl font-fkDisplay py-12 lg:py-48 w-full lg:w-[440px] text-center lg:text-left">
           Data Stored for as Long as You Need
         </h2> */}
         <Heading
           level={3}
           className={
-            'w-full lg:w-[440px] text-center lg:text-left  py-12 lg:py-48'
+            'w-full py-12 text-center lg:w-[440px]  lg:py-48 lg:text-left'
           }
         >
           Data Stored Permanently
@@ -166,17 +165,15 @@ const DescentralizedStorage: NextPage = () => {
           width={500}
           className="absolute right-10 top-10 hidden lg:block"
         />
-        <ul className="flex flex-col lg:flex-row gap-10">
-          <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
+        <ul className="flex flex-col gap-10 lg:flex-row">
+          <li className="w-full rounded-lg bg-gradient-to-b from-[#968982] to-transparent p-[1px] lg:w-1/2">
             <a href="https://arweave.org/" target={'_blank'} rel="noreferrer">
               {/* add gradient background that goes from gray to transparent */}
-              <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden px-2 py-8 lg:p-11">
+              <div className="flex flex-col gap-8 overflow-hidden rounded-lg bg-seashell px-2 py-8 lg:p-11">
                 {/* make image as background of rectangle box */}
                 <div className="flex flex-col gap-4 px-5 pb-10">
-                  <Heading level={3}>
-                    Arweave
-                  </Heading>
-                  <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
+                  <Heading level={3}>Arweave</Heading>
+                  <div className="self-start bg-black p-1 font-robotoMono text-xs font-light uppercase text-white">
                     LIVE
                   </div>
                   <p className="font-robotoMono text-lg leading-loose">
@@ -192,16 +189,14 @@ const DescentralizedStorage: NextPage = () => {
               </div>
             </a>
           </li>
-          <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-1/2">
+          <li className="w-full rounded-lg bg-gradient-to-b from-[#968982] to-transparent p-[1px] lg:w-1/2">
             {/* add gradient background that goes from gray to transparent */}
 
-            <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden px-2 py-8 lg:p-11 h-full">
+            <div className="flex h-full flex-col gap-8 overflow-hidden rounded-lg bg-seashell px-2 py-8 lg:p-11">
               {/* make image as background of rectangle box */}
               <div className="flex flex-col gap-4 px-5 pb-10">
-                <Heading level={3}>
-                  Preweave
-                </Heading>
-                <div className="bg-black text-white p-1 font-light text-xs font-robotoMono uppercase self-start">
+                <Heading level={3}>Preweave</Heading>
+                <div className="self-start bg-black p-1 font-robotoMono text-xs font-light uppercase text-white">
                   Coming soon
                 </div>
                 <p className="font-robotoMono text-lg leading-loose">
@@ -217,13 +212,13 @@ const DescentralizedStorage: NextPage = () => {
           </li>
         </ul>
       </section>
-      <section className="px-5 lg:px-[79px] flex py-24 relative overflow-hidden">
+      <section className="relative flex overflow-hidden px-5 py-24 lg:px-[79px]">
         <div className="">
-          <h3 className="transform -rotate-90 mt-24 text-[26px] uppercase -ml-[96px] hidden lg:inline-block">
+          <h3 className="mt-24 -ml-[96px] hidden -rotate-90 transform text-[26px] uppercase lg:inline-block">
             WE ARE DIFFERENT
           </h3>
         </div>
-        <div className="flex flex-col gap-36 w-full lg:w-2/3 ml-auto">
+        <div className="ml-auto flex w-full flex-col gap-36 lg:w-2/3">
           <div className="">
             {/* <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
               Lightning Fast Uploads, at Industrial Scale
@@ -231,7 +226,7 @@ const DescentralizedStorage: NextPage = () => {
             <Heading level={3} className="text-center lg:text-left">
               Lightning Fast Uploads, at Industrial Scale
             </Heading>
-            <p className="font-robotoMono max-w-[870px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left leading-loose">
+            <p className="max-w-[870px] pl-0 pt-16 text-center font-robotoMono text-lg leading-loose lg:pl-28 lg:text-left">
               With uploads time under 8 milliseconds and the ability to scale to
               millions of transactions per seconds, Bundlr’s performance is on
               par with traditional providers. Bundlr is ready to store the
@@ -240,10 +235,10 @@ const DescentralizedStorage: NextPage = () => {
           </div>
           <div className="">
             {/* <h2 className="text-4xl font-fkDisplay text-center lg:text-left z-50">Seamless for Developers</h2> */}
-            <Heading level={3} className="text-center lg:text-left z-50">
+            <Heading level={3} className="z-50 text-center lg:text-left">
               Seamless for Developers
             </Heading>
-            <p className="font-robotoMono max-w-[870px] pl-0 lg:pl-28 pt-16 text-lg text-center lg:text-left z-50 leading-loose">
+            <p className="z-50 max-w-[870px] pl-0 pt-16 text-center font-robotoMono text-lg leading-loose lg:pl-28 lg:text-left">
               Our intuitive docs and SDK help you integrate Bundlr with just 3-4
               lines of code. Further, you can sign and pay for storage in of our
               14 supported tokens, including ETH, SOL, and MATIC.{' '}
@@ -261,7 +256,7 @@ const DescentralizedStorage: NextPage = () => {
         <img
           src="/new/assets/home/data-donuts.webp"
           alt="data-splash"
-          className="absolute -bottom-72 -left-32 hidden lg:block w-[600px] rotate-[-30deg]"
+          className="absolute -bottom-72 -left-32 hidden w-[600px] rotate-[-30deg] lg:block"
         />
       </section>
 

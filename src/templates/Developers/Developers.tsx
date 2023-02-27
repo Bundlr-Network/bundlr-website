@@ -23,7 +23,8 @@ import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 const useDevelopers = () => {
   const PAGE_SEO = {
     title: 'Bundlr | Developers',
-    description: 'Unlock the full potential of Bundlr\'s technology with our developer resources. Use our SDK and start storing data permanently with 3-4 lines of code.'
+    description:
+      "Unlock the full potential of Bundlr's technology with our developer resources. Use our SDK and start storing data permanently with 3-4 lines of code."
   }
 
   const CTA_CONTENT: CtaCentralizedProps = {
@@ -47,8 +48,7 @@ const useDevelopers = () => {
       },
       {
         title: 'Seamless Integration',
-        description:
-          '3-4 lines of code to integrate Bundlr'
+        description: '3-4 lines of code to integrate Bundlr'
       },
       {
         title: 'Pay in Any Token',
@@ -66,10 +66,10 @@ const Developers: NextPage = () => {
   return (
     <div className="">
       <NextSeo {...PAGE_SEO} />
-      <header className=" text-white bg-black">
+      <header className=" bg-black text-white">
         <NavbarDesktop scheme={SchemeColor.black} />
-        <div className="px-5 lg:px-0 flex flex-col items-center justify-center h-[calc(100vh-90px)] relative">
-          <div className="flex flex-col gap-9 mb-32 items-center justify-center">
+        <div className="relative flex h-[calc(100vh-90px)] flex-col items-center justify-center px-5 lg:px-0">
+          <div className="mb-32 flex flex-col items-center justify-center gap-9">
             <Heading level={1} className="z-10 text-center">
               Ferociously Fast, Super Scalable, Simply Seamless
             </Heading>
@@ -92,7 +92,7 @@ const Developers: NextPage = () => {
           <img
             src="/new/assets/home/dataverse.webp"
             alt="hero"
-            className="absolute bg-cover bottom-0 w-full h-48 lg:h-64"
+            className="absolute bottom-0 h-48 w-full bg-cover lg:h-64"
           />
         </div>
       </header>
@@ -121,12 +121,10 @@ const Developers: NextPage = () => {
         </div>
       </section> */}
 
-
-
-      <section className="px-5 lg:px-[79px] bg-seashell lg:pt-16 pb-20 flex justify-between items-center gap-24 flex-col lg:flex-row pt-20">
-        <div className='flex flex-col items-center justify-center lg:items-start'>
+      <section className="flex flex-col items-center justify-between gap-24 bg-seashell px-5 pb-20 pt-20 lg:flex-row lg:px-[79px] lg:pt-16">
+        <div className="flex flex-col items-center justify-center lg:items-start">
           <SectionTitle title="How Bundlr Works" />
-          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-l lg:ml-24 pt-16 text-center lg:text-left">
+          <div className="ml-l flex max-w-[600px] flex-col gap-10 pt-16 text-center font-robotoMono lg:ml-24 lg:text-left">
             <p className="leading-loose">
               Bundlr uses binary encoding methods to compact multiple Layer 2
               transactions into a Layer 1 transaction know as a bundle. Like
@@ -142,8 +140,9 @@ const Developers: NextPage = () => {
         </div>
         <div className="flex flex-col items-center lg:items-center">
           <div className="text-9xl">&gt;90%</div>
-          <p className="font-robotoMono text-lg text-center">
-            Bundlr processes over 90% <br />of transactions on Arweave
+          <p className="text-center font-robotoMono text-lg">
+            Bundlr processes over 90% <br />
+            of transactions on Arweave
           </p>
         </div>
         {/* <div className="hidden lg:block">
@@ -152,26 +151,30 @@ const Developers: NextPage = () => {
       </section>
 
       <section className="bg-seashell pt-20 pb-20 lg:pb-32">
-        <div className="mx-5 lg:mx-[79px] rounded-[20px] overflow-hidden bg-black z-10">
+        <div className="z-10 mx-5 overflow-hidden rounded-[20px] bg-black lg:mx-[79px]">
           <HomeTrustedBy scheme="dark" />
         </div>
       </section>
 
-      <section className='bg-black text-white flex gap-20 items-start relative h-auto md:flex-row px-4 lg:px-[79px] pt-20 min-h-[990px] overflow-hidden'>
-        <div className="hidden md:inline-block absolute top-32 left-0">
-          <h2 className="transform -rotate-90 text-[26px] uppercase w-[300px]">
+      <section className="relative flex h-auto min-h-[990px] items-start gap-20 overflow-hidden bg-black px-4 pt-20 text-white md:flex-row lg:px-[79px]">
+        <div className="absolute top-32 left-0 hidden md:inline-block">
+          <h2 className="w-[300px] -rotate-90 transform text-[26px] uppercase">
             BUILD ON BUNDLR
           </h2>
         </div>
-        <img src="/new/assets/home/data-donuts.webp" alt="" className='w-[320px] md:w-[450px] lg:w-[640px] absolute -left-40 -bottom-40' />
+        <img
+          src="/new/assets/home/data-donuts.webp"
+          alt=""
+          className="absolute -left-40 -bottom-40 w-[320px] md:w-[450px] lg:w-[640px]"
+        />
         <div className="ml-auto w-full md:w-2/3">
           <ExpandableSection />
         </div>
       </section>
-      <section className="px-5 lg:px-[79px] bg-seashell pt-16 flex justify-between gap-24 items-center">
-        <div className='flex items-center justify-center flex-col lg:items-start'>
+      <section className="flex items-center justify-between gap-24 bg-seashell px-5 pt-16 lg:px-[79px]">
+        <div className="flex flex-col items-center justify-center lg:items-start">
           <SectionTitle title="Why on Arweave?" />
-          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-0 lg:ml-24 pt-16 text-center lg:text-left">
+          <div className="ml-0 flex max-w-[600px] flex-col gap-10 pt-16 text-center font-robotoMono lg:ml-24 lg:text-left">
             <p className="leading-loose">
               <a href="https://arweave.org" target={'_blank'} rel="noreferrer">
                 Arweave

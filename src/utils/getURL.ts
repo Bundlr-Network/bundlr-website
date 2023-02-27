@@ -7,8 +7,8 @@ function getURL() {
       ? process.env.NEXT_PUBLIC_URL
       : process?.env?.NEXT_PUBLIC_VERCEL_URL &&
         process.env.NEXT_PUBLIC_VERCEL_URL !== ''
-        ? process.env.NEXT_PUBLIC_VERCEL_URL
-        : localUrl
+      ? process.env.NEXT_PUBLIC_VERCEL_URL
+      : localUrl
 
   return url.includes('http') ? url : `https://${url}`
 }

@@ -94,74 +94,74 @@ const MediaKit: NextPage = () => {
     <>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
-      <header className="overflow-hidden flex flex-col gap-9 px-5 lg:px-[109px] pt-[193px] pb-14 border-b border-ghostWhite relative">
+      <header className="relative flex flex-col gap-9 overflow-hidden border-b border-ghostWhite px-5 pt-[193px] pb-14 lg:px-[109px]">
         <h1 className="text-6xl">Media Kit</h1>
-        <p className="font-robotoMono max-w-[654px]">
+        <p className="max-w-[654px] font-robotoMono">
           Please follow these guidelines when promoting Bundlr in all marketing
           communications, including advertising, articles, websites, and printed
           promotions.
         </p>
         <img
           src="/new/assets/home/data-storm.webp"
-          className="absolute hidden lg:flex -bottom-60 sm:-bottom-[400px] lg:top-[0px] lg:-right-[270px] xl:-right-10 w-[600px] transform -rotate-180 -scale-y-100"
+          className="absolute -bottom-60 hidden w-[600px] -rotate-180 -scale-y-100 transform sm:-bottom-[400px] lg:top-[0px] lg:-right-[270px] lg:flex xl:-right-10"
           alt="cloud"
         />
       </header>
-      <div className="flex relative px-4 lg:px-[109px]">
+      <div className="relative flex px-4 lg:px-[109px]">
         <div className="">
           <section className="mt-28">
-            <h2 className="text-5xl mb-16" id="brand-guidelines" ref={brandRef}>
+            <h2 className="mb-16 text-5xl" id="brand-guidelines" ref={brandRef}>
               Brand Guidelines
             </h2>
             <div className="pr-4 lg:pr-0">
-              <h3 className="text-3xl font-fkDisplay font-light">Logo</h3>
-              <div className="py-28 flex items-center justify-center w-full lg:w-[726px] bg-white rounded-3xl mt-5">
+              <h3 className="font-fkDisplay text-3xl font-light">Logo</h3>
+              <div className="mt-5 flex w-full items-center justify-center rounded-3xl bg-white py-28 lg:w-[726px]">
                 <MediaKitBundlrLogoIcon />
               </div>
-              <div className="flex flex-col gap-5 mt-8">
-                <p className="text-sm font-robotoMono">
+              <div className="mt-8 flex flex-col gap-5">
+                <p className="font-robotoMono text-sm">
                   Blockchain. Bundling. Data layers.{' '}
                 </p>
-                <p className="text-sm font-robotoMono">
+                <p className="font-robotoMono text-sm">
                   Bundlr’s logo is comprised of data layers bundled together in
                   a chain shaped as the letter B.
                 </p>
               </div>
             </div>
             <div className="mt-28">
-              <h3 className="text-3xl font-fkDisplay font-light">
+              <h3 className="font-fkDisplay text-3xl font-light">
                 Color Variations
               </h3>
-              <div className="grid grid-cols-1 lg:grid-cols-2 w-full lg:w-[726px] grid-row gap-y-4 mt-5 pr-4 lg:pr-0">
-                <div className="w-full lg:max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-black text-white">
+              <div className="grid-row mt-5 grid w-full grid-cols-1 gap-y-4 pr-4 lg:w-[726px] lg:grid-cols-2 lg:pr-0">
+                <div className="flex w-full items-center justify-center rounded-3xl bg-black py-16 text-white lg:max-w-[348px]">
                   <MediaKitBundlrLogoIcon width={'187px'} />
                 </div>
-                <div className="w-full lg:max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-timberwolf">
+                <div className="flex w-full items-center justify-center rounded-3xl bg-timberwolf py-16 lg:max-w-[348px]">
                   <MediaKitBundlrLogoIcon width={'187px'} />
                 </div>
-                <div className="w-full lg:max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-ghostWhite">
+                <div className="flex w-full items-center justify-center rounded-3xl bg-ghostWhite py-16 lg:max-w-[348px]">
                   <MediaKitBundlrLogoIcon width={'187px'} />
                 </div>
-                <div className="w-full lg:max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-white">
+                <div className="flex w-full items-center justify-center rounded-3xl bg-white py-16 lg:max-w-[348px]">
                   <MediaKitBundlrLogoIcon width={'187px'} />
                 </div>
               </div>
             </div>
             <div className="mt-28">
-              <h3 className="text-3xl font-fkDisplay font-light">
+              <h3 className="font-fkDisplay text-3xl font-light">
                 Common Errors
               </h3>
-              <div className="grid grid-cols-1 lg:grid-cols-2 grid-row gap-y-6 mt-5  w-full lg:w-[726px] pr-4 lg:pr-0 ">
-                <div className="w-full lg:max-w-[348px] flex flex-col gap-4">
-                  <div className="border-2 border-white flex flex-col items-center justify-center  h-[157px] rounded-3xl bg-white">
+              <div className="grid-row mt-5 grid w-full grid-cols-1 gap-y-6  pr-4 lg:w-[726px] lg:grid-cols-2 lg:pr-0 ">
+                <div className="flex w-full flex-col gap-4 lg:max-w-[348px]">
+                  <div className="flex h-[157px] flex-col items-center justify-center rounded-3xl  border-2 border-white bg-white">
                     <img src="/assets/mediakit/stretched.png" />
                   </div>
                   <p className="font-robotoMono text-sm">
                     Do not squash, strech or manipulate the logo in any way.
                   </p>
                 </div>
-                <div className="w-full lg:max-w-[348px] flex flex-col gap-4">
-                  <div className="border-2 border-white flex flex-col items-center justify-center h-[157px] rounded-3xl bg-white">
+                <div className="flex w-full flex-col gap-4 lg:max-w-[348px]">
+                  <div className="flex h-[157px] flex-col items-center justify-center rounded-3xl border-2 border-white bg-white">
                     <img src="/assets/mediakit/shadow.png" />
                   </div>
                   <p className="font-robotoMono text-sm">
@@ -169,16 +169,16 @@ const MediaKit: NextPage = () => {
                     pairings.
                   </p>
                 </div>
-                <div className="w-full lg:max-w-[348px] flex flex-col gap-4">
-                  <div className="border-2 border-white flex flex-col items-center justify-center  h-[157px] rounded-3xl bg-white">
+                <div className="flex w-full flex-col gap-4 lg:max-w-[348px]">
+                  <div className="flex h-[157px] flex-col items-center justify-center rounded-3xl  border-2 border-white bg-white">
                     <img src="/assets/mediakit/opacity.png" />
                   </div>
                   <p className="font-robotoMono text-sm">
                     Do not reduce the opacity in any way. Ensure high contrast.
                   </p>
                 </div>
-                <div className="w-full lg:max-w-[348px] flex flex-col gap-4">
-                  <div className="border-2 border-white flex flex-col items-center justify-center  h-[157px] rounded-3xl bg-white">
+                <div className="flex w-full flex-col gap-4 lg:max-w-[348px]">
+                  <div className="flex h-[157px] flex-col items-center justify-center rounded-3xl  border-2 border-white bg-white">
                     <img src="/assets/mediakit/text.png" />
                   </div>
                   <p className="font-robotoMono text-sm">
@@ -189,44 +189,44 @@ const MediaKit: NextPage = () => {
               </div>
             </div>
             <div className="mt-28 mb-28">
-              <h3 className="text-3xl font-fkDisplay font-light">
+              <h3 className="font-fkDisplay text-3xl font-light">
                 Primary colors
               </h3>
-              <div className="grid grid-cols-1 lg:grid-cols-2 w-full lg:w-[726px] grid-row gap-y-4 mt-5 pr-4 lg:pr-0">
-                <div className="border-2 border-white w-full lg:max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-black text-white">
+              <div className="grid-row mt-5 grid w-full grid-cols-1 gap-y-4 pr-4 lg:w-[726px] lg:grid-cols-2 lg:pr-0">
+                <div className="flex w-full items-center justify-center rounded-3xl border-2 border-white bg-black py-16 text-white lg:max-w-[348px]">
                   Black #000000
                 </div>
-                <div className="border-2 border-white w-full lg:max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-seashell">
+                <div className="flex w-full items-center justify-center rounded-3xl border-2 border-white bg-seashell py-16 lg:max-w-[348px]">
                   Seashell #FEF4EE
                 </div>
-                <div className="border-2 border-white w-full lg:max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-ghostWhite">
+                <div className="flex w-full items-center justify-center rounded-3xl border-2 border-white bg-ghostWhite py-16 lg:max-w-[348px]">
                   Ghost white #EEF0F6
                 </div>
-                <div className="border-2 border-white w-full lg:max-w-[348px] flex items-center justify-center py-16 rounded-3xl bg-white">
+                <div className="flex w-full items-center justify-center rounded-3xl border-2 border-white bg-white py-16 lg:max-w-[348px]">
                   White #FFFFFF
                 </div>
               </div>
             </div>
           </section>
           <section className="">
-            <div className="flex flex-col md:flex-row justify-between items-start gap-3 lg:gap-0 mb-16 max-w-[726px]">
+            <div className="mb-16 flex max-w-[726px] flex-col items-start justify-between gap-3 md:flex-row lg:gap-0">
               <h2 className="text-5xl" id="asset-downloads" ref={assetRef}>
                 Asset Downloads
               </h2>
               <a
                 href="/assets/mediakit/downloads/media-kit.zip"
                 download="media-kit.zip"
-                className="font-robotoMono text-sm bg-black text-white flex items-center gap-2 px-4 py-3 rounded-full hover:font-bold"
+                className="flex items-center gap-2 rounded-full bg-black px-4 py-3 font-robotoMono text-sm text-white hover:font-bold"
               >
                 DOWNLOAD ALL
                 <DownloadIcon />
               </a>
             </div>
             <div className="flex flex-col gap-10">
-              <div className="flex flex-col lg:flex-row justify-between w-full lg:w-[726px] items-start ">
+              <div className="flex w-full flex-col items-start justify-between lg:w-[726px] lg:flex-row ">
                 <div className="">
-                  <p className="font-robotoMono uppercase text-xs pb-2">Logo</p>
-                  <div className="border-2 border-white w-[348px] flex items-center justify-center py-16 rounded-3xl bg-black text-white">
+                  <p className="pb-2 font-robotoMono text-xs uppercase">Logo</p>
+                  <div className="flex w-[348px] items-center justify-center rounded-3xl border-2 border-white bg-black py-16 text-white">
                     <MediaKitBundlrLogoIcon />
                   </div>
                 </div>
@@ -234,23 +234,23 @@ const MediaKit: NextPage = () => {
                   <a
                     href="/assets/mediakit/downloads/logo.png"
                     download="logo.png"
-                    className="border rounded-full font-robotoMono px-3 py-2 border-black"
+                    className="rounded-full border border-black px-3 py-2 font-robotoMono"
                   >
                     PNG
                   </a>
                   <a
                     href="/assets/mediakit/downloads/logo.svg"
                     download="logo.svg"
-                    className="border rounded-full font-robotoMono px-3 py-2 border-black"
+                    className="rounded-full border border-black px-3 py-2 font-robotoMono"
                   >
                     SVG
                   </a>
                 </div>
               </div>
-              <div className="flex flex-col lg:flex-row justify-between w-full lg:w-[726px] items-start">
+              <div className="flex w-full flex-col items-start justify-between lg:w-[726px] lg:flex-row">
                 <div className="">
-                  <p className="font-robotoMono uppercase text-xs pb-2">Logo</p>
-                  <div className="border-2 border-white w-[348px] flex items-center justify-center py-16 rounded-3xl bg-black text-white">
+                  <p className="pb-2 font-robotoMono text-xs uppercase">Logo</p>
+                  <div className="flex w-[348px] items-center justify-center rounded-3xl border-2 border-white bg-black py-16 text-white">
                     <MediaKitBundlrSymbolIcon />
                   </div>
                 </div>
@@ -258,7 +258,7 @@ const MediaKit: NextPage = () => {
                   <a
                     href="/assets/mediakit/downloads/logomark.png"
                     download="logomark.png"
-                    className="border rounded-full font-robotoMono px-3 py-2 border-black"
+                    className="rounded-full border border-black px-3 py-2 font-robotoMono"
                   >
                     PNG
                   </a>
@@ -266,7 +266,7 @@ const MediaKit: NextPage = () => {
                   <a
                     href="/assets/mediakit/downloads/logomark.svg"
                     download="logomark.svg"
-                    className="border rounded-full font-robotoMono px-3 py-2 border-black"
+                    className="rounded-full border border-black px-3 py-2 font-robotoMono"
                   >
                     SVG
                   </a>
@@ -275,7 +275,7 @@ const MediaKit: NextPage = () => {
             </div>
           </section>
           <section className="">
-            <div className="flex flex-col justify-between items-left gap-10 mb-28 max-w-[726px] mt-28">
+            <div className="items-left mb-28 mt-28 flex max-w-[726px] flex-col justify-between gap-10">
               <h2 className="text-5xl" id="press-inquiries" ref={pressRef}>
                 Press Inquiries
               </h2>
@@ -288,13 +288,15 @@ const MediaKit: NextPage = () => {
             </div>
           </section>
         </div>
-        <ul className="sticky hidden lg:flex cursor-pointer flex-col gap-3 top-10 ml-auto self-start mt-28 pr-5 pl-5 lg:pr-[109px] uppercase">
+        <ul className="sticky top-10 ml-auto mt-28 hidden cursor-pointer flex-col gap-3 self-start pr-5 pl-5 uppercase lg:flex lg:pr-[109px]">
           {STICKY_MENU.map((item, index) => (
             <li
               key={index}
               onClick={() => scrollToSection(item.id)}
-              className={`font-robotoMono text-sm mb-4 p-1 ${item.id === latestCurrentlyOnScreen && 'bg-black text-white whitespace-nowrap'
-                }`}
+              className={`mb-4 p-1 font-robotoMono text-sm ${
+                item.id === latestCurrentlyOnScreen &&
+                'whitespace-nowrap bg-black text-white'
+              }`}
             >
               {item.title}
             </li>

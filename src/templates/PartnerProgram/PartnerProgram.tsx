@@ -1,4 +1,10 @@
-import { Footer, Heading, NavbarDesktop, Paragraph, SectionTitle } from '@/components'
+import {
+  Footer,
+  Heading,
+  NavbarDesktop,
+  Paragraph,
+  SectionTitle
+} from '@/components'
 import { useEffect, useRef, useState } from 'react'
 
 import type { NextPage } from 'next'
@@ -8,7 +14,8 @@ import { SchemeColor } from '@/components/NavbarDesktop/NavbarDesktop'
 const usePartnerProgram = () => {
   const PAGE_SEO = {
     title: 'Bundlr | Partner Program',
-    description: 'Join us at the frontier of data by becoming a Bundlr partner. Contact us for token integrations and other opportunities.'
+    description:
+      'Join us at the frontier of data by becoming a Bundlr partner. Contact us for token integrations and other opportunities.'
   }
 
   return { PAGE_SEO }
@@ -46,15 +53,15 @@ const PartnerProgram: NextPage = () => {
     <div className="bg-ghostWhite">
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-      <header className="hidden lg:flex flex-col justify-center items-center mt-20 mb-28 gap-4">
+      <header className="mt-20 mb-28 hidden flex-col items-center justify-center gap-4 lg:flex">
         {/* <p className="text-2xl font-robotoMono text-center">
          
         </p> */}
-        <Paragraph size='md'> Interested in partnering with Bundlr?</Paragraph>
+        <Paragraph size="md"> Interested in partnering with Bundlr?</Paragraph>
         <Heading level={1}>Let&apos;s talk</Heading>
       </header>
-      <section className="mt-10 lg:mt-0 flex flex-col md:flex-row justify-between md:px-5 lg:px-[89px] pb-[105px] px-5 gap-12 lg:gap-0">
-        <div className="max-w-[564px] flex flex-col gap-9">
+      <section className="mt-10 flex flex-col justify-between gap-12 px-5 pb-[105px] md:flex-row md:px-5 lg:mt-0 lg:gap-0 lg:px-[89px]">
+        <div className="flex max-w-[564px] flex-col gap-9">
           <SectionTitle title="The Partner Program" />
           <p className="font-robotoMono">
             Are you interested in having your project’s token integrated as a
@@ -63,13 +70,13 @@ const PartnerProgram: NextPage = () => {
             continue the conversation.
           </p>
         </div>
-        <div className="bg-black p-6 lg:p-12 rounded-xl">
+        <div className="rounded-xl bg-black p-6 lg:p-12">
           <form
             className="flex flex-col gap-5"
             action="https://formsubmit.co/hello@bundlr.network"
             method="POST"
           >
-            <p className="text-white font-robotoMono">
+            <p className="font-robotoMono text-white">
               Fill in this form and we’ll get back to you shortly.
             </p>
             {/* <input type="hidden" name="debug" value="1" /> */}
@@ -89,31 +96,31 @@ const PartnerProgram: NextPage = () => {
               value="https://bundlr.network/partner-program?success"
             /> */}
             <input
-              className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
+              className="b-white rounded-md border bg-transparent px-6 py-3 font-robotoMono text-lg text-white"
               type="text"
               name="Name"
               placeholder="Name"
             />
             <input
-              className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
+              className="b-white rounded-md border bg-transparent px-6 py-3 font-robotoMono text-lg text-white"
               type="text"
               placeholder="Organization"
               name="Organization"
             />
             <input
-              className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
+              className="b-white rounded-md border bg-transparent px-6 py-3 font-robotoMono text-lg text-white"
               type="text"
               placeholder="Email"
               name="Email"
             />
             <input
-              className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
+              className="b-white rounded-md border bg-transparent px-6 py-3 font-robotoMono text-lg text-white"
               type="text"
               placeholder="Phone Number (Optional)"
               name="Phone"
             />
             <input
-              className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
+              className="b-white rounded-md border bg-transparent px-6 py-3 font-robotoMono text-lg text-white"
               type="text"
               placeholder="Telegram Handle (Optional)"
               name="Telegram"
@@ -123,7 +130,7 @@ const PartnerProgram: NextPage = () => {
               id=""
               rows={4}
               placeholder="Anything you want us to know? (Optional)"
-              className="border font-robotoMono rounded-md px-6 py-3 text-lg b-white bg-transparent text-white"
+              className="b-white rounded-md border bg-transparent px-6 py-3 font-robotoMono text-lg text-white"
             ></textarea>
             {/* <div
               className="g-recaptcha"
@@ -131,7 +138,7 @@ const PartnerProgram: NextPage = () => {
             ></div> */}
             <button
               type="submit"
-              className="bg-white rounded-md text-black flex items-center justify-center uppercase text-base py-4"
+              className="flex items-center justify-center rounded-md bg-white py-4 text-base uppercase text-black"
             >
               Submit
             </button>

@@ -3,9 +3,7 @@ import { PartnerProgram } from '@/templates'
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
-    props: {
-
-    }
+    props: {}
   }
 }
 

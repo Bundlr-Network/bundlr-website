@@ -32,18 +32,18 @@ const useProofOfProvenance = () => {
     description: string
     href: string
   }[] = [
-      {
-        title: 'Decentralized Storage',
-        description:
-          'Performant, scalable, and seamless data, stored permanently on Arweave ',
-        href: '/solutions/decentralized-storage'
-      }
-      // {
-      //   title: 'Optimistic Data Availability',
-      //   description: 'Pay for consensus only when you need it',
-      //   href: '/solutions/data-availability'
-      // }
-    ]
+    {
+      title: 'Decentralized Storage',
+      description:
+        'Performant, scalable, and seamless data, stored permanently on Arweave ',
+      href: '/solutions/decentralized-storage'
+    }
+    // {
+    //   title: 'Optimistic Data Availability',
+    //   description: 'Pay for consensus only when you need it',
+    //   href: '/solutions/data-availability'
+    // }
+  ]
 
   const CTA_CONTENT: CtaCentralizedProps = {
     title: 'Ready to Become <br /> a BUNDLOOOOR?',
@@ -87,18 +87,18 @@ const ProofOfProvenance: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <header className="bg-ghostWhite">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-start justify-center relative overflow-hidden px-5 lg:px-[79px] gap-5">
+        <div className="relative flex flex-col items-start justify-center gap-5 overflow-hidden px-5 pt-20 pb-52 lg:h-[700px] lg:px-[79px] lg:pt-0 lg:pb-0">
           <SubNav />
           <img
             src="/new/assets/home/data-cluster-rotated.webp"
-            className="absolute -bottom-60 sm:-bottom-[400px] lg:top-0 md:-right-[500px] lg:-right-[570px] xl:-right-[450px] w-[900px] transform -rotate-180"
+            className="absolute -bottom-60 w-[900px] -rotate-180 transform sm:-bottom-[400px] md:-right-[500px] lg:top-0 lg:-right-[570px] xl:-right-[450px]"
             alt="cloud"
           />
           <Heading level={1} className="z-10">
             Proof of Provenance
           </Heading>
 
-          <p className="font-robotoMono text-base z-10 leading-loose">
+          <p className="z-10 font-robotoMono text-base leading-loose">
             Trustlessly identify original information <br />
             by accurately attributing characteristics of its origin.
           </p>
@@ -107,13 +107,13 @@ const ProofOfProvenance: NextPage = () => {
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="px-5 lg:px-[79px] flex py-12 lg:py-24 relative overflow-hidden">
-        <div className="flex flex-col gap-36 w-full">
+      <section className="relative flex overflow-hidden px-5 py-12 lg:px-[79px] lg:py-24">
+        <div className="flex w-full flex-col gap-36">
           <div className="">
             <Heading level={3} className="text-center lg:text-left">
               Proof of Time
             </Heading>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
+            <p className="w-full pl-0 pt-16 text-center font-robotoMono text-lg leading-loose lg:max-w-[770px] lg:pl-28 lg:text-left">
               Receive signed receipts timestamps down to the millisecond that
               serve as a verifiable ‘proof of time’ for when information was
               stored on Bundlr.
@@ -123,7 +123,7 @@ const ProofOfProvenance: NextPage = () => {
             <Heading level={3} className="text-center lg:text-left">
               Custom Metadata Tagging
             </Heading>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
+            <p className="w-full pl-0 pt-16 text-center font-robotoMono text-lg leading-loose lg:max-w-[770px] lg:pl-28 lg:text-left">
               You can add custom tags to the metadata of the content that you
               store on Bundlr. This makes it simple to index and query any data
               that you need to find on Bundlr.
@@ -131,7 +131,7 @@ const ProofOfProvenance: NextPage = () => {
           </div>
         </div>
         <p
-          className="hidden lg:block transform rotate-180 text-center text-[26px] uppercase"
+          className="hidden rotate-180 transform text-center text-[26px] uppercase lg:block"
           style={{ writingMode: 'vertical-rl' }}
         >
           PROVE AND FIND TRUTH
@@ -140,7 +140,7 @@ const ProofOfProvenance: NextPage = () => {
 
       <div className="overflow-hidden">
         <Marquee gradientColor={[254, 244, 238]} speed={155}>
-          <motion.h2 className="text-4xl lg:text-8xl whitespace-nowrap py-10 lg:py-32 uppercase">
+          <motion.h2 className="whitespace-nowrap py-10 text-4xl uppercase lg:py-32 lg:text-8xl">
             {Array.from({ length: 10 })
               .fill('IDENTIFY ORIGINAL INFORMATION WITH TRUE PROVENANCE. ')
               .toString()

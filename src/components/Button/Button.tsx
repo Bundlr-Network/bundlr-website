@@ -22,16 +22,17 @@ const Button = ({
   className,
   ...props
 }: ButtonProps) => {
-  const { } = useButton()
+  const {} = useButton()
 
   return (
     <>
       <button
-        className={`z-50 font-robotoMono uppercase text-md flex items-center gap-2 px-4 py-3 lg:px-6 lg:py-5 rounded-full hover:font-bold ${{
-          [ButtonScheme.black]: 'bg-black text-white',
-          [ButtonScheme.white]: 'bg-white text-black'
-        }[scheme]
-          } ${className}}`}
+        className={`text-md z-50 flex items-center gap-2 rounded-full px-4 py-3 font-robotoMono uppercase hover:font-bold lg:px-6 lg:py-5 ${
+          {
+            [ButtonScheme.black]: 'bg-black text-white',
+            [ButtonScheme.white]: 'bg-white text-black'
+          }[scheme]
+        } ${className}}`}
         {...props}
       >
         {children}

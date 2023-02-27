@@ -17,14 +17,18 @@ export const Socials = ({
     icon: React.FC
   }[]
 }) => (
-  <ul className="flex flex-wrap items-center justify-center z-[99] w-full gap-8 xl:gap-11">
+  <ul className="z-[99] flex w-full flex-wrap items-center justify-center gap-8 xl:gap-11">
     {links.map((link, index) => {
       const Icon = link.icon
       return (
-        <a href={link.href} target="_blank" rel="noreferrer" key={index} className="w-full md:w-1/4 xl:w-1/5">
-          <li
-            className="text-white font-light flex items-center justify-center gap-4 bg-smoky rounded-3xl py-11 text-2xl communityShadow"
-          >
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noreferrer"
+          key={index}
+          className="w-full md:w-1/4 xl:w-1/5"
+        >
+          <li className="communityShadow flex items-center justify-center gap-4 rounded-3xl bg-smoky py-11 text-2xl font-light text-white">
             <Icon />
             {link.name}
           </li>
@@ -75,9 +79,9 @@ export const SOCIAL_LINKS = [
 const JoinTheCommunity = () => {
   return (
     <>
-      <section className="px-4 md:px-5 lg:px-[79px] py-24">
-        <div className="bg-black px-4 lg:px-7 py-20 rounded-3xl">
-          <h2 className="text-white hidden md:block text-7xl text-center pb-20 font-fkDisplay font-light">
+      <section className="px-4 py-24 md:px-5 lg:px-[79px]">
+        <div className="rounded-3xl bg-black px-4 py-20 lg:px-7">
+          <h2 className="hidden pb-20 text-center font-fkDisplay text-7xl font-light text-white md:block">
             Join the Community
           </h2>
           <Socials links={SOCIAL_LINKS} />

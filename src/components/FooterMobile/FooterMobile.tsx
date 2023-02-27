@@ -27,9 +27,9 @@ const FooterMobile = ({
 }) => {
   return (
     <>
-      <footer className="border-t border-timberwolf pt-[56px] px-[20px] font-robotoMono lg:hidden bg-seashell pb-10">
+      <footer className="border-t border-timberwolf bg-seashell px-[20px] pt-[56px] pb-10 font-robotoMono lg:hidden">
         <FooterLogo />
-        <p className="mt-[60px] text-[40px] tracking-tighter whitespace-normal leading-none mb-[68px]">
+        <p className="mt-[60px] mb-[68px] whitespace-normal text-[40px] leading-none tracking-tighter">
           THE WORLD&apos;S <br />
           DATA LAYER
         </p>
@@ -40,12 +40,12 @@ const FooterMobile = ({
             key={definition.title}
           />
         ))}
-        <section className="flex items-center gap-[21px] pb-[10px] mt-[60px]">
+        <section className="mt-[60px] flex items-center gap-[21px] pb-[10px]">
           <a
             href="https://medium.com/bundlr-network"
             target={'_blank'}
             rel="nofollow noreferrer"
-            className="hover:rotate-6 hover:scale-105 transition-all"
+            className="transition-all hover:rotate-6 hover:scale-105"
           >
             <MediumIcon />
           </a>
@@ -53,15 +53,15 @@ const FooterMobile = ({
             href="https://mirror.xyz/0x9AbB09BF9F58E72A532E859d798eB4E8e10A35e1"
             target={'_blank'}
             rel="nofollow noreferrer"
-            className="hover:rotate-6 hover:scale-105 transition-all"
+            className="transition-all hover:rotate-6 hover:scale-105"
           >
-            <MirrorIcon className="w-6 h-6 text-black" />
+            <MirrorIcon className="h-6 w-6 text-black" />
           </a>
           <a
             href="https://twitter.com/BundlrNetwork"
             target={'_blank'}
             rel="nofollow noreferrer"
-            className="hover:rotate-6 hover:scale-105 transition-all"
+            className="transition-all hover:rotate-6 hover:scale-105"
           >
             <TwitterIcon />
           </a>
@@ -69,7 +69,7 @@ const FooterMobile = ({
             href="https://discord.gg/bundlr"
             target={'_blank'}
             rel="nofollow noreferrer"
-            className="hover:rotate-6 hover:scale-105 transition-all"
+            className="transition-all hover:rotate-6 hover:scale-105"
           >
             <DiscordIcon />
           </a>
@@ -77,7 +77,7 @@ const FooterMobile = ({
             href="https://github.com/Bundlr-Network"
             target={'_blank'}
             rel="nofollow noreferrer"
-            className="hover:rotate-6 hover:scale-105 transition-all"
+            className="transition-all hover:rotate-6 hover:scale-105"
           >
             <GitIcon />
           </a>
@@ -85,7 +85,7 @@ const FooterMobile = ({
             href="https://t.me/bundlr"
             target={'_blank'}
             rel="nofollow noreferrer"
-            className="hover:rotate-6 hover:scale-105 transition-all"
+            className="transition-all hover:rotate-6 hover:scale-105"
           >
             <TelegramIcon />
           </a>
@@ -112,7 +112,7 @@ const ExpandableSection = ({
 }) => {
   return (
     <details>
-      <summary className="text-[15px] font-medium mt-[26px] flex justify-between items-center cursor-pointer">
+      <summary className="mt-[26px] flex cursor-pointer items-center justify-between text-[15px] font-medium">
         {title}
         <PlusFooterDetailIcon />
         <MinusFooterDetailIcon />
@@ -129,7 +129,7 @@ const ExpandableSection = ({
               {option.name}
             </Link>
             {option.label && (
-              <span className="ml-[10px] text-xs font-bold bg-black rounded-full px-[10px] py-[5px] text-white">
+              <span className="ml-[10px] rounded-full bg-black px-[10px] py-[5px] text-xs font-bold text-white">
                 {option.label}
               </span>
             )}

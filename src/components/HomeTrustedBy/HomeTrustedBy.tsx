@@ -61,7 +61,7 @@ const HomeTrustedBy = ({
     {
       title: 'Glass XYZ',
       icon: '/assets/home/users/glass.png',
-      link: 'https://glass.xyz',
+      link: 'https://glass.xyz'
     },
     {
       title: 'Backpack',
@@ -130,13 +130,14 @@ const HomeTrustedBy = ({
   return (
     <>
       <section
-        className={`pt-[40px] pb-[64px] flex flex-col items-center justify-center text-center ${{
-          dark: 'bg-black text-white',
-          light: 'bg-white text-black'
-        }[scheme || 'light']
-          }`}
+        className={`flex flex-col items-center justify-center pt-[40px] pb-[64px] text-center ${
+          {
+            dark: 'bg-black text-white',
+            light: 'bg-white text-black'
+          }[scheme || 'light']
+        }`}
       >
-        <h3 className="font-robotoMono pb-[46px]">{customTitle || TITLE}</h3>
+        <h3 className="pb-[46px] font-robotoMono">{customTitle || TITLE}</h3>
         {/* <Marquee gradientColor={[238, 240, 246]} speed={50}> */}
         <Marquee
           gradientColor={scheme === 'dark' ? [0, 0, 0] : [255, 255, 255]}
@@ -154,9 +155,9 @@ const HomeTrustedBy = ({
             ].map((user, index) => (
               <a href={user.link} target="_blank" key={index} rel="noreferrer">
                 <div
-
-                  className={`flex flex-col items-center rounded-xl p-4 ${index === 0 && 'ml-[40px]'
-                    }`}
+                  className={`flex flex-col items-center rounded-xl p-4 ${
+                    index === 0 && 'ml-[40px]'
+                  }`}
                 >
                   <img
                     src={user.icon}
@@ -165,8 +166,12 @@ const HomeTrustedBy = ({
                     // (scheme === 'light' && user.whiteinvert) ? 'whiteinvert' : '')
                     className={`
                       h-12
-                      ${(scheme === 'dark') && user.invert && 'invert'}
-                      ${(!scheme || scheme === 'light') && user.whiteinvert && 'invert'}
+                      ${scheme === 'dark' && user.invert && 'invert'}
+                      ${
+                        (!scheme || scheme === 'light') &&
+                        user.whiteinvert &&
+                        'invert'
+                      }
                       `}
                   />
                 </div>

@@ -63,7 +63,7 @@ const ExpandableSection = () => {
   return (
     <>
       <section className="flex flex-col gap-10">
-        <p className="text-lg font-robotoMono text-center md:text-left">
+        <p className="text-center font-robotoMono text-lg md:text-left">
           There are three simple steps to building on Bundlr:
         </p>
         <ul className="flex flex-col gap-10 lg:gap-16">
@@ -71,16 +71,17 @@ const ExpandableSection = () => {
             <li
               key={section.id}
               onClick={() => handleSectionClick(section.id)}
-              className="cursor-pointer flex flex-col gap-2 lg:gap-9 items-center justify-center md:items-start"
+              className="flex cursor-pointer flex-col items-center justify-center gap-2 md:items-start lg:gap-9"
             >
               <h2
-                className={`flex items-center gap-3 text-3xl lg:text-5xl text-white text-center md:text-left ${currentlyOpen !== section.id && 'text-onyx hover:text-onyx/90'
-                  }`}
+                className={`flex items-center gap-3 text-center text-3xl text-white md:text-left lg:text-5xl ${
+                  currentlyOpen !== section.id && 'text-onyx hover:text-onyx/90'
+                }`}
               >
                 <span
-                  className={`hidden lg:flex bg-white text-base rounded-full w-6 h-6 text-black items-center justify-center ${currentlyOpen !== section.id &&
-                    'bg-onyx hover:bg-onyx/90'
-                    }`}
+                  className={`hidden h-6 w-6 items-center justify-center rounded-full bg-white text-base text-black lg:flex ${
+                    currentlyOpen !== section.id && 'bg-onyx hover:bg-onyx/90'
+                  }`}
                 >
                   {section.id}
                 </span>{' '}
@@ -89,7 +90,7 @@ const ExpandableSection = () => {
               {currentlyOpen === section.id && (
                 <>
                   <p
-                    className={`text-base lg:text-lg font-robotoMono max-w-5xl text-center md:text-left`}
+                    className={`max-w-5xl text-center font-robotoMono text-base md:text-left lg:text-lg`}
                   >
                     {section.description}
                   </p>
@@ -107,14 +108,15 @@ const ExpandableSection = () => {
           ))}
         </ul>
         <div
-          className={`z-50 text-3xl lg:text-5xl cursor-pointer text-whitfont-bold text-center md:text-left ${currentlyOpen != 4 && 'text-onyx hover:text-onyx/90 '
-            }`}
+          className={`text-whitfont-bold z-50 cursor-pointer text-center text-3xl md:text-left lg:text-5xl ${
+            currentlyOpen != 4 && 'text-onyx hover:text-onyx/90 '
+          }`}
           onClick={() => handleSectionClick(4)}
         >
           Here’s the Full Code!
         </div>
         {currentlyOpen === 4 && (
-          <div className="overflow-scroll md:overflow-y-hidden lg:overflow-hidden max-w-[calc(100vw-30px)] z-50">
+          <div className="z-50 max-w-[calc(100vw-30px)] overflow-scroll md:overflow-y-hidden lg:overflow-hidden">
             <CodeBlock
               text={CODE_EXAMPLE}
               language={'javascript'}

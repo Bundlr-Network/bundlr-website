@@ -8,9 +8,7 @@ const CloseIcon = (props: SVGAttributes<SVGElement>) => {
       height="14"
       fill="none"
       viewBox="0 0 14 14"
-      {
-      ...props
-      }
+      {...props}
     >
       <path
         fill="currentColor"

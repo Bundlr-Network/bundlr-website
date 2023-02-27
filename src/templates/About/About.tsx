@@ -21,19 +21,19 @@ import PermanentVenturesLogo from '@assets/about/investors/permanent.webp'
 import RaceCapitalLogo from '@assets/about/investors/racecapital.webp'
 
 export const useMediaQuery = (query: any) => {
-  const [matches, setMatches] = useState(false);
+  const [matches, setMatches] = useState(false)
 
   useEffect(() => {
-    const media = window.matchMedia(query);
+    const media = window.matchMedia(query)
     if (media.matches !== matches) {
-      setMatches(media.matches);
+      setMatches(media.matches)
     }
-    const listener = () => setMatches(media.matches);
-    window.addEventListener("resize", listener);
-    return () => window.removeEventListener("resize", listener);
-  }, [matches, query]);
+    const listener = () => setMatches(media.matches)
+    window.addEventListener('resize', listener)
+    return () => window.removeEventListener('resize', listener)
+  }, [matches, query])
 
-  return matches;
+  return matches
 }
 
 const useAbout = () => {
@@ -83,7 +83,7 @@ const useAbout = () => {
       name: 'Gus',
       role: 'Engineer',
       image: '/assets/about/heads/Gus.jpeg',
-      mobileImage: '/assets/about/heads/mobile/Gus.jpeg',
+      mobileImage: '/assets/about/heads/mobile/Gus.jpeg'
     },
     {
       name: 'William',
@@ -105,7 +105,7 @@ const useAbout = () => {
       image: '/assets/about/heads/Luke.jpeg',
       mobileImage: '/assets/about/heads/mobile/Luke.jpeg',
       link: 'https://twitter.com/spaceagente'
-    },
+    }
     // {
     //   name: 'Kevin',
     //   role: 'Engineer',
@@ -149,8 +149,8 @@ const useAbout = () => {
       name: 'OpenSea',
       logo: OpenseaLogo,
       logoHref: '/assets/about/investors/opensea-logo.png',
-      link: 'https://opensea.io/',
-    },
+      link: 'https://opensea.io/'
+    }
   ]
 
   return { PAGE_SEO, MEMBERS, INVESTORS }
@@ -161,12 +161,12 @@ const About: NextPage = () => {
   const isMobile = useMediaQuery('(max-width: 768px)')
 
   return (
-    <div className='overflow-hidden'>
+    <div className="overflow-hidden">
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
 
-      <header className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[794px] px-5 lg:px-[79px] relative overflow-hidden mb-10 lg:border-none">
-        <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-10 md:pt-0 lg:pt-[83px] mb-10 md:mb-20">
+      <header className="relative mb-10 overflow-hidden px-5 pt-20 pb-52 lg:h-[794px] lg:border-none lg:px-[79px] lg:pt-0 lg:pb-0">
+        <div className="mb-10 flex max-w-[742px] flex-col gap-[32px] pt-10 leading-none md:mb-20 md:pt-0 lg:pt-[83px]">
           <Heading level={1} className="z-10">
             Meet the World&apos;s Data Layer
           </Heading>
@@ -174,23 +174,23 @@ const About: NextPage = () => {
         <img
           src="/new/assets/home/data-exponential.webp"
           alt=""
-          className="absolute bottom-20 md:bottom-10 lg:bottom-36 right-0"
+          className="absolute bottom-20 right-0 md:bottom-10 lg:bottom-36"
         />
       </header>
 
-      <section className="px-5 lg:px-[79px] items-center bg-seashell flex lg:justify-between relative justify-center -z-20">
+      <section className="relative -z-20 flex items-center justify-center bg-seashell px-5 lg:justify-between lg:px-[79px]">
         <div className="flex flex-col items-center justify-center lg:items-start">
           <SectionTitle title="What is Bundlr?" />
-          <div className="flex flex-col gap-10 font-robotoMono max-w-[600px] ml-0 lg:ml-24 pt-16">
-            <p className="z-10 text-center lg:text-left leading-loose">
+          <div className="ml-0 flex max-w-[600px] flex-col gap-10 pt-16 font-robotoMono lg:ml-24">
+            <p className="z-10 text-center leading-loose lg:text-left">
               Bundlr is developing a decentralized data network to help
               developers solve complex data integrity issues.{' '}
             </p>
-            <p className="z-10 text-center lg:text-left leading-loose">
+            <p className="z-10 text-center leading-loose lg:text-left">
               We provide solutions for storage, provenance, and data
               availability that help you establish a trustless data foundation.{' '}
             </p>
-            <p className="z-10 text-center lg:text-left leading-loose">
+            <p className="z-10 text-center leading-loose lg:text-left">
               Our vision is to be data’s trustless source of truth.
             </p>
           </div>
@@ -198,7 +198,7 @@ const About: NextPage = () => {
         <img
           src="/new/assets/home/data-cluster-rotated.webp"
           alt=""
-          className="absolute lg:-right-96 xl:-right-56 hidden lg:block -mb-4 w-[800px] -z-10 -scale-y-100"
+          className="absolute -z-10 -mb-4 hidden w-[800px] -scale-y-100 lg:-right-96 lg:block xl:-right-56"
         />
       </section>
 
@@ -206,35 +206,37 @@ const About: NextPage = () => {
         <SpotifySection />
       </div>
 
-      <section className="flex flex-col lg:flex-row px-5 lg:px-[79px] justify-start gap-10 lg:gap-0">
-        <p className="text-5xl font-fkDisplay text-center lg:text-left">
+      <section className="flex flex-col justify-start gap-10 px-5 lg:flex-row lg:gap-0 lg:px-[79px]">
+        <p className="text-center font-fkDisplay text-5xl lg:text-left">
           Our
           <br />
           Team
         </p>
         {/* 3 column grid  */}
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:ml-auto w-full lg:w-4/5">
+        <ul className="grid w-full grid-cols-1 gap-10 md:grid-cols-3 lg:ml-auto lg:w-4/5">
           {MEMBERS.map((item, index) => {
             return (
               <li
                 key={index}
-                className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg"
+                className="rounded-lg bg-gradient-to-b from-[#968982] to-transparent p-[1px]"
               >
                 {/* add gradient background that goes from gray to transparent */}
                 <a href={item?.link} target="_blank" rel="noreferrer">
-                  <div className="hover:shadow-md transition-all flex flex-col gap-8 w-full bg-seashell rounded-lg overflow-hidden">
+                  <div className="flex w-full flex-col gap-8 overflow-hidden rounded-lg bg-seashell transition-all hover:shadow-md">
                     {/* make image as background of rectangle box */}
                     <div
-                      className="w-full h-[348px] bg-cover bg-center hover:bg-zoom  overflow-hidden"
+                      className="hover:bg-zoom h-[348px] w-full overflow-hidden bg-cover  bg-center"
                       style={{
-                        backgroundImage: `url(${isMobile ? item.mobileImage : item.image})`
+                        backgroundImage: `url(${
+                          isMobile ? item.mobileImage : item.image
+                        })`
                       }}
                     />
                     <div className="flex flex-col gap-4 px-5 pb-10">
-                      <h3 className="text-black font-light text-sm font-robotoMono uppercase">
+                      <h3 className="font-robotoMono text-sm font-light uppercase text-black">
                         {item.name}
                       </h3>
-                      <p className="text-black font-light text-sm font-robotoMono">
+                      <p className="font-robotoMono text-sm font-light text-black">
                         {item.role}
                       </p>
                     </div>
@@ -246,12 +248,12 @@ const About: NextPage = () => {
         </ul>
       </section>
 
-      <section className="bg-white mx-2 lg:mx-[59px] p-14 flex flex-col gap-20 rounded-[30px] pb-52 -mb-40 mt-10">
+      <section className="mx-2 -mb-40 mt-10 flex flex-col gap-20 rounded-[30px] bg-white p-14 pb-52 lg:mx-[59px]">
         <Heading level={2} className="text-center lg:text-left">
           Backed by Visionaries
         </Heading>
 
-        <div className="flex items-center xl:justify-between flex-wrap justify-center gap-10">
+        <div className="flex flex-wrap items-center justify-center gap-10 xl:justify-between">
           {INVESTORS.map((item, index) => {
             return (
               <a href={item.link} target="_blank" rel="noreferrer" key={index}>
@@ -264,7 +266,7 @@ const About: NextPage = () => {
 
       <div className="py-10">
         <CtaSection>
-          <div className="flex flex-col items-center md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+          <div className="flex flex-col items-center justify-center gap-10 md:items-center lg:items-start lg:gap-0">
             <Heading level={2} className="text-center lg:text-left">
               Ready to Become a BUNDLOOOOR?
             </Heading>

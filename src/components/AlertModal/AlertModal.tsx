@@ -10,10 +10,7 @@ interface AlertModalProps {
   setIsOpen: (isOpen: boolean) => void
 }
 
-const AlertModal = ({
-  handleConfirmation,
-  isOpen,
-}: AlertModalProps) => {
+const AlertModal = ({ handleConfirmation, isOpen }: AlertModalProps) => {
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={() => null}>
@@ -40,21 +37,21 @@ const AlertModal = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="mt-16 w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-center align-center shadow-xl transition-all">
+              <Dialog.Panel className="align-center mt-16 w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-center shadow-xl transition-all">
                 <Dialog.Title
                   as="div"
-                  className="relative uppercase flex w-full justify-center text-lg font-medium leading-6 text-gray-900 text-center font-robotoMono"
+                  className="relative flex w-full justify-center text-center font-robotoMono text-lg font-medium uppercase leading-6 text-gray-900"
                 >
                   Friendly reminder
                 </Dialog.Title>
 
-                <div className="mt-6 text-gray-500 font-robotoMono">
+                <div className="mt-6 font-robotoMono text-gray-500">
                   In order for the verification process to work,{' '}
                   <b>do not change the message of the tweet</b>, and remember to
                   return to the website after tweeting to verify the message.
                 </div>
 
-                <div className="flex items-center justify-center mt-6">
+                <div className="mt-6 flex items-center justify-center">
                   <Button onClick={handleConfirmation} className="w-full">
                     I understand.
                   </Button>

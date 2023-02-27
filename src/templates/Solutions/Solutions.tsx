@@ -20,7 +20,8 @@ import useOnScreen from '@/hooks/useOnScreen'
 const useSolutions = () => {
   const PAGE_SEO = {
     title: 'Bundlr | Use Cases',
-    description: 'Bundlr is the data solution for audio, video, and metaverse applications – to name a few. Discover our diverse range of use cases.'
+    description:
+      'Bundlr is the data solution for audio, video, and metaverse applications – to name a few. Discover our diverse range of use cases.'
   }
 
   const [latestCurrentlyOnScreen, setLatestCurrentlyOnScreen] = useState<
@@ -221,13 +222,14 @@ const Solutions: NextPage = () => {
           <Button />
         </section> */}
 
-      <header className="flex flex-col bg-ghostWhite px-5 lg:px-[79px] pb-2 lg:pb-24 relative overflow-visible lg:overflow-hidden">
+      <header className="relative flex flex-col overflow-visible bg-ghostWhite px-5 pb-2 lg:overflow-hidden lg:px-[79px] lg:pb-24">
         <div className="flex">
-          <div className="container pt-20 lg:pb-0 lg:pt-[203px] z-40 text-center md:text-left">
+          <div className="container z-40 pt-20 text-center md:text-left lg:pb-0 lg:pt-[203px]">
             <Heading level={1}>
-              Use Cases for<br className='hidden lg:inline' /> Everyone
+              Use Cases for
+              <br className="hidden lg:inline" /> Everyone
             </Heading>
-            <p className="text-lg font-robotoMono font-light z-10 leading-loose mt-5">
+            <p className="z-10 mt-5 font-robotoMono text-lg font-light leading-loose">
               Size doesn&apos;t matter
             </p>
           </div>
@@ -238,12 +240,12 @@ const Solutions: NextPage = () => {
           /> */}
           <img
             src="/new/assets/home/data-cluster-rotated.webp"
-            className="absolute -bottom-60 sm:-bottom-[400px] lg:top-10 md:-right-[500px] lg:-right-[470px] xl:-right-[350px] w-[900px] transform -rotate-180 -scale-y-100"
+            className="absolute -bottom-60 w-[900px] -rotate-180 -scale-y-100 transform sm:-bottom-[400px] md:-right-[500px] lg:top-10 lg:-right-[470px] xl:-right-[350px]"
             alt="cloud"
           />
         </div>
 
-        <div className="rounded-[20px] overflow-hidden bg-black mt-20 lg:mt-40 z-10 mb-10 lg:mb-0">
+        <div className="z-10 mt-20 mb-10 overflow-hidden rounded-[20px] bg-black lg:mt-40 lg:mb-0">
           <HomeTrustedBy />
         </div>
       </header>
@@ -251,14 +253,14 @@ const Solutions: NextPage = () => {
       {/* left aligned fixed navigation */}
 
       <div className="relative mt-10">
-        <section className="sticky ml-10 top-10 pb-10 self-start w-32 hidden xl:block">
+        <section className="sticky top-10 ml-10 hidden w-32 self-start pb-10 xl:block">
           {/* <div className="h-10 w-10" /> */}
           <ul className="flex flex-col gap-4">
             {SECTION_DATA.map((section, index) => (
               <li
                 onClick={() => scrollToSection(section.id)}
                 key={index}
-                className={`cursor-pointer font-robotoMono text-sm uppercase p-1 ${section.id === latestCurrentlyOnScreen &&
+                className={`cursor-pointer p-1 font-robotoMono text-sm uppercase ${section.id === latestCurrentlyOnScreen &&
                   'bg-black text-white'
                   }`}
               >
@@ -274,34 +276,34 @@ const Solutions: NextPage = () => {
               key={`section-${index}`}
               id={section.id}
               ref={section.ref}
-              className="w-full flex flex-col lg:flex-row gap-20 justify-end items-center bg-ghostWhite odd:bg-seashell py-14 lg:py-20 px-4 lg:px-[79px] xl:pl-[200px]"
+              className="flex w-full flex-col items-center justify-end gap-20 bg-ghostWhite py-14 px-4 odd:bg-seashell lg:flex-row lg:py-20 lg:px-[79px] xl:pl-[200px]"
             >
               <div
                 key={index}
-                className="flex flex-col items-center lg:items-start justify-center gap-8 "
+                className="flex flex-col items-center justify-center gap-8 lg:items-start "
               >
                 <SectionTitle title={section.title} />
-                <p className="font-robotoMono lg:max-w-[600px] lg:ml-[126px] ml-0 pt-0 lg:pt-12 leading-loose text-center lg:text-left">
+                <p className="ml-0 pt-0 text-center font-robotoMono leading-loose lg:ml-[126px] lg:max-w-[600px] lg:pt-12 lg:text-left">
                   {section.description}
                 </p>
               </div>
               <a href={section.href} target="_blank" rel="noreferrer">
                 <div className="flex flex-col items-center justify-center gap-10">
-                  <div className={`p-10 rounded-lg flex items-center justify-center ${index % 2 === 0 ? 'bg-black' : 'bg-white'
-                    }`}>
+                  <div
+                    className={`flex items-center justify-center rounded-lg p-10 ${index % 2 === 0 ? 'bg-black' : 'bg-white'
+                      }`}
+                  >
                     <Image
                       src={`/assets/solutions/logos/${section.image}`}
                       alt=""
                       width={'200px'}
                       height={140}
-                      className={`object-contain ${(section.invert && index % 2 === 0) && 'invert'}`}
+                      className={`object-contain ${section.invert && index % 2 === 0 && 'invert'
+                        }`}
                     />
                   </div>
                   <p className="font-robotoMono">
-                    Example:{' '}
-
-                    <u>{section.example}</u>
-
+                    Example: <u>{section.example}</u>
                   </p>
                 </div>
               </a>
@@ -312,12 +314,16 @@ const Solutions: NextPage = () => {
 
       <div className="mb-20 mt-10">
         <CtaSection>
-          <div className="flex flex-col items-center md:items-center lg:items-start justify-center gap-10 lg:gap-0">
+          <div className="flex flex-col items-center justify-center gap-10 md:items-center lg:items-start lg:gap-0">
             <Heading level={2} className="text-center lg:text-left">
               Ready to Become a BUNDLOOOOR?
             </Heading>
             <div className="mt-0 lg:mt-10">
-              <a href="https://docs.bundlr.network/" target={"_blank"} rel="noreferrer">
+              <a
+                href="https://docs.bundlr.network/"
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 <Button scheme={ButtonScheme.white}>
                   START BUILDING
                   <DevIcon color="black" />
@@ -329,7 +335,7 @@ const Solutions: NextPage = () => {
       </div>
       <Footer />
     </div>
-  );
+  )
 }
 
 export default Solutions

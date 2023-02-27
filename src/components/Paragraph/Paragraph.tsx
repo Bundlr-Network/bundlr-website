@@ -22,7 +22,10 @@ const Paragraph = ({ size, children, className, ...props }: ParagraphProps) => {
 
   return (
     <>
-      <p className={`${PARAGRAPH_DEFITINION} ${className ? className : ''}`} {...props}>
+      <p
+        className={`${PARAGRAPH_DEFITINION} ${className ? className : ''}`}
+        {...props}
+      >
         {children}
       </p>
     </>

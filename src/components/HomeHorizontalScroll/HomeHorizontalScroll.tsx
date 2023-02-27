@@ -45,7 +45,6 @@ const HomeHorizontalScroll = () => {
   const [serverImageRef, serverImageInView] = useInView()
   const isMobile = useMediaQuery('(max-width: 768px)')
 
-
   const serverVariants = {
     title: {
       visible: { opacity: 1 },
@@ -218,7 +217,7 @@ const HomeHorizontalScroll = () => {
   return (
     <>
       <div
-        className="overflow-hidden w-screen h-screen flex flex-col items-center justify-center p-10 lg:p-24 relative top-0 left-0  -z-10 gap-10 lg:gap-0"
+        className="relative top-0 left-0 -z-10 flex h-screen w-screen flex-col items-center justify-center gap-10 overflow-hidden  p-10 lg:gap-0 lg:p-24"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
@@ -236,7 +235,7 @@ const HomeHorizontalScroll = () => {
         </motion.h2>
       </div>
       <div
-        className="w-screen h-screen flex flex-col items-center justify-center lg:justify-between p-10 lg:p-24 relative top-0 left-0  -z-10 gap-10 lg:gap-0"
+        className="relative top-0 left-0 -z-10 flex h-screen w-screen flex-col items-center justify-center gap-10 p-10  lg:justify-between lg:gap-0 lg:p-24"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
@@ -248,7 +247,7 @@ const HomeHorizontalScroll = () => {
           animate={serverControls}
           initial="hidden"
           variants={serverVariants.title}
-        // className={'z-[99] text-center text-5xl lg:text-7xl'}
+          // className={'z-[99] text-center text-5xl lg:text-7xl'}
         >
           <Heading level={2} className="text-center">
             {' '}
@@ -261,7 +260,7 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.description}
           initial="hidden"
           transition={{ delay: 0.1, duration: 0.3 }}
-          className="font-robotoMono text-lg max-w-md text-center z-[99] leading-loose"
+          className="z-[99] max-w-md text-center font-robotoMono text-lg leading-loose"
         >
           In the internet’s early days, online data was stored in local servers.
           This was inconvenient and expensive for most people.
@@ -269,7 +268,7 @@ const HomeHorizontalScroll = () => {
         <div className="mb-36 lg:mb-0" />
         <img
           src={'/new/assets/home/server-left.webp'}
-          className="absolute -bottom-36 md:-bottom-20 -left-20 w-[300px] md:w-[320px] lg:hidden z-10"
+          className="absolute -bottom-36 -left-20 z-10 w-[300px] md:-bottom-20 md:w-[320px] lg:hidden"
         />
         <motion.img
           ref={serverImageRef}
@@ -277,7 +276,7 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.serverLeft}
           initial="hidden"
           src={'/new/assets/home/server-left.webp'}
-          className="absolute bottom-56 lg:-bottom-32 -left-52 hidden lg:block w-[500px]"
+          className="absolute bottom-56 -left-52 hidden w-[500px] lg:-bottom-32 lg:block"
           transition={{ delay: 0.3, type: 'tween' }}
         />
         <motion.img
@@ -286,20 +285,20 @@ const HomeHorizontalScroll = () => {
           variants={serverVariants.serverRight}
           initial="hidden"
           src={'/new/assets/home/server-right.webp'}
-          className="absolute bottom-56 lg:-bottom-32 -right-52 hidden lg:block w-[500px]"
+          className="absolute bottom-56 -right-52 hidden w-[500px] lg:-bottom-32 lg:block"
           transition={{ delay: 0.3, type: 'tween' }}
         />
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl relative top-0 left-0  -z-10"
+        className="relative top-0 left-0 -z-10 flex h-screen w-screen items-center justify-center overflow-hidden  text-7xl"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
           }
         }
       >
-        <div className="h-full w-screen	shrink-0 px-5 lg:px-[79px] pt-[120px]">
-          <div className="w-full lg:w-2/5 ml-auto">
+        <div className="h-full w-screen	shrink-0 px-5 pt-[120px] lg:px-[79px]">
+          <div className="ml-auto w-full lg:w-2/5">
             <motion.div
               // className="z-[99] text-center text-5xl lg:text-7xl lg:text-left"
               ref={cloudTitleRef}
@@ -312,17 +311,17 @@ const HomeHorizontalScroll = () => {
               </Heading>
             </motion.div>
             <motion.div
-              className="flex flex-col gap-6 mt-12 ml-0 lg:ml-16 items-center justify-center lg:items-start"
+              className="mt-12 ml-0 flex flex-col items-center justify-center gap-6 lg:ml-16 lg:items-start"
               ref={cloudDescriptionRef}
               animate={cloudControls}
               initial="hidden"
               variants={cloudVariants.description}
             >
-              <p className="font-robotoMono text-base max-w-md z-10 leading-loose text-center lg:text-left">
+              <p className="z-10 max-w-md text-center font-robotoMono text-base leading-loose lg:text-left">
                 With the advent of the cloud, data storage became more
                 affordable, convenient, and performant.
               </p>
-              <p className="font-robotoMono text-base max-w-md z-10 text-center lg:text-left">
+              <p className="z-10 max-w-md text-center font-robotoMono text-base lg:text-left">
                 But, data centralized in the cloud.
               </p>
             </motion.div>
@@ -335,19 +334,19 @@ const HomeHorizontalScroll = () => {
             initial="hidden"
             src="/new/assets/home/cloud.webp"
             alt="cloud"
-            className="absolute bottom-32 md:bottom-10 lg:-left-32 left-4 right-0 mx-auto lg:max-w-[70%] scale-110 md:scale-100"
+            className="absolute bottom-32 left-4 right-0 mx-auto scale-110 md:bottom-10 md:scale-100 lg:-left-32 lg:max-w-[70%]"
           />
         </div>
       </div>
       <div
-        className="overflow-hidden w-screen h-screen flex items-center justify-center text-7xl relative top-0 left-0  -z-10"
+        className="relative top-0 left-0 -z-10 flex h-screen w-screen items-center justify-center overflow-hidden  text-7xl"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
           }
         }
       >
-        <div className="flex flex-col gap-10 mt-36 px-6 lg:px-0 justify-center items-center mb-72 lg:mb-48 lg:mb-72">
+        <div className="mt-36 mb-72 flex flex-col items-center justify-center gap-10 px-6 lg:mb-48 lg:mb-72 lg:px-0">
           <motion.div
             // className="max-w-5xl z-10 text-center text-4xl lg:text-6xl"
             ref={successorTitleRef}
@@ -355,12 +354,12 @@ const HomeHorizontalScroll = () => {
             initial="hidden"
             variants={successorVariants.title}
           >
-            <Heading level={2} className="max-w-5xl z-10 text-center">
+            <Heading level={2} className="z-10 max-w-5xl text-center">
               The Next Generation of Data Infrastructure
             </Heading>
           </motion.div>
           <motion.h3
-            className="font-robotoMono text-base max-w-2xl z-10 text-center leading-loose"
+            className="z-10 max-w-2xl text-center font-robotoMono text-base leading-loose"
             animate={successorControls}
             initial="hidden"
             variants={successorVariants.title}
@@ -379,7 +378,7 @@ const HomeHorizontalScroll = () => {
           transition={{ delay: 0.7, type: 'tween' }}
           src="/new/assets/home/data-sphere.webp"
           alt=""
-          className="hidden lg:block absolute -bottom-[180px] md:-bottom-[580px] lg:bottom-auto lg:-left-[450px] block bg-cover w-[700px]"
+          className="absolute -bottom-[180px] block hidden w-[700px] bg-cover md:-bottom-[580px] lg:bottom-auto lg:-left-[450px] lg:block"
         />
         <motion.img
           ref={successorImageRef}
@@ -389,7 +388,7 @@ const HomeHorizontalScroll = () => {
           transition={{ delay: 0.7, type: 'tween' }}
           src="/new/assets/home/data-sphere-flop.webp"
           alt=""
-          className="absolute -bottom-[140px] md:-bottom-[280px] lg:bottom-auto -right-[140px] lg:-right-[450px] block bg-cover w-[700px]"
+          className="absolute -bottom-[140px] -right-[140px] block w-[700px] bg-cover md:-bottom-[280px] lg:bottom-auto lg:-right-[450px]"
         />
 
         {/* <div className="hidden lg:flex absolute top-0 right-0 overflow-hidden transform rotate-180">
@@ -426,14 +425,14 @@ const HomeHorizontalScroll = () => {
         /> */}
       </div>
       <div
-        className="bg-black overflow-hidden text-white w-screen h-screen flex items-start justify-center relative top-0 left-0"
+        className="relative top-0 left-0 flex h-screen w-screen items-start justify-center overflow-hidden bg-black text-white"
         style={
           {
             // boxShadow: '0 0 70px rgba(0,0,0,.2)'
           }
         }
       >
-        <div className="flex flex-col gap-6 mt-36">
+        <div className="mt-36 flex flex-col gap-6">
           <motion.div
             // className="text-center text-5xl lg:text-7xl font-fkDisplay z-10"
             ref={conclusionTitleRef}
@@ -481,7 +480,7 @@ const HomeHorizontalScroll = () => {
           // /assets/home/dataverse.png
           src="/assets/home/dataverse-mobile.png"
           alt="dataverse"
-          className="absolute -bottom-36 md:-bottom-[468px] left-0 right-0 mx-auto lg:hidden"
+          className="absolute -bottom-36 left-0 right-0 mx-auto md:-bottom-[468px] lg:hidden"
         />
       </div>
     </>

@@ -165,7 +165,7 @@ const Faucet: NextPage = () => {
         <div className="flex w-full max-w-3xl flex-col gap-16 rounded-xl border border-gray-600 bg-gradient-to-b from-[#0F0F0F] to-[#000000] p-8 lg:w-[768px]">
           {error && (
             <div
-              className="rounded-lg bg-red-100 -mb-4 p-4 text-center text-sm text-red-700 dark:bg-red-200 dark:text-red-800"
+              className="-mb-4 rounded-lg bg-red-100 p-4 text-center text-sm text-red-700 dark:bg-red-200 dark:text-red-800"
               role="alert"
             >
               <span className="font-robotoMono font-medium">{error}</span>
@@ -197,24 +197,25 @@ const Faucet: NextPage = () => {
                 onChange={(e) => setWallet(e.target.value)}
                 disabled={currentStep != STEPS.Tweet}
                 placeholder="Enter wallet address"
-                className="w-full disabled:opacity-60 rounded-tl-xl rounded-bl-xl border-t border-b border-l bg-transparent px-6 py-2 font-robotoMono"
+                className="w-full rounded-tl-xl rounded-bl-xl border-t border-b border-l bg-transparent px-6 py-2 font-robotoMono disabled:opacity-60"
               />
               <button
                 onClick={handleVerification}
                 disabled={currentStep != STEPS.Tweet}
-                className="w-[320px] disabled:cursor-not-allowed disabled:opacity-60 rounded-tr-xl rounded-br-xl bg-white px-6 py-2 font-robotoMono text-base uppercase text-black"
+                className="w-[320px] rounded-tr-xl rounded-br-xl bg-white px-6 py-2 font-robotoMono text-base uppercase text-black disabled:cursor-not-allowed disabled:opacity-60"
               >
                 Share on twitter
               </button>
             </div>
           </div>
           <div
-            className={`flex flex-col gap-5 ${currentStep === STEPS.Verify ||
+            className={`flex flex-col gap-5 ${
+              currentStep === STEPS.Verify ||
               currentStep === STEPS.Verifying ||
               currentStep === STEPS.Success
-              ? 'pointer-events-auto opacity-100'
-              : 'pointer-events-none opacity-40'
-              }`}
+                ? 'pointer-events-auto opacity-100'
+                : 'pointer-events-none opacity-40'
+            }`}
           >
             <p className="font-robotoMono text-sm uppercase">Step 2</p>
             <div className="flex items-center gap-4">
@@ -235,14 +236,20 @@ const Faucet: NextPage = () => {
                 type="text"
                 pattern="https://.*"
                 onChange={(e) => setTweetURL(e.target.value)}
-                disabled={currentStep === STEPS.Success || currentStep === STEPS.Verifying}
+                disabled={
+                  currentStep === STEPS.Success ||
+                  currentStep === STEPS.Verifying
+                }
                 placeholder="Enter twitter URL"
-                className="w-full disabled:opacity-60 rounded-tl-xl rounded-bl-xl border-t border-b border-l bg-transparent px-6 py-2 font-robotoMono"
+                className="w-full rounded-tl-xl rounded-bl-xl border-t border-b border-l bg-transparent px-6 py-2 font-robotoMono disabled:opacity-60"
               />
               <button
                 onClick={handleURL}
-                disabled={currentStep === STEPS.Success || currentStep === STEPS.Verifying}
-                className="w-[320px] flex disabled:cursor-not-allowed disabled:opacity-60 items-center justify-center rounded-tr-xl rounded-br-xl bg-white px-6 py-2 font-robotoMono text-base uppercase text-black"
+                disabled={
+                  currentStep === STEPS.Success ||
+                  currentStep === STEPS.Verifying
+                }
+                className="flex w-[320px] items-center justify-center rounded-tr-xl rounded-br-xl bg-white px-6 py-2 font-robotoMono text-base uppercase text-black disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {currentStep === STEPS.Verifying ? (
                   <svg
@@ -273,10 +280,11 @@ const Faucet: NextPage = () => {
           </div>
 
           <div
-            className={`flex flex-col gap-5 ${currentStep === STEPS.Success
-              ? 'pointer-events-auto opacity-100'
-              : 'pointer-events-none opacity-40'
-              }`}
+            className={`flex flex-col gap-5 ${
+              currentStep === STEPS.Success
+                ? 'pointer-events-auto opacity-100'
+                : 'pointer-events-none opacity-40'
+            }`}
           >
             <p className="font-robotoMono text-sm uppercase">Step 3</p>
             <div className="flex items-center gap-4">

@@ -41,8 +41,8 @@ const Testimonial = () => {
 
   return (
     <>
-      <section className="flex flex-col lg:flex-row relative order-solid border text-black bg-[rgba(251,242,237,1)] border-[rgba(216,_207,_202,_1.00)] overflow-clip rounded-[30px] p-4 lg:py-[43px] lg:px-[40px] gap-10 lg:gap-10 mt-20 lg:mt-[99px]">
-        <div className="bg-white text-black lg:w-[488px] h-[210px] lg:h-auto flex items-center justify-center">
+      <section className="order-solid relative mt-20 flex flex-col gap-10 overflow-clip rounded-[30px] border border-[rgba(216,_207,_202,_1.00)] bg-[rgba(251,242,237,1)] p-4 text-black lg:mt-[99px] lg:flex-row lg:gap-10 lg:py-[43px] lg:px-[40px]">
+        <div className="flex h-[210px] items-center justify-center bg-white text-black lg:h-auto lg:w-[488px]">
           <img
             src={TESTIMONIALS_CONTENT[currentTestimonial].image}
             alt={TESTIMONIALS_CONTENT[currentTestimonial].imageAlt}
@@ -51,23 +51,23 @@ const Testimonial = () => {
             }
           />
         </div>
-        <div className="flex flex-col w-full ">
+        <div className="flex w-full flex-col ">
           <div className="h-auto w-full lg:mt-[27px]">
-            <p className="text-lg lg:text-3xl font-light leading-loose h-[280px] md:h-[140px] lg:h-[330px] xl:h-[220px]">
+            <p className="h-[280px] text-lg font-light leading-loose md:h-[140px] lg:h-[330px] lg:text-3xl xl:h-[220px]">
               {TESTIMONIALS_CONTENT[currentTestimonial].description}
             </p>
           </div>
           <div className="flex flex-col">
             <div className="mt-auto">
-              <p className="uppercase text-[13px] tracking-[2.72px] leading-[1.66]">
+              <p className="text-[13px] uppercase leading-[1.66] tracking-[2.72px]">
                 {TESTIMONIALS_CONTENT[currentTestimonial].author}
               </p>
-              <p className="uppercase text-[13px] tracking-[2.72px] leading-[1.66]">
+              <p className="text-[13px] uppercase leading-[1.66] tracking-[2.72px]">
                 {TESTIMONIALS_CONTENT[currentTestimonial].authorRole}
               </p>
             </div>
             <button
-              className="mt-6 flex items-center justify-center gap-2 border rounded-full px-3 py-2 border-black uppercase font-robotoMono"
+              className="mt-6 flex items-center justify-center gap-2 rounded-full border border-black px-3 py-2 font-robotoMono uppercase"
               onClick={() => {
                 if (currentTestimonial === TESTIMONIALS_CONTENT.length - 1) {
                   setCurrentTestimonial(0)

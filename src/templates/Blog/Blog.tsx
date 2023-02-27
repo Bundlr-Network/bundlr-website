@@ -69,19 +69,27 @@ export const useLatestArticles = () => {
 
   const MEDIUM_FEED_URL = 'https://medium.com/feed/bundlr-network'
 
-  const CUSTOM_ARTICLE = [{
-    title: 'New Year’s NFT from Bundlr',
-    pubDate: 'January 18, 2023',
-    link: 'https://mirror.xyz/0x9AbB09BF9F58E72A532E859d798eB4E8e10A35e1/DwsDnsqP9qU11dtnsE6w1VpgQ-rvxnR8RvXO6-Wmhe8',
-    thumbnail: '/new/assets/shared/mirror-post.webp'
-  }]
+  const CUSTOM_ARTICLE = [
+    {
+      title: 'New Year’s NFT from Bundlr',
+      pubDate: 'January 18, 2023',
+      link: 'https://mirror.xyz/0x9AbB09BF9F58E72A532E859d798eB4E8e10A35e1/DwsDnsqP9qU11dtnsE6w1VpgQ-rvxnR8RvXO6-Wmhe8',
+      thumbnail: '/new/assets/shared/mirror-post.webp'
+    }
+  ]
 
   useEffect(() => {
     setLoading(true)
     fetch(`https://api.rss2json.com/v1/api.json?rss_url=${MEDIUM_FEED_URL}`)
       .then((res) => res.json())
       .then((res) => {
-        setLatestArticles([...CUSTOM_ARTICLE, ...res.items.filter((article: any) => article.title !== "Unveiling the Next Evolution of Bundlr")])
+        setLatestArticles([
+          ...CUSTOM_ARTICLE,
+          ...res.items.filter(
+            (article: any) =>
+              article.title !== 'Unveiling the Next Evolution of Bundlr'
+          )
+        ])
         setLoading(false)
       })
   }, [])
@@ -98,34 +106,34 @@ const Blog: NextPage = () => {
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
       <div className="relative">
-        <Heading level={1} className="text-center py-14 lg:pt-24 z-10">
+        <Heading level={1} className="z-10 py-14 text-center lg:pt-24">
           Bundlr Blog
         </Heading>
         <img
           src="/new/assets/home/data-donuts.webp"
           alt="delicious donuts of data"
-          className="mx-auto w-[500px] fixed -left-28 top-32 hidden lg:block -z-10"
+          className="fixed -left-28 top-32 -z-10 mx-auto hidden w-[500px] lg:block"
         />
       </div>
-      <section className="px-4 md:px-5 lg:px-[79px] flex gap-10 justify-center flex-col lg:flex-row">
+      <section className="flex flex-col justify-center gap-10 px-4 md:px-5 lg:flex-row lg:px-[79px]">
         <a href={featuredPosts[0]?.link} target="_blank" rel="noreferrer">
-          <div className="md:sticky top-10 left-0 self-start">
-            <div className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg w-full lg:w-[726px] ">
+          <div className="top-10 left-0 self-start md:sticky">
+            <div className="w-full rounded-lg bg-gradient-to-b from-[#968982] to-transparent p-[1px] lg:w-[726px] ">
               {/* add gradient background that goes from gray to transparent */}
-              <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden">
+              <div className="flex flex-col gap-8 overflow-hidden rounded-lg bg-seashell">
                 {/* make image as background of rectangle box */}
                 <div
-                  className="w-full h-[215px] lg:h-[427px] bg-cover bg-center"
+                  className="h-[215px] w-full bg-cover bg-center lg:h-[427px]"
                   style={{
                     backgroundImage: `url(${featuredPosts[0]?.thumbnail})`
                   }}
                 />
                 <div className="flex flex-col gap-4 px-5 pb-10">
-                  <h3 className="text-black font-light text-sm font-robotoMono uppercase">
+                  <h3 className="font-robotoMono text-sm font-light uppercase text-black">
                     {featuredPosts[0]?.title}
                   </h3>
                   <div className="flex justify-between">
-                    <p className="text-black font-light text-sm font-robotoMono uppercase">
+                    <p className="font-robotoMono text-sm font-light uppercase text-black">
                       {new Date(featuredPosts[0]?.pubDate).toLocaleDateString(
                         'en-US',
                         {
@@ -135,7 +143,7 @@ const Blog: NextPage = () => {
                         }
                       )}
                     </p>
-                    <p className="text-black font-light text-sm font-robotoMono">
+                    <p className="font-robotoMono text-sm font-light text-black">
                       [ 3 min read ]
                     </p>
                   </div>
@@ -152,26 +160,26 @@ const Blog: NextPage = () => {
                   href={article.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-lg w-full md:w-[calc(50%-14px)] lg:w-full"
+                  className="w-full rounded-lg md:w-[calc(50%-14px)] lg:w-full"
                   key={`blog-post-${index}`}
                 >
-                  <li className="bg-gradient-to-b from-[#968982] to-transparent p-[1px] rounded-lg">
+                  <li className="rounded-lg bg-gradient-to-b from-[#968982] to-transparent p-[1px]">
                     {/* add gradient background that goes from gray to transparent */}
 
-                    <div className="flex flex-col gap-8 bg-seashell rounded-lg overflow-hidden">
+                    <div className="flex flex-col gap-8 overflow-hidden rounded-lg bg-seashell">
                       {/* make image as background of rectangle box */}
                       <div
-                        className="w-full h-[215px] bg-cover bg-center"
+                        className="h-[215px] w-full bg-cover bg-center"
                         style={{
                           backgroundImage: `url(${article.thumbnail})`
                         }}
                       />
                       <div className="flex flex-col gap-4 px-5 pb-10">
-                        <h3 className="text-black font-light text-sm font-robotoMono uppercase line-clamp-2">
+                        <h3 className="font-robotoMono text-sm font-light uppercase text-black line-clamp-2">
                           {article.title}
                         </h3>
                         <div className="flex justify-between">
-                          <p className="text-black font-light text-sm font-robotoMono uppercase">
+                          <p className="font-robotoMono text-sm font-light uppercase text-black">
                             {new Date(article?.pubDate).toLocaleDateString(
                               'en-US',
                               {
@@ -181,7 +189,7 @@ const Blog: NextPage = () => {
                               }
                             )}
                           </p>
-                          <p className="text-black font-light text-sm font-robotoMono">
+                          <p className="font-robotoMono text-sm font-light text-black">
                             [ 3 min read ]
                           </p>
                         </div>

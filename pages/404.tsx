@@ -7,25 +7,23 @@ import React from 'react'
 type Props = {}
 
 const NotFound = (props: Props) => {
-
   const PAGE_SEO = {
     title: 'Bundlr | Page Not Found',
-    description:
-      'The page you are looking for does not exist.'
+    description: 'The page you are looking for does not exist.'
   }
 
   return (
     <>
       <NextSeo {...PAGE_SEO} />
       <NavbarDesktop />
-      <div className="px-5 lg:px-[79px] overflow-hidden flex items-start justify-center flex-col gap-10 h-[400px] relative">
+      <div className="relative flex h-[400px] flex-col items-start justify-center gap-10 overflow-hidden px-5 lg:px-[79px]">
         <Heading level={1}>Page Not Found</Heading>
         <Link href={'/'}>
-          <Button className='self-start'>Return to home</Button>
+          <Button className="self-start">Return to home</Button>
         </Link>
         <img
           src="/new/assets/home/data-storm.webp"
-          className="absolute hidden lg:flex -bottom-60 sm:-bottom-[400px] lg:top-[0px] lg:-right-[270px] xl:-right-10 w-[600px] transform -rotate-180 -scale-y-100"
+          className="absolute -bottom-60 hidden w-[600px] -rotate-180 -scale-y-100 transform sm:-bottom-[400px] lg:top-[0px] lg:-right-[270px] lg:flex xl:-right-10"
           alt="cloud"
         />
       </div>

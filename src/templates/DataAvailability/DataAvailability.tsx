@@ -31,19 +31,19 @@ const useDataAvailability = () => {
     description: string
     href: string
   }[] = [
-      {
-        title: 'Decentralized Storage',
-        description:
-          'Performant, scalable, and seamless data, stored permanently on Arweave ',
-        href: '/solutions/decentralized-storage'
-      },
-      {
-        title: 'Proof of Provenance',
-        description:
-          'Identify original information by accurately attributing origin',
-        href: '/solutions/proof-of-provenance'
-      }
-    ]
+    {
+      title: 'Decentralized Storage',
+      description:
+        'Performant, scalable, and seamless data, stored permanently on Arweave ',
+      href: '/solutions/decentralized-storage'
+    },
+    {
+      title: 'Proof of Provenance',
+      description:
+        'Identify original information by accurately attributing origin',
+      href: '/solutions/proof-of-provenance'
+    }
+  ]
 
   const CTA_CONTENT: CtaCentralizedProps = {
     title: 'Ready to Become <br /> a BUNDLOOOOR?',
@@ -86,46 +86,46 @@ const DataAvailability: NextPage = () => {
   return (
     <>
       <NextSeo {...PAGE_SEO} />
-      <header className="bg-ghostWhite border-b-2 lg:border-none">
+      <header className="border-b-2 bg-ghostWhite lg:border-none">
         <NavbarDesktop scheme={SchemeColor.ghostWhite} />
-        <div className="pt-20 pb-52 lg:pt-0 lg:pb-0 lg:h-[700px] flex flex-col items-start justify-center relative lg:overflow-hidden px-5 lg:px-[79px] gap-5">
-          <div className="hidden lg:flex absolute top-6 left-[79px] gap-4">
+        <div className="relative flex flex-col items-start justify-center gap-5 px-5 pt-20 pb-52 lg:h-[700px] lg:overflow-hidden lg:px-[79px] lg:pt-0 lg:pb-0">
+          <div className="absolute top-6 left-[79px] hidden gap-4 lg:flex">
             <Link href={'/solutions/decentralized-storage'}>
-              <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
+              <div className="cursor-pointer px-2 py-1 font-robotoMono text-xs uppercase">
                 Storage
               </div>
             </Link>
             <Link href={'/solutions/proof-of-provenance'}>
-              <div className="uppercase px-2 py-1 font-robotoMono text-xs cursor-pointer">
+              <div className="cursor-pointer px-2 py-1 font-robotoMono text-xs uppercase">
                 Provenance
               </div>
             </Link>
-            <div className="uppercase px-2 py-1 font-robotoMono text-xs bg-black text-white">
+            <div className="bg-black px-2 py-1 font-robotoMono text-xs uppercase text-white">
               Data availability
             </div>
           </div>
           <img
             src="/assets/dataavailability/blocks.png"
-            className="absolute -top-30 right-0 md:-right-64 -bottom-56 lg:bottom-auto"
+            className="-top-30 absolute right-0 -bottom-56 md:-right-64 lg:bottom-auto"
             alt="cloud"
           />
-          <h1 className="text-5xl lg:text-7xl z-10">
+          <h1 className="z-10 text-5xl lg:text-7xl">
             Optimistic <br />
             Data Availability
           </h1>
-          <p className="font-robotoMono text-base z-10">
+          <p className="z-10 font-robotoMono text-base">
             Improve performance, scalability, and costs by opting in to
             consensus
           </p>
         </div>
       </header>
-      <section className="px-5 lg:px-[79px] flex py-28 lg:py-56 relative  bg-ghostWhite">
-        <div className="flex flex-col gap-36 w-full lg:w-1/2 ml-auto z-10">
+      <section className="relative flex bg-ghostWhite px-5 py-28 lg:px-[79px]  lg:py-56">
+        <div className="z-10 ml-auto flex w-full flex-col gap-36 lg:w-1/2">
           <div className="">
-            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
+            <h2 className="text-center font-fkDisplay text-4xl lg:text-left">
               What is Optimistic Data Availability?
             </h2>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-8 lg:pt-16 text-lg leading-loose text-center lg:text-left">
+            <p className="w-full pl-0 pt-8 text-center font-robotoMono text-lg leading-loose lg:max-w-[770px] lg:pl-28 lg:pt-16 lg:text-left">
               Bundlr is the trust assumption, but it always gets settled on L1,
               Arweave.
             </p>
@@ -134,39 +134,41 @@ const DataAvailability: NextPage = () => {
         <img
           src="/assets/dataavailability/cloud.png"
           alt="data-splash"
-          className="hidden lg:block absolute bottom-0 -left-40 md:-left-96 lg:-left-32 w-[767px]"
+          className="absolute bottom-0 -left-40 hidden w-[767px] md:-left-96 lg:-left-32 lg:block"
         />
       </section>
 
       <Benefits {...BENEFITS_CONTENT} />
 
-      <section className="px-5 lg:px-[79px] flex py-24 relative overflow-hidden">
-        <div className="flex flex-col gap-36 w-full">
+      <section className="relative flex overflow-hidden px-5 py-24 lg:px-[79px]">
+        <div className="flex w-full flex-col gap-36">
           <div className="">
-            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">Opt-in to Consensus</h2>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-16 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
+            <h2 className="text-center font-fkDisplay text-4xl lg:text-left">
+              Opt-in to Consensus
+            </h2>
+            <p className="w-full pl-0 pt-16 text-center font-robotoMono text-lg leading-loose lg:max-w-[770px] lg:pl-16 lg:pl-28 lg:text-left">
               People pay for consensus to update the state of a blockchain in
               every transaction. For non-financial transactions, this is
               wasteful and unnecessarily increases blockchain fees.
             </p>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
+            <p className="w-full pl-0 pt-16 text-center font-robotoMono text-lg leading-loose lg:max-w-[770px] lg:pl-28 lg:text-left">
               For such use cases, you can have stateless transactions, which
               don’t require consensus. This allows incredibly low latency
               transactions at industrial scales for an affordable price.
             </p>
           </div>
           <div className="">
-            <h2 className="text-4xl font-fkDisplay text-center lg:text-left">
+            <h2 className="text-center font-fkDisplay text-4xl lg:text-left">
               “And What If I Need My Data On-chain?”
             </h2>
-            <p className="font-robotoMono w-full lg:max-w-[770px] pl-0 lg:pl-28 pt-16 text-lg leading-loose text-center lg:text-left">
+            <p className="w-full pl-0 pt-16 text-center font-robotoMono text-lg leading-loose lg:max-w-[770px] lg:pl-28 lg:text-left">
               Easy,just connect to an oracle. Bundlr allows you to pay for state
               only when you need it.
             </p>
           </div>
         </div>
         <div className="hidden lg:w-[310px]">
-          <h3 className="inline-block transform -rotate-90 mt-24 text-[20px] uppercase ml-auto">
+          <h3 className="mt-24 ml-auto inline-block -rotate-90 transform text-[20px] uppercase">
             PAY FOR WHAT YOU USE
           </h3>
         </div>
@@ -174,7 +176,7 @@ const DataAvailability: NextPage = () => {
 
       <div className="overflow-hidden">
         <Marquee gradientColor={[254, 244, 238]} speed={155}>
-          <motion.h2 className="text-4xl lg:text-8xl whitespace-nowrap py-10 lg:py-32 uppercase">
+          <motion.h2 className="whitespace-nowrap py-10 text-4xl uppercase lg:py-32 lg:text-8xl">
             {Array.from({ length: 50 }).map((_, i) => (
               <span key={i}> OPTIMISM IS SENSIBLE {';) '} </span>
             ))}

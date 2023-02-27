@@ -7,22 +7,22 @@ const HomeHeader = () => {
   return (
     <>
       <header
-        className="px-5 lg:px-[79px] border-b border-timberwolf relative pb-20 overflow-hidden"
-      // style={{
-      //   backgroundImage: 'url()',
-      //   backgroundRepeat: 'no-repeat',
-      //   backgroundPosition: '20% -10%',
-      //   backgroundSize: '120%',
-      //   height: '894px'
-      // }}
+        className="relative overflow-hidden border-b border-timberwolf px-5 pb-20 lg:px-[79px]"
+        // style={{
+        //   backgroundImage: 'url()',
+        //   backgroundRepeat: 'no-repeat',
+        //   backgroundPosition: '20% -10%',
+        //   backgroundSize: '120%',
+        //   height: '894px'
+        // }}
       >
         <img
           src="/new/assets/home/header.webp"
           alt=""
-          className="absolute top-80 md:top-28 lg:top-36 lg:-right-18 xl:top-10 xl:-right-18 scale-150 rotate-[-20.24deg] 2xl:right-0 2xl:max-w-[1600px]"
+          className="lg:-right-18 xl:-right-18 absolute top-80 rotate-[-20.24deg] scale-150 md:top-28 lg:top-36 xl:top-10 2xl:right-0 2xl:max-w-[1600px]"
         />
 
-        <div className="flex flex-col gap-[32px] max-w-[742px] leading-none pt-[83px]">
+        <div className="flex max-w-[742px] flex-col gap-[32px] pt-[83px] leading-none">
           <Heading level={1} className="z-10">
             THE <br className="md:hidden" />
             WORLD’S <br />
@@ -37,7 +37,7 @@ const HomeHeader = () => {
             <br /> trustless source of truth
           </Paragraph>
         </div>
-        <div className="flex gap-[21px] mt-56 lg:mt-[320px] items-center font-robotoMono">
+        <div className="mt-56 flex items-center gap-[21px] font-robotoMono lg:mt-[320px]">
           <a href="https://docs.bundlr.network" className="z-50">
             <Button>
               START BUILDING
@@ -48,7 +48,7 @@ const HomeHeader = () => {
             href="https://arweave.net/"
             target={'_blank'}
             rel="noreferrer"
-            className="z-10 -ml-14 px-4 py-3 lg:px-6 lg:py-5 pl-10 lg:pl-14 rounded-tr-full rounded-br-full uppercase bg-white text-black"
+            className="z-10 -ml-14 rounded-tr-full rounded-br-full bg-white px-4 py-3 pl-10 uppercase text-black lg:px-6 lg:py-5 lg:pl-14"
           >
             Permanent on Arweave
           </a>

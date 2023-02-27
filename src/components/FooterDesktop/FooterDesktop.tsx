@@ -18,40 +18,44 @@ const FooterDesktop = ({
 }) => {
   return (
     <>
-      <footer className="hidden lg:flex items-start bg-seashell antialiased border-t border-timberwolf font-robotoMono px-[50px]">
-        <section className="flex flex-col max-w-[513px] leading-none w-auto pt-[36px]">
+      <footer className="hidden items-start border-t border-timberwolf bg-seashell px-[50px] font-robotoMono antialiased lg:flex">
+        <section className="flex w-auto max-w-[513px] flex-col pt-[36px] leading-none">
           <Link href="/">
             <FooterLogo className="cursor-pointer" />
           </Link>
-          <p className="mt-[230px] lg:text-[31px] text-[62px] tracking-tighter whitespace-normal">
-            THE WORLD&apos;S <br />DATA LAYER
+          <p className="mt-[230px] whitespace-normal text-[62px] tracking-tighter lg:text-[31px]">
+            THE WORLD&apos;S <br />
+            DATA LAYER
           </p>
           <p className="mt-[47px]">
             {new Date().getFullYear()} Bundlr. All rights reserved.
           </p>
         </section>
-        <section className="flex gap-20 h-[568px] ml-auto min-w-[272px]">
+        <section className="ml-auto flex h-[568px] min-w-[272px] gap-20">
           {data.map((definition) => {
             return (
               <div
                 key={definition.title}
-                className="flex flex-col mb-auto border-l border-timberwolf h-full pt-[36px] pl-[30px]"
+                className="mb-auto flex h-full flex-col border-l border-timberwolf pt-[36px] pl-[30px]"
               >
                 <p className="text-[16px] font-bold">{definition.title}</p>
                 <ul className="mt-[50px] flex flex-col gap-[10px]">
                   {definition.options.map((option) => {
                     return (
-                      <li key={option.name} className="hover:font-bold self-start">
+                      <li
+                        key={option.name}
+                        className="self-start hover:font-bold"
+                      >
                         <Link
                           href={option.href}
-                          className="text-base whitespace-nowrap"
+                          className="whitespace-nowrap text-base"
                           rel="noreferrer"
                           passHref
                         >
                           <a target={option.newTab ? '_blank' : '_self'}>
                             {option.name}
                             {option.label && (
-                              <span className="ml-[10px] text-xs font-bold bg-black rounded-full px-[10px] py-[5px] text-white">
+                              <span className="ml-[10px] rounded-full bg-black px-[10px] py-[5px] text-xs font-bold text-white">
                                 {option.label}
                               </span>
                             )}

@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react'
 
 const useHomeStats = () => {
-
   const [transactions, setTransactions] = useState<null | number>(null)
-  const [totalTransactions, setTotalTransactions] = useState<null | number>(null)
-
+  const [totalTransactions, setTotalTransactions] = useState<null | number>(
+    null
+  )
 
   const STATS = [
     {
       title: 'Transactions in last 24h',
       description: transactions
         ? transactions?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-        : 'Loading...',
+        : 'Loading...'
     },
     {
       title: 'Upload time',
@@ -21,8 +21,8 @@ const useHomeStats = () => {
       title: 'Total number of transactions',
       description: totalTransactions
         ? totalTransactions?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-        : 'Loading...',
-    },
+        : 'Loading...'
+    }
   ]
 
   useEffect(() => {
@@ -54,27 +54,30 @@ const HomeStats = () => {
 
   return (
     <>
-      <section className="items-center justify-center h-auto px-4 py-10 lg:py-20 lg:py-0 lg:h-[232px] flex flex-col md:flex-row md:items-left md:items-center gap-10 overflow-hidden">
+      <section className="md:items-left flex h-auto flex-col items-center justify-center gap-10 overflow-hidden px-4 py-10 md:flex-row md:items-center lg:h-[232px] lg:py-20 lg:py-0">
         {/* Vertical text 'stats' aligned to left */}
 
         <div className="hidden md:inline-block">
-          <p className="transform rotate-180 text-center ml-5 lg:ml-[79px] text-[26px] uppercase" style={{ writingMode: 'vertical-rl' }}>
+          <p
+            className="ml-5 rotate-180 transform text-center text-[26px] uppercase lg:ml-[79px]"
+            style={{ writingMode: 'vertical-rl' }}
+          >
             Stats
           </p>
         </div>
 
-        <div className="md:hidden inline-block">
+        <div className="inline-block md:hidden">
           <h3 className="text-[26px] uppercase">Stats</h3>
         </div>
 
         {/* 2 columns grid */}
-        <div className="flex md:flex-row flex-col gap-10 leading-none md:ml-auto md:pr-4 lg:pr-[79px] items-center justify-center md:justify-start">
+        <div className="flex flex-col items-center justify-center gap-10 leading-none md:ml-auto md:flex-row md:justify-start md:pr-4 lg:pr-[79px]">
           {STATS.map((stat, index) => (
             <div key={index}>
-              <small className="uppercase text-[13px] font-robotoMono leading-none">
+              <small className="font-robotoMono text-[13px] uppercase leading-none">
                 {stat.title}
               </small>
-              <h2 className="text-5xl lg:text-[74px] leading-none font-fkDisplay">
+              <h2 className="font-fkDisplay text-5xl leading-none lg:text-[74px]">
                 {stat.description}
               </h2>
             </div>

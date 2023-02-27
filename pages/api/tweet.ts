@@ -1,15 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import allowCors from '@/utils/allowCORS';
+import allowCors from '@/utils/allowCORS'
 
-async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+async function handler(req: NextApiRequest, res: NextApiResponse) {
   const URL_PREFIX = process.env.ENDPOINT_URL
 
-  const { tweet } = req.body;
+  const { tweet } = req.body
 
   if (!tweet) {
     res.status(400).send('')
@@ -30,6 +27,5 @@ async function handler(
     res.status(500).send(error)
   }
 }
-
 
 export default allowCors(handler)

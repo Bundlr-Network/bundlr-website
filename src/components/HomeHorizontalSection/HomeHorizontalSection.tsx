@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react'
 
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import gsap from 'gsap'
@@ -10,7 +10,7 @@ const useHomeHorizontalSection = () => {
 }
 
 const HomeHorizontalSection = () => {
-  const { } = useHomeHorizontalSection()
+  const {} = useHomeHorizontalSection()
 
   const wrapper = useRef<any>()
   const slider = useRef<any>()
@@ -39,7 +39,7 @@ const HomeHorizontalSection = () => {
       <div ref={wrapper}>
         <div
           ref={slider}
-          className="flex flex-wrap flex-col w-screen h-screen overflow-hidden"
+          className="flex h-screen w-screen flex-col flex-wrap overflow-hidden"
         >
           <div className="h-screen w-screen bg-blue-500">ONE</div>
           <div className="h-screen w-screen bg-red-500">ONE</div>
