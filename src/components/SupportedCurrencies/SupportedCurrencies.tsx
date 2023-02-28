@@ -1,77 +1,90 @@
+import AlgorandIcon from '@assets/currencies/algorand.svg'
 import AptosIcon from '@assets/currencies/aptos.svg'
+import ArbitrumIcon from '@assets/currencies/arbitrum.svg'
+import ArweaveIcon from '@assets/currencies/arweave.svg'
+import AvalancheIcon from '@assets/currencies/avalanche.svg'
+import BobaIcon from '@assets/currencies/boba.svg'
+import ChainlinkIcon from '@assets/currencies/chainlink.svg'
+import EthereumIcon from '@assets/currencies/ethereum.svg'
+import FantomIcon from '@assets/currencies/fantom.svg'
+import Image from 'next/image'
 import Marquee from 'react-fast-marquee'
+import NearIcon from '@assets/currencies/near.svg'
+import OptimismIcon from '@assets/currencies/optimism.svg'
+import PolygonIcon from '@assets/currencies/polygon.svg'
+import SolanaIcon from '@assets/currencies/solana.svg'
 
 const useSupportedCurrencies = () => {
   const SUPPORTED_CURRENCIES = [
     {
       company: 'Arweave',
       ticker: 'AR',
-      icon: '/assets/currencies/arweave.svg'
+      icon: ArweaveIcon
     },
     {
       company: 'Ethereum',
       ticker: 'ETH',
-      icon: '/assets/currencies/ethereum.svg'
+      icon: EthereumIcon
     },
     {
       company: 'Solana',
       ticker: 'SOL',
-      icon: '/assets/currencies/solana.svg'
+      icon: SolanaIcon
     },
     {
       company: 'Polygon',
       ticker: 'MATIC',
-      icon: '/assets/currencies/polygon.svg'
+      icon: PolygonIcon
     },
     {
       company: 'Aptos',
       ticker: 'APT',
-      icon: '/assets/currencies/aptos.svg'
+      icon: AptosIcon
     },
     {
       company: 'Boba',
       ticker: 'BOBA',
-      icon: '/assets/currencies/boba.svg'
+      icon: BobaIcon
     },
     {
       company: 'Algorand',
       ticker: 'ALGO',
-      icon: '/assets/currencies/algorand.svg'
+      icon: AlgorandIcon
     },
     {
       company: 'Arbitrum',
       ticker: 'ETH',
-      icon: '/assets/currencies/arbitrum.svg'
+      icon: ArbitrumIcon
     },
     {
       company: 'Avalanche',
       ticker: 'AVAX',
-      icon: '/assets/currencies/avalanche.svg'
+      icon: AvalancheIcon
     },
     {
       company: 'Fantom',
       ticker: 'FTM',
-      icon: '/assets/currencies/fantom.svg'
+      icon: FantomIcon
     },
     {
       company: 'Near',
       ticker: 'NEAR',
-      icon: '/assets/currencies/near.svg'
+      icon: NearIcon
     },
     {
       company: 'Optimism',
       ticker: 'ETH',
-      icon: '/assets/currencies/optimism.svg'
+      icon: OptimismIcon
     },
     {
       company: 'Chainlink',
       ticker: 'LINK',
-      icon: '/assets/currencies/chainlink.svg'
+      icon: ChainlinkIcon
     },
     {
       company: 'Boba',
       ticker: 'ETH',
-      icon: '/assets/currencies/boba.svg'
+      icon: BobaIcon
     }
   ]
 
@@ -109,12 +122,11 @@ const SupportedCurrencies = ({
                 ${index === 0 && 'ml-[80px]'}
                 `}
                 >
-                  <img
+                  <Image
                     src={currency.icon}
                     alt={currency.ticker}
                     width={54}
                     height={54}
-                    // className="invert"
                   />
                   <div className="flex flex-col gap-1">
                     <p className="font-robotoMono text-lg uppercase">
