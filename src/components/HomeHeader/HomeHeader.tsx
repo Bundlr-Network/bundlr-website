@@ -1,20 +1,20 @@
-import Button from '../Button'
-import { DevIcon } from '@/svg'
-import Heading from '../Heading'
-import Paragraph from '../Paragraph'
+import Button from '../Button';
+import { DevIcon } from '@/svg';
+import Heading from '../Heading';
+import Paragraph from '../Paragraph';
 
 const HomeHeader = () => {
   return (
     <>
       <header
         className="relative overflow-hidden border-b border-timberwolf px-5 pb-20 lg:px-[79px]"
-        // style={{
-        //   backgroundImage: 'url()',
-        //   backgroundRepeat: 'no-repeat',
-        //   backgroundPosition: '20% -10%',
-        //   backgroundSize: '120%',
-        //   height: '894px'
-        // }}
+      // style={{
+      //   backgroundImage: 'url()',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundPosition: '20% -10%',
+      //   backgroundSize: '120%',
+      //   height: '894px'
+      // }}
       >
         <img
           src="/new/assets/home/header.webp"
@@ -45,7 +45,7 @@ const HomeHeader = () => {
             </Button>
           </a>
           <a
-            href="https://arweave.net/"
+            href="https://arweave.org/"
             target={'_blank'}
             rel="noreferrer"
             className="z-10 -ml-14 rounded-tr-full rounded-br-full bg-white px-4 py-3 pl-10 uppercase text-black lg:px-6 lg:py-5 lg:pl-14"
@@ -55,7 +55,7 @@ const HomeHeader = () => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default HomeHeader
+export default HomeHeader;
