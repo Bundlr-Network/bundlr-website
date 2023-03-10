@@ -1,4 +1,4 @@
-import { Head, Html, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from 'next/document';
 
 const Document = () => {
   return (
@@ -23,7 +23,7 @@ const Document = () => {
           property="og:description"
           content="Bundlr is the world’s data layer. We solve data integrity issues through permanent storage and proof of provenance."
         />
-        <meta property="og:image" content="/new/assets/shared/open-graph.png" />
+        <meta property="og:image" content="https://bundlr.network/new/assets/shared/open-graph.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="bundlr.network" />
@@ -35,7 +35,7 @@ const Document = () => {
         />
         <meta
           name="twitter:image"
-          content="/new/assets/shared/open-graph.png"
+          content="https://bundlr.network/new/assets/shared/open-graph.png"
         />
 
         {/* // favicon */}
@@ -46,7 +46,7 @@ const Document = () => {
         <NextScript />
       </body>
     </Html>
-  )
-}
+  );
+};
 
-export default Document
+export default Document;
