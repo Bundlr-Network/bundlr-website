@@ -106,14 +106,12 @@ const SupportedCurrencies = ({
         className={`flex flex-col items-center justify-center gap-11 rounded-[20px] bg-white pt-[40px] pb-[64px] text-center text-black`}
       >
         <h2 className="font-robotoMono">SUPPORTED TOKENS</h2>
-        <Marquee gradientColor={[255, 255, 255]} speed={45}>
+        <Marquee gradientColor={[255, 255, 255]} speed={40}>
           <div className="flex items-center gap-10 lg:gap-20">
             {[
-              ...SUPPORTED_CURRENCIES
-              // ...SUPPORTED_CURRENCIES,
-              // ...SUPPORTED_CURRENCIES,
-              // ...SUPPORTED_CURRENCIES,
-              // ...SUPPORTED_CURRENCIES
+              ...SUPPORTED_CURRENCIES,
+              ...SUPPORTED_CURRENCIES,
+              ...SUPPORTED_CURRENCIES,
             ].map((currency, index) => {
               return (
                 <div
