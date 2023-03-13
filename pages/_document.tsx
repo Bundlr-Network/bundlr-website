@@ -18,7 +18,7 @@ const Document = () => {
 
         <meta property="og:url" content="https://bundlr.network" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Bundlr | Home" />
+        <meta property="og:title" content="Bundlr" />
         <meta
           property="og:description"
           content="Bundlr is the world’s data layer. We solve data integrity issues through permanent storage and proof of provenance."

@@ -27,7 +27,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const useHome = () => {
   const PAGE_SEO = {
-    title: 'Bundlr | Home',
+    title: 'Bundlr',
     description:
       'Bundlr is the world’s data layer. We solve data integrity issues through permanent storage and proof of provenance.'
   }
@@ -71,19 +71,19 @@ const useHome = () => {
     description: string
     href: string
   }[] = [
-    {
-      title: 'Decentralized Storage',
-      description:
-        'Performant, scalable, and seamless data, stored permanently on Arweave',
-      href: '/solutions/decentralized-storage'
-    },
-    {
-      title: 'Proof of Provenance',
-      description:
-        'Identify original information by accurately attributing origin',
-      href: '/solutions/proof-of-provenance'
-    }
-  ]
+      {
+        title: 'Decentralized Storage',
+        description:
+          'Performant, scalable, and seamless data, stored permanently on Arweave',
+        href: '/solutions/decentralized-storage'
+      },
+      {
+        title: 'Proof of Provenance',
+        description:
+          'Identify original information by accurately attributing origin',
+        href: '/solutions/proof-of-provenance'
+      }
+    ]
 
   return { PAGE_SEO, WHY_USE_BUNDLR, PRODUCT_CONTENT }
 }
